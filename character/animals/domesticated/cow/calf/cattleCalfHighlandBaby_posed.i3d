@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="cattleCalfHighlandBaby_posed" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/tileAndMirrorShader.xml" />
+    <File fileId="5" filename="$dataS/character/animals/domesticated/cow/calf/cattleCalfHighland_alpha.png" />
+    <File fileId="1" filename="$dataS/character/animals/domesticated/cow/calf/cattleCalfHighland_diffuse.png" />
+    <File fileId="2" filename="$dataS/character/animals/domesticated/cow/calf/cattleCalfHighland_normal.png" />
+    <File fileId="3" filename="$dataS/character/animals/domesticated/cow/calf/cattleCalfHighland_specular.png" />
+  </Files>
+
+  <Materials>
+    <Material name="cattleCalfHighland_01_mat1" materialId="1" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="1 1 1 1"/>
+      <CustomParameter name="dirt" value="0 20.0 20.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0.5"/>
+      <CustomParameter name="sssColor" value="0.938 0.567 0.567 1.0"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="cattleCalfHighland_02_mat1" materialId="2" customShaderId="4" customShaderVariation="sssSpecularDirt_alphaMapSecondUV">
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="1 1 1 1"/>
+      <CustomParameter name="dirt" value="0 20.0 20.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0.5"/>
+      <CustomParameter name="sssColor" value="0.938 0.567 0.567 1.0"/>
+      <Custommap name="alphaMap" fileId="5"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="cattleCalfHighlandBaby_posed.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="cattleCalfHighland" clipDistance="300" nodeId="1">
+      <Shape name="body" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="2"/>
+      <Shape name="eyes" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="3"/>
+      <Shape name="teeth" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="4"/>
+      <Shape name="tongue" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="5"/>
+      <TransformGroup name="hair" clipDistance="300" nodeId="6">
+        <Shape name="eyelashes" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="7"/>
+        <Shape name="neckFur" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="8"/>
+        <Shape name="fur1" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="9"/>
+        <Shape name="fur2" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="10"/>
+        <TransformGroup name="reverse" clipDistance="300" nodeId="11">
+          <Shape name="hairbody_reverse" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="12"/>
+          <Shape name="hairFur01_reverse" shapeId="10" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="13"/>
+          <Shape name="harFur02_reverse" shapeId="11" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="14"/>
+          <Shape name="hairFur03_reverse" shapeId="12" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="15"/>
+          <Shape name="spineFur_reverse" shapeId="13" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="16"/>
+        </TransformGroup>
+        <Shape name="hairbody" shapeId="14" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="17"/>
+        <Shape name="hairFur01" shapeId="15" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="18"/>
+        <Shape name="harFur02" shapeId="16" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="19"/>
+        <Shape name="hairFur03" shapeId="17" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="20"/>
+        <Shape name="spineFur" shapeId="18" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="21"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

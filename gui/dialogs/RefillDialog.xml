@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <GuiElement profile="fs25_refillDialogBg" id="dialogElement">
+        <ThreePartBitmap profile="fs25_dialogBgMiddleSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgTopSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <GuiElement profile="fs25_dialogContentContainer">
+            <Bitmap profile="fs25_dialogCircle" id="dialogCircle">
+                <Bitmap profile="fs25_dialogQuestion" id="iconQuestionElement" />
+                <Bitmap profile="fs25_dialogWarning" id="iconWarningElement" />
+                <Bitmap profile="fs25_dialogKey" id="iconKeyElement" />
+                <Bitmap profile="fs25_dialogInfo" id="iconInfoElement" />
+            </Bitmap>
+            <Text profile="fs25_dialogTitle" id="dialogTitleElement" />
+            <Text profile="fs25_refillDialogText" text="$l10n_ui_siloRefillingDescription:" id="dialogTextElement" />
+            <MultiTextOption profile="fs25_dialogMultiTextOption" id="fillTypesElement" position="0px 140px" onClick="onClickFillTypes" focusInit="onOpen" />
+            <OptionSlider profile="fs25_optionSlider" id="fillAmountsElement" onClick="onClickFillAmount" position="0px 80px">
+                <Text profile="fs25_optionSliderText" id="fillAmountText" name="text" />
+            </OptionSlider>
+            <Text profile="fs25_dialogWarningText" id="messageBackground" text="$l10n_message_noSpaceForFillType" position="0px -310px">
+                <Bitmap profile="fs25_dialogWarningIcon" />
+            </Text>
+        </GuiElement>
+        <BoxLayout profile="fs25_dialogButtonBox" id="buttonsPC">
+            <Button profile="buttonOK" text="$l10n_button_buy" onClick="onClickOk" id="yesButton" />
+            <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" id="noButton" />
+        </BoxLayout>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="fs25_refillDialogBg" extends="fs25_dialogBg">
+            <size value="700px 440px" />
+        </Profile>
+        <Profile name="fs25_refillDialogText" extends="fs25_dialogText">
+            <width value="540px" />
+            <textMaxNumLines value="1" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

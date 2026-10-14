@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<locomotion>
+    <general suddenStopTime="400" />
+    <speed walk="0.75" run="2.5" walkRunThreshold="2" minimum="0.137" />
+    <wander circleDistance="0.1" circleRadius="3" jitter="20" />
+    <avoidance wallCircleRadius="1" wallCircleDistance="1" detectionDistance="1" maxAnimalForce="1" maxWallForce="1" />
+    <animation filename="$dataS/character/animals/domesticated/chicken/chickAnimation.xml" />
+</locomotion>

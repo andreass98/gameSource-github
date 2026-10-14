@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="sheepLambAnimations" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+  </Files>
+
+  <Materials>
+  </Materials>
+
+
+  <Scene>
+    <TransformGroup name="lambSkeleton" nodeId="1">
+      <TransformGroup name="lamb_root_skin_jnt" nodeId="2">
+        <TransformGroup name="lamb_spine_skin_jnt_01" translation="-0.059661 0.491389 -0.234532" rotation="-68.699928 -78.266052 73.473022" nodeId="3">
+          <TransformGroup name="lamb_spine_skin_jnt_02" translation="0.237023 -0.023208 -0.021702" rotation="-5.339937 -2.982395 -4.036629" nodeId="4">
+            <TransformGroup name="lamb_spine_skin_jnt_03" translation="0.229487 -0.023904 0.037053" rotation="-5.421093 -14.620366 -6.863041" nodeId="5">
+              <TransformGroup name="lamb_neck_skin_jnt_01" translation="0.044616 -0.040679 0.000202" rotation="1.82895 -5.791188 65.039825" nodeId="6">
+                <TransformGroup name="lamb_neck_skin_jnt_02" translation="0.123779 -0.034695 -0.002574" rotation="-3.85799 -2.344304 -18.684118" nodeId="7">
+                  <TransformGroup name="lamb_neck_skin_jnt_03" translation="0.128426 0.001034 0.007843" rotation="-1.87979 -10.389795 -2.875261" nodeId="8">
+                    <TransformGroup name="lamb_head_skin_jnt" translation="-0.002822 -0.009482 -0.001153" rotation="-24.649679 75.065529 -75.567101" nodeId="9">
+                      <TransformGroup name="lamb_jaw_skin_jnt" translation="0 0.018932 0.029801" rotation="90 -55.306133 -89.503899" nodeId="10">
+                        <TransformGroup name="lamb_tongue_skin_jnt_01" translation="0.070414 -0.04263 0" rotation="0 0 29.341192" nodeId="11">
+                          <TransformGroup name="lamb_tongue_skin_jnt_02" translation="0.079381 0 0" nodeId="12"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="lamb_ear_L_skin_jnt_01" translation="0.073501 0.055885 0.005778" rotation="20.114389 14.65043 -54.323425" nodeId="13">
+                        <TransformGroup name="lamb_ear_L_skin_jnt_02" translation="0 0.08586 0" rotation="32.635254 27.227814 13.106757" nodeId="14"/>
+                      </TransformGroup>
+                      <TransformGroup name="lamb_ear_R_skin_jnt_01" translation="-0.073501 0.055885 0.005778" rotation="152.976624 16.494104 -130.676636" nodeId="15">
+                        <TransformGroup name="lamb_ear_R_skin_jnt_02" translation="0 0.08586 0" rotation="-28.516235 -24.895472 1.756402" nodeId="16"/>
+                      </TransformGroup>
+                      <TransformGroup name="lamb_eyeball_L_skin_jnt" translation="0.065687 0.043444 0.081766" rotation="6.364852 -47.883545 -6.251271" nodeId="17"/>
+                      <TransformGroup name="lamb_eyeball_R_skin_jnt" translation="-0.065687 0.043444 0.081766" rotation="173.635147 -47.883545 -173.748718" nodeId="18"/>
+                      <TransformGroup name="lamb_eyelid_up_L_skin_jnt" translation="0.08015 0.050819 0.093717" rotation="-13.859507 -36.359734 27.019262" nodeId="19"/>
+                      <TransformGroup name="lamb_eyelid_up_R_skin_jnt" translation="-0.080133 0.050818 0.093738" rotation="-165.297745 -36.431332 152.958099" nodeId="20"/>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="lamb_shoulder_L_skin_jnt" translation="-0.000832 0.054108 -0.076835" rotation="-2.032164 6.062249 -109.476936" nodeId="21">
+                <TransformGroup name="lamb_elbow_L_skin_jnt" translation="0.183892 0 0" rotation="0 0 58.735931" nodeId="22">
+                  <TransformGroup name="lamb_wrist_L_skin_jnt" translation="0.193935 0 0" rotation="7.807546 -16.155401 -74.869827" nodeId="23">
+                    <TransformGroup name="lamb_front_foot_L_skin_jnt" translation="0.139995 0 0" rotation="-5.875756 -1.793212 4.26071" nodeId="24">
+                      <TransformGroup name="lamb_front_ball_L_skin_jnt" translation="0.039572 0 0" rotation="-0.000003 0.00001 -14.691901" nodeId="25"/>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="lamb_shoulder_R_skin_jnt" translation="0.017769 0.06035 0.074202" rotation="0.754597 -7.985611 87.372421" nodeId="26">
+                <TransformGroup name="lamb_elbow_R_skin_jnt" translation="-0.183892 0 0" rotation="0 0 6.217889" nodeId="27">
+                  <TransformGroup name="lamb_wrist_R_skin_jnt" translation="-0.193935 0 0" rotation="1.425976 -3.593991 -5.198993" nodeId="28">
+                    <TransformGroup name="lamb_front_foot_R_skin_jnt" translation="-0.139995 0 0" rotation="-0.160778 -9.377918 -138.854294" nodeId="29">
+                      <TransformGroup name="lamb_front_ball_R_skin_jnt" translation="0.039572 0 0" rotation="0.558762 1.523292 -19.602692" nodeId="30"/>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="lamb_clavicle_R_skin_jnt" translation="0.017769 0.06035 0.074202" rotation="0.892856 5.500726 84.508553" nodeId="31"/>
+              <TransformGroup name="lamb_clavicle_L_skin_jnt" translation="-0.000832 0.054108 -0.076835" rotation="-2.681098 0.96659 -99.362709" nodeId="32"/>
+            </TransformGroup>
+            <TransformGroup name="lamb_belly_skin_jnt" translation="-0.002144 -0.218623 0" rotation="0 89.420021 -0.579978" nodeId="33"/>
+          </TransformGroup>
+          <TransformGroup name="lamb_tail_skin_jnt_01" translation="-0.056084 0.081426 -0.008725" rotation="175.521561 3.815285 -144.736969" nodeId="34">
+            <TransformGroup name="lamb_tail_skin_jnt_02" translation="0.080096 0 0" rotation="-9.464324 -5.995813 -26.034678" nodeId="35">
+              <TransformGroup name="lamb_tail_skin_jnt_03" translation="0.09292 0 0" rotation="-9.471802 -5.026556 10.160645" nodeId="36">
+                <TransformGroup name="lamb_tail_skin_jnt_04" translation="0.077368 0 0" rotation="-4.176897 -12.307151 -1.873393" nodeId="37"/>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="lamb_hip_L_skin_jnt" translation="0.020929 0.071589 -0.07226" rotation="-6.233139 4.046142 -65.333031" nodeId="38">
+            <TransformGroup name="lamb_knee_L_skin_jnt" translation="0.204459 0 0" rotation="0 0 -68.253845" nodeId="39">
+              <TransformGroup name="lamb_ankle_L_skin_jnt" translation="0.212573 0 0" rotation="1.229835 1.931252 51.996422" nodeId="40">
+                <TransformGroup name="lamb_hind_foot_L_skin_jnt" translation="0.16465 0 0" rotation="-2.489479 -5.712221 11.85648" nodeId="41">
+                  <TransformGroup name="lamb_hind_ball_L_skin_jnt" translation="0.040171 0 0" rotation="0 -0.000009 -5.226724" nodeId="42"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="lamb_hip_R_skin_jnt" translation="0.020679 0.067509 0.076382" rotation="10.543278 2.372231 80.854187" nodeId="43">
+            <TransformGroup name="lamb_knee_R_skin_jnt" translation="-0.204459 0 0" rotation="0 0 -66.564987" nodeId="44">
+              <TransformGroup name="lamb_ankle_R_skin_jnt" translation="-0.212573 0 0" rotation="1.141807 4.711767 52.732395" nodeId="45">
+                <TransformGroup name="lamb_hind_foot_R_skin_jnt" translation="-0.16465 0 0" rotation="-3.426676 2.09026 177.980743" nodeId="46">
+                  <TransformGroup name="lamb_hind_ball_R_skin_jnt" translation="0.040171 0 0" rotation="0 0 6.137781" nodeId="47"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="sheepLamb" nodeId="48">
+      <TransformGroup name="LOD_0" nodeId="49">
+        <TransformGroup name="hair" nodeId="50">
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="LOD_1" visibility="false" nodeId="51">
+        <TransformGroup name="hair" nodeId="52">
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="LOD_2" visibility="false" nodeId="53">
+        <TransformGroup name="hair" nodeId="54">
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="LOD_3" visibility="false" nodeId="55">
+        <TransformGroup name="hair" nodeId="56">
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+
+  <Animation externalAnimFile="sheepLambAnimations.i3d.anim" />
+</i3D>

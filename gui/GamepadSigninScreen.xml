@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onCreate="onCreate" onOpen="onOpen" onClose="onClose">
+    <Picture id="backgroundImage" profile="backgroundImage" />
+    <GuiElement profile="fs25_mainScreenSidebar" id="mainScreenSidebar">
+        <Bitmap id="logo" profile="mainScreenLogo" />
+    </GuiElement>
+    <Text profile="fs25_signInText" text="$l10n_ui_consolePressStart" id="startText" />
+    <GUIProfiles>
+        <Profile name="fs25_signInText" extends="fs25_textDefault" with="anchorBottomCenter">
+            <position value="0 100px" />
+            <textSize value="48px" />
+            <text2Color value="0 0 0 1" />
+            <text2Offset value="-1px -1px" />
+            <textAlignment value="center" />
+            <textAutoWidth value="true" />
+            <textMaxWidth value="500px" />
+            <textLayoutMode value="resize" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

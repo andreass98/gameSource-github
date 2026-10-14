@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI name="modHubDetails">
+    <GuiElement profile="fs25_menuContainer" id="pageInformation">
+        <GuiElement profile="fs25_menuHeaderPanel">
+            <Bitmap profile="fs25_menuHeaderIconBg">
+                <Bitmap profile="fs25_menuHeaderIcon" id="headerIcon" />
+            </Bitmap>
+            <Text profile="fs25_menuHeaderTitle" id="headerText" width="850px" />
+            <RoundCorner profile="fs25_shopMoneyBoxBg" id="diskSpaceBoxBg" />
+            <BoxLayout profile="fs25_shopMoneyBox" id="diskSpaceBox">
+                <Bitmap profile="fs25_modHubIconStorageSpace" />
+                <Text profile="fs25_shopMoney" id="spaceUsageLabel" />
+            </BoxLayout>
+        </GuiElement>
+        <Bitmap profile="fs25_modHubDetailPreview" id="modPreviewImage[1]" />
+        <Bitmap profile="fs25_modHubDetailPreviewRight" id="modPreviewImage[2]" />
+        <Bitmap profile="fs25_modHubDetailPreviewBottom" id="modPreviewImage[3]" />
+        <BoxLayout profile="fs25_modHubDetailAttributeBox" id="modInfoBox">
+            <Text profile="fs25_modHubDetailsAttributeName" id="modAuthor" />
+            <Text profile="fs25_modHubAttributeInfo" text="  |  " />
+            <Text profile="fs25_modHubAttributeInfo" id="modAttributeInfoVersion" />
+            <Text profile="fs25_modHubAttributeInfo" text="  |  " id="modAttributeInfoRatingSpace" />
+            <BoxLayout profile="fs25_modHubAttributeRatingBox" id="modAttributeRatingBox">
+                <Bitmap profile="fs25_modHubAttributeRatingStar" id="modAttributeRatingStar[1]">
+                    <Bitmap profile="fs25_modHubAttributeRatingStarHalf" id="modAttributeRatingStarHalf[1]" />
+                </Bitmap>
+                <Bitmap profile="fs25_modHubAttributeRatingStar" id="modAttributeRatingStar[2]">
+                    <Bitmap profile="fs25_modHubAttributeRatingStarHalf" id="modAttributeRatingStarHalf[2]" />
+                </Bitmap>
+                <Bitmap profile="fs25_modHubAttributeRatingStar" id="modAttributeRatingStar[3]">
+                    <Bitmap profile="fs25_modHubAttributeRatingStarHalf" id="modAttributeRatingStarHalf[3]" />
+                </Bitmap>
+                <Bitmap profile="fs25_modHubAttributeRatingStar" id="modAttributeRatingStar[4]">
+                    <Bitmap profile="fs25_modHubAttributeRatingStarHalf" id="modAttributeRatingStarHalf[4]" />
+                </Bitmap>
+                <Bitmap profile="fs25_modHubAttributeRatingStar" id="modAttributeRatingStar[5]">
+                    <Bitmap profile="fs25_modHubAttributeRatingStarHalf" id="modAttributeRatingStarHalf[5]" />
+                </Bitmap>
+            </BoxLayout>
+            <Text profile="fs25_modHubAttributeInfo" text="  |  " id="modAttributeInfoSizeSpace" />
+            <Text profile="fs25_modHubAttributeInfo" id="modInfoSize" />
+            <Text profile="fs25_modHubAttributeInfo" text="  |  " id="modAttributeInfoFilenameSpace" />
+            <Text profile="fs25_modHubAttributeInfo" id="modInfoFilename" />
+            <Text profile="fs25_modHubAttributeInfo" text="  |  " id="modAttributeInfoHashSpace" />
+            <Text profile="fs25_modHubAttributeInfo" id="modInfoHash" />
+        </BoxLayout>
+        <GuiElement profile="fs25_modHubDetailDescriptionContainer">
+            <ThreePartBitmap profile="fs25_lineSeparatorTopHighlighted" absoluteSizeOffset="-80px 0px" position="0.5px 0px" />
+            <Bitmap profile="fs25_stopClipper" name="bottomClipper" size="780px 82px" position="0px -1px" />
+            <ScrollingLayout profile="fs25_modHubDetailDescriptionLayout" id="descriptionLayout" bottomClipperElementName="bottomClipper">
+                <Text profile="fs25_modHubDetailDescription" id="modDescription" />
+            </ScrollingLayout>
+        </GuiElement>
+    </GuiElement>
+    <ThreePartBitmap profile="fs25_sliderDockedBg">
+        <ThreePartBitmap profile="fs25_sliderDockedBox">
+            <Slider profile="fs25_sliderDocked" id="textSlider" dataElementId="descriptionLayout" handleFocus="true" focusInit="onOpen" stepSize="3" />
+        </ThreePartBitmap>
+    </ThreePartBitmap>
+    <GUIProfiles>
+        <Profile name="fs25_modHubDetailPreview" extends="baseReference" with="anchorTopLeft">
+            <size value="722px 395px" />
+            <position value="43px -20px" />
+            <imageSliceId value="noSlice" />
+            <imageIsWebOverlay value="true" />
+            <imageMaskFilename value="dataS/menu/mask_modhubDetail.png" />
+            <imagePreviewFilename value="dataS/menu/modHubPreview_default.png" />
+            <overlayMaskSize value="1024px 512px" />
+            <overlayMaskPos value="-151px -57px" />
+        </Profile>
+        <Profile name="fs25_modHubDetailPreviewRight" extends="fs25_modHubDetailPreview" with="anchorTopRight">
+            <position value="-43px -20px" />
+        </Profile>
+        <Profile name="fs25_modHubDetailPreviewBottom" extends="fs25_modHubDetailPreview" with="anchorTopLeft">
+            <position value="43px -440px" />
+        </Profile>
+        <Profile name="fs25_modHubDetailAttributeBox" extends="fs25_modHubAttributeBox" with="anchorTopRight">
+            <width value="50%" />
+            <absoluteSizeOffset value="80px 0px" />
+            <position value="-43px -440px" />
+            <numFlows value="2" />
+            <alignmentX value="left" />
+        </Profile>
+        <Profile name="fs25_modHubDetailsAttributeName" extends="fs25_modHubAttributeName">
+            <textMaxWidth value="300px" />
+        </Profile>
+        <Profile name="fs25_modHubDetailDescriptionContainer" extends="emptyPanel" with="anchorStretchingYStretchingX pivotBottomRight">
+            <width value="50%" />
+            <absoluteSizeOffset value="80px 500px" />
+            <position value="-43px 0px" />
+        </Profile>
+        <Profile name="fs25_modHubDetailDescriptionLayout" extends="emptyPanel" with="anchorStretchingYStretchingX pivotBottomCenter">
+            <absoluteSizeOffset value="0px 2px" />
+            <flowDirection value="vertical" />
+        </Profile>
+        <Profile name="fs25_modHubDetailDescription" extends="fs25_textDefault" with="anchorTopStretchingX">
+            <width value="100%" />
+            <margin value="0 10px 0 0" />
+            <textSize value="16px" />
+            <textLineHeightScale value="1.3" />
+            <textMaxNumLines value="1000000" />
+            <textVerticalAlignment value="top" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

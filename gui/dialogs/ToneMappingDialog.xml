@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <RoundCorner profile="toneMappingDialogBg" id="dialogElement">
+        <BoxLayout profile="toneMappingDialogBoxLayout">
+            <Text profile="toneMappingDialogTitle" text="Slope" />
+            <OptionSlider profile="toneMappingDialogOption" id="optionSlope" onClick="onClickSlope" />
+            <Text profile="toneMappingDialogTitle" text="Toe" />
+            <OptionSlider profile="toneMappingDialogOption" id="optionToe" onClick="onClickToe" />
+            <Text profile="toneMappingDialogTitle" text="Shoulder" />
+            <OptionSlider profile="toneMappingDialogOption" id="optionShoulder" onClick="onClickShoulder" />
+            <Text profile="toneMappingDialogTitle" text="Black Clip" />
+            <OptionSlider profile="toneMappingDialogOption" id="optionBlackClip" onClick="onClickBlackClip" />
+            <Text profile="toneMappingDialogTitle" text="White Clip" />
+            <OptionSlider profile="toneMappingDialogOption" id="optionWhiteClip" onClick="onClickWhiteClip" />
+        </BoxLayout>
+    </RoundCorner>
+    <GUIProfiles>
+        <Profile name="toneMappingDialogBg" extends="dialogBg" with="anchorBottomLeft">
+            <size value="550px 270px" />
+            <position value="20px 20px" />
+        </Profile>
+        <Profile name="toneMappingDialogBoxLayout" extends="baseReference" with="anchorMiddleCenter">
+            <size value="500px 250px" />
+            <imageColor value="$preset_colorTransparent" />
+            <numFlows value="0" />
+            <lateralFlowSize value="50px" />
+            <handleFocus value="false" />
+            <autoValidateLayout value="true" />
+        </Profile>
+        <Profile name="toneMappingDialogTitle" extends="fs25_textDefault">
+            <size value="100px 48px" />
+            <textOffset value="10px 0px" />
+        </Profile>
+        <Profile name="toneMappingDialogOption" extends="fs25_multiTextOption">
+            <size value="400px 48px" />
+            <margin value="0px 0px 0px 0px" />
+            <defaultProfileSlider value="toneMappingDialogOptionSlider" />
+            <defaultProfileText value="toneMappingDialogOptionText" />
+        </Profile>
+        <Profile name="toneMappingDialogOptionSlider" extends="multiTextOptionLeft" with="anchorMiddleLeft">
+            <size value="70px 40px" />
+        </Profile>
+        <Profile name="toneMappingDialogOptionText" extends="fs25_multiTextOptionText">
+            <textLayoutMode value="resize" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

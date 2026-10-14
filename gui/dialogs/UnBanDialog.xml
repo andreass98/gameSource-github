@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <GuiElement profile="fs25_dialogBg" id="dialogElement" height="500px">
+        <ThreePartBitmap profile="fs25_dialogBgMiddleSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgTopSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <GuiElement profile="fs25_dialogContentContainer">
+            <Text profile="fs25_dialogTitle" text="$l10n_ui_blockedPlayers" id="headerText" position="0px -40px" />
+            <GuiElement profile="fs25_unBanDialogListBox">
+                <SmoothList profile="fs25_unBanDialogList" id="banList">
+                    <ListItem profile="fs25_financesListItem">
+                        <ThreePartBitmap profile="fs25_financesListItemBg" name="alternating" />
+                        <Text profile="fs25_financesListItemName" name="name" />
+                    </ListItem>
+                </SmoothList>
+                <Text profile="fs25_unBanDialogEmptyText" id="noBansText" text="$l10n_ui_noBlockedPlayers" />
+                <Text profile="fs25_unBanDialogEmptyText" id="loadingText" text="$l10n_ui_gameIsLoadingPleaseWait" />
+                <ThreePartBitmap profile="fs25_listSliderBox">
+                    <Slider profile="fs25_listSlider" dataElementId="banList" />
+                </ThreePartBitmap>
+            </GuiElement>
+        </GuiElement>
+        <BoxLayout profile="fs25_dialogButtonBox" id="buttonLayout">
+            <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" id="backButton" />
+            <Button profile="buttonCancel" text="$l10n_button_unblock" onClick="onClickUnblock" id="unblockButton">
+                <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            </Button>
+        </BoxLayout>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="fs25_unBanDialogListBox" extends="emptyPanel" with="anchorTopCenter">
+            <absoluteSizeOffset value="70px 110px" />
+            <position value="-10px -90px" />
+        </Profile>
+        <Profile name="fs25_unBanDialogHeaderBox" extends="emptyPanel" with="anchorTopLeft">
+            <size value="735px 104px" />
+            <imageColor value="$preset_colorListHeaderBackground" />
+        </Profile>
+        <Profile name="fs25_unBanDialogList" extends="emptyPanel" with="anchorStretchingYStretchingX">
+            <selectOnScroll value="true" />
+        </Profile>
+        <Profile name="fs25_unBanDialogEmptyText" extends="fs25_textDefault" with="anchorMiddleCenter">
+            <size value="500px 50px" />
+            <textSize value="20px" />
+            <textAlignment value="center" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

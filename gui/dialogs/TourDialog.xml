@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <RoundCorner profile="tourDialogBg" id="dialogElement">
+        <Text profile="tourDialogText" text="default text" id="dialogTextElement" />
+        <BoxLayout profile="tourDialogInputsContainer" id="inputBox">
+            <GuiElement profile="tourDialogItem" id="inputItems[1]">
+                <Bitmap profile="tourDialogItemSeparator" />
+                <Bitmap profile="tourDialogItemIcon" id="icon1[1]" />
+                <Bitmap profile="tourDialogItemIconPlus" id="iconSeparator[1]" />
+                <Bitmap profile="tourDialogItemIcon2" id="icon2[1]" />
+                <Text profile="tourDialogItemText" id="description[1]" />
+            </GuiElement>
+            <GuiElement profile="tourDialogItem" id="inputItems[2]">
+                <Bitmap profile="tourDialogItemSeparator" />
+                <Bitmap profile="tourDialogItemIcon" id="icon1[2]" />
+                <Bitmap profile="tourDialogItemIconPlus" id="iconSeparator[2]" />
+                <Bitmap profile="tourDialogItemIcon2" id="icon2[2]" />
+                <Text profile="tourDialogItemText" id="description[2]" />
+            </GuiElement>
+            <GuiElement profile="tourDialogItem" id="inputItems[3]">
+                <Bitmap profile="tourDialogItemSeparator" />
+                <Bitmap profile="tourDialogItemIcon" id="icon1[3]" />
+                <Bitmap profile="tourDialogItemIconPlus" id="iconSeparator[3]" />
+                <Bitmap profile="tourDialogItemIcon2" id="icon2[3]" />
+                <Text profile="tourDialogItemText" id="description[3]" />
+            </GuiElement>
+        </BoxLayout>
+        <BoxLayout profile="buttonBoxDialog" id="buttonsPC">
+            <Button profile="buttonOK" text="$l10n_button_ok" onClick="onClickOk" id="okButton" />
+        </BoxLayout>
+    </RoundCorner>
+    <GUIProfiles>
+        <Profile name="tourDialogBg" extends="dialogBg">
+            <Variant name="mobile">
+                <hasFrame value="false" />
+                <size value="1400px 50px" />
+                <color value="0 0 0 0.8" />
+            </Variant>
+        </Profile>
+        <Profile name="tourDialogText" extends="dialogText">
+            <Variant name="mobile">
+                <position value="0px -30px" />
+                <textColor value="1 1 1 1" />
+                <margin value="0 30px 0 30px" />
+                <textSize value="40px" />
+                <textMaxNumLines value="7" />
+            </Variant>
+        </Profile>
+        <Profile name="tourDialogInputsContainer" extends="emptyPanel">
+            <Variant name="mobile" with="anchorTopCenter">
+                <size value="1200px 360px" />
+                <alignmentX value="left" />
+                <alignmentY value="bottom" />
+                <fitToElements value="true" />
+                <lateralFlowSize value="120px" />
+                <flowDirection value="vertical" />
+                <autoValidateLayout value="true" />
+            </Variant>
+        </Profile>
+        <Profile name="tourDialogItem" extends="emptyPanel">
+            <Variant name="mobile" with="anchorTopCenter">
+                <size value="1200px 100px" />
+            </Variant>
+        </Profile>
+        <Profile name="tourDialogItemIcon" extends="baseReference" with="anchorTopCenter">
+            <Variant name="mobile" with="anchorTopLeft">
+                <size value="60px 60px" />
+                <position value="50px -20px" />
+                <imageFilename value="dataS/menu/black.png" />
+                <imageSize value="2048 2048" />
+                <imageColor value="$preset_colorWhite" />
+            </Variant>
+        </Profile>
+        <Profile name="tourDialogItemIconPlus" extends="baseReference" with="anchorTopCenter">
+            <Variant name="mobile" with="anchorTopLeft">
+                <size value="80px 80px" />
+                <position value="130px -20px" />
+                <imageFilename value="dataS/menu/controllerSymbols2048.png" />
+                <imageSize value="2048 1024" />
+                <imageUVs value="1072px 100px 72px 72px" />
+                <imageColor value="$preset_colorWhite" />
+            </Variant>
+        </Profile>
+        <Profile name="tourDialogItemIconSeparator" extends="tourDialogItemIconPlus">
+            <Variant name="mobile" with="anchorTopLeft">
+                <imageUVs value="1072px 192px 72px 72px" />
+            </Variant>
+        </Profile>
+        <Profile name="tourDialogItemIcon2" extends="tourDialogItemIcon">
+            <Variant name="mobile" with="anchorTopLeft">
+                <position value="210px -20px" />
+            </Variant>
+        </Profile>
+        <Profile name="tourDialogItemText" extends="textDefault" with="anchorMiddleRight">
+            <Variant name="mobile">
+                <size value="850px 100px" />
+                <position value="-40px 0px" />
+                <textSize value="40px" />
+                <textMaxNumLines value="2" />
+            </Variant>
+        </Profile>
+        <Profile name="tourDialogItemSeparator" extends="baseReference">
+            <Variant name="mobile" with="anchorTopCenter">
+                <size value="1200px 2dp" />
+                <imageColor value="1 1 1 0.4" />
+            </Variant>
+        </Profile>
+    </GUIProfiles>
+</GUI>

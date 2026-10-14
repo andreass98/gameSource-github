@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="labradorRetriever" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/tileAndMirrorShader.xml" />
+    <File fileId="6" filename="$dataS/character/animals/domesticated/dog/labradorRetriever/labradorRetrieverHair_alpha.png" />
+    <File fileId="5" filename="$dataS/character/animals/domesticated/dog/labradorRetriever/labradorRetrieverHair_normal.png" />
+    <File fileId="1" filename="$dataS/character/animals/domesticated/dog/labradorRetriever/labradorRetriever_diffuse.png" />
+    <File fileId="2" filename="$dataS/character/animals/domesticated/dog/labradorRetriever/labradorRetriever_normal.png" />
+    <File fileId="3" filename="$dataS/character/animals/domesticated/dog/labradorRetriever/labradorRetriever_specular.png" />
+  </Files>
+
+  <Materials>
+    <Material name="labradorRetriever_mat" materialId="2" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value=".5 .5 0 0.5"/>
+      <CustomParameter name="dirt" value="0 20.0 20.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0"/>
+      <CustomParameter name="sssColor" value="0.8 0.8 0.8 1.0"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="labradorRetriever_mat1" materialId="3" customShaderId="4" customShaderVariation="sssSpecularDirt_alphaMapSecondUV_normalMapSecondUV">
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value=".5 .5 0 0.5"/>
+      <CustomParameter name="dirt" value="0 20.0 20.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0"/>
+      <CustomParameter name="sssColor" value="0.8 0.8 0.8 1.0"/>
+      <Custommap name="alphaMap" fileId="6"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="standardSurface1" materialId="1" diffuseColor="1 1 1 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="labradorRetriever.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="dogSkeleton" nodeId="1">
+      <TransformGroup name="root" translation="0 0.655047 -0.223829" rotation="-90 -73.06234 -90" nodeId="2">
+        <TransformGroup name="backRump_R" translation="-0.020032 0.080583 -0.08716" rotation="0 0 69.804222" nodeId="3">
+          <TransformGroup name="backHip_R" translation="0.194512 0 0" rotation="0 0 39.296333" nodeId="4">
+            <TransformGroup name="backKnee_R" translation="0.219636 0 0" rotation="0 0 -29.730284" nodeId="5">
+              <TransformGroup name="backAnkle_R" translation="0.163908 0 0" rotation="9.584947 -0.000001 -6.30792" nodeId="6">
+                <TransformGroup name="backToes_R" translation="0.023774 -0.027798 0" rotation="0 -0.000004 -57.640522" nodeId="7"/>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="Tail1_M" translation="-0.060832 0.012989 0" rotation="180 0 154.408188" nodeId="8">
+          <TransformGroup name="Tail2_M" translation="0.074035 0 0" rotation="0 0 16.600979" nodeId="9">
+            <TransformGroup name="Tail3_M" translation="0.097075 0 0" rotation="0 0 5.882077" nodeId="10">
+              <TransformGroup name="Tail4_M" translation="0.086942 0 0" rotation="0 0 -4.510809" nodeId="11">
+                <TransformGroup name="Tail5_M" translation="0.084439 0 0" rotation="0 0 -18.455688" nodeId="12">
+                  <TransformGroup name="Tail6_M" translation="0.093048 0 0" rotation="0 0 -21.175793" nodeId="13"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="Spine1_M" translation="0.120765 0 0" rotation="0 0 -5.692431" nodeId="14">
+          <TransformGroup name="Spine2_M" translation="0.124822 0 0" rotation="0 0 -0.853034" nodeId="15">
+            <TransformGroup name="Spine3_M" translation="0.129478 0 0" rotation="0 0 -14.447183" nodeId="16">
+              <TransformGroup name="Chest_M" translation="0.129649 0 0" rotation="0 0 -45.448856" nodeId="17">
+                <TransformGroup name="Neck_M" translation="0.070288 0 0" rotation="0 0 -13.082692" nodeId="18">
+                  <TransformGroup name="Neck1_M" translation="0.075653 0 0" nodeId="19">
+                    <TransformGroup name="Head_M" translation="0.075653 0 0" rotation="0 0 15.112975" nodeId="20">
+                      <TransformGroup name="Jaw_M" translation="0.032227 0.04664 0" rotation="0 0 87.312462" nodeId="21"/>
+                      <TransformGroup name="Eye_R" translation="0.110546 0.070261 -0.042118" rotation="0.015967 0.100972 56.459488" nodeId="22"/>
+                      <TransformGroup name="tongue_M" translation="0.022871 0.103485 0" rotation="0 0 59.085049" nodeId="23">
+                        <TransformGroup name="tongue1_M" translation="0.03455 0 0" rotation="0 0 20.96257" nodeId="24">
+                          <TransformGroup name="tongue2_M" translation="0.026407 0 0" rotation="0 0 -7.669288" nodeId="25">
+                            <TransformGroup name="tongue3_M" translation="0.021467 0 0" rotation="0 0 0.78057" nodeId="26"/>
+                          </TransformGroup>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="Ear_R" translation="0.052799 -0.035406 -0.066271" rotation="64.937866 66.857643 87.897194" nodeId="27">
+                        <TransformGroup name="Ear1_R" translation="0.040785 0 0" rotation="-174.511581 0.253234 65.435234" nodeId="28">
+                          <TransformGroup name="Ear2_R" translation="0.053747 0 0" rotation="1.591037 -2.036125 -14.729836" nodeId="29"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="upperLid_R" translation="0.110546 0.070261 -0.042118" rotation="-179.986145 0.008034 21.8601" nodeId="30"/>
+                      <TransformGroup name="bottomLid_R" translation="0.110546 0.070261 -0.042118" rotation="-179.991943 -0.013841 111.752892" nodeId="31"/>
+                      <TransformGroup name="Eye_L" translation="0.110546 0.070261 0.042118" rotation="-0.015967 -0.100972 56.459488" nodeId="32"/>
+                      <TransformGroup name="Ear_L" translation="0.052799 -0.035406 0.066271" rotation="64.937866 66.857643 -92.102806" nodeId="33">
+                        <TransformGroup name="Ear1_L" translation="-0.040785 0 0" rotation="-174.511581 0.253234 65.435234" nodeId="34">
+                          <TransformGroup name="Ear2_L" translation="-0.053747 0 0" rotation="1.591037 -2.036125 -14.729836" nodeId="35"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="upperLid_L" translation="0.110546 0.070261 0.042118" rotation="0.013856 179.991959 21.8601" nodeId="36"/>
+                      <TransformGroup name="bottomLid_L" translation="0.110546 0.070261 0.042118" rotation="-179.991943 -0.013841 -68.247108" nodeId="37"/>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+                <TransformGroup name="ribCage_M" rotation="0 0 133.33963" nodeId="38"/>
+                <TransformGroup name="frontRump_R" translation="-0.019925 0.090967 -0.078286" rotation="-161.189545 4.494332 167.605682" nodeId="39">
+                  <TransformGroup name="frontHip_R" translation="0.178879 0 0" rotation="-0.000003 11.501885 37.333664" nodeId="40">
+                    <TransformGroup name="frontKnee_R" translation="0.231315 0 0" rotation="0 0 -9.375278" nodeId="41">
+                      <TransformGroup name="frontAnkle_R" translation="0.074426 0 0" rotation="-2.092314 1.277713 -1.96046" nodeId="42">
+                        <TransformGroup name="frontToes_R" translation="0.010032 0.027825 0" rotation="179.847214 0.219628 55.176132" nodeId="43"/>
+                      </TransformGroup>
+                    </TransformGroup>
+                  </TransformGroup>
+                  <TransformGroup name="scapula_R" rotation="4.643729 195.375763 62.115791" nodeId="44"/>
+                </TransformGroup>
+                <TransformGroup name="frontRump_L" translation="-0.019925 0.090967 0.078286" rotation="-161.189545 4.494332 -12.394324" nodeId="45">
+                  <TransformGroup name="frontHip_L" translation="-0.178879 0 0" rotation="-0.000003 11.501885 37.333664" nodeId="46">
+                    <TransformGroup name="frontKnee_L" translation="-0.231315 0 0" rotation="0 0 -9.375278" nodeId="47">
+                      <TransformGroup name="frontAnkle_L" translation="-0.074426 0 0" rotation="-2.092314 1.277713 -1.96046" nodeId="48">
+                        <TransformGroup name="frontToes_L" translation="-0.010032 -0.027825 0" rotation="179.847214 0.219628 55.176132" nodeId="49"/>
+                      </TransformGroup>
+                    </TransformGroup>
+                  </TransformGroup>
+                  <TransformGroup name="scapula_L" rotation="4.643729 195.375763 62.115791" nodeId="50"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="backRump_L" translation="-0.020032 0.080583 0.08716" rotation="0 0 -110.195778" nodeId="51">
+          <TransformGroup name="backHip_L" translation="-0.194512 0 0" rotation="0 0 39.296333" nodeId="52">
+            <TransformGroup name="backKnee_L" translation="-0.219636 0 0" rotation="0 0 -29.730284" nodeId="53">
+              <TransformGroup name="backAnkle_L" translation="-0.163908 0 0" rotation="9.584947 -0.000001 -6.30792" nodeId="54">
+                <TransformGroup name="backToes_L" translation="-0.023774 0.027798 0" rotation="0 -0.000004 -57.640522" nodeId="55"/>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <Shape name="playerInteractionTrigger" translation="0 0.5 0" shapeId="1" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="56"/>
+    </TransformGroup>
+    <TransformGroup name="labradorRetriever" nodeId="57">
+      <TransformGroup name="body" nodeId="58">
+        <Shape name="dog" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="40 39 17 44 16 38 15 18 19 20 14 3 2 4 8 9 5 51 27 33 21 31 30 28 41 42 43 10 6 7 11 12 13 50 29 52 45 46 53 36 37 34 47 48 49 54 55 35 26 25 24 23 22 32" clipDistance="300" nodeId="59"/>
+        <TransformGroup name="base_tip" nodeId="60">
+          <Shape name="base_tip" translation="0 0.518669 -0.629006" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="40 39 17 44 16 38 15 18 19 20 14 3 2 4 8 9 5 51 27 33 31 30 28 41 42 43 10 6 7 11 12 13 50 29 52 45 46 53 36 37 34 47 48 49 54 55 35 26 25 24 23 22 32 21" clipDistance="300" nodeId="61"/>
+        </TransformGroup>
+        <Shape name="eyes" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="40 39 17 44 16 38 15 18 19 20 14 3 2 4 8 9 5 51 27 33 31 30 28 41 42 43 10 6 7 11 12 13 50 29 52 45 46 53 36 37 34 47 48 49 54 55 35 26 25 24 23 22 32 21" clipDistance="300" nodeId="62"/>
+        <Shape name="tongue" translation="0 0.708276 0.521774" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="40 39 17 44 16 38 15 18 19 20 14 3 2 4 8 9 5 51 27 33 31 30 28 41 42 43 10 6 7 11 12 13 50 29 52 45 46 53 36 37 34 47 48 49 54 55 35 26 25 24 23 22 32 21" clipDistance="300" nodeId="63"/>
+        <Shape name="teeth_lower" translation="0 0.693644 0.526024" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="20 26 25 24 23 21" clipDistance="300" nodeId="64"/>
+        <Shape name="teeth_upper" translation="0 0.735985 0.540382" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="20" clipDistance="300" nodeId="65"/>
+      </TransformGroup>
+      <TransformGroup name="hair_card" nodeId="66">
+        <TransformGroup name="eyes_top" nodeId="67">
+          <Shape name="eyes_top" translation="0 0.832979 0.51759" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="3" skinBindNodeIds="40 39 17 44 16 38 15 18 19 20 14 3 2 4 8 9 5 51 27 33 31 30 28 41 42 43 10 6 7 11 12 13 50 29 52 45 46 53 36 37 34 47 48 49 54 55 35 26 25 24 23 22 32 21" clipDistance="300" nodeId="68"/>
+        </TransformGroup>
+        <TransformGroup name="tails" nodeId="69">
+          <Shape name="tails" translation="0 0.559008 -0.498366" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="3" skinBindNodeIds="40 39 17 44 16 38 15 18 19 20 14 3 2 4 8 9 5 51 27 33 31 30 28 41 42 43 10 6 7 11 12 13 50 29 52 45 46 53 36 37 34 47 48 49 54 55 35 26 25 24 23 22 32 21" clipDistance="300" nodeId="70"/>
+        </TransformGroup>
+        <TransformGroup name="ear" nodeId="71">
+          <Shape name="ear_outside" translation="0 0.796424 0.419009" shapeId="10" castsShadows="true" receiveShadows="true" materialIds="3" skinBindNodeIds="40 39 17 44 16 38 15 18 19 20 14 3 2 4 8 9 5 51 27 33 31 30 28 41 42 43 10 6 7 11 12 13 50 29 52 45 46 53 36 37 34 47 48 49 54 55 35 26 25 24 23 22 32 21" clipDistance="300" nodeId="72"/>
+          <Shape name="ear_inside" translation="0 0.780382 0.419394" shapeId="11" castsShadows="true" receiveShadows="true" materialIds="3" skinBindNodeIds="40 39 17 44 16 38 15 18 19 20 14 3 2 4 8 9 5 51 27 33 31 30 28 41 42 43 10 6 7 11 12 13 50 29 52 45 46 53 36 37 34 47 48 49 54 55 35 26 25 24 23 22 32 21" clipDistance="300" nodeId="73"/>
+          <Shape name="ear_top" translation="0 0.857463 0.427589" shapeId="12" castsShadows="true" receiveShadows="true" materialIds="3" skinBindNodeIds="40 39 17 44 16 38 15 18 19 20 14 3 2 4 8 9 5 51 27 33 31 30 28 41 42 43 10 6 7 11 12 13 50 29 52 45 46 53 36 37 34 47 48 49 54 55 35 26 25 24 23 22 32 21" clipDistance="300" nodeId="74"/>
+        </TransformGroup>
+        <TransformGroup name="beard" nodeId="75">
+          <Shape name="cheek" translation="0 0.714778 0.45928" shapeId="13" castsShadows="true" receiveShadows="true" materialIds="3" skinBindNodeIds="40 39 17 44 16 38 15 18 19 20 14 3 2 4 8 9 5 51 27 33 31 30 28 41 42 43 10 6 7 11 12 13 50 29 52 45 46 53 36 37 34 47 48 49 54 55 35 26 25 24 23 22 32 21" clipDistance="300" nodeId="76"/>
+          <Shape name="cheek_reseve" translation="0 0.714778 0.45928" shapeId="14" castsShadows="true" receiveShadows="true" materialIds="3" skinBindNodeIds="40 39 17 44 16 38 15 18 19 20 14 3 2 4 8 9 5 51 27 33 31 30 28 41 42 43 10 6 7 11 12 13 50 29 52 45 46 53 36 37 34 47 48 49 54 55 35 26 25 24 23 22 32 21" clipDistance="300" nodeId="77"/>
+          <Shape name="eye" translation="0.067715 0.723281 0.459208" shapeId="15" castsShadows="true" receiveShadows="true" materialIds="3" skinBindNodeIds="20 30 36" clipDistance="300" nodeId="78"/>
+          <Shape name="mouth" translation="0 0.699962 0.585234" shapeId="16" castsShadows="true" receiveShadows="true" materialIds="3" skinBindNodeIds="40 39 17 44 16 38 15 18 19 20 14 3 2 4 8 9 5 51 27 33 31 30 28 41 42 43 10 6 7 11 12 13 50 29 52 45 46 53 36 37 34 47 48 49 54 55 35 26 25 24 23 22 32 21" clipDistance="300" nodeId="79"/>
+          <Shape name="mouth_reseve" translation="0 0.699962 0.585234" shapeId="17" castsShadows="true" receiveShadows="true" materialIds="3" skinBindNodeIds="40 39 17 44 16 38 15 18 19 20 14 3 2 4 8 9 5 51 27 33 31 30 28 41 42 43 10 6 7 11 12 13 50 29 52 45 46 53 36 37 34 47 48 49 54 55 35 26 25 24 23 22 32 21" clipDistance="300" nodeId="80"/>
+          <Shape name="eyetop" translation="0 0.840916 0.518635" shapeId="18" castsShadows="true" receiveShadows="true" materialIds="3" skinBindNodeIds="40 39 17 44 16 38 15 18 19 20 14 3 2 4 8 9 5 51 27 33 31 30 28 41 42 43 10 6 7 11 12 13 50 29 52 45 46 53 36 37 34 47 48 49 54 55 35 26 25 24 23 22 32 21" clipDistance="300" nodeId="81"/>
+          <Shape name="eyetop_reseve" translation="0 0.840916 0.518635" shapeId="19" castsShadows="true" receiveShadows="true" materialIds="3" skinBindNodeIds="40 39 17 44 16 38 15 18 19 20 14 3 2 4 8 9 5 51 27 33 31 30 28 41 42 43 10 6 7 11 12 13 50 29 52 45 46 53 36 37 34 47 48 49 54 55 35 26 25 24 23 22 32 21" clipDistance="300" nodeId="82"/>
+          <Shape name="eye_reseve" translation="0.067715 0.723281 0.459208" shapeId="20" castsShadows="true" receiveShadows="true" materialIds="3" skinBindNodeIds="36 30 20" clipDistance="300" nodeId="83"/>
+        </TransformGroup>
+        <TransformGroup name="jowl" nodeId="84">
+          <Shape name="jowl" translation="0 0.714778 0.45928" shapeId="21" castsShadows="true" receiveShadows="true" materialIds="3" skinBindNodeIds="40 39 17 44 16 38 15 18 19 20 14 3 2 4 8 9 5 51 27 33 31 30 28 41 42 43 10 6 7 11 12 13 50 29 52 45 46 53 36 37 34 47 48 49 54 55 35 26 25 24 23 22 32 21" clipDistance="300" nodeId="85"/>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+    <Shape name="dogProxy" visibility="false" shapeId="22" kinematic="true" linearDamping="0.5" angularDamping="0.5" collisionFilterGroup="0x400000" collisionFilterMask="0x1" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="86"/>
+  </Scene>
+
+
+  <Animation externalAnimFile="labradorRetriever.i3d.anim" />
+</i3D>

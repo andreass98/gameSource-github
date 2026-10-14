@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <GuiElement profile="denyAcceptDialogBg" id="dialogElement">
+        <ThreePartBitmap profile="fs25_dialogBgMiddleSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgTopSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <GuiElement profile="fs25_dialogContentContainer">
+            <Bitmap profile="fs25_dialogCircle" id="dialogCircle">
+                <Bitmap profile="fs25_dialogUser" />
+            </Bitmap>
+            <BoxLayout profile="denyAcceptDialogNameLayout">
+                <PlatformIcon profile="denyAcceptDialogNamePlatformIcon" id="platformIcon" />
+                <Text profile="denyAcceptDialogNameText" id="dialogTitleElement" />
+            </BoxLayout>
+            <Text profile="fs25_dialogTextWithTitle" id="dialogTextElement" text="$l10n_ui_playerWantsToJoinGame" />
+            <Text profile="fs25_dialogTextWarning" id="dialogWarning" text="$l10n_ui_splitShapeWarning" />
+        </GuiElement>
+        <BoxLayout profile="fs25_dialogButtonBox">
+            <Button profile="buttonOK" text="$l10n_button_accept" onClick="onClickAccept" id="yesButton" />
+            <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            <Button profile="buttonBlock" text="$l10n_button_denyAlways" onClick="onClickDenyAlways" />
+            <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            <Button profile="buttonRefuse" text="$l10n_button_deny" onClick="onClickRefuse" id="noButton" />
+        </BoxLayout>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="denyAcceptDialogBg" extends="fs25_dialogBg">
+            <height value="295px" />
+            <Variant name="mobile">
+                <size value="1400px 380px" />
+            </Variant>
+        </Profile>
+        <Profile name="denyAcceptDialogNameLayout" extends="emptyPanel" with="anchorTopCenter">
+            <size value="500px 30px" />
+            <position value="0px -130px" />
+            <alignmentX value="center" />
+            <alignmentY value="bottom" />
+            <Variant name="mobile">
+                <position value="0px -170px" />
+            </Variant>
+        </Profile>
+        <Profile name="denyAcceptDialogNamePlatformIcon" extends="baseReference">
+            <size value="30px 30px" />
+            <margin value="0 0 6px 0" />
+        </Profile>
+        <Profile name="denyAcceptDialogNameText" extends="fs25_dialogTitle">
+            <size value="20px 30px" />
+            <position value="0 0" />
+            <textMaxNumLines value="1" />
+            <textAutoWidth value="true" />
+            <textMaxWidth value="450px" />
+            <textAlignment value="left" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

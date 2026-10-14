@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="cattleHighland_posed" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/tileAndMirrorShader.xml" />
+    <File fileId="5" filename="$dataS/character/animals/domesticated/cow/highland/cattleHighland_alpha.png" />
+    <File fileId="1" filename="$dataS/character/animals/domesticated/cow/highland/cattleHighland_diffuse.png" />
+    <File fileId="2" filename="$dataS/character/animals/domesticated/cow/highland/cattleHighland_normal.png" />
+    <File fileId="3" filename="$dataS/character/animals/domesticated/cow/highland/cattleHighland_specular.png" />
+  </Files>
+
+  <Materials>
+    <Material name="cattleHighland_02_mat" materialId="1" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="1 1 1 0"/>
+      <CustomParameter name="dirt" value="0 20.0 20.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0.5"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="dirtNmap" fileId="3"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="cattleHighland_01_mat" materialId="2" customShaderId="4" customShaderVariation="sssSpecularDirt_alphaMapSecondUV">
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="1 1 1 0"/>
+      <CustomParameter name="dirt" value="0 20.0 20.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0.5"/>
+      <CustomParameter name="sssColor" value="0.938 0.567 0.567 1.0"/>
+      <Custommap name="alphaMap" fileId="5"/>
+      <Custommap name="dirtNmap" fileId="3"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="cattleHighland_posed.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="cattleHighland" clipDistance="300" nodeId="1">
+      <TransformGroup name="LOD0" nodeId="2">
+        <Shape name="body" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="3"/>
+        <Shape name="eyes" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="4"/>
+        <Shape name="teeth" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="5"/>
+        <Shape name="tongue" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="6"/>
+        <TransformGroup name="hair" clipDistance="300" nodeId="7">
+          <Shape name="fullHair01" shapeId="5" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="8"/>
+          <Shape name="tailHair01" shapeId="6" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="9"/>
+          <Shape name="tailHair02" shapeId="7" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="10"/>
+          <Shape name="headHair" shapeId="8" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="11"/>
+          <Shape name="bodyHair" shapeId="9" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="12"/>
+          <Shape name="spineHair" shapeId="10" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="13"/>
+          <Shape name="middleHair" shapeId="11" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="14"/>
+          <Shape name="earHair" shapeId="12" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="15"/>
+          <Shape name="lashHair" shapeId="13" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="16"/>
+          <Shape name="whiskersHair" shapeId="14" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="17"/>
+          <Shape name="hairbase" shapeId="15" castsShadows="false" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="18"/>
+          <Shape name="neckHair" shapeId="16" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="19"/>
+        </TransformGroup>
+        <TransformGroup name="hair_reverse" clipDistance="300" nodeId="20">
+          <Shape name="tailHair02" shapeId="17" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="21"/>
+          <Shape name="headHair" shapeId="18" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="22"/>
+          <Shape name="bodyHair" shapeId="19" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="23"/>
+          <Shape name="earHair" shapeId="20" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="24"/>
+          <Shape name="lashHair" shapeId="21" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="25"/>
+          <Shape name="whiskersHair" shapeId="22" castsShadows="false" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="26"/>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

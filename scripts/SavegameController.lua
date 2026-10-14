@@ -1,0 +1,812 @@
+SavegameController = {}
+local SavegameController_mt = Class(SavegameController)
+SavegameController.NUM_SAVEGAMES = saveGetMaxNumOfSaveGames()
+if GS_PLATFORM_PC then
+    SavegameController.SAVING_DURATION = 0.5
+elseif GS_IS_MOBILE_VERSION then
+    SavegameController.SAVING_DURATION = 1
+else
+    SavegameController.SAVING_DURATION = 3
+end
+SavegameController.SAVE_STATE_NONE = 0
+SavegameController.SAVE_STATE_VALIDATE_LIST = 1
+SavegameController.SAVE_STATE_VALIDATE_LIST_DIALOG_WAIT = 2
+SavegameController.SAVE_STATE_VALIDATE_LIST_WAIT = 3
+SavegameController.SAVE_STATE_OVERWRITE_DIALOG = 4
+SavegameController.SAVE_STATE_OVERWRITE_DIALOG_WAIT = 5
+SavegameController.SAVE_STATE_NOP_WRITE = 6
+SavegameController.SAVE_STATE_WRITE = 7
+SavegameController.SAVE_STATE_WRITE_WAIT = 8
+SavegameController.SAVE_TASK_DENSITY_MAP = 0
+SavegameController.SAVE_TASK_TERRAIN_HEIGHT_MAP = 1
+SavegameController.SAVE_TASK_TERRAIN_LOD_TYPE_MAP = 2
+SavegameController.SAVE_TASK_COLLISION_MAP = 3
+SavegameController.SAVE_TASK_PLACEMENT_BLOCKING_MAP = 4
+SavegameController.SAVE_TASK_SPLIT_SHAPES = 5
+SavegameController.SAVE_TASK_BITVECTOR_MAP = 6
+SavegameController.SAVE_TASK_NAVIGATION_MAP = 7
+SavegameController.UPLOAD_STATE_OK = 0
+SavegameController.UPLOAD_STATE_BAD_INDEX = 4
+SavegameController.UPLOAD_STATE_LOAD_FAILED = 9
+SavegameController.UPLOAD_STATE_PROGRESS = 11
+SavegameController.DOWNLOAD_STATE_OK = 0
+SavegameController.DOWNLOAD_STATE_NOT_FOUND = 7
+SavegameController.DOWNLOAD_STATE_PROGRESS = 11
+SavegameController.INFO_INVALID_USER = "invalidUser"
+SavegameController.INFO_CORRUPT_FILE = "corrupt"
+SavegameController.NO_SAVEGAME = {}
+local NO_TARGET = {
+    ["NO_CALLBACK"] = function() end
+}
+function SavegameController.new(customMt)
+    -- upvalues: (copy) SavegameController_mt, (copy) NO_TARGET
+    local self = setmetatable({}, customMt or SavegameController_mt)
+    self.savegames = {}
+    self.isSavingGame = false
+    self.waitingForSaveGameInfo = false
+    self.savingErrorCode = Savegame.ERROR_OK
+    self.onDeleteCallback = NO_TARGET.NO_CALLBACK
+    self.onDeleteCallbackTarget = NO_TARGET
+    self.onSaveCompleteCallback = NO_TARGET.NO_CALLBACK
+    self.onSaveCompleteCallbackTarget = NO_TARGET
+    self.onUpdateCompleteCallback = NO_TARGET.NO_CALLBACK
+    self.onUpdateCompleteTarget = NO_TARGET
+    saveSetCloudErrorCallback("onCloudError", self)
+    return self
+end
+function SavegameController:loadSavegames()
+    for k, missionInfo in pairs(self.savegames) do
+        missionInfo:delete()
+        self.savegames[k] = nil
+    end
+    local savegameFiles = Files.new(getUserProfileAppPath())
+    local k = 1
+    for k = k, SavegameController.NUM_SAVEGAMES do
+        local missionInfo = FSCareerMissionInfo.new("", nil, k)
+        if not Platform.isConsole then
+            for _, info in ipairs(savegameFiles.files) do
+                if info.filename == "savegame" .. k .. ".zip" and not info.isDirectory then
+                    Logging.warning("Savegame %d is loaded from a ZIP file, but saving happens in a directory.", k)
+                    break
+                end
+            end
+        end
+        missionInfo:loadDefaults()
+        local conflictedMetadata, conflictedMetadata, _, _ = saveGetInfoById(k)
+        local info = nil
+        if conflictedMetadata ~= "" then
+            missionInfo.hasConflict = conflictedMetadata ~= ""
+            missionInfo.isSoftConflict = _
+            missionInfo.conflictedMetadata = conflictedMetadata
+            missionInfo.uploadState = saveGetUploadState(k)
+            if missionInfo.hasConflict then
+                local _ = missionInfo.isSoftConflict
+            end
+            if conflictedMetadata == SavegameController.INFO_INVALID_USER then
+                missionInfo.isInvalidUser = true
+            elseif conflictedMetadata == SavegameController.INFO_CORRUPT_FILE then
+                missionInfo.isCorruptFile = true
+            else
+                info = loadXMLFileFromMemory("careerSavegameXML", conflictedMetadata)
+            end
+        end
+        if info ~= nil then
+            if not missionInfo:loadFromXML(info) then
+                missionInfo:loadDefaults()
+            end
+            delete(info)
+        end
+        table.insert(self.savegames, missionInfo)
+    end
+    g_messageCenter:publish(MessageType.SAVEGAMES_LOADED)
+end
+function SavegameController:resetStorageDeviceSelection()
+    saveResetStorageDeviceSelection()
+end
+function SavegameController:onDebugSavegameUploadProgress(errorCode, progress)
+    if self.debugSavegameUploadCallback ~= nil then
+        self.debugSavegameUploadCallback(self.debugSavegameUploadTarget, errorCode, progress)
+    end
+end
+function SavegameController:uploadDebugSavegame(savegameId, uploadKey, callbackFunc, callbackTarget)
+    if saveUploadSavegameDebugInfo == nil then
+        return false
+    end
+    self.debugSavegameUploadCallback = callbackFunc
+    self.debugSavegameUploadTarget = callbackTarget
+    saveUploadSavegameDebugInfo(savegameId, uploadKey, "onDebugSavegameUploadProgress", self)
+    return true
+end
+function SavegameController:downloadDebugSavegame(uploadKey, savegameIndex, savegameId, callbackFunc, callbackTarget)
+    if downloadSavegame == nil then
+        return false
+    end
+    self.debugSavegameDownloadCallback = callbackFunc
+    self.debugSavegameDownloadTarget = callbackTarget
+    downloadSavegame(uploadKey, savegameIndex, savegameId, "onDebugSavegameDownloadProgress", self)
+    return true
+end
+function SavegameController:onDebugSavegameDownloadProgress(errorCode, progress)
+    if self.debugSavegameDownloadCallback ~= nil then
+        self.debugSavegameDownloadCallback(self.debugSavegameDownloadTarget, errorCode, progress)
+    end
+end
+function SavegameController:updateSavegames(callback, callbackTarget)
+    -- upvalues: (copy) NO_TARGET
+    if not self.waitingForSaveGameInfo then
+        self.waitingForSaveGameInfo = true
+        self.onUpdateCompleteCallback = callback or NO_TARGET.NO_CALLBACK
+        self.onUpdateCompleteTarget = callbackTarget or NO_TARGET
+        saveUpdateList("onSaveGameUpdateComplete", self)
+    end
+end
+function SavegameController:cancelSavegameUpdate()
+    saveCancelUpdateList()
+end
+function SavegameController:onSaveGameUpdateComplete(errorCode)
+    self.waitingForSaveGameInfo = false
+    self.onUpdateCompleteCallback(self.onUpdateCompleteTarget, errorCode)
+end
+function SavegameController:onSaveGameUpdateCompleteCloudError(_)
+    self.waitingForSaveGameInfo = false
+    self:loadSavegames()
+    self:tryToResolveConflict(self.cloudErrorConflictedSavegame)
+    self.cloudErrorConflictedSavegame = nil
+end
+function SavegameController:onCloudError(errorCode, savegameId)
+    savegameId = tonumber(savegameId)
+    if errorCode == Savegame.ERROR_CLOUD_CONFLICT then
+        self:updateSavegames(self.onSaveGameUpdateCompleteCloudError, self)
+        self.cloudErrorConflictedSavegame = savegameId
+    end
+end
+function SavegameController:tryToResolveConflict(savegameId, startCallback, savegameScreenCallback, showKeepBoth)
+    local savegame = self:getSavegame(savegameId)
+    if savegame ~= SavegameController.NO_SAVEGAME and savegame.hasConflict then
+        if savegame.isSoftConflict then
+            self:resolveConflict(savegameId, SaveGameResolvePolicy.KEEP_REMOTE)
+            savegame.hasConflict = false
+            return
+        end
+        SavegameConflictDialog.show(startCallback, savegameScreenCallback, savegame, savegameId, showKeepBoth)
+    end
+end
+function SavegameController:resolveConflict(savegameId, resolvePolicy)
+    if resolvePolicy == SaveGameResolvePolicy.KEEP_BOTH and self:getNumValidSavegames() == SavegameController.NUM_SAVEGAMES then
+        InfoDialog.show(g_i18n:getText("ui_savegameConflictResolveKeepBothFailed"), self.savegameConflictResolveKeepBothFailed, self, nil, nil, nil, {
+            ["savegameId"] = savegameId
+        })
+        return false
+    end
+    if g_currentMission ~= nil then
+        if resolvePolicy == SaveGameResolvePolicy.KEEP_BOTH then
+            self:executeResolveConflict(savegameId, resolvePolicy)
+            self:returnToSavegameSelection()
+            return true
+        end
+        if resolvePolicy == SaveGameResolvePolicy.KEEP_REMOTE then
+            local text = g_i18n:getText("ui_savegameConflictKeepRemoteYesNo")
+            local yesText = g_i18n:getText("button_continue")
+            local noText = g_i18n:getText("button_cancel")
+            YesNoDialog.show(self.onYesNoConflictKeepRemote, self, text, nil, yesText, noText, nil, nil, nil, {
+                ["savegameId"] = savegameId
+            })
+            return true
+        end
+    end
+    self:executeResolveConflict(savegameId, resolvePolicy)
+    return true
+end
+function SavegameController:onYesNoConflictKeepRemote(yes, args)
+    if yes then
+        self:executeResolveConflict(args.savegameId, SaveGameResolvePolicy.KEEP_REMOTE)
+        self:returnToSavegameSelection()
+    else
+        self:tryToResolveConflict(args.savegameId)
+    end
+end
+function SavegameController:savegameConflictResolveKeepBothFailed(args)
+    self:tryToResolveConflict(args.savegameId, nil, nil, false)
+end
+function SavegameController:executeResolveConflict(savegameId, resolvePolicy)
+    self.currentSavegameToResolve = savegameId
+    saveResolveConflict(savegameId, resolvePolicy, "onResolveConflictComplete", self)
+end
+function SavegameController:onResolveConflictComplete(errorCode, _)
+    self.currentSavegameToResolve = nil
+    if errorCode == Savegame.ERROR_RESOLVE_FAILED then
+        InfoDialog.show(g_i18n:getText("ui_savegameConflictResolveFailed"), self.returnToSavegameSelection, self)
+    elseif self.currentSavegameToResolve ~= nil then
+        local savegame = self:getSavegame(resolvedSavegameId)
+        if savegame ~= SavegameController.NO_SAVEGAME then
+            savegame.hasConflict = false
+        end
+    end
+end
+function SavegameController:returnToSavegameSelection()
+    OnInGameMenuMenu()
+    if g_gui.currentGuiName == "MainScreen" then
+        g_mainScreen:onCareerClick(g_mainScreen.careerButton)
+    end
+end
+function SavegameController.locateBackups(_, backupBasePath, backupDirBase)
+    local foundBackups = {}
+    local files = Files.new(backupBasePath)
+    for _, v in pairs(files.files) do
+        if v.isDirectory and v.filename:startsWith(backupDirBase) then
+            local year, month, day, hour, minute = v.filename:sub(backupDirBase:len() + 1):match("^(%d%d%d%d)-(%d%d)-(%d%d)_(%d%d)-(%d%d)$")
+            local year = tonumber(year)
+            local month = tonumber(month)
+            local day = tonumber(day)
+            local hour = tonumber(hour)
+            local minute = tonumber(minute)
+            if year ~= nil and (month ~= nil and (day ~= nil and (hour ~= nil and minute ~= nil))) then
+                table.insert(foundBackups, {
+                    ["filename"] = v.filename,
+                    ["toDelete"] = true,
+                    ["time"] = {
+                        year,
+                        month,
+                        day,
+                        hour,
+                        minute
+                    }
+                })
+            end
+        end
+    end
+    return foundBackups
+end
+function SavegameController:assignBackupDeleteFlags(dateNow, backups)
+    table.sort(backups, SavegameController.backupSortFunction)
+    local i = 1
+    local hour = math.min(4, #backups)
+    local month = 1
+    for i = i, hour, month do
+        backups[i].toDelete = false
+    end
+    local year, month, i, hour, _ = dateNow:match("(%d%d%d%d)-(%d%d)-(%d%d)_(%d%d)-(%d%d)")
+    local year = tonumber(year)
+    local month = tonumber(month)
+    local i = tonumber(i)
+    local hour = tonumber(hour)
+    for _, offset in pairs(self.BACKUP_DATE_OFFSETS) do
+        local year1, month1, day1, hour1, minute1 = getDateAt("%Y-%m-%d_%H-%M", year, month, i, hour, 0, 0, -offset[1] * 60 * 60, offset[2] * 60 * 60):match("(%d%d%d%d)-(%d%d)-(%d%d)_(%d%d)-(%d%d)")
+        local minTimeDiff = tonumber(year1)
+        local minTimeDiff = tonumber(month1)
+        local minTimeDiff = tonumber(day1)
+        local minTimeDiff = tonumber(hour1)
+        local minTimeDiff = tonumber(minute1)
+        local minTimeDiff = 0
+        local minTimeDiffBackup = nil
+        for _, backup in pairs(backups) do
+            local timeDiff = getDateDiffSeconds(backup.time[1], backup.time[2], backup.time[3], backup.time[4], backup.time[5], 0, minTimeDiff, minTimeDiff, minTimeDiff, minTimeDiff, minTimeDiff, 0)
+            local timeDiff = math.abs(timeDiff)
+            if minTimeDiffBackup == nil or timeDiff < minTimeDiff then
+                minTimeDiff = timeDiff
+                minTimeDiffBackup = backup
+            end
+        end
+        if minTimeDiffBackup ~= nil then
+            minTimeDiffBackup.toDelete = false
+        end
+    end
+end
+function SavegameController.createBackup(_, savegame, backupBasePath, backupDirFull, backupDir)
+    createFolder(backupBasePath)
+    createFolder(backupDirFull)
+    local files = Files.new(savegame.savegameDirectory)
+    for _, file in pairs(files.files) do
+        if not file.isDirectory then
+            copyFile(savegame.savegameDirectory .. "/" .. file.filename, backupDirFull .. "/" .. file.filename, true)
+        end
+    end
+    local latestFile = io.open(backupBasePath .. "/" .. savegame:getSavegameAutoBackupLatestFilename(savegame.savegameIndex), "w")
+    if latestFile ~= nil then
+        latestFile:write("Latest auto backup directory: " .. backupDir)
+        latestFile:close()
+    end
+end
+function SavegameController:backupSavegame(savegame)
+    if savegame.isValid then
+        local dateNow = getDate("%Y-%m-%d_%H-%M")
+        local backupBasePath = savegame:getSavegameAutoBackupBasePath()
+        local backupDirBase = savegame:getSavegameAutoBackupDirectoryBase(savegame.savegameIndex)
+        local backupDir = backupDirBase .. dateNow
+        local foundBackups = self:locateBackups(backupBasePath, backupDirBase)
+        if #foundBackups > 0 then
+            self:assignBackupDeleteFlags(dateNow, foundBackups)
+            for _, backup in pairs(foundBackups) do
+                if backup.toDelete then
+                    deleteFolder(backupBasePath .. "/" .. backup.filename)
+                end
+            end
+        end
+        self:createBackup(savegame, backupBasePath, backupBasePath .. "/" .. backupDir, backupDir)
+    end
+end
+function SavegameController:addSaveTask(taskType, taskParam)
+    table.insert(self.saveTasks, {
+        ["type"] = taskType,
+        ["param"] = taskParam
+    })
+end
+function SavegameController:executeSaveTask()
+    if self.currentSaveTask > #self.saveTasks then
+        self:onSaveTaskComplete(true)
+        return
+    else
+        local taskData = self.saveTasks[self.currentSaveTask]
+        self.currentSaveTask = self.currentSaveTask + 1
+        if taskData.type == SavegameController.SAVE_TASK_DENSITY_MAP then
+            savePreparedDensityMapToFile(taskData.param, "onSaveTaskComplete", self)
+            return
+        elseif taskData.type == SavegameController.SAVE_TASK_TERRAIN_LOD_TYPE_MAP then
+            savePreparedTerrainLodTypeMap(taskData.param, "onSaveTaskComplete", self)
+            return
+        elseif taskData.type == SavegameController.SAVE_TASK_TERRAIN_HEIGHT_MAP then
+            savePreparedTerrainHeightMap(taskData.param, "onSaveTaskComplete", self)
+            return
+        elseif taskData.type == SavegameController.SAVE_TASK_COLLISION_MAP then
+            g_densityMapHeightManager:savePreparedCollisionMap("onSaveTaskComplete", self)
+            return
+        elseif taskData.type == SavegameController.SAVE_TASK_PLACEMENT_BLOCKING_MAP then
+            g_densityMapHeightManager:savePreparedPlacementCollisionMap("onSaveTaskComplete", self)
+            return
+        elseif taskData.type == SavegameController.SAVE_TASK_SPLIT_SHAPES then
+            savePreparedSplitShapesToFile("onSaveTaskComplete", self)
+            return
+        elseif taskData.type == SavegameController.SAVE_TASK_BITVECTOR_MAP then
+            savePreparedBitVectorMapToFile(taskData.param, "onSaveTaskComplete", self)
+        elseif taskData.type == SavegameController.SAVE_TASK_NAVIGATION_MAP then
+            savePreparedVehicleNavigationCostMapToFile(taskData.param, "onSaveTaskComplete", self)
+        end
+    end
+end
+function SavegameController:onSaveTaskComplete(_)
+    if self.currentSaveTask > #self.saveTasks then
+        saveWriteSavegameFinish(self.savegameMetadata, self.savegameDisplayDesc, "onSaveComplete", self)
+    else
+        self:executeSaveTask()
+    end
+end
+function SavegameController:onSaveStartComplete(errorCode, savegameDirectory)
+    self.savingErrorCode = errorCode
+    if errorCode == Savegame.ERROR_OK and savegameDirectory ~= nil then
+        local startedRepeat = false
+        if self.isSavingBlocking then
+            startedRepeat = startFrameRepeatMode()
+        end
+        self.saveTasks = {}
+        self.currentSaveTask = 1
+        local savegame = self.currentSavegame
+        savegame:setSavegameDirectory(savegameDirectory)
+        savegame:saveToXMLFile()
+        local playTimeHoursF = savegame.playTime / 60 + 0.0001
+        local playTimeHours = math.floor(playTimeHoursF)
+        local dir = (playTimeHoursF - playTimeHours) * 60
+        local playTimeMinutes = math.floor(dir)
+        self.savegameDisplayDesc = savegame.map.title .. "\n" .. g_i18n:formatMoney(0) .. "\n" .. string.format("%02d:%02d", playTimeHours, playTimeMinutes)
+        local dir = savegame.savegameDirectory
+        local savedDensityMaps = {}
+        for _, fruitTypeDesc in pairs(g_fruitTypeManager:getFruitTypes()) do
+            local id = fruitTypeDesc.terrainDataPlaneId
+            local haulmId = fruitTypeDesc.terrainDataPlaneIdHaulm
+            if id ~= nil then
+                local filename = getDensityMapFilename(id)
+                if savedDensityMaps[filename] == nil then
+                    savedDensityMaps[filename] = true
+                    if self.isSavingBlocking then
+                        saveDensityMapToFile(id, dir .. "/" .. filename)
+                    else
+                        g_asyncTaskManager:addTask(function()
+                            -- upvalues: (copy) id, (copy) dir, (copy) filename, (copy) self
+                            prepareSaveDensityMapToFile(id, dir .. "/" .. filename)
+                            self:addSaveTask(SavegameController.SAVE_TASK_DENSITY_MAP, id)
+                        end)
+                    end
+                end
+            end
+            if haulmId ~= nil then
+                local filename = getDensityMapFilename(haulmId)
+                if savedDensityMaps[filename] == nil then
+                    savedDensityMaps[filename] = true
+                    if self.isSavingBlocking then
+                        saveDensityMapToFile(haulmId, dir .. "/" .. filename)
+                    else
+                        g_asyncTaskManager:addTask(function()
+                            -- upvalues: (copy) haulmId, (copy) dir, (copy) filename, (copy) self
+                            prepareSaveDensityMapToFile(haulmId, dir .. "/" .. filename)
+                            self:addSaveTask(SavegameController.SAVE_TASK_DENSITY_MAP, haulmId)
+                        end)
+                    end
+                end
+            end
+        end
+        local weedMapId = g_currentMission.weedSystem:getDensityMapData()
+        if weedMapId ~= nil then
+            local filename = getDensityMapFilename(weedMapId)
+            local path = dir .. "/" .. filename
+            if savedDensityMaps[filename] == nil then
+                savedDensityMaps[filename] = true
+                if self.isSavingBlocking then
+                    saveDensityMapToFile(weedMapId, path)
+                else
+                    g_asyncTaskManager:addTask(function()
+                        -- upvalues: (copy) weedMapId, (copy) path, (copy) self
+                        prepareSaveDensityMapToFile(weedMapId, path)
+                        self:addSaveTask(SavegameController.SAVE_TASK_DENSITY_MAP, weedMapId)
+                    end)
+                end
+            end
+        end
+        local filename = g_currentMission.weedSystem:getInfoLayer()
+        if filename ~= nil then
+            local path = filename.filename
+            local _ = dir .. "/" .. path
+            if savedDensityMaps[path] == nil then
+                savedDensityMaps[path] = true
+                if self.isSavingBlocking then
+                    saveBitVectorMapToFile(filename.map, _)
+                else
+                    g_asyncTaskManager:addTask(function()
+                        -- upvalues: (copy) filename, (copy) _, (copy) self
+                        prepareSaveBitVectorMapToFile(filename.map, _)
+                        self:addSaveTask(SavegameController.SAVE_TASK_BITVECTOR_MAP, filename.map)
+                    end)
+                end
+            end
+        end
+        local path = g_currentMission.aiSystem:getNavigationMap()
+        if path ~= nil then
+            local _ = g_currentMission.aiSystem:getNavigationMapFilename()
+            local fruitTypeDesc = dir .. "/" .. _
+            if savedDensityMaps[_] == nil then
+                savedDensityMaps[_] = true
+                if self.isSavingBlocking then
+                    saveVehicleNavigationCostMapToFile(path, fruitTypeDesc)
+                else
+                    g_asyncTaskManager:addTask(function()
+                        -- upvalues: (copy) path, (copy) fruitTypeDesc, (copy) self
+                        prepareSaveVehicleNavigationCostMapToFile(path, fruitTypeDesc)
+                        self:addSaveTask(SavegameController.SAVE_TASK_NAVIGATION_MAP, path)
+                    end)
+                end
+            end
+        end
+        if _ ~= nil then
+            local fruitTypeDesc = getDensityMapFilename(_)
+            if savedDensityMaps[fruitTypeDesc] == nil then
+                savedDensityMaps[fruitTypeDesc] = true
+                if self.isSavingBlocking then
+                    saveDensityMapToFile(_, dir .. "/" .. fruitTypeDesc)
+                else
+                    g_asyncTaskManager:addTask(function()
+                        -- upvalues: (copy) _, (copy) dir, (copy) fruitTypeDesc, (copy) self
+                        prepareSaveDensityMapToFile(_, dir .. "/" .. fruitTypeDesc)
+                        self:addSaveTask(SavegameController.SAVE_TASK_DENSITY_MAP, _)
+                    end)
+                end
+            end
+        end
+        local fruitTypeDesc = g_currentMission.fieldGroundSystem:getDensityMaps()
+        for _, densityMap in pairs(fruitTypeDesc) do
+            local filename = densityMap.filename
+            local path = dir .. "/" .. filename
+            if savedDensityMaps[filename] == nil then
+                savedDensityMaps[filename] = true
+                if self.isSavingBlocking then
+                    if densityMap.isBitVector then
+                        saveBitVectorMapToFile(densityMap.map, path)
+                    else
+                        saveDensityMapToFile(densityMap.map, path)
+                    end
+                else
+                    local densityMap
+                    g_asyncTaskManager:addTask(function()
+                        -- upvalues: (copy) densityMap, (copy) path, (copy) self
+                        if densityMap.isBitVector then
+                            prepareSaveBitVectorMapToFile(densityMap.map, path)
+                            self:addSaveTask(SavegameController.SAVE_TASK_BITVECTOR_MAP, densityMap.map)
+                        else
+                            prepareSaveDensityMapToFile(densityMap.map, path)
+                            self:addSaveTask(SavegameController.SAVE_TASK_DENSITY_MAP, densityMap.map)
+                        end
+                    end)
+                end
+            end
+        end
+        local id = g_currentMission.foliageSystem:getDecoFoliages()
+        for densityMap, filename in pairs(id) do
+            local path = filename.terrainDataPlaneId
+            if path ~= nil then
+                local filename = getDensityMapFilename(path)
+                if savedDensityMaps[filename] == nil then
+                    savedDensityMaps[filename] = true
+                    if self.isSavingBlocking then
+                        saveDensityMapToFile(path, dir .. "/" .. filename)
+                    else
+                        g_asyncTaskManager:addTask(function()
+                            -- upvalues: (copy) path, (copy) dir, (copy) filename, (copy) self
+                            prepareSaveDensityMapToFile(path, dir .. "/" .. filename)
+                            self:addSaveTask(SavegameController.SAVE_TASK_DENSITY_MAP, path)
+                        end)
+                    end
+                end
+            end
+        end
+        local haulmId = #g_currentMission.dynamicFoliageLayers
+        local filename = 1
+        for _ = g_currentMission.stoneSystem:getDensityMapData(), haulmId, filename do
+            local densityMap = g_currentMission.dynamicFoliageLayers[_]
+            local filename = getDensityMapFilename(densityMap)
+            if savedDensityMaps[filename] == nil then
+                savedDensityMaps[filename] = true
+                if self.isSavingBlocking then
+                    saveDensityMapToFile(densityMap, dir .. "/" .. filename)
+                else
+                    g_asyncTaskManager:addTask(function()
+                        -- upvalues: (copy) densityMap, (copy) dir, (copy) filename, (copy) self
+                        prepareSaveDensityMapToFile(densityMap, dir .. "/" .. filename)
+                        self:addSaveTask(SavegameController.SAVE_TASK_DENSITY_MAP, densityMap)
+                    end)
+                end
+            end
+        end
+        local haulmId = getDensityMapFilename(g_currentMission.terrainDetailHeightId)
+        if haulmId ~= nil and savedDensityMaps[haulmId] == nil then
+            savedDensityMaps[haulmId] = true
+            if self.isSavingBlocking then
+                saveDensityMapToFile(g_currentMission.terrainDetailHeightId, dir .. "/" .. haulmId)
+            else
+                g_asyncTaskManager:addTask(function()
+                    -- upvalues: (copy) dir, (copy) haulmId, (copy) self
+                    prepareSaveDensityMapToFile(g_currentMission.terrainDetailHeightId, dir .. "/" .. haulmId)
+                    self:addSaveTask(SavegameController.SAVE_TASK_DENSITY_MAP, g_currentMission.terrainDetailHeightId)
+                end)
+            end
+        end
+        if self.isSavingBlocking then
+            g_currentMission.growthSystem:saveState(dir)
+            g_currentMission.snowSystem:saveState(dir)
+        else
+            g_asyncTaskManager:addTask(function()
+                -- upvalues: (copy) dir
+                g_currentMission.growthSystem:saveState(dir)
+            end)
+            g_asyncTaskManager:addTask(function()
+                -- upvalues: (copy) dir
+                g_currentMission.snowSystem:saveState(dir)
+            end)
+        end
+        if self.isSavingBlocking then
+            saveSplitShapesToFile(dir .. "/splitShapes.gmss")
+        else
+            g_asyncTaskManager:addTask(function()
+                -- upvalues: (copy) dir, (copy) self
+                prepareSaveSplitShapesToFile(dir .. "/splitShapes.gmss")
+                self:addSaveTask(SavegameController.SAVE_TASK_SPLIT_SHAPES, 0)
+            end)
+        end
+        if not GS_IS_MOBILE_VERSION then
+            if self.isSavingBlocking then
+                g_densityMapHeightManager:saveCollisionMap(dir)
+            else
+                g_asyncTaskManager:addTask(function()
+                    -- upvalues: (copy) dir, (copy) self
+                    g_densityMapHeightManager:prepareSaveCollisionMap(dir)
+                    self:addSaveTask(SavegameController.SAVE_TASK_COLLISION_MAP, 0)
+                end)
+            end
+            if self.isSavingBlocking then
+                g_densityMapHeightManager:savePlacementCollisionMap(dir)
+            else
+                g_asyncTaskManager:addTask(function()
+                    -- upvalues: (copy) dir, (copy) self
+                    g_densityMapHeightManager:prepareSavePlacementCollisionMap(dir)
+                    self:addSaveTask(SavegameController.SAVE_TASK_PLACEMENT_BLOCKING_MAP, 0)
+                end)
+            end
+            if self.isSavingBlocking then
+                saveTerrainLodTypeMap(g_terrainNode, dir .. "/" .. getTerrainLodTypeMapFilename(g_terrainNode))
+            else
+                g_asyncTaskManager:addTask(function()
+                    -- upvalues: (copy) dir, (copy) self
+                    prepareSaveTerrainLodTypeMap(g_terrainNode, dir .. "/" .. getTerrainLodTypeMapFilename(g_terrainNode))
+                    self:addSaveTask(SavegameController.SAVE_TASK_TERRAIN_LOD_TYPE_MAP, g_terrainNode)
+                end)
+            end
+            if self.isSavingBlocking then
+                saveTerrainLodNormalMap(g_terrainNode, dir .. "/" .. getTerrainLodNormalMapFilename(g_terrainNode))
+            else
+                g_asyncTaskManager:addTask(function()
+                    -- upvalues: (copy) dir
+                    saveTerrainLodNormalMap(g_terrainNode, dir .. "/" .. getTerrainLodNormalMapFilename(g_terrainNode))
+                end)
+            end
+            if self.isSavingBlocking then
+                saveTerrainHeightMap(g_terrainNode, dir .. "/" .. getTerrainHeightMapFilename(g_terrainNode))
+            else
+                g_asyncTaskManager:addTask(function()
+                    -- upvalues: (copy) dir, (copy) self
+                    prepareSaveTerrainHeightMap(g_terrainNode, dir .. "/" .. getTerrainHeightMapFilename(g_terrainNode))
+                    self:addSaveTask(SavegameController.SAVE_TASK_TERRAIN_HEIGHT_MAP, g_terrainNode)
+                end)
+            end
+            if self.isSavingBlocking then
+                saveTerrainOccludersCache(g_terrainNode, dir .. "/" .. getTerrainOccludersCacheFilename(g_terrainNode))
+            else
+                g_asyncTaskManager:addTask(function()
+                    -- upvalues: (copy) dir
+                    saveTerrainOccludersCache(g_terrainNode, dir .. "/" .. getTerrainOccludersCacheFilename(g_terrainNode))
+                end)
+            end
+        end
+        if self.isSavingBlocking then
+            self.savegameMetadata = saveXMLFileToMemory(savegame.xmlFile)
+        else
+            g_asyncTaskManager:addTask(function()
+                -- upvalues: (copy) self, (copy) savegame
+                self.savegameMetadata = saveXMLFileToMemory(savegame.xmlFile)
+            end)
+        end
+        if self.isSavingBlocking and #self.saveTasks > 0 then
+            printWarning("Warning: Blocking saving has async tasks")
+        end
+        if self.isSavingBlocking then
+            self:executeSaveTask()
+        else
+            g_asyncTaskManager:addTask(function()
+                -- upvalues: (copy) self
+                self:executeSaveTask()
+            end)
+        end
+        if startedRepeat then
+            endFrameRepeatMode()
+            return
+        end
+    else
+        self:onSaveComplete(errorCode)
+    end
+end
+function SavegameController:onSaveComplete(errorCode, finalSavegameDirectory)
+    self.savingErrorCode = errorCode
+    self.isSavingGame = false
+    local savegame = self.currentSavegame
+    if savegame ~= nil and not string.isNilOrWhitespace(finalSavegameDirectory) then
+        savegame:setSavegameDirectory(finalSavegameDirectory)
+    end
+    if errorCode == Savegame.ERROR_OK then
+        local directoryName = not string.isNilOrWhitespace(finalSavegameDirectory) and Utils.getDirectoryName(finalSavegameDirectory) or nil
+        local directoryStr = directoryName and string.format(" (%s)", directoryName) or ""
+        print(string.format("Game saved successfully%s.%s", directoryStr, ""))
+    else
+        printError("Game save failed. Error: " .. tostring(errorCode))
+    end
+    leaveCpuBoostMode()
+    g_asyncTaskManager:setAllowedTimePerFrame(nil)
+    self.onSaveCompleteCallback(self.onSaveCompleteCallbackTarget, errorCode)
+end
+function SavegameController:onSavegameDeleted(errorCode)
+    self.onDeleteCallback(self.onDeleteCallbackTarget, errorCode)
+end
+function SavegameController:deleteSavegame(index, callback, callbackTarget)
+    -- upvalues: (copy) NO_TARGET
+    self.onDeleteCallback = callback or NO_TARGET.NO_CALLBACK
+    self.onDeleteCallbackTarget = callbackTarget or NO_TARGET
+    saveDeleteSavegame(self.savegames[index].savegameIndex, "onSavegameDeleted", self)
+end
+function SavegameController:saveSavegame(savegame, blocking)
+    if savegame.supportsSaving == false then
+        printWarning("Warning: Saving not supported by savegame/mission")
+        self.onSaveCompleteCallback(self.onSaveCompleteCallbackTarget, Savegame.ERROR_OK)
+        return
+    elseif self.isSavingGame then
+        printWarning("Warning: Saving while already saving")
+        self.onSaveCompleteCallback(self.onSaveCompleteCallbackTarget, Savegame.ERROR_OPERATION_IN_PROGRESS)
+    else
+        self.isSavingGame = true
+        self.isSavingBlocking = blocking
+        enterCpuBoostMode()
+        g_asyncTaskManager:setAllowedTimePerFrame(33.333333333333336)
+        if savegame.isValid and not (GS_IS_CONSOLE_VERSION or GS_IS_MOBILE_VERSION) then
+            self:backupSavegame(savegame)
+        end
+        savegame.isValid = true
+        savegame.densityMapRevision = g_densityMapRevision
+        savegame.terrainTextureRevision = g_terrainTextureRevision
+        savegame.terrainLodTextureRevision = g_terrainLodTextureRevision
+        savegame.splitShapesRevision = g_splitShapesRevision
+        savegame.tipCollisionRevision = g_tipCollisionRevision
+        savegame.placementCollisionRevision = g_placementCollisionRevision
+        savegame.navigationCollisionRevision = g_navigationCollisionRevision
+        savegame.resetVehicles = false
+        savegame:loadFromMission(g_currentMission)
+        self.currentSavegame = savegame
+        saveWriteSavegameStart(savegame.savegameIndex, savegame.displayName, FSCareerMissionInfo.MaxSavegameSize, "onSaveStartComplete", self)
+    end
+end
+function SavegameController:getCanStartGame(index, allowConflicted)
+    local savegame = self:getSavegame(index)
+    if not allowConflicted and (savegame ~= SavegameController.NO_SAVEGAME and savegame.hasConflict) then
+        return false
+    end
+    if savegame ~= SavegameController.NO_SAVEGAME and (savegame.isValid and savegame.map == nil) then
+        return false
+    end
+    return index > 0
+end
+function SavegameController:getIsSavegameConflicted(index)
+    local savegame = self:getSavegame(index)
+    return savegame ~= SavegameController.NO_SAVEGAME and savegame.hasConflict and true or false
+end
+function SavegameController:getCanDeleteGame(index)
+    if index > 0 and self.savegames[index] ~= nil then
+        return self.savegames[index].isValid or (self.savegames[index].isInvalidUser or self.savegames[index].isCorruptFile)
+    else
+        return false
+    end
+end
+function SavegameController:getSavegame(index)
+    return self.savegames[index] or SavegameController.NO_SAVEGAME
+end
+function SavegameController:getNumValidSavegames()
+    local num = 0
+    local i = 1
+    for i = i, SavegameController.NUM_SAVEGAMES do
+        local savegame = self:getSavegame(i)
+        if savegame ~= SavegameController.NO_SAVEGAME and savegame.isValid then
+        end
+    end
+    return num
+end
+function SavegameController:getIsSaving()
+    return self.isSavingGame
+end
+function SavegameController:getSavingErrorCode()
+    return self.savingErrorCode
+end
+function SavegameController:getIsWaitingForSavegameInfo()
+    return self.waitingForSaveGameInfo
+end
+function SavegameController:getNumberOfSavegames()
+    return saveGetNumOfSaveGames()
+end
+function SavegameController:getMaxNumberOfSavegames()
+    return SavegameController.NUM_SAVEGAMES
+end
+function SavegameController:isStorageDeviceUnavailable()
+    return saveGetNumOfSaveGames() < 0
+end
+function SavegameController.backupSortFunction(a, b)
+    if a.time[1] == b.time[1] then
+        if a.time[2] == b.time[2] then
+            if a.time[3] == b.time[3] then
+                if a.time[4] == b.time[4] then
+                    return a.time[5] > b.time[5]
+                else
+                    return a.time[4] > b.time[4]
+                end
+            else
+                return a.time[3] > b.time[3]
+            end
+        else
+            return a.time[2] > b.time[2]
+        end
+    else
+        return a.time[1] > b.time[1]
+    end
+end
+SavegameController.BACKUP_DATE_OFFSETS = {
+    { 1, 1 },
+    { 2, 1 },
+    { 3, 1 },
+    { 4, 1 },
+    { 5, 1 },
+    { 6, 6 },
+    { 12, 12 },
+    { 24, 24 },
+    { 48, 48 },
+    { 96, 96 },
+    { 192, 192 }
+}

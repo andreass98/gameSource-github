@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="pigPigletBaby_posed" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/tileAndMirrorShader.xml" />
+    <File fileId="1" filename="$dataS/character/animals/domesticated/pig/piglet/pigPiglet_diffuse.png" />
+    <File fileId="2" filename="$dataS/character/animals/domesticated/pig/piglet/pigPiglet_normal.png" />
+    <File fileId="3" filename="$dataS/character/animals/domesticated/pig/piglet/pigPiglet_specular.png" />
+  </Files>
+
+  <Materials>
+    <Material name="pigPiglet_mat" materialId="1" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <CustomParameter name="sssColor" value="0.938 0.567 0.567 1.0"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="pigPigletBaby_posed.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="pigPiglet" nodeId="1">
+      <TransformGroup name="LOD_0" nodeId="2">
+        <Shape name="body" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="3"/>
+        <Shape name="tongue" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="4"/>
+        <Shape name="eyes" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="5"/>
+      </TransformGroup>
+      <TransformGroup name="LOD_1" visibility="false" lodDistance="0 2 4 8" collision="false" density="0" clipDistance="350" nodeId="6">
+        <Shape name="body" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="7"/>
+        <Shape name="tongue" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="8"/>
+        <Shape name="eyes" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="9"/>
+      </TransformGroup>
+      <TransformGroup name="LOD_2" visibility="false" lodDistance="0 2 4 8" collision="false" density="0" clipDistance="350" nodeId="10">
+        <Shape name="body" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="11"/>
+        <Shape name="tongue" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="12"/>
+        <Shape name="eyes" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="13"/>
+      </TransformGroup>
+      <TransformGroup name="LOD_3" visibility="false" lodDistance="0 2 4 8" collision="false" density="0" clipDistance="350" nodeId="14">
+        <Shape name="body" shapeId="10" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="15"/>
+        <Shape name="tongue" shapeId="11" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="16"/>
+        <Shape name="eyes" shapeId="12" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="17"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

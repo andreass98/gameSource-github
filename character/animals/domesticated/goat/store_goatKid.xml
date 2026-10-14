@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<placeable type="placeable">
+    <storeData>
+        <name>Goat Kid</name>
+        <image>$dataS/character/animals/domesticated/goat/store_goatKid.dds</image>
+        <price>0</price>
+        <dailyUpkeep>0</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>NONE</brand>
+        <species>PLACEABLE</species>
+        <category>fences</category>
+        <canBeSold>false</canBeSold>
+        <showInStore>false</showInStore>
+        <vertexBufferMemoryUsage>241920</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>84992</indexBufferMemoryUsage>
+        <textureMemoryUsage>262144</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <storeIconRendering>
+            <settings centerIcon="true" cameraXRot="-15" cameraYRot="50" advancedBoundingBox="true" lightIntensity="2.5" />
+            <shaderParameter name="dirt" values="0 - - -" />
+            <shaderParameter name="atlasInvSizeAndOffsetUV" values="- - 0.5 0" />
+        </storeIconRendering>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+    <base>
+        <filename>$dataS/character/animals/domesticated/goat/goatKid/goatKid_posed.i3d</filename>
+    </base>
+</placeable>

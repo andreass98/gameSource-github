@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Bitmap profile="fs25_fullScreenBackground" />
+    <GuiElement profile="fs25_menuContainer">
+        <GuiElement profile="fs25_menuHeaderPanel" absoluteSizeOffset="51px 0px" position="2px 92px">
+            <Bitmap profile="fs25_menuHeaderIconBg">
+                <Bitmap profile="fs25_menuHeaderIcon" imageSliceId="gui.icon_calendar" />
+            </Bitmap>
+            <Text profile="fs25_menuHeaderTitle" text="$l10n_ui_inGameMenuModeMultiplayer" />
+            <RoundCorner profile="fs25_shopMoneyBoxBg" id="onlineNameBoxBg" />
+            <BoxLayout profile="fs25_shopMoneyBox" id="onlineNameBox">
+                <Text profile="fs25_shopBalance" text="$l10n_ui_onlinePresenceName:" />
+                <Text profile="fs25_shopMoney" id="onlineNameText" />
+            </BoxLayout>
+        </GuiElement>
+        <GuiElement profile="fs25_joinMultiplayerContainer">
+            <SmoothList profile="fs25_joinMultiplayerList" id="listCoop" onDoubleClick="onContinue">
+                <ListItem profile="fs25_joinMultiplayerListItem">
+                    <ThreePartBitmap profile="fs25_joinMultiplayerListItemBg" />
+                    <Bitmap profile="fs25_joinMultiplayerListItemIcon" name="icon" />
+                    <Text profile="fs25_joinMultiplayerListItemTitle" name="title" />
+                    <Text profile="fs25_joinMultiplayerListItemText" name="text" />
+                </ListItem>
+            </SmoothList>
+            <ThreePartBitmap profile="fs25_lineSeparatorBottom" />
+            <MultiTextOption profile="fs25_hintMultiTextOption" id="gameplayHintSelector" />
+            <IndexState profile="fs25_hintSelectorBox" id="hintStateBox" stateElementTemplateId="hintTemplate" indexableElementId="gameplayHintSelector">
+                <RoundCorner profile="fs25_subCategorySelectorDot" id="hintTemplate" />
+            </IndexState>
+        </GuiElement>
+    </GuiElement>
+    <Bitmap profile="fs25_natWarningBg" id="natWarning">
+        <Text profile="fs25_natWarning" text="$l10n_ui_strictNatWarning" />
+    </Bitmap>
+    <BoxLayout profile="fs25_buttonBox">
+        <Button profile="buttonOK" text="$l10n_button_continue" onClick="onContinue" />
+        <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonActivate" text="$l10n_button_changeName" onClick="onClickChangeName" id="changeNameButton">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonCancel" text="$l10n_button_blocklist" onClick="onClickOpenBlocklist">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+    </BoxLayout>
+    <GUIProfiles>
+        <Profile name="fs25_joinMultiplayerContainer" extends="emptyPanel" with="anchorStretchingYStretchingX pivotTopCenter">
+            <absoluteSizeOffset value="0px 176px" />
+        </Profile>
+        <Profile name="fs25_joinMultiplayerList" extends="emptyPanel" with="anchorMiddleStretchingX">
+            <height value="390px" />
+            <selectedWithoutFocus value="false" />
+            <showHighlights value="true" />
+            <isHorizontalList value="true" />
+            <listItemSpacing value="-10px" />
+            <listItemAlignment value="middle" />
+        </Profile>
+        <Profile name="fs25_joinMultiplayerListItem" extends="emptyPanel" with="anchorStretchingYLeft">
+            <width value="510px" />
+        </Profile>
+        <Profile name="fs25_joinMultiplayerListItemBg" extends="baseReference" with="anchorStretchingYStretchingX">
+            <imageSliceId value="gui.joinMultiplayer_middle" />
+            <imageSelectedSliceId value="gui.joinMultiplayerSelected_middle" />
+            <imageHighlightedSliceId value="gui.joinMultiplayerHover_middle" />
+            <startImageSize value="25px 0" />
+            <startImageSliceId value="gui.joinMultiplayer_left" />
+            <startImageSelectedSliceId value="gui.joinMultiplayerSelected_left" />
+            <startImageHighlightedSliceId value="gui.joinMultiplayerHover_left" />
+            <endImageSize value="30px 0" />
+            <endImageSliceId value="gui.joinMultiplayer_right" />
+            <endImageSelectedSliceId value="gui.joinMultiplayerSelected_right" />
+            <endImageHighlightedSliceId value="gui.joinMultiplayerHover_right" />
+        </Profile>
+        <Profile name="fs25_joinMultiplayerListItemIcon" extends="baseReference" with="anchorTopCenter">
+            <size value="200px 200px" />
+            <position value="2px -30px" />
+        </Profile>
+        <Profile name="fs25_joinMultiplayerListItemTitle" extends="fs25_textDarkHighlight" with="anchorBottomStretchingX">
+            <width value="100%" />
+            <absoluteSizeOffset value="50px 0px" />
+            <position value="2px 90px" />
+            <textSize value="18px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+            <textAlignment value="center" />
+        </Profile>
+        <Profile name="fs25_joinMultiplayerListItemText" extends="fs25_textDarkHighlight" with="anchorBottomStretchingX">
+            <width value="100%" />
+            <absoluteSizeOffset value="50px 0px" />
+            <position value="2px 50px" />
+            <textAlignment value="center" />
+        </Profile>
+        <Profile name="fs25_natWarningBg" extends="baseReference" with="anchorBottomStretchingX">
+            <height value="60px" />
+            <position value="0px 40px" />
+            <fixedWidth value="true" />
+            <imageColor value="0.0037 0.0056 0.0065 0.65" />
+        </Profile>
+        <Profile name="fs25_natWarning" extends="fs25_textDefault" with="anchorMiddleCenter">
+            <size value="1500px 40px" />
+            <textMaxNumLines value="2" />
+            <textAlignment value="center" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

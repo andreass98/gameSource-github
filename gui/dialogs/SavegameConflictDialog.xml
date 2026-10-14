@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <Bitmap profile="bgVignette" />
+    <RoundCorner profile="savegameConflictDialogBg" id="dialogElement">
+        <Bitmap profile="dialogHeaderDocked">
+            <Text profile="dialogHeaderText" text="$l10n_ui_resolveConflict" id="titleText" />
+        </Bitmap>
+        <Bitmap profile="savegameConflictDataBox" position="50px 10px">
+            <Text profile="savegameConflictSaveTitle" position="400px 15px" text="$l10n_ui_localSavegame" id="titleText" />
+            <Text profile="savegameConflictSaveTitle" position="1050px 15px" text="$l10n_ui_cloudSavegame" id="titleText" />
+            <Text profile="savegameConflictItemTitle" position="0px 260px" text="$l10n_ui_savegameName:" />
+            <Text profile="savegameConflictItemText" position="400px 260px" id="local_gameName" textMaxWidth="620px" />
+            <Text profile="savegameConflictItemText" position="1050px 260px" id="cloud_gameName" textMaxWidth="620px" />
+            <Bitmap profile="savegameConflictDialogSeparator" position="0px 240px" />
+            <Text profile="savegameConflictItemTitle" position="0px 180px" text="$l10n_ui_money:" />
+            <Text profile="savegameConflictItemText" position="400px 180px" id="local_money" textMaxWidth="620px" />
+            <Text profile="savegameConflictItemText" position="1050px 180px" id="cloud_money" textMaxWidth="620px" />
+            <Bitmap profile="savegameConflictDialogSeparator" position="0px 160px" />
+            <Text profile="savegameConflictItemTitle" position="0px 100px" text="$l10n_ui_difficulty:" />
+            <Text profile="savegameConflictItemText" position="400px 100px" id="local_difficulty" textMaxWidth="620px" />
+            <Text profile="savegameConflictItemText" position="1050px 100px" id="cloud_difficulty" textMaxWidth="620px" />
+            <Bitmap profile="savegameConflictDialogSeparator" position="0px 80px" />
+            <Text profile="savegameConflictItemTitle" position="0px 20px" text="$l10n_ui_duration:" />
+            <Text profile="savegameConflictItemText" position="400px 20px" id="local_timePlayed" />
+            <Text profile="savegameConflictItemText" position="1050px 20px" id="cloud_timePlayed" />
+            <Bitmap profile="savegameConflictDialogSeparator" position="0px 0px" />
+            <Text profile="savegameConflictItemTitle" position="0px -60px" text="$l10n_ui_saveDate:" />
+            <Text profile="savegameConflictItemText" position="400px -60px" id="local_createDate" />
+            <Text profile="savegameConflictItemText" position="1050px -60px" id="cloud_createDate" />
+        </Bitmap>
+        <BoxLayout profile="buttonBoxDialogConflict" id="dialogButtonLayout">
+            <Button profile="savegameConflictKeepLocalButton" text="$l10n_ui_savegameConflictKeepLocal" onClick="onClickKeepLocal" />
+            <Button profile="savegameConflictKeepRemoteButton" text="$l10n_ui_savegameConflictKeepRemote" onClick="onClickKeepRemote" id="keepRemote" />
+            <Button profile="savegameConflictKeepBothButton" text="$l10n_ui_savegameConflictKeepBoth" onClick="onClickKeepBoth" id="keepBoth" />
+        </BoxLayout>
+    </RoundCorner>
+    <GUIProfiles>
+        <Profile name="savegameConflictDialogBg" extends="fs25_dialogBg">
+            <size value="1800px 550px" />
+        </Profile>
+        <Profile name="buttonBoxDialogConflict" extends="buttonBoxDialog">
+            <size value="1800px 200px" />
+        </Profile>
+        <Profile name="savegameConflictDataBox" extends="baseReference" with="anchorMiddleLeft">
+            <size value="350px 350px" />
+            <imageColor value="$preset_colorTransparent" />
+        </Profile>
+        <Profile name="savegameConflictDataBoxData" extends="savegameConflictDataBox">
+            <size value="600px 350px" />
+        </Profile>
+        <Profile name="savegameConflictItemTitle" extends="savegameConflictItemText">
+            <textSize value="33px" />
+            <textBold value="true" />
+            <Variant name="mobile">
+                <textSize value="40px" />
+                <textMaxWidth value="300px" />
+            </Variant>
+        </Profile>
+        <Profile name="savegameConflictDialogSeparator" extends="baseReference" with="anchorBottomLeft">
+            <size value="1700px 1dp" />
+            <imageColor value="$preset_colorSeparator" />
+        </Profile>
+        <Profile name="savegameConflictSaveTitle" extends="fs25_textDefault" with="anchorTopLeft">
+            <textSize value="40px" />
+            <Variant name="mobile">
+                <textSize value="50px" />
+                <textMaxWidth value="620px" />
+                <textBold value="true" />
+            </Variant>
+        </Profile>
+        <Profile name="savegameConflictItemText" extends="baseReference" with="anchorBottomRight">
+            <size value="0 40px" />
+            <textSize value="33px" />
+            <textBold value="false" />
+            <textAlignment value="right" />
+            <textColor value="$preset_colorDescriptionText2" />
+            <textSelectedColor value="$preset_colorDescriptionText2" />
+            <textMaxWidth value="155px" />
+            <textAutoWidth value="true" />
+            <Variant name="mobile" with="anchorBottomLeft">
+                <textAlignment value="left" />
+                <textColor value="$preset_colorWhite" />
+                <textSelectedColor value="$preset_colorWhite" />
+                <textSize value="40px" />
+                <textMaxWidth value="600px" />
+            </Variant>
+        </Profile>
+        <Profile name="savegameConflictKeepLocalButton" extends="buttonBack">
+            <Variant name="mobile">
+                <touchIconSize value="36px 36px" />
+                <touchIconSliceId value="gui.multiplayer_local" />
+                <touchIconRotation value="0" />
+            </Variant>
+        </Profile>
+        <Profile name="savegameConflictKeepRemoteButton" extends="buttonActivate">
+            <Variant name="mobile">
+                <touchIconSize value="36px 36px" />
+                <touchIconSliceId value="gui.multiplayer_global" />
+            </Variant>
+        </Profile>
+        <Profile name="savegameConflictKeepBothButton" extends="buttonOK">
+            <Variant name="mobile">
+                <touchIconSliceId value="gui.plus" />
+                <touchIconSize value="27px 27px" />
+            </Variant>
+        </Profile>
+    </GUIProfiles>
+</GUI>

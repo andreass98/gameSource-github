@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Bitmap profile="fs25_fullScreenBackground" />
+    <GuiElement profile="fs25_menuContainer" id="mainBox">
+        <GuiElement profile="fs25_menuHeaderPanel" absoluteSizeOffset="14px 0px" position="21px 92px">
+            <Bitmap profile="fs25_menuHeaderIconBg">
+                <Bitmap profile="fs25_menuHeaderIcon" imageSliceId="gui.icon_multiplayer_joinServer2" />
+            </Bitmap>
+            <Text profile="fs25_menuHeaderTitle" text="$l10n_ui_joinMultiplayerGame" />
+            <RoundCorner profile="fs25_shopMoneyBoxBg" id="numServersBoxBg" />
+            <BoxLayout profile="fs25_shopMoneyBox" id="numServersBox">
+                <Text profile="fs25_shopBalance" text="$l10n_ui_gamesAvailable:" />
+                <Text profile="fs25_joinGameNumGamesText" id="numServersText" />
+            </BoxLayout>
+        </GuiElement>
+        <GuiElement profile="fs25_joinGameBoxLeft">
+            <BoxLayout profile="fs25_joinGameListHeader" focusId="focus_header">
+                <TableHeader profile="fs25_joinGameListHeaderButton" text="$l10n_ui_serverName" onClick="onClickHeader" onFocus="onFocusHeader" onLeave="onLeaveHeader" width="412px" textAlignment="left" columnName="name" focusId="leftHeaderButton" focusChangeLeft="focus_name_input">
+                    <Bitmap profile="fs25_joinGameListHeaderSortAscending" name="iconAscending" />
+                    <Bitmap profile="fs25_joinGameListHeaderSortDescending" name="iconDescending" />
+                </TableHeader>
+                <TableHeader profile="fs25_joinGameListHeaderButton" text="$l10n_ui_map" onClick="onClickHeader" onFocus="onFocusHeader" onLeave="onLeaveHeader" width="264px" columnName="mapName">
+                    <Bitmap profile="fs25_joinGameListHeaderSortAscending" name="iconAscending" />
+                    <Bitmap profile="fs25_joinGameListHeaderSortDescending" name="iconDescending" />
+                </TableHeader>
+                <TableHeader profile="fs25_joinGameListHeaderButton" text="$l10n_ui_players" onClick="onClickHeader" onFocus="onFocusHeader" onLeave="onLeaveHeader" width="146px" columnName="fullness">
+                    <Bitmap profile="fs25_joinGameListHeaderSortAscending" name="iconAscending" />
+                    <Bitmap profile="fs25_joinGameListHeaderSortDescending" name="iconDescending" />
+                </TableHeader>
+                <TableHeader profile="fs25_joinGameListHeaderButton" onClick="onClickHeader" onFocus="onFocusHeader" onLeave="onLeaveHeader" width="64px" columnName="language" focusId="rightHeaderButton">
+                    <Bitmap profile="fs25_joinGameListHeaderButtonIcon" />
+                    <Bitmap profile="fs25_joinGameListHeaderSortAscending" name="iconAscending" />
+                    <Bitmap profile="fs25_joinGameListHeaderSortDescending" name="iconDescending" />
+                </TableHeader>
+            </BoxLayout>
+            <ThreePartBitmap profile="fs25_lineSeparatorTopHighlighted" position="0px -55px" />
+            <SmoothList profile="fs25_joinGameList" id="serverList" onDoubleClick="onDoubleClick" emptyIndicatorId="noMatchingGamesText" focusChangeBottom="nil" focusChangeTop="nil" focusChangeLeft="leftHeaderButton" focusChangeRight="focus_name_input">
+                <ListItem profile="fs25_joinGameListItem">
+                    <ThreePartBitmap profile="fs25_joinGameListItemBg" name="alternating" />
+                    <Bitmap profile="fs25_iconModsMissing" name="iconModsMissing" />
+                    <Bitmap profile="fs25_iconServerPassword" name="iconServerPassword" />
+                    <Bitmap profile="fs25_iconServerInternet" name="iconServerInternet" />
+                    <Bitmap profile="fs25_iconServerLan" name="iconServerLan" />
+                    <Bitmap profile="fs25_iconFriends" name="iconFriends" />
+                    <PlatformIcon profile="fs25_joinGameIconPlatform" name="iconPlatform" />
+                    <Text profile="fs25_joinGameNameText" name="gameName" />
+                    <Text profile="fs25_joinGameMapText" name="mapName" />
+                    <Text profile="fs25_joinGamePlayersText" name="players" />
+                    <Bitmap profile="fs25_iconSlotsFullBg" name="iconSlotsFull">
+                        <Bitmap profile="fs25_iconSlotsFull" />
+                    </Bitmap>
+                    <Bitmap profile="fs25_iconSlotsAvailBg" name="iconSlotsAvailable">
+                        <Bitmap profile="fs25_iconSlotsAvail" />
+                    </Bitmap>
+                    <Text profile="fs25_joinGameLangText" name="language" />
+                </ListItem>
+            </SmoothList>
+            <ThreePartBitmap profile="fs25_listSliderBox">
+                <Slider profile="fs25_listSlider" dataElementId="serverList" />
+            </ThreePartBitmap>
+            <Text profile="fs25_joinGameLoadingText" id="loadingText" text="$l10n_ui_loading" />
+            <Text profile="fs25_joinGameNoMatchingGamesText" id="noMatchingGamesText" text="$l10n_ui_noMatchingGame" />
+        </GuiElement>
+        <GuiElement profile="fs25_joinGameBoxRight">
+            <Text profile="fs25_joinGameFiltersTitle" text="$l10n_ui_filters" />
+            <Bitmap profile="fs25_lineSeparatorTopSoft" position="0px -55px" />
+            <BoxLayout profile="fs25_joinGameFiltersLayout" id="settingsBox">
+                <GuiElement profile="fs25_joinGameFilterContainer">
+                    <TextInput profile="fs25_joinGameNameFilter" id="serverNameElement" onTextChanged="onServerNameChanged" focusId="focus_name_input" imeTitle="$l10n_ui_serverName" imeDescription="$l10n_ui_serverName" imePlaceholder="$l10n_ui_serverName" onFocus="onFocusGameName" onLeave="onLeaveGameName" focusChangeLeft="rightHeaderButton" focusChangeRight="leftHeaderButton" applyProfanityFilter="false">
+                        <ThreePartBitmap profile="fs25_textInputBg" />
+                        <Bitmap profile="fs25_textInputIconBox">
+                            <Bitmap profile="fs25_textInputIcon" />
+                        </Bitmap>
+                    </TextInput>
+                    <Text profile="fs25_joinGameFilterTitle" text="$l10n_ui_serverName" />
+                </GuiElement>
+                <GuiElement profile="fs25_joinGameFilterContainer">
+                    <MultiTextOption profile="fs25_joinGameMultiTextOption" onClick="onClickMap" id="mapSelectionElement" />
+                    <Text profile="fs25_joinGameFilterTitle" text="$l10n_ui_map" />
+                </GuiElement>
+                <GuiElement profile="fs25_joinGameFilterContainer">
+                    <MultiTextOption profile="fs25_joinGameMultiTextOption" onClick="onClickLanguage" onCreate="onCreateLanguage" id="languageElement" />
+                    <Text profile="fs25_joinGameFilterTitle" text="$l10n_setting_language" />
+                </GuiElement>
+                <GuiElement profile="fs25_joinGameFilterContainer">
+                    <MultiTextOption profile="fs25_joinGameMultiTextOption" onClick="onClickMaxNumPlayers" id="maxNumPlayersElement" onCreate="onCreateMaxNumPlayers" />
+                    <Text profile="fs25_joinGameFilterTitle" text="$l10n_ui_maxNumPlayers" />
+                </GuiElement>
+                <GuiElement profile="fs25_joinGameFilterContainer">
+                    <BinaryOption profile="fs25_joinGameBinaryOption" id="passwordElement" onClick="onClickPassword" />
+                    <Text profile="fs25_joinGameFilterTitle" text="$l10n_ui_includePasswordProtected" />
+                </GuiElement>
+                <GuiElement profile="fs25_joinGameFilterContainer">
+                    <BinaryOption profile="fs25_joinGameBinaryOption" id="capacityElement" onClick="onClickCapacity" />
+                    <Text profile="fs25_joinGameFilterTitle" text="$l10n_ui_includeFullGames" />
+                </GuiElement>
+                <GuiElement profile="fs25_joinGameFilterContainer">
+                    <BinaryOption profile="fs25_joinGameBinaryOption" id="modDlcElement" onClick="onClickModsDlcs" />
+                    <Text profile="fs25_joinGameFilterTitle" text="$l10n_ui_onlyAvailableMods" />
+                </GuiElement>
+                <GuiElement profile="fs25_joinGameFilterContainer">
+                    <BinaryOption profile="fs25_joinGameBinaryOption" id="allowCrossPlayElement" onClick="onClickAllowCrossPlay" focusChangeBottom="focus_name_input" />
+                    <Text profile="fs25_joinGameFilterTitle" text="$l10n_ui_allowCrossPlay" />
+                </GuiElement>
+            </BoxLayout>
+        </GuiElement>
+    </GuiElement>
+    <BoxLayout profile="fs25_buttonBox" id="buttonBox">
+        <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" />
+        <Button profile="buttonOK" id="startButtonElement" text="$l10n_button_start" onClick="onClickOk">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonMenuSwitch" id="sortButton" text="$l10n_button_sortTable" onClick="onClickSort">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonActivate" id="detailButtonElement" text="$l10n_button_detail" onClick="onClickActivate">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonCancel" text="$l10n_button_blocklist" onClick="onClickOpenBlocklist">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+    </BoxLayout>
+    <GUIProfiles>
+        <Profile name="fs25_joinGameBoxLeft" extends="emptyPanel" with="anchorStretchingYLeft">
+            <width value="1070px" />
+        </Profile>
+        <Profile name="fs25_joinGameNumGamesText" extends="fs25_shopBalance">
+            <textColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_joinGameListHeader" extends="emptyPanel" with="anchorTopStretchingX">
+            <height value="50px" />
+            <alignmentX value="right" />
+            <alignmentY value="middle" />
+            <fitFlowToElements value="true" />
+            <autoValidateLayout value="true" />
+        </Profile>
+        <Profile name="fs25_joinGameListHeaderButton" extends="fs25_textDefault" with="anchorStretchingYLeft">
+            <size value="265px 50px" />
+            <textSize value="18px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+            <textFocusedColor value="$preset_fs25_colorMainHighlight" />
+            <textHighlightedColor value="$preset_fs25_colorMainHighlight" />
+            <imageColor value="$preset_colorTransparent" />
+            <allowSortingAsc value="true" />
+            <allowSortingDesc value="true" />
+        </Profile>
+        <Profile name="fs25_joinGameListHeaderSortAscending" extends="baseReference" with="anchorMiddleLeft">
+            <visible value="false" />
+            <size value="7px 7px" />
+            <position value="-20px 0px" />
+            <imageRotation value="180" />
+            <imageSliceId value="gui.tourdialogue_arrow" />
+        </Profile>
+        <Profile name="fs25_joinGameListHeaderSortDescending" extends="fs25_joinGameListHeaderSortAscending">
+            <imageRotation value="0" />
+        </Profile>
+        <Profile name="fs25_joinGameListHeaderButtonIcon" extends="baseReference" with="anchorMiddleLeft">
+            <size value="20px 20px" />
+            <imageSliceId value="gui.multiplayer_global" />
+            <imageFocusedColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_joinGameList" extends="baseReference" with="anchorStretchingYStretchingX pivotTopCenter">
+            <absoluteSizeOffset value="0px 52px" />
+            <position value="0 -57px" />
+            <isHorizontalList value="false" />
+        </Profile>
+        <Profile name="fs25_joinGameListItem" extends="baseReference" with="anchorTopStretchingX">
+            <height value="30px" />
+            <alternateChildren value="true" />
+            <imageSliceId value="gui.empty" />
+            <imageColor value="$preset_fs25_colorGreyListItem" />
+            <alternateBackgroundColor value="$preset_colorTransparent" />
+        </Profile>
+        <Profile name="fs25_joinGameListItemBg" extends="baseReference" with="anchorStretchingYStretchingX">
+            <imageSelectedColor value="$preset_fs25_colorMainHighlight" />
+            <startImageSize value="100px 30px" />
+            <startImageSliceId value="gui.list_gradient" />
+            <startImageSelectedColor value="$preset_fs25_colorMainHighlight" />
+            <endImageSize value="100px 30px" />
+            <endImageSliceId value="gui.list_gradient" />
+            <endImageSelectedColor value="$preset_fs25_colorMainHighlight" />
+            <endImageInvertX value="true" />
+        </Profile>
+        <Profile name="fs25_joinGameBaseIcon" extends="baseReference" with="anchorMiddleLeft">
+            <imageSelectedColor value="$preset_fs25_colorMainDark" />
+        </Profile>
+        <Profile name="fs25_iconModsMissing" extends="baseReference" with="anchorMiddleLeft">
+            <size value="24px 24px" />
+            <position value="55px 0px" />
+            <imageColor value="$preset_colorRed" />
+            <imageSliceId value="gui.fieldInfo_warning" />
+        </Profile>
+        <Profile name="fs25_iconServerPassword" extends="fs25_joinGameBaseIcon" with="anchorMiddleLeft">
+            <size value="15px 22px" />
+            <position value="86px 0px" />
+            <imageSliceId value="gui.multiplayer_lock" />
+        </Profile>
+        <Profile name="fs25_iconServerInternet" extends="fs25_joinGameBaseIcon" with="anchorMiddleLeft">
+            <size value="24px 24px" />
+            <position value="108px 0px" />
+            <imageSliceId value="gui.multiplayer_global" />
+        </Profile>
+        <Profile name="fs25_iconServerLan" extends="fs25_joinGameBaseIcon" with="anchorMiddleLeft">
+            <size value="24px 24px" />
+            <position value="108px 0px" />
+            <imageSliceId value="gui.multiplayer_local" />
+        </Profile>
+        <Profile name="fs25_iconFriends" extends="fs25_joinGameBaseIcon" with="anchorMiddleLeft">
+            <size value="24px 24px" />
+            <position value="108px 0px" />
+            <imageSliceId value="gui.multiplayer_friends" />
+        </Profile>
+        <Profile name="fs25_joinGameIconPlatform" extends="fs25_joinGameBaseIcon" with="anchorMiddleLeft">
+            <size value="30px 30px" />
+            <position value="136px 0px" />
+        </Profile>
+        <Profile name="fs25_joinGameNameText" extends="fs25_joinGamePlayersText">
+            <width value="390px" />
+            <position value="184px 0px" />
+            <textBold value="true" />
+        </Profile>
+        <Profile name="fs25_joinGameMapText" extends="fs25_joinGamePlayersText">
+            <width value="250px" />
+            <position value="594px 0px" />
+        </Profile>
+        <Profile name="fs25_joinGamePlayersText" extends="fs25_textDarkHighlight" with="anchorStretchingYLeft">
+            <width value="120px" />
+            <position value="860px 0px" />
+            <textSize value="16px" />
+        </Profile>
+        <Profile name="fs25_iconSlotsFullBg" extends="baseReference" with="anchorMiddleLeft">
+            <size value="22px 22px" />
+            <position value="920px 0px" />
+            <imageColor value="$preset_colorRed" />
+            <imageSelectedColor value="$preset_colorWhite" />
+            <imageSliceId value="gui.gearBg" />
+        </Profile>
+        <Profile name="fs25_iconSlotsFull" extends="fs25_joinGameBaseIcon" with="anchorMiddleCenter">
+            <size value="12px 12px" />
+            <imageSliceId value="gui.crossSmall" />
+            <imageSelectedColor value="$preset_colorRed" />
+        </Profile>
+        <Profile name="fs25_iconSlotsAvailBg" extends="fs25_iconSlotsFullBg">
+            <imageColor value="$preset_colorGreen" />
+        </Profile>
+        <Profile name="fs25_iconSlotsAvail" extends="fs25_iconSlotsFull">
+            <imageSliceId value="gui.tickSmall" />
+            <imageSelectedColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_joinGameLangText" extends="fs25_joinGamePlayersText">
+            <width value="50px" />
+            <position value="1005px 0px" />
+            <textOffset value="0 0" />
+        </Profile>
+        <Profile name="fs25_joinGameNoMatchingGamesText" extends="fs25_textDefault" with="anchorMiddleStretchingX">
+            <size value="60% 60px" />
+            <textSize value="20px" />
+            <textAlignment value="center" />
+        </Profile>
+        <Profile name="fs25_joinGameLoadingText" extends="fs25_textDefault" with="anchorMiddleStretchingX">
+            <textSize value="28px" />
+            <textAlignment value="center" />
+        </Profile>
+        <Profile name="fs25_joinGameBoxRight" extends="emptyPanel" with="anchorStretchingYRight">
+            <width value="370px" />
+        </Profile>
+        <Profile name="fs25_joinGameFiltersTitle" extends="fs25_textDefault" with="anchorTopStretchingX">
+            <size value="100% 50px" />
+            <textSize value="18px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+        </Profile>
+        <Profile name="fs25_joinGameFiltersLayout" extends="emptyPanel" with="anchorStretchingYStretchingX pivotBottomCenter">
+            <absoluteSizeOffset value="0px 96px" />
+            <flowDirection value="vertical" />
+        </Profile>
+        <Profile name="fs25_joinGameFilterContainer" extends="emptyPanel" with="anchorTopStretchingX">
+            <height value="60px" />
+            <margin value="0px 0px 0px 22px" />
+        </Profile>
+        <Profile name="fs25_joinGameFilterServername" extends="baseReference">
+            <size value="316px 48px" />
+            <margin value="0px 25px 0px 12px" />
+        </Profile>
+        <Profile name="fs25_joinGameNameFilter" extends="fs25_textInput" with="anchorBottomStretchingX pivotBottomLeft">
+            <width value="100%" />
+            <absoluteSizeOffset value="31px 0px" />
+            <textAlignment value="left" />
+            <maxInputTextWidth value="320px" />
+        </Profile>
+        <Profile name="fs25_joinGameMultiTextOption" extends="fs25_multiTextOption" with="anchorBottomStretchingX">
+            <width value="100%" />
+        </Profile>
+        <Profile name="fs25_joinGameBinaryOption" extends="fs25_binaryOption" with="anchorBottomStretchingX">
+            <width value="100%" />
+            <useYesNoTexts value="true" />
+        </Profile>
+        <Profile name="fs25_joinGameFilterTitle" extends="fs25_textDefault" with="anchorTopStretchingX">
+            <width value="100%" />
+            <textSize value="16px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

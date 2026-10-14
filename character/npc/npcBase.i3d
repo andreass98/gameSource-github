@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="npcBase" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+  </Files>
+
+  <Materials>
+    <Material name="lambert1" materialId="1" diffuseColor="0.5 0.5 0.5 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="npcBase.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="npc" nodeId="1">
+      <TransformGroup name="audioNode" translation="0 1.65 0" nodeId="2"/>
+      <Shape name="triggerNode" translation="0 1 0" shapeId="1" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="3"/>
+      <Shape name="collision" translation="0 1 0" shapeId="2" kinematic="true" compound="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="4"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

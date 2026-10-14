@@ -1,0 +1,47 @@
+TensionBeltObject = {}
+function TensionBeltObject.prerequisitesPresent(specializations)
+    return true
+end
+function TensionBeltObject.initSpecialization()
+    local schema = Vehicle.xmlSchema
+    schema:setXMLSpecializationType("TensionBeltObject")
+    schema:register(XMLValueType.BOOL, "vehicle.tensionBeltObject#supportsTensionBelts", "Supports tension belts", true)
+    schema:register(XMLValueType.NODE_INDEX, "vehicle.tensionBeltObject.meshNodes.meshNode(?)#node", "Mesh node for tension belt calculation")
+    schema:setXMLSpecializationType()
+end
+function TensionBeltObject.registerFunctions(vehicleType)
+    SpecializationUtil.registerFunction(vehicleType, "getSupportsTensionBelts", TensionBeltObject.getSupportsTensionBelts)
+    SpecializationUtil.registerFunction(vehicleType, "getMeshNodes", TensionBeltObject.getMeshNodes)
+    SpecializationUtil.registerFunction(vehicleType, "getTensionBeltNodeId", TensionBeltObject.getTensionBeltNodeId)
+end
+function TensionBeltObject.registerEventListeners(vehicleType)
+    SpecializationUtil.registerEventListener(vehicleType, "onLoad", TensionBeltObject)
+end
+function TensionBeltObject:onLoad(_)
+    local spec = self.spec_tensionBeltObject
+    spec.supportsTensionBelts = self.xmlFile:getValue("vehicle.tensionBeltObject#supportsTensionBelts", true)
+    spec.meshNodes = {}
+    for _, meshNodeKey in self.xmlFile:iterator("vehicle.tensionBeltObject.meshNodes.meshNode") do
+        local node = self.xmlFile:getValue(meshNodeKey .. "#node", nil, self.components, self.i3dMappings)
+        if node ~= nil then
+            if getHasClassId(node, ClassIds.SHAPE) then
+                if getShapeIsCPUMesh(node) then
+                    table.insert(spec.meshNodes, node)
+                else
+                    Logging.xmlWarning(self.xmlFile, "Mesh node %q at %q does not have the \'CPU-Mesh\' flag (Shape settings) enabled which required for tension belts", I3DUtil.getNodePath(node), meshNodeKey)
+                end
+            else
+                Logging.xmlWarning(self.xmlFile, "Node %q at %q is not a shape", I3DUtil.getNodePath(node), meshNodeKey)
+            end
+        end
+    end
+end
+function TensionBeltObject:getSupportsTensionBelts()
+    return self.spec_tensionBeltObject.supportsTensionBelts
+end
+function TensionBeltObject:getMeshNodes()
+    return self.spec_tensionBeltObject.meshNodes
+end
+function TensionBeltObject:getTensionBeltNodeId()
+    return self.components[1].node
+end

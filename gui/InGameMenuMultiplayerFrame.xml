@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI name="ingameMenuMultiplayer">
+    <GuiElement profile="fs25_menuContainer">
+        <GuiElement profile="fs25_menuHeaderPanel">
+            <Bitmap profile="fs25_menuHeaderIconBg">
+                <Bitmap profile="fs25_menuHeaderIcon" imageSliceId="gui.icon_multiplayer" />
+            </Bitmap>
+            <Text profile="fs25_menuHeaderTitle" text="$l10n_ui_ingameMenuMultiplayerUsers" />
+        </GuiElement>
+        <BoxLayout profile="fs25_subCategorySelectorTabbedBox" id="subCategoryBox">
+            <Button profile="fs25_subCategorySelectorTabbedTab" id="subCategoryTabs[1]" text="$l10n_ui_ingameMenuMultiplayerFarms" onClick="onClickFarms">
+                <ThreePartBitmap profile="fs25_subCategorySelectorTabbedTabBg" name="background" />
+            </Button>
+            <Button profile="fs25_subCategorySelectorTabbedTab" id="subCategoryTabs[2]" text="$l10n_ui_accountManagement" onClick="onClickUsers">
+                <ThreePartBitmap profile="fs25_subCategorySelectorTabbedTabBg" name="background" />
+            </Button>
+        </BoxLayout>
+        <ThreePartBitmap profile="fs25_lineSeparatorTopHighlighted" position="0px -57px" />
+        <MultiTextOption profile="fs25_subCategorySelectorTabbed" id="subCategoryPaging" position="0px -10px" onClick="updateSubCategoryPages" onFocus="updateMenuButtons" />
+        <GuiElement profile="fs25_subCategorySelectorTabbedContainer" id="subCategoryPages[1]">
+            <Text profile="fs25_multiplayerNameTemplate" id="playerNameTemplate" />
+            <SmoothList profile="fs25_multiplayerList" id="farmList" onDoubleClick="onDoubleClickFarm" startClipperElementName="startClipper">
+                <ListItem profile="fs25_multiplayerListItem">
+                    <GuiElement profile="emptyFullPanel" name="existingFarm" anchors="0 1 0 1">
+                        <ThreePartBitmap profile="fs25_multiplayerListItemBg" />
+                        <ThreePartBitmap profile="fs25_multiplayerListItemImageBg" />
+                        <Bitmap profile="fs25_multiplayerListItemImage" name="farmIcon" />
+                        <Text profile="fs25_multiplayerListItemName" name="farmName" text="" />
+                        <Text profile="fs25_multiplayerListItemBalance" name="farmBalance" />
+                        <ThreePartBitmap profile="fs25_multiplayerListItemSeparator" />
+                        <ThreePartBitmap profile="fs25_multiplayerListItemSeparator" position="380px -150px" />
+                        <ThreePartBitmap profile="fs25_multiplayerListItemSeparator" position="380px -190px" />
+                        <BoxLayout profile="fs25_multiplayerListItemDataBox" name="playerNameLayout" />
+                    </GuiElement>
+                    <GuiElement profile="emptyFullPanel" name="newFarm" anchors="0 1 0 1">
+                        <ThreePartBitmap profile="fs25_multiplayerListItemBg" />
+                        <ThreePartBitmap profile="fs25_multiplayerListItemImageBg" />
+                        <Bitmap profile="fs25_multiplayerListItemNewIcon" />
+                        <Text profile="fs25_multiplayerListItemNewFarm" text="$l10n_ui_createNewFarm" />
+                    </GuiElement>
+                </ListItem>
+            </SmoothList>
+            <Bitmap profile="fs25_startClipper" name="startClipper" position="-3px 1px" />
+            <Text profile="fs25_multiplayerNoFarmsText" id="noFarmsText" text="$l10n_ui_noFarmsCreated" visible="false" />
+        </GuiElement>
+        <GuiElement profile="fs25_subCategorySelectorTabbedContainer" id="subCategoryPages[2]">
+            <GuiElement profile="fs25_multiplayerUsersListBox">
+                <SmoothList profile="fs25_multiplayerUsersList" id="userList">
+                    <ListItem profile="fs25_multiplayerUsersListItem" name="user">
+                        <ThreePartBitmap profile="fs25_multiplayerUsersListItemBg" name="alternating" />
+                        <PlatformIcon profile="fs25_multiplayerUsersListItemPlatform" name="platform" />
+                        <Text profile="fs25_multiplayerUsersListItemText" text="Nickname" name="playerName" />
+                        <BoxLayout profile="fs25_multiplayerUsersListItemAttributeBox">
+                            <Bitmap profile="fs25_multiplayerUsersListItemNoMicrophone" name="noMicrophone" />
+                            <Bitmap profile="fs25_multiplayerUsersListItemMuted" name="muted" />
+                            <Bitmap profile="fs25_multiplayerUsersListItemFarmManager" name="farmManager" />
+                            <Bitmap profile="fs25_multiplayerUsersListItemAdmin" name="admin" />
+                        </BoxLayout>
+                    </ListItem>
+                    <ListItem profile="fs25_multiplayerUsersListItem" handleFocus="false" name="farm">
+                        <ThreePartBitmap profile="fs25_multiplayerUsersListItemBg" name="alternating" />
+                        <RoundCorner profile="fs25_multiplayerUsersListItemDot" name="dot" />
+                        <Text profile="fs25_multiplayerUsersListFarmName" text="My Farm" name="title" />
+                        <Text profile="fs25_multiplayerUsersListFarmBalance" text="Info" name="farmBalance" />
+                    </ListItem>
+                </SmoothList>
+                <ThreePartBitmap profile="fs25_listSliderBox">
+                    <Slider profile="fs25_listSlider" dataElementId="userList" />
+                </ThreePartBitmap>
+            </GuiElement>
+            <GuiElement profile="fs25_multiplayerUsersContentBox">
+                <BoxLayout profile="fs25_multiplayerActionsBox" id="actionsBox">
+                    <Text profile="fs25_multiplayerActionsTitle" id="actionsTitle" />
+                    <Button profile="fs25_multiplayerActionsButton" text="$l10n_button_mp_transferMoney" onClick="onClickTransferButton" id="transferButton">
+                        <ThreePartBitmap profile="fs25_multiplayerActionsButtonBg" />
+                    </Button>
+                    <Button profile="fs25_multiplayerActionsButton" text="$l10n_button_mp_removeFromFarm" onClick="onClickRemoveFromFarm" id="removeButton">
+                        <ThreePartBitmap profile="fs25_multiplayerActionsButtonBg" />
+                    </Button>
+                    <Button profile="fs25_multiplayerActionsButton" text="$l10n_button_mp_promote" onClick="onClickPromote" id="promoteButton">
+                        <ThreePartBitmap profile="fs25_multiplayerActionsButtonBg" />
+                    </Button>
+                    <Button profile="fs25_multiplayerActionsButton" text="$l10n_button_mp_grant" onClick="onClickContractor" id="contractorButton">
+                        <ThreePartBitmap profile="fs25_multiplayerActionsButtonBg" />
+                    </Button>
+                    <Button profile="fs25_multiplayerActionsButton" text="$l10n_button_kick" onClick="onButtonKick" id="kickButton">
+                        <ThreePartBitmap profile="fs25_multiplayerActionsButtonBg" />
+                    </Button>
+                    <Button profile="fs25_multiplayerActionsButton" text="$l10n_button_block" onClick="onButtonBlock" id="blockButton">
+                        <ThreePartBitmap profile="fs25_multiplayerActionsButtonBg" />
+                    </Button>
+                    <Button profile="fs25_multiplayerActionsButton" text="$l10n_button_blockFromServer" onClick="onButtonBlockFromServer" id="blockFromServerButton">
+                        <ThreePartBitmap profile="fs25_multiplayerActionsButtonBg" />
+                    </Button>
+                    <Button profile="fs25_multiplayerActionsButton" text="$l10n_button_report" onClick="onButtonReport" id="reportButton">
+                        <ThreePartBitmap profile="fs25_multiplayerActionsButtonBg" />
+                    </Button>
+                    <Button profile="fs25_multiplayerActionsButton" text="$l10n_button_mute" onClick="onButtonMute" id="muteButton">
+                        <ThreePartBitmap profile="fs25_multiplayerActionsButtonBg" />
+                    </Button>
+                    <Button profile="fs25_multiplayerActionsButton" text="$l10n_button_showProfile" onClick="onButtonShowProfile" id="showProfileButton">
+                        <ThreePartBitmap profile="fs25_multiplayerActionsButtonBg" />
+                    </Button>
+                    <MultiTextOption profile="fs25_multiplayerActionsMultiTextOption" id="peerVolumeOption" onClick="onPeerVolumeChanged" />
+                </BoxLayout>
+                <ThreePartBitmap profile="fs25_lineSeparatorLeftSoft" width="1dp" position="430px 0px" />
+                <Text profile="fs25_multiplayerPermissionsTitle" id="permissionsTitle" text="$l10n_ui_permissions" />
+                <ScrollingLayout profile="fs25_multiplayerPermissionsBox" id="permissionsBox">
+                    <GuiElement profile="fs25_multiPlayerBinaryOptionContainer" id="permissionRow[1]">
+                        <BinaryOption profile="fs25_multiplayerBinaryOption" onClick="onClickPermission" id="buyVehiclePermissionCheckbox" />
+                        <Text profile="fs25_multiplayerBinaryOptionTitle" text="$l10n_ui_permission_buyVehicles" />
+                    </GuiElement>
+                    <GuiElement profile="fs25_multiPlayerBinaryOptionContainer" id="permissionRow[2]">
+                        <BinaryOption profile="fs25_multiplayerBinaryOption" onClick="onClickPermission" id="sellVehiclePermissionCheckbox" />
+                        <Text profile="fs25_multiplayerBinaryOptionTitle" text="$l10n_ui_permission_sellVehicles" />
+                    </GuiElement>
+                    <GuiElement profile="fs25_multiPlayerBinaryOptionContainer" id="permissionRow[3]">
+                        <BinaryOption profile="fs25_multiplayerBinaryOption" onClick="onClickPermission" id="resetVehiclePermissionCheckbox" />
+                        <Text profile="fs25_multiplayerBinaryOptionTitle" text="$l10n_ui_permissions_resetVehicles" />
+                    </GuiElement>
+                    <GuiElement profile="fs25_multiPlayerBinaryOptionContainer" id="permissionRow[4]">
+                        <BinaryOption profile="fs25_multiplayerBinaryOption" onClick="onClickPermission" id="buyPlaceablePermissionCheckbox" />
+                        <Text profile="fs25_multiplayerBinaryOptionTitle" text="$l10n_ui_permissions_buyPlaceable" />
+                    </GuiElement>
+                    <GuiElement profile="fs25_multiPlayerBinaryOptionContainer" id="permissionRow[5]">
+                        <BinaryOption profile="fs25_multiplayerBinaryOption" onClick="onClickPermission" id="sellPlaceablePermissionCheckbox" />
+                        <Text profile="fs25_multiplayerBinaryOptionTitle" text="$l10n_ui_permissions_sellPlaceable" />
+                    </GuiElement>
+                    <GuiElement profile="fs25_multiPlayerBinaryOptionContainer" id="permissionRow[6]">
+                        <BinaryOption profile="fs25_multiplayerBinaryOption" onClick="onClickPermission" id="hireAssistantPermissionCheckbox" />
+                        <Text profile="fs25_multiplayerBinaryOptionTitle" text="$l10n_ui_permissions_hireAssistent" />
+                    </GuiElement>
+                    <GuiElement profile="fs25_multiPlayerBinaryOptionContainer" id="permissionRow[7]">
+                        <BinaryOption profile="fs25_multiplayerBinaryOption" onClick="onClickPermission" id="manageMissionsPermissionCheckbox" />
+                        <Text profile="fs25_multiplayerBinaryOptionTitle" text="$l10n_ui_permissions_manageMissions" />
+                    </GuiElement>
+                    <GuiElement profile="fs25_multiPlayerBinaryOptionContainer" id="permissionRow[8]">
+                        <BinaryOption profile="fs25_multiplayerBinaryOption" onClick="onClickPermission" id="manageProductionsPermissionCheckbox" />
+                        <Text profile="fs25_multiplayerBinaryOptionTitle" text="$l10n_ui_permissions_manageProductions" />
+                    </GuiElement>
+                    <GuiElement profile="fs25_multiPlayerBinaryOptionContainer" id="permissionRow[9]">
+                        <BinaryOption profile="fs25_multiplayerBinaryOption" onClick="onClickPermission" id="tradeAnimalsPermissionCheckbox" />
+                        <Text profile="fs25_multiplayerBinaryOptionTitle" text="$l10n_ui_permissions_tradeAnimals" />
+                    </GuiElement>
+                    <GuiElement profile="fs25_multiPlayerBinaryOptionContainer" id="permissionRow[10]">
+                        <BinaryOption profile="fs25_multiplayerBinaryOption" onClick="onClickPermission" id="cutTreesPermissionCheckbox" />
+                        <Text profile="fs25_multiplayerBinaryOptionTitle" text="$l10n_ui_permissions_cutTrees" />
+                    </GuiElement>
+                    <GuiElement profile="fs25_multiPlayerBinaryOptionContainer" id="permissionRow[11]">
+                        <BinaryOption profile="fs25_multiplayerBinaryOption" onClick="onClickPermission" id="createFieldsPermissionCheckbox" />
+                        <Text profile="fs25_multiplayerBinaryOptionTitle" text="$l10n_ui_permissions_createFields" />
+                    </GuiElement>
+                    <GuiElement profile="fs25_multiPlayerBinaryOptionContainer" id="permissionRow[12]">
+                        <BinaryOption profile="fs25_multiplayerBinaryOption" onClick="onClickPermission" id="landscapingPermissionCheckbox" />
+                        <Text profile="fs25_multiplayerBinaryOptionTitle" text="$l10n_ui_permissions_landscaping" />
+                    </GuiElement>
+                </ScrollingLayout>
+            </GuiElement>
+        </GuiElement>
+    </GuiElement>
+    <ThreePartBitmap profile="fs25_sliderDockedBg">
+        <ThreePartBitmap profile="fs25_sliderDockedBox">
+            <Slider profile="fs25_sliderDocked" id="multiplayerSlider" dataElementId="farmList" stepSize="5" />
+        </ThreePartBitmap>
+    </ThreePartBitmap>
+    <GUIProfiles>
+        <Profile name="fs25_multiplayerNameTemplate" extends="fs25_textDarkHighlight">
+            <size value="270px 40px" />
+            <textMaxWidth value="250px" />
+        </Profile>
+        <Profile name="fs25_multiplayerList" extends="emptyPanel" with="anchorStretchingYStretchingX">
+            <listItemSpacing value="-30px" />
+            <isHorizontalList value="false" />
+            <selectedWithoutFocus value="false" />
+        </Profile>
+        <Profile name="fs25_multiplayerListItem" extends="emptyPanel" with="anchorTopStretchingX">
+            <height value="280px" />
+        </Profile>
+        <Profile name="fs25_multiplayerListItemImageBg" extends="baseReference" with="anchorTopLeft">
+            <size value="350px 237px" />
+            <position value="12px -8px" />
+            <imageSliceId value="gui.multiplayer_blackBox_right" />
+            <startImageSize value="20px 0" />
+            <startImageSliceId value="gui.multiplayer_blackBox_left" />
+            <endImageSize value="0px 0" />
+        </Profile>
+        <Profile name="fs25_multiplayerListItemImage" extends="baseReference" with="anchorTopLeft">
+            <size value="240px 240px" />
+            <position value="66px -6px" />
+            <imageSliceId value="noSlice" />
+        </Profile>
+        <Profile name="fs25_multiplayerListItemNewIcon" extends="baseReference" with="anchorTopLeft">
+            <size value="160px 160px" />
+            <position value="107px -44px" />
+            <imageSliceId value="gui.multiplayer_plus" />
+        </Profile>
+        <Profile name="fs25_multiplayerListItemBg" extends="baseReference" with="anchorStretchingYStretchingX">
+            <imageSliceId value="gui.multiplayer_farm_middle" />
+            <imageSelectedSliceId value="gui.multiplayer_farmSelected_middle" />
+            <imageHighlightedSliceId value="gui.multiplayer_farmHover_middle" />
+            <startImageSize value="35px 0" />
+            <startImageSliceId value="gui.multiplayer_farm_left" />
+            <startImageSelectedSliceId value="gui.multiplayer_farmSelected_left" />
+            <startImageHighlightedSliceId value="gui.multiplayer_farmHover_left" />
+            <endImageSize value="50px 0" />
+            <endImageSliceId value="gui.multiplayer_farm_right" />
+            <endImageSelectedSliceId value="gui.multiplayer_farmSelected_right" />
+            <endImageHighlightedSliceId value="gui.savegame_hover_right" />
+        </Profile>
+        <Profile name="fs25_multiplayerListItemName" extends="fs25_textDarkHighlight" with="anchorTopLeft">
+            <size value="1000px 40px" />
+            <position value="400px -30px" />
+            <textSize value="30px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+        </Profile>
+        <Profile name="fs25_multiplayerListItemBalance" extends="fs25_shopMoney" with="anchorTopRight">
+            <height value="40px" />
+            <position value="-60px -30px" />
+            <textSize value="30px" />
+            <textSelectedColor value="$preset_fs25_colorMainDark" />
+        </Profile>
+        <Profile name="fs25_multiplayerListItemNewFarm" extends="fs25_textDarkHighlight" with="anchorTopLeft">
+            <size value="1000px 40px" />
+            <position value="380px -30px" />
+            <textSize value="30px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+            <textColor value="$preset_colorWhite_50" />
+        </Profile>
+        <Profile name="fs25_multiplayerListItemDataBox" extends="emptyPanel" with="anchorTopLeft">
+            <size value="1080px 160px" />
+            <position value="400px -80px" />
+            <numFlows value="4" />
+            <flowDirection value="vertical" />
+        </Profile>
+        <Profile name="fs25_multiplayerListItemSeparator" extends="fs25_lineSeparatorTop" with="anchorTopLeft">
+            <width value="1100px" />
+            <position value="380px -110px" />
+        </Profile>
+        <Profile name="fs25_multiplayerNoFarmsBox" extends="emptyPanel" with="anchorMiddleCenter">
+            <size value="1660px 708px" />
+        </Profile>
+        <Profile name="fs25_multiplayerNoFarmsText" extends="fs25_textDefault" with="anchorMiddleStretchingX">
+            <size value="80% 960px" />
+            <textSize value="26px" />
+            <textAlignment value="center" />
+        </Profile>
+        <Profile name="fs25_multiplayerUsersListBox" extends="emptyPanel" with="anchorStretchingYLeft">
+            <width value="540px" />
+            <position value="40px 0px" />
+        </Profile>
+        <Profile name="fs25_multiplayerUsersList" extends="emptyPanel" with="anchorStretchingYStretchingX">
+            <isHorizontalList value="false" />
+        </Profile>
+        <Profile name="fs25_multiplayerUsersListItem" extends="emptyPanel" with="anchorTopLeft">
+            <height value="30px" />
+            <alternateChildren value="true" />
+            <imageSliceId value="gui.empty" />
+            <imageColor value="$preset_fs25_colorGreyListItem" />
+            <imageSelectedColor value="$preset_fs25_colorMainHighlight" />
+            <alternateBackgroundColor value="$preset_colorTransparent" />
+        </Profile>
+        <Profile name="fs25_multiplayerUsersListItemBg" extends="baseReference" with="anchorStretchingYStretchingX">
+            <imageSliceId value="gui.3dShop_button_middle" />
+            <imageSelectedColor value="$preset_fs25_colorMainHighlight" />
+            <startImageSize value="6px 0" />
+            <startImageSliceId value="gui.3dShop_button_left" />
+            <startImageSelectedColor value="$preset_fs25_colorMainHighlight" />
+            <endImageSize value="6px 0" />
+            <endImageSliceId value="gui.3dShop_button_right" />
+            <endImageSelectedColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_multiplayerUsersListItemDot" extends="baseReference" with="anchorMiddleLeft">
+            <size value="16px 16px" />
+            <position value="16px 0" />
+            <cornerSize value="0.25" />
+        </Profile>
+        <Profile name="fs25_multiplayerUsersListItemPlatform" extends="baseReference" with="anchorMiddleLeft">
+            <size value="32px 32px" />
+            <position value="45px 0" />
+            <imageSelectedColor value="$preset_fs25_colorMainDark" />
+        </Profile>
+        <Profile name="fs25_multiplayerUsersListItemText" extends="fs25_textDarkHighlight" with="anchorStretchingYLeft">
+            <width value="350px" />
+            <position value="85px 0px" />
+            <textBold value="true" />
+            <textLayoutMode value="scrolling" />
+        </Profile>
+        <Profile name="fs25_multiplayerUsersListItemAttributeBox" extends="emptyPanel" with="anchorStretchingYRight">
+            <width value="100px" />
+            <position value="-8px 0" />
+            <alignmentX value="right" />
+            <alignmentY value="middle" />
+        </Profile>
+        <Profile name="fs25_multiplayerUsersListItemAttribute" extends="baseReference">
+            <size value="30px 30px" />
+            <margin value="2px 0 2px 0" />
+            <imageSelectedColor value="$preset_fs25_colorMainDark" />
+        </Profile>
+        <Profile name="fs25_multiplayerUsersListItemNoMicrophone" extends="fs25_multiplayerUsersListItemAttribute">
+            <size value="24px 24px" />
+            <imageSliceId value="gui.multiplayer_noMic" />
+        </Profile>
+        <Profile name="fs25_multiplayerUsersListItemMuted" extends="fs25_multiplayerUsersListItemAttribute">
+            <size value="24px 24px" />
+            <imageSliceId value="gui.multiplayer_soundMute" />
+        </Profile>
+        <Profile name="fs25_multiplayerUsersListItemFarmManager" extends="fs25_multiplayerUsersListItemAttribute">
+            <size value="28px 28px" />
+            <imageSliceId value="gui.multiplayer_farmManager" />
+        </Profile>
+        <Profile name="fs25_multiplayerUsersListItemAdmin" extends="fs25_multiplayerUsersListItemAttribute">
+            <size value="28px 28px" />
+            <imageSliceId value="gui.multiplayer_serverAdmin" />
+        </Profile>
+        <Profile name="fs25_multiplayerUsersListFarmName" extends="fs25_textDarkHighlight" with="anchorStretchingYLeft">
+            <width value="360px" />
+            <position value="45px 0px" />
+            <textSize value="20px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+        </Profile>
+        <Profile name="fs25_multiplayerUsersListFarmBalance" extends="fs25_textDarkHighlight" with="anchorStretchingYRight">
+            <width value="150px" />
+            <position value="-8px 0" />
+            <format value="currency" />
+            <textAlignment value="right" />
+        </Profile>
+        <Profile name="fs25_multiplayerUsersContentBox" extends="emptyPanel" with="anchorTopRight">
+            <size value="820px 756px" />
+            <position value="-90px 0px" />
+        </Profile>
+        <Profile name="fs25_multiplayerActionsBox" extends="emptyPanel" with="anchorStretchingYLeft pivotBottomLeft">
+            <width value="400px" />
+            <flowDirection value="vertical" />
+        </Profile>
+        <Profile name="fs25_multiplayerActionsTitle" extends="fs25_textDefault" with="anchorTopStretchingX">
+            <size value="100% 40px" />
+            <textSize value="20px" />
+            <textBold value="true" />
+            <textMaxWidth value="380px" />
+            <textUpperCase value="true" />
+            <textVerticalAlignment value="top" />
+        </Profile>
+        <Profile name="fs25_multiplayerActionsButton" extends="fs25_textDefault" with="anchorTopStretchingX">
+            <size value="100% 30px" />
+            <margin value="0 0 0 7px" />
+            <iconSliceId value="noSlice" />
+            <iconColor value="$preset_colorTransparent" />
+            <imageSliceId value="noSlice" />
+            <imageColor value="$preset_colorTransparent" />
+            <textSize value="16px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+            <textMaxWidth value="380px" />
+            <textOffset value="10px 0px" />
+            <textFocusedColor value="$preset_fs25_colorMainDark" />
+        </Profile>
+        <Profile name="fs25_multiplayerActionsButtonBg" extends="baseReference" with="anchorStretchingYStretchingX">
+            <imageSliceId value="gui.button_middle" />
+            <imageColor value="$preset_fs25_colorGreyListItem" />
+            <imageFocusedColor value="$preset_fs25_colorMainHighlight" />
+            <startImageSize value="6px 0" />
+            <startImageSliceId value="gui.button_left" />
+            <startImageColor value="$preset_fs25_colorGreyListItem" />
+            <startImageFocusedColor value="$preset_fs25_colorMainHighlight" />
+            <endImageSize value="6px 0" />
+            <endImageSliceId value="gui.button_right" />
+            <endImageColor value="$preset_fs25_colorGreyListItem" />
+            <endImageFocusedColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_multiplayerActionsMultiTextOption" extends="fs25_multiTextOption" with="anchorTopStretchingX">
+            <width value="100%" />
+        </Profile>
+        <Profile name="fs25_multiplayerPermissionsBox" extends="emptyPanel" with="anchorStretchingYRight pivotBottomRight">
+            <width value="360px" />
+            <absoluteSizeOffset value="0px 40px" />
+            <wrapAround value="false" />
+            <flowDirection value="vertical" />
+        </Profile>
+        <Profile name="fs25_multiplayerPermissionsTitle" extends="fs25_textDefault" with="anchorTopRight">
+            <size value="360px 40px" />
+            <textSize value="20px" />
+            <textBold value="true" />
+            <textMaxWidth value="380px" />
+            <textUpperCase value="true" />
+            <textVerticalAlignment value="top" />
+        </Profile>
+        <Profile name="fs25_multiPlayerBinaryOptionContainer" extends="baseReference" with="anchorTopStretchingX">
+            <height value="60px" />
+            <margin value="0px 0px 0px 30px" />
+        </Profile>
+        <Profile name="fs25_multiplayerBinaryOption" extends="fs25_binaryOption" with="anchorBottomLeft">
+            <useYesNoTexts value="true" />
+            <defaultProfileBgThreePart value="fs25_multiplayerBinaryOptionBg" />
+            <defaultProfileSliderThreePart value="fs25_multiplayerBinaryOptionSlider" />
+        </Profile>
+        <Profile name="fs25_multiplayerBinaryOptionBg" extends="fs25_binaryOptionBg">
+            <imageDisabledColor value="$preset_fs25_colorGrey_20" />
+            <startImageDisabledColor value="$preset_fs25_colorGrey_20" />
+            <endImageDisabledColor value="$preset_fs25_colorGrey_20" />
+        </Profile>
+        <Profile name="fs25_multiplayerBinaryOptionSlider" extends="fs25_binaryOptionSlider">
+            <imageDisabledColor value="$preset_fs25_colorGreyBinarySlider_20" />
+            <startImageDisabledColor value="$preset_fs25_colorGreyBinarySlider_20" />
+            <endImageDisabledColor value="$preset_fs25_colorGreyBinarySlider_20" />
+        </Profile>
+        <Profile name="fs25_multiplayerBinaryOptionTitle" extends="fs25_textDefault" with="anchorTopStretchingX">
+            <width value="100%" />
+            <textSize value="16px" />
+        </Profile>
+        <Profile name="fs25_multiplayerSliderDocked" extends="fs25_sliderDocked">
+            <handleFocus value="true" />
+            <sliderImageColor value="$preset_fs25_colorGreyLight" />
+            <sliderImageFocusedColor value="$preset_fs25_colorMainHighlight" />
+            <startImageColor value="$preset_fs25_colorGreyLight" />
+            <startImageFocusedColor value="$preset_fs25_colorMainHighlight" />
+            <endImageColor value="$preset_fs25_colorGreyLight" />
+            <endImageFocusedColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

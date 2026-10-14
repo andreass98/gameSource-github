@@ -1,0 +1,6 @@
+NPCConversationFailedState = {}
+NPCConversationFailedState.FAILED_REASON_NO_CONVERSATION_ITEMS = 1
+NPCConversationFailedState.FAILED_REASON_NO_CONVERSATION_AVAILABLE = 2
+NPCConversationFailedState.FAILED_REASON_NPC_BUSY = 3
+NPCConversationFailedState.FAILED_REASON_UNKNOWN_PLAYER = 4
+Enum(NPCConversationFailedState)

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <RoundCorner profile="fieldStateDialogBg" id="dialogElement">
+        <Bitmap profile="dialogHeaderDocked">
+            <Text profile="dialogHeaderText" text="Field State" id="headerText" />
+        </Bitmap>
+        <BoxLayout profile="fieldStateBoxLayout" id="boxLayout">
+            <GuiElement profile="fieldStateTextInputWrapper">
+                <TextInput profile="fieldStateTextInput" id="fieldIds" needExternalClick="true" imeTitle="Field-Ids" imeDescription="Field-Ids" imePlaceholder="Field-Ids" focusInit="onOpen">
+                    <ThreePartBitmap profile="fs25_textInputBg" />
+                </TextInput>
+                <Text profile="fieldStateMultiTextTitle" text="Field-Ids (use &apos;all&apos; or comma separated list)" />
+            </GuiElement>
+            <GuiElement profile="fieldStateMultiTextOptionSettings">
+                <MultiTextOption profile="fieldStateMultiTextOption" id="fruitTypes" onClick="onClickFruitType" />
+                <Text profile="fieldStateMultiTextTitle" text="Fruit" />
+            </GuiElement>
+            <GuiElement profile="fieldStateMultiTextOptionSettings">
+                <MultiTextOption profile="fieldStateMultiTextOption" id="growthStates" onClick="onClickGrowthStates" />
+                <Text profile="fieldStateMultiTextTitle" text="GrowthState" />
+            </GuiElement>
+            <GuiElement profile="fieldStateMultiTextOptionSettings">
+                <MultiTextOption profile="fieldStateMultiTextOption" id="weed" />
+                <Text profile="fieldStateMultiTextTitle" text="Weed" />
+            </GuiElement>
+            <GuiElement profile="fieldStateMultiTextOptionSettings">
+                <MultiTextOption profile="fieldStateMultiTextOption" id="stones" />
+                <Text profile="fieldStateMultiTextTitle" text="Stones" />
+            </GuiElement>
+            <GuiElement profile="fieldStateMultiTextOptionSettings">
+                <MultiTextOption profile="fieldStateMultiTextOption" id="groundTypes" />
+                <Text profile="fieldStateMultiTextTitle" text="GroundType" />
+            </GuiElement>
+            <GuiElement profile="fieldStateMultiTextOptionSettings">
+                <MultiTextOption profile="fieldStateMultiTextOption" id="groundAngles" />
+                <Text profile="fieldStateMultiTextTitle" text="GroundAngle" />
+            </GuiElement>
+            <GuiElement profile="fieldStateMultiTextOptionSettings">
+                <MultiTextOption profile="fieldStateMultiTextOption" id="sprayTypes" />
+                <Text profile="fieldStateMultiTextTitle" text="SprayType" />
+            </GuiElement>
+            <GuiElement profile="fieldStateMultiTextOptionSettings">
+                <MultiTextOption profile="fieldStateMultiTextOption" id="sprayLevel" />
+                <Text profile="fieldStateMultiTextTitle" text="SprayLevel" />
+            </GuiElement>
+            <GuiElement profile="fieldStateMultiTextOptionSettings">
+                <MultiTextOption profile="fieldStateMultiTextOption" id="limeLevel" />
+                <Text profile="fieldStateMultiTextTitle" text="LimeLevel" />
+            </GuiElement>
+            <GuiElement profile="fieldStateMultiTextOptionSettings">
+                <MultiTextOption profile="fieldStateMultiTextOption" id="plowLevel" />
+                <Text profile="fieldStateMultiTextTitle" text="PlowLevel" />
+            </GuiElement>
+            <GuiElement profile="fieldStateMultiTextOptionSettings">
+                <MultiTextOption profile="fieldStateMultiTextOption" id="rollerLevel" />
+                <Text profile="fieldStateMultiTextTitle" text="RollerLevel" />
+            </GuiElement>
+            <GuiElement profile="fieldStateMultiTextOptionSettings">
+                <MultiTextOption profile="fieldStateMultiTextOption" id="stubbleShredLevel" />
+                <Text profile="fieldStateMultiTextTitle" text="StubbleShredLevel" />
+            </GuiElement>
+        </BoxLayout>
+        <BoxLayout profile="fs25_dialogButtonBox">
+            <Button profile="buttonBack" text="$l10n_button_close" onClick="onClickBack" />
+            <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            <Button profile="buttonActivate" text="$l10n_button_apply" onClick="onClickApply" id="applyButton" />
+            <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            <Button profile="buttonOK" text="$l10n_button_ok" onClick="onClickOk" />
+        </BoxLayout>
+    </RoundCorner>
+    <GUIProfiles>
+        <Profile name="fieldStateDialogBg" extends="baseReference" with="anchorMiddleRight">
+            <size value="510px 960px" />
+            <color value="$preset_fs25_colorMainGrey" />
+        </Profile>
+        <Profile name="fieldStateBoxLayout" extends="emptyPanel" with="anchorTopCenter">
+            <size value="480px 760px" />
+            <position value="0px -20px" />
+            <flowMargin value="0 0 0 0" />
+            <numFlows value="1" />
+            <lateralFlowSize value="305px" />
+            <flowDirection value="vertical" />
+            <fitFlowToElements value="true" />
+            <alignmentX value="left" />
+            <alignmentY value="top" />
+            <imageColor value="$preset_colorTransparent" />
+            <useFullVisibility value="false" />
+            <autoValidateLayout value="true" />
+            <Variant name="mobile" with="anchorMiddleCenter">
+                <size value="850px 680px" />
+                <position value="0px 0px" />
+            </Variant>
+        </Profile>
+        <Profile name="fieldStateTextInputWrapper" extends="baseReference">
+            <size value="480px 48px" />
+            <margin value="0 12px 0 12px" />
+            <focusFallthrough value="true" />
+            <Variant name="mobile">
+                <size value="1400px 105px" />
+            </Variant>
+        </Profile>
+        <Profile name="fieldStateTextInput" extends="fs25_textInput" with="anchorMiddleRight">
+            <position value="-30px 0px" />
+            <Variant name="mobile">
+                <textSize value="35px" />
+                <cursorSize value="2px 35px" />
+                <size value="420px 105px" />
+            </Variant>
+        </Profile>
+        <Profile name="fieldStateMultiTextTitle" extends="fs25_textDefault" with="anchorMiddleLeft">
+            <size value="190px 48px" />
+            <textSize value="20px" />
+            <textMaxNumLines value="2" />
+            <textAlignment value="right" />
+            <Variant name="mobile">
+                <textSize value="35px" />
+            </Variant>
+        </Profile>
+        <Profile name="fieldStateMultiTextOptionSettings" extends="baseReference">
+            <margin value="0 5px 0 5px" />
+            <size value="480px 48px" />
+            <Variant name="mobile">
+                <size value="820px 105px" />
+                <margin value="0px 15px 0px 15px" />
+            </Variant>
+        </Profile>
+        <Profile name="fieldStateMultiTextOption" extends="fs25_multiTextOption" with="anchorMiddleRight">
+            <Variant name="mobile">
+                <size value="420px 105px" />
+            </Variant>
+        </Profile>
+    </GUIProfiles>
+</GUI>

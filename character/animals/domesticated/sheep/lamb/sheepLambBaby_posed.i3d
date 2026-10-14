@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="sheepLambBaby_posed" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/tileAndMirrorShader.xml" />
+    <File fileId="5" filename="$dataS/character/animals/domesticated/sheep/lamb/sheepLamb_alpha.png" />
+    <File fileId="1" filename="$dataS/character/animals/domesticated/sheep/lamb/sheepLamb_diffuse.png" />
+    <File fileId="2" filename="$dataS/character/animals/domesticated/sheep/lamb/sheepLamb_normal.png" />
+    <File fileId="3" filename="$dataS/character/animals/domesticated/sheep/lamb/sheepLamb_specular.png" />
+  </Files>
+
+  <Materials>
+    <Material name="sheepLambAlpha_mat" materialId="2" customShaderId="4" customShaderVariation="sssSpecularDirt_alphaMapSecondUV">
+      <CustomParameter name="sssColor" value=".8 .8 .8 1.0"/>
+      <Custommap name="alphaMap" fileId="5"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="sheepLamb_mat" materialId="1" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <CustomParameter name="sssColor" value="0.8 0.8 0.8 1.0"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="sheepLambBaby_posed.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="sheepLamb" nodeId="1">
+      <TransformGroup name="LOD_0" nodeId="2">
+        <Shape name="body" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="3"/>
+        <Shape name="tongue" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="4"/>
+        <Shape name="bottom" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="5"/>
+        <Shape name="eye_l" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="6"/>
+        <Shape name="eye_r" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="7"/>
+        <TransformGroup name="hair" nodeId="8">
+          <Shape name="hair1" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="9"/>
+          <Shape name="lashes_L" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="350" nodeId="10"/>
+          <Shape name="lashes_R" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="350" nodeId="11"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="LOD_1" visibility="false" nodeId="12">
+        <Shape name="body" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="13"/>
+        <Shape name="tongue" shapeId="10" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="14"/>
+        <Shape name="bottom" shapeId="11" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="15"/>
+        <Shape name="eye_r" shapeId="12" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="16"/>
+        <Shape name="eye_l" shapeId="13" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="17"/>
+        <TransformGroup name="hair" nodeId="18">
+          <Shape name="hair1" shapeId="14" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="19"/>
+          <Shape name="lashes_L" shapeId="15" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="350" nodeId="20"/>
+          <Shape name="lashes_R" shapeId="16" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="350" nodeId="21"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="LOD_2" visibility="false" nodeId="22">
+        <Shape name="body" shapeId="17" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="23"/>
+        <Shape name="tongue" shapeId="18" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="24"/>
+        <Shape name="bottom" shapeId="19" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="25"/>
+        <Shape name="eye_r" shapeId="20" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="26"/>
+        <Shape name="eye_l" shapeId="21" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="27"/>
+        <TransformGroup name="hair" nodeId="28">
+          <Shape name="lashes_L" shapeId="22" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="350" nodeId="29"/>
+          <Shape name="lashes_R" shapeId="23" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="350" nodeId="30"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="LOD_3" visibility="false" nodeId="31">
+        <Shape name="body" shapeId="24" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="32"/>
+        <Shape name="tongue" shapeId="25" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="33"/>
+        <Shape name="bottom" shapeId="26" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="34"/>
+        <Shape name="eye_r" shapeId="27" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="35"/>
+        <Shape name="eye_l" shapeId="28" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="350" nodeId="36"/>
+        <TransformGroup name="hair" nodeId="37">
+          <Shape name="lashes_L" shapeId="29" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="350" nodeId="38"/>
+          <Shape name="lashes_R" shapeId="30" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="350" nodeId="39"/>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

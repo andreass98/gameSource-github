@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="borderCollie_posed" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Maya Exporter" version="10.0.0" revision="40892" />
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/tileAndMirrorShader.xml" />
+    <File fileId="6" filename="$dataS/character/animals/domesticated/dog/borderCollie/borderCollie_alpha.png" />
+    <File fileId="1" filename="$dataS/character/animals/domesticated/dog/borderCollie/borderCollie_diffuse.png" />
+    <File fileId="2" filename="$dataS/character/animals/domesticated/dog/borderCollie/borderCollie_normal.png" />
+    <File fileId="3" filename="$dataS/character/animals/domesticated/dog/borderCollie/borderCollie_specular.png" />
+    <File fileId="5" filename="$dataS/character/textures/default_normal.png" />
+  </Files>
+
+  <Materials>
+    <Material name="borderCollie_01_mat" materialId="1" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <CustomParameter name="sssColor" value="0.938 0.567 0.567 1"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="borderCollie_02_mat" materialId="2" customShaderId="4" customShaderVariation="sssSpecularDirt_alphaMapSecondUV_normalMapSecondUV">
+      <CustomParameter name="sssColor" value="0.938 0.567 0.567 1"/>
+      <Custommap name="alphaMap" fileId="6"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="borderCollie_posed.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="borderCollie" nodeId="1">
+      <Shape name="body" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="2"/>
+      <Shape name="tong" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="3"/>
+      <Shape name="alpha" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="4"/>
+      <Shape name="alphaStrands" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="5"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

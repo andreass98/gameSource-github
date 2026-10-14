@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI name="ingameMenuSave">
+    <GuiElement profile="fs25_menuContainer">
+        <GuiElement profile="fs25_menuHeaderPanel">
+            <Bitmap profile="fs25_menuHeaderIconBg">
+                <Bitmap profile="fs25_menuHeaderIcon" imageSliceId="gui.icon_ingameMenu_options" />
+            </Bitmap>
+            <Text profile="fs25_menuHeaderTitle" text="$l10n_ui_inGameMenuModeSettings" />
+        </GuiElement>
+        <GuiElement profile="fs25_saveContainer">
+            <BoxLayout profile="fs25_saveLayout" id="buttonsLayout">
+                <Button profile="fs25_saveButton" id="saveButton" onClick="onButtonSaveGame" focusInit="onOpen" onFocus="onButtonFocused">
+                    <Bitmap profile="fs25_saveButtonBg" />
+                    <Bitmap profile="fs25_saveButtonIcon" imageSliceId="gui.icon_options_saveGame" />
+                    <Text profile="fs25_saveButtonText" text="$l10n_button_saveGame" />
+                </Button>
+                <Button profile="fs25_saveButton" id="gameSettingsButton" onClick="onButtonGameSettings" onFocus="onButtonFocused">
+                    <Bitmap profile="fs25_saveButtonBg" />
+                    <Bitmap profile="fs25_saveButtonIcon" imageSliceId="gui.icon_options_generalSettings" />
+                    <Text profile="fs25_saveButtonText" text="$l10n_ui_inGameMenuModeSettings" />
+                </Button>
+                <Button profile="fs25_saveButton" id="buttonOpenControls" onClick="onButtonControls" onFocus="onButtonFocused">
+                    <Bitmap profile="fs25_saveButtonBg" />
+                    <Bitmap profile="fs25_saveButtonIcon" imageSliceId="gui.icon_options_controls" />
+                    <Text profile="fs25_saveButtonText" text="$l10n_button_controls" />
+                </Button>
+                <Button profile="fs25_saveButton" onClick="onButtonHelp" onFocus="onButtonFocused">
+                    <Bitmap profile="fs25_saveButtonBg" />
+                    <Bitmap profile="fs25_saveButtonIcon" imageSliceId="gui.icon_options_help" />
+                    <Text profile="fs25_saveButtonText" text="$l10n_ui_ingameMenuHelpLine" />
+                </Button>
+                <Button profile="fs25_saveButton" id="quitButton" onClick="onButtonQuit" onFocus="onButtonFocused">
+                    <Bitmap profile="fs25_saveButtonBg" />
+                    <Bitmap profile="fs25_saveButtonIcon" imageSliceId="gui.icon_options_quit" />
+                    <Text profile="fs25_saveButtonText" text="$l10n_button_cancelGame" />
+                </Button>
+            </BoxLayout>
+            <ThreePartBitmap profile="fs25_lineSeparatorBottom" />
+            <MultiTextOption profile="fs25_hintMultiTextOption" id="gameplayHintSelector" onFocus="updateMenuButtons" onLeave="updateMenuButtons" />
+            <IndexState profile="fs25_hintSelectorBox" id="hintStateBox" stateElementTemplateId="hintTemplate" indexableElementId="gameplayHintSelector">
+                <RoundCorner profile="fs25_subCategorySelectorDot" id="hintTemplate" />
+            </IndexState>
+        </GuiElement>
+    </GuiElement>
+</GUI>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="headgearJonsered" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/characterShader.xml" />
+    <File fileId="6" filename="$dataS/character/textures/accessory/head/hats/headgearForestryAlpha_diffuse.png" />
+    <File fileId="1" filename="$dataS/character/textures/accessory/head/hats/headgearForestryJonsered_diffuse.png" />
+    <File fileId="3" filename="$dataS/character/textures/accessory/head/hats/headgearForestryJonsered_specular.png" />
+    <File fileId="7" filename="$dataS/character/textures/accessory/head/hats/headgearForestryVisor_normal.png" />
+    <File fileId="5" filename="$dataS/character/textures/accessory/head/hats/headgearForestry_mask.png" />
+    <File fileId="2" filename="$dataS/character/textures/accessory/head/hats/headgearForestry_normal.png" />
+  </Files>
+
+  <Materials>
+    <Material name="headgearForestryJonsered_mat" materialId="1" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="5"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="headgearForestryAlpha_mat" materialId="2" specularColor="0.1 0.1 0.1" alphaBlending="true" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.220 0.250 0.440 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.500 0.500 0.500 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="5"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="headgearJonsered.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="animationRootNode" nodeId="1"/>
+    <TransformGroup name="headgearJonsered" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="2">
+      <Shape name="ForestryVisor" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="3">
+        <Shape name="VisorMesh" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="4"/>
+      </Shape>
+      <Shape name="Helmet" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="5"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

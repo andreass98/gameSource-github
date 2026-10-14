@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Bitmap profile="fs25_fullScreenBackground" />
+    <GuiElement profile="fs25_modSelectionContaienr">
+        <GuiElement profile="fs25_menuHeaderPanel" absoluteSizeOffset="0px 0px">
+            <Bitmap profile="fs25_menuHeaderIconBg">
+                <Bitmap profile="fs25_menuHeaderIcon" imageSliceId="gui.modhub_categories" />
+            </Bitmap>
+            <Text profile="fs25_menuHeaderTitle" text="$l10n_ui_modsDLCs" id="title" />
+            <RoundCorner profile="fs25_shopMoneyBoxBg" id="numSelectedModsBoxBg" />
+            <BoxLayout profile="fs25_shopMoneyBox" id="numSelectedModsBox">
+                <Bitmap profile="fs25_modSelectionHeaderIcon" margin="0px 0px 10px 0px" />
+                <Text profile="fs25_shopMoney" id="numSelectedModsText" />
+            </BoxLayout>
+        </GuiElement>
+        <SmoothList profile="fs25_shopList" id="modList" onDoubleClick="onDoubleClick" startClipperElementName="startClipper" listSectionHeader="section">
+            <ListItem profile="fs25_modSelectionListItem">
+                <Bitmap profile="fs25_modSelectionListItemBackground" name="bg" />
+                <Bitmap profile="fs25_modSelectionListItemImage" name="icon" />
+                <Text profile="fs25_modSelectionListItemTitle" name="title" />
+                <Text profile="fs25_modSelectionListItemVersion" name="version" />
+                <ThreePartBitmap profile="fs25_modHubDLCTag" name="dlcTag" position="30px 100px">
+                    <Text profile="fs25_modHubDLCTagText" text="DLC" />
+                </ThreePartBitmap>
+                <BoxLayout profile="fs25_modHubMarkerBox" name="markerBox" position="-24px -24px">
+                    <Bitmap profile="fs25_modHubMarkerConflict" name="markerBlocked" />
+                    <Bitmap profile="fs25_modHubMarkerUpdate" name="markerUpdate" />
+                </BoxLayout>
+            </ListItem>
+            <ListItem profile="fs25_shopListSection" name="section">
+                <Text profile="fs25_shopListSectionTitle" name="title" />
+            </ListItem>
+            <ListItem profile="fs25_modSelectionListItem" name="empty">
+                <Bitmap profile="fs25_modSelectionListItemBackgroundEmpty" />
+            </ListItem>
+        </SmoothList>
+        <Bitmap profile="fs25_startClipper" name="startClipper" position="-2px -0px" />
+        <Text profile="fs25_modSelectionNoModsDLCs" text="$l10n_ui_noMatchingModsDLCSFound" id="noModsDLCsElement" />
+        <Text profile="fs25_modHubAbuseText" text="$l10n_modHub_abuse" id="disclaimerLabel" position="0px -40px" />
+    </GuiElement>
+    <ThreePartBitmap profile="fs25_sliderDockedBg">
+        <ThreePartBitmap profile="fs25_sliderDockedBox">
+            <Slider profile="fs25_sliderDocked" dataElementId="modList" />
+        </ThreePartBitmap>
+    </ThreePartBitmap>
+    <BoxLayout profile="fs25_buttonBox" id="buttonsPanel">
+        <Button profile="buttonOK" onClick="onClickOk" id="buttonStart" text="$l10n_button_start" />
+        <Button profile="buttonBack" onClick="onClickBack" text="$l10n_button_back">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonSelect" onClick="toggleModAction" id="buttonSelect" text="$l10n_button_select">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonSelectAll" onClick="toggleAllAction" id="buttonSelectAll" text="$l10n_button_selectAll">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonExtra1" onClick="toggleCrossplay" id="buttonToggleCrossplay" text="$l10n_button_modHubShowCrossplay">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonSearch" onClick="onSearch" id="buttonSearch" text="$l10n_modHub_search">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+    </BoxLayout>
+    <GUIProfiles>
+        <Profile name="fs25_modSelectionContaienr" extends="fs25_shopContainer">
+            <position value="-14px 80px" />
+            <absoluteSizeOffset value="0px 250px" />
+        </Profile>
+        <Profile name="fs25_modSelectionHeaderIcon" extends="baseReference" with="anchorMiddleCenter">
+            <size value="50px 50px" />
+            <imageSliceId value="gui.icon_vehicleDealer_mods" />
+        </Profile>
+        <Profile name="fs25_modSelectionListItem" extends="emptyPanel" with="anchorTopLeft">
+            <size value="270px 340px" />
+        </Profile>
+        <Profile name="fs25_modSelectionListItemContainer" extends="emptyPanel" with="anchorStretchingYStretchingX">
+            <imageSliceId value="gui.empty" />
+        </Profile>
+        <Profile name="fs25_modSelectionListItemContainerSelected" extends="fs25_modSelectionListItemContainer">
+            <position value="0px 15px" />
+        </Profile>
+        <Profile name="fs25_modSelectionListItemBackground" extends="baseReference" with="anchorStretchingYStretchingX">
+            <imageSliceId value="gui.modSelection" />
+            <imageHighlightedSliceId value="gui.modSelection_hover" />
+            <imageSelectedSliceId value="gui.modSelection_hover" />
+        </Profile>
+        <Profile name="fs25_modSelectionListItemBackgroundSelected" extends="baseReference" with="anchorStretchingYStretchingX">
+            <imageSliceId value="gui.modSelection_selected2" />
+            <imageHighlightedSliceId value="gui.modSelection_selected" />
+            <imageSelectedSliceId value="gui.modSelection_selected" />
+        </Profile>
+        <Profile name="fs25_modSelectionListItemBackgroundEmpty" extends="baseReference" with="anchorStretchingYStretchingX">
+            <imageColor value="$preset_colorWhite_50" />
+            <imageSliceId value="gui.modSelection" />
+        </Profile>
+        <Profile name="fs25_modSelectionListItemImage" extends="baseReference" with="anchorTopCenter">
+            <size value="230px 230px" />
+            <position value="1px -19px" />
+            <imageSliceId value="noSlice" />
+            <imageFilename value="shared/splash.png" />
+            <imageMaskFilename value="dataS/menu/mask_mods.png" />
+            <selectedOffset value="0px 15px" />
+            <highlightedOffset value="0px 15px" />
+            <overlayMaskSize value="516px 516px" />
+            <overlayMaskPos value="-144px -144px" />
+        </Profile>
+        <Profile name="fs25_modSelectionListItemTitle" extends="fs25_textDefault" with="anchorBottomCenter">
+            <size value="200px 30px" />
+            <position value="0px 50px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+            <textAlignment value="center" />
+            <textLayoutMode value="scrolling" />
+            <textHighlightedOffset value="0px 15px" />
+            <textSelectedOffset value="0px 15px" />
+            <textFocusedColor value="$preset_fs25_colorMainDark" />
+            <textFocusedSelectedColor value="$preset_fs25_colorMainDark" />
+        </Profile>
+        <Profile name="fs25_modSelectionListItemVersion" extends="fs25_textDefault" with="anchorBottomCenter">
+            <size value="200px 30px" />
+            <position value="0px 25px" />
+            <textSize value="10px" />
+            <textUpperCase value="true" />
+            <textAlignment value="center" />
+            <textLayoutMode value="resize" />
+            <textHighlightedOffset value="0px 15px" />
+            <textSelectedOffset value="0px 15px" />
+            <textFocusedColor value="$preset_fs25_colorMainDark" />
+            <textFocusedSelectedColor value="$preset_fs25_colorMainDark" />
+        </Profile>
+        <Profile name="fs25_modSelectionListSection" extends="emptyPanel" with="anchorTopStretchingX">
+            <height value="19px" />
+        </Profile>
+        <Profile name="fs25_modSelectionListSectionTitle" extends="textDefault">
+            <size value="500px 30px" />
+            <position value="0px -1px" />
+            <textSize value="26px" />
+            <textColor value="1 0 0 1" />
+        </Profile>
+        <Profile name="fs25_modSelectionNoModsDLCs" extends="fs25_textDefault" with="anchorMiddleCenter">
+            <size value="800px 40px" />
+            <position value="0 0" />
+            <textSize value="20px" />
+            <textAlignment value="center" />
+        </Profile>
+        <Profile name="buttonSelectAll" extends="fs25_wideButton">
+            <inputAction value="MENU_CANCEL" />
+        </Profile>
+        <Profile name="buttonExtra1" extends="buttonOK">
+            <inputAction value="MENU_EXTRA_1" />
+        </Profile>
+        <Profile name="buttonSearch" extends="buttonOK">
+            <inputAction value="MENU_EXTRA_2" />
+        </Profile>
+        <Profile name="fs25_modSelectionNumSelectedBg" extends="fs25_shopMoneyBoxBg">
+            <size value="340px 40px" />
+            <cornerSize value="0.3" />
+        </Profile>
+        <Profile name="fs25_modSelectionNumSelectedBox" with="anchorMiddleRight">
+            <size value="100px 40px" />
+            <position value="-45px 0px" />
+            <alignmentX value="right" />
+            <alignmentY value="middle" />
+            <autoValidateLayout value="true" />
+            <Variant name="mobile" with="anchorMiddleRight">
+                <position value="-80px -882px" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_modSelectionNumSelectedText" extends="fs25_textDefault" with="anchorMiddleRight">
+            <textBold value="true" />
+            <textSize value="24px" />
+            <position value="-10px 0px" />
+            <textAutoWidth value="true" />
+            <textUpperCase value="true" />
+            <textColor value="$preset_fs25_colorMainHighlight" />
+            <format value="accounting" />
+            <formatDecimalPlaces value="0" />
+        </Profile>
+        <Profile name="fs25_modSelectionSearchInputBg" extends="fs25_textInputBg">
+            <imageColor value="$preset_fs25_colorMainDark" />
+            <startImageColor value="$preset_fs25_colorMainDark" />
+            <endImageColor value="$preset_fs25_colorMainDark" />
+        </Profile>
+        <Profile name="fs25_modSelectionSearchInput" extends="fs25_textInput" with="anchorBottomCenter">
+            <size value="340px 40px" />
+            <position value="-20px 20px" />
+            <textSize value="18px" />
+            <textOffset value="45px 0px" />
+            <textAlignment value="left" />
+            <cursorSize value="1px 22px" />
+            <textBold value="true" />
+            <applyProfanityFilter value="false" />
+            <maxCharacters value="30" />
+            <maxInputTextWidth value="310px" />
+        </Profile>
+        <Profile name="fs25_modSelectionSearchIcon" extends="fs25_textInputIcon">
+            <imageSliceId value="gui.icon_magnifier" />
+            <size value="20px 20px" />
+        </Profile>
+        <Profile name="fs25_modSelectionSearchIconBox" extends="fs25_dialogTextInputIconBox" with="anchorMiddleLeft">
+            <size value="40px 40px" />
+            <position value="0px 0px" />
+            <imageRotation value="180" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

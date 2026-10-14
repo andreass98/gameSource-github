@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<locomotion>
+    <general suddenStopTime="400" />
+    <speed walk="1.02" run="3.52" walkRunThreshold="3" minimum="0.14" />
+    <wander circleDistance="3" circleRadius="1" jitter="6" />
+    <avoidance wallCircleRadius="2" wallCircleDistance="2" detectionDistance="4" maxAnimalForce="5" maxWallForce="8" />
+    <animation filename="$dataS/character/animals/domesticated/sheep/animationKid.xml" />
+</locomotion>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <GuiElement profile="fs25_savegameMigrationDialogBg" id="dialogElement">
+        <ThreePartBitmap profile="fs25_dialogBgMiddleSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgTopSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <GuiElement profile="fs25_dialogContentContainer">
+            <Text profile="fs25_savegameMigrationText" id="dialogTextElement" text="$l10n_savegameMigration" />
+        </GuiElement>
+        <BoxLayout profile="fs25_dialogButtonBox" id="buttonsPC">
+            <Button profile="buttonOK" text="$l10n_button_yes" onClick="onYes" id="yesButton" />
+            <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            <Button profile="buttonBack" text="$l10n_button_no" onClick="onNo" id="noButton" />
+        </BoxLayout>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="fs25_savegameMigrationDialogBg" extends="fs25_dialogBg">
+            <size value="540px 200px" />
+        </Profile>
+        <Profile name="fs25_savegameMigrationText" extends="fs25_dialogText" with="anchorMiddleCenter">
+            <size value="500px 60px" />
+            <position value="0px 0px" />
+            <textVerticalAlignment value="true" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

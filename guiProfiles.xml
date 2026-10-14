@@ -1,0 +1,3670 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUIProfiles>
+    <Presets>
+        <Preset name="colorTransparent" value="0 0 0 0" />
+        <Preset name="colorGlass" value="0.0036 0.0056 0.0065 0.5" />
+        <Preset name="colorGlassVeryLight" value="0.715 0.715 0.718 0.04" />
+        <Preset name="colorGlassMedium" value="0.115 0.115 0.118 0.20" />
+        <Preset name="colorGlassDark" value="0.015 0.015 0.018 0.65" />
+        <Preset name="colorGlassLight" value="0.715 0.715 0.718 0.25" />
+        <Preset name="colorGlassLight_50" value="0.715 0.715 0.718 0.0625" />
+        <Preset name="colorGlassLight_75" value="0.715 0.715 0.718 0.09375" />
+        <Preset name="colorMainUI" value="0.0227 0.5346 0.8519 1.0" />
+        <Preset name="colorMainUI_80" value="0.0227 0.5346 0.8519 0.8" />
+        <Preset name="colorMainUI_70" value="0.0227 0.5346 0.8519 0.7" />
+        <Preset name="colorMainUI_60" value="0.0227 0.5346 0.8519 0.6" />
+        <Preset name="colorMainUI_50" value="0.0227 0.5346 0.8519 0.5" />
+        <Preset name="colorMainUI_40" value="0.0227 0.5346 0.8519 0.4" />
+        <Preset name="colorMainUI_30" value="0.0227 0.5346 0.8519 0.3" />
+        <Preset name="colorMainUI_20" value="0.0227 0.5346 0.8519 0.2" />
+        <Preset name="colorMainUI_10" value="0.0227 0.5346 0.8519 0.1" />
+        <Preset name="colorMainUI_6" value="0.0227 0.5346 0.8519 0.06" />
+        <Preset name="colorDisabled" value="0.3 0.3 0.3 1" />
+        <Preset name="colorDisabled_30" value="0.3 0.3 0.3 0.3" />
+        <Preset name="colorWhite" value="1 1 1 1" />
+        <Preset name="colorWhite_50" value="1 1 1 0.5" />
+        <Preset name="colorWhite_25" value="1 1 1 0.25" />
+        <Preset name="colorWhite_08" value="1 1 1 0.08" />
+        <Preset name="colorRed" value="0.8069 0.0097 0.0097 1" />
+        <Preset name="colorRed_50" value="0.8069 0.0097 0.0097 0.5" />
+        <Preset name="colorDarkRed" value="0.2832 0.0091 0.0091 1" />
+        <Preset name="colorDarkRed_75" value="0.2832 0.0091 0.0091 0.75" />
+        <Preset name="colorDarkRed_50" value="0.2832 0.0091 0.0091 0.5" />
+        <Preset name="colorBlue" value="0.0742 0.4341 0.6939 1" />
+        <Preset name="colorGreen" value="0.3763 0.6038 0.0782 1" />
+        <Preset name="colorOrange" value="0.8 0.4 0 1" />
+        <Preset name="colorBlack" value="0 0 0 1" />
+        <Preset name="colorBlack90" value="0 0 0 0.9" />
+        <Preset name="colorBlack80" value="0 0 0 0.8" />
+        <Preset name="colorBlack50" value="0 0 0 0.5" />
+        <Preset name="colorBlack3" value="0.013 0.013 0.013 1" />
+        <Preset name="colorBlack3_97" value="0.013 0.013 0.013 0.97" />
+        <Preset name="colorBlack3_995" value="0.013 0.013 0.013 0.995" />
+        <Preset name="colorBlack3_95" value="0.013 0.013 0.013 0.95" />
+        <Preset name="colorDarkGrey" value="0.0284 0.0284 0.0284 1" />
+        <Preset name="colorDarkGrey2" value="0.0630 0.0630 0.0630 1" />
+        <Preset name="colorDarkGrey7" value="0.0212 0.0212 0.0212 1" />
+        <Preset name="colorLightGrey" value="0.0482 0.0482 0.0482 1" />
+        <Preset name="colorDescriptionText" value="0.1329 0.2086 0.2232 1" />
+        <Preset name="colorDescriptionText2" value="0.4000 0.4941 0.5137 1" />
+        <Preset name="colorListRowAlternateBackground" value="0.3140 0.8069 1.0000 0.08" />
+        <Preset name="colorListRowBackground" value="0.3140 0.8069 1.0000 0.02" />
+        <Preset name="colorListHeaderBackground" value="0 0 0 0.35" />
+        <Preset name="colorDialogBackdrop" value="$preset_colorBlack3_97" />
+        <Preset name="colorDialogBackdropMobile" value="$preset_colorBlack80" />
+        <Preset name="colorDialogBackdropWithMenuMobile" value="$preset_colorBlack3_95" />
+        <Preset name="colorItemBgNormal" value="0.0036 0.0056 0.0065 0.5" />
+        <Preset name="colorItemBgSelected" value="0.0036 0.0056 0.0065 0.85" />
+        <Preset name="colorSeparator" value="0.1882 0.2274 0.2274 1" />
+        <Preset name="colorSelectorInactive" value="0.2196 0.2667 0.2784 1" />
+        <Preset name="colorFocusBackgroundGradient" value="0.0227 0.5346 0.8519 1" />
+        <Preset name="colorFocusBackgroundGradient_20" value="0.0227 0.5346 0.8519 0.2" />
+        <Preset name="imageDoublesidedGradient" value="53px 65px 600px 2px" />
+        <Preset name="colorDetailBackground" value="0.3140 0.8069 1.0000 0.04" />
+        <Preset name="colorDialogBackground" value="0 0 0 0.8" />
+        <Preset name="colorCharacterCreation" value="0 0.1927 0.3412 1" />
+        <Preset name="colorCharacterCreation_10" value="0 0.1927 0.3412 0.1" />
+        <Preset name="colorCharacterCreation_20" value="0 0.1927 0.3412 0.2" />
+        <Preset name="colorCharacterCreation_30" value="0 0.1927 0.3412 0.3" />
+        <Preset name="colorCharacterCreation_40" value="0 0.1927 0.3412 0.4" />
+        <Preset name="colorCharacterCreation_60" value="0 0.1927 0.3412 0.6" />
+        <Preset name="colorCharacterCreation_70" value="0 0.1927 0.3412 0.7" />
+        <Preset name="colorCharacterCreation_80" value="0 0.1927 0.3412 0.8" />
+        <Preset name="colorCharacterCreation_90" value="0 0.1927 0.3412 0.9" />
+        <Preset name="colorHeaderText" value="0.1714 0.2122 0.2270 1" />
+        <Preset name="fs25_colorLightBeige" value="0.76815 0.76052 0.70838 1" />
+        <Preset name="fs25_colorBeige" value="0.61721 0.59062 0.55201 1" />
+        <Preset name="fs25_colorDarkBeige" value="0.47932 0.4452 0.39676 1" />
+        <Preset name="fs25_colorDarkBeige_50" value="0.47932 0.4452 0.39676 0.5" />
+        <Preset name="fs25_colorDarkBlue" value="0.02519 0.05448 0.05448 1" />
+        <Preset name="fs25_colorDarkGreen" value="0.008 0.063 0.063 1" />
+        <Preset name="fs25_colorGreen" value="0.33716 0.55834 0.0003 1" />
+        <Preset name="fs25_colorGreen_40" value="0.33716 0.55834 0.0003 0.4" />
+        <Preset name="fs25_colorTextInput" value="0.0253 0.0253 0.0253 1" />
+        <Preset name="fs25_colorChatTextInput" value="0.00439 0.00478 0.00368 0.65" />
+        <Preset name="fs25_colorMainDark" value="0.00439 0.00478 0.00368 1" />
+        <Preset name="fs25_colorMainDark_90" value="0.00439 0.00478 0.00368 0.9" />
+        <Preset name="fs25_colorMainDark_40" value="0.00439 0.00478 0.00368 0.4" />
+        <Preset name="fs25_colorMainGrey" value="0.01681 0.01764 0.016 1" />
+        <Preset name="fs25_colorMainGrey_99" value="0.01681 0.01764 0.016 0.991" />
+        <Preset name="fs25_colorMainGrey_92" value="0.01681 0.01764 0.016 0.92" />
+        <Preset name="fs25_colorMainGrey_90" value="0.01681 0.01764 0.016 0.9" />
+        <Preset name="fs25_colorMainHighlight" value="0.22323 0.40724 0.00368 1" />
+        <Preset name="fs25_colorMainHighlight_40" value="0.22323 0.40724 0.00368 0.4" />
+        <Preset name="fs25_colorMainLight" value="0.89627 0.92158 0.81485 1" />
+        <Preset name="fs25_colorMainLight_80" value="0.89627 0.92158 0.81485 0.4" />
+        <Preset name="fs25_colorGreyLight" value="0.20156 0.20156 0.20156 1" />
+        <Preset name="fs25_colorGreyLight_50" value="0.20156 0.20156 0.20156 0.5" />
+        <Preset name="fs25_colorGreyLight_20" value="0.20156 0.20156 0.20156 0.2" />
+        <Preset name="fs25_colorGrey" value="0.04231 0.04231 0.04231 1" />
+        <Preset name="fs25_colorGrey_50" value="0.04231 0.04231 0.04231 0.5" />
+        <Preset name="fs25_colorGrey_20" value="0.04231 0.04231 0.04231 0.2" />
+        <Preset name="fs25_colorGreyDark" value="0.02956 0.02956 0.02956 1" />
+        <Preset name="fs25_colorGreyDark_50" value="0.02956 0.02956 0.02956 0.5" />
+        <Preset name="fs25_colorGreyText" value="0.25415 0.25415 0.25415 1" />
+        <Preset name="fs25_colorGreyMTODisabled" value="0.04231 0.04231 0.04231 0.3" />
+        <Preset name="fs25_colorGreyListItem" value="0.02732 0.02732 0.02732 1" />
+        <Preset name="fs25_colorGreyBinarySlider" value="0.39216 0.47059 0.09412 1" />
+        <Preset name="fs25_colorGreyBinarySlider_20" value="0.39216 0.47059 0.09412 0.2" />
+        <Preset name="fs25_colorGreenDark" value="0.00913 0.01033 0.00651 1" />
+        <Preset name="fs25_colorGreenDark_40" value="0.00913 0.01033 0.00651 0.4" />
+        <Preset name="fs25_colorOrangeDark" value="0.53328 0.06301 0.00335 1" />
+        <Preset name="fs25_colorDialogBg" value="0.61721 0.59062 0.55201 1" />
+        <Preset name="fs25_colorHeaderText" value="0.1714 0.2122 0.2270 1" />
+        <Preset name="fs25_colorTextDescription" value="0.4000 0.4941 0.5137 1" />
+    </Presets>
+    <Traits>
+        <Trait name="debugging">
+            <debugEnabled value="true" />
+        </Trait>
+        <Trait name="anchorTopLeft">
+            <anchors value="0 0 1 1" />
+            <pivot value="0 1" />
+        </Trait>
+        <Trait name="anchorTopCenter">
+            <anchors value="0.5 0.5 1 1" />
+            <pivot value="0.5 1" />
+        </Trait>
+        <Trait name="anchorTopRight">
+            <anchors value="1 1 1 1" />
+            <pivot value="1 1" />
+        </Trait>
+        <Trait name="anchorTopStretchingX">
+            <anchors value="0 1 1 1" />
+            <pivot value="0.5 1" />
+        </Trait>
+        <Trait name="anchorMiddleLeft">
+            <anchors value="0 0 0.5 0.5" />
+            <pivot value="0 0.5" />
+        </Trait>
+        <Trait name="anchorMiddleCenter">
+            <anchors value="0.5 0.5 0.5 0.5" />
+            <pivot value="0.5 0.5" />
+        </Trait>
+        <Trait name="anchorMiddleRight">
+            <anchors value="1 1 0.5 0.5" />
+            <pivot value="1 0.5" />
+        </Trait>
+        <Trait name="anchorMiddleStretchingX">
+            <anchors value="0 1 0.5 0.5" />
+            <pivot value="0.5 0.5" />
+        </Trait>
+        <Trait name="anchorBottomLeft">
+            <anchors value="0 0 0 0" />
+            <pivot value="0 0" />
+        </Trait>
+        <Trait name="anchorBottomCenter">
+            <anchors value="0.5 0.5 0 0" />
+            <pivot value="0.5 0" />
+        </Trait>
+        <Trait name="anchorBottomRight">
+            <anchors value="1 1 0 0" />
+            <pivot value="1 0" />
+        </Trait>
+        <Trait name="anchorBottomStretchingX">
+            <anchors value="0 1 0 0" />
+            <pivot value="0.5 0" />
+        </Trait>
+        <Trait name="anchorStretchingYLeft">
+            <anchors value="0 0 0 1" />
+            <pivot value="0 0.5" />
+        </Trait>
+        <Trait name="anchorStretchingYCenter">
+            <anchors value="0.5 0.5 0 1" />
+            <pivot value="0.5 0.5" />
+        </Trait>
+        <Trait name="anchorStretchingYRight">
+            <anchors value="1 1 0 1" />
+            <pivot value="1 0.5" />
+        </Trait>
+        <Trait name="anchorStretchingYStretchingX">
+            <anchors value="0 1 0 1" />
+            <pivot value="0.5 0.5" />
+        </Trait>
+        <Trait name="pivotTopLeft">
+            <pivot value="0 1" />
+        </Trait>
+        <Trait name="pivotTopCenter">
+            <pivot value="0.5 1" />
+        </Trait>
+        <Trait name="pivotTopRight">
+            <pivot value="1 1" />
+        </Trait>
+        <Trait name="pivotMiddleLeft">
+            <pivot value="0 0.5" />
+        </Trait>
+        <Trait name="pivotMiddleCenter">
+            <pivot value="0.5 0.5" />
+        </Trait>
+        <Trait name="pivotMiddleRight">
+            <pivot value="1 0.5" />
+        </Trait>
+        <Trait name="pivotBottomLeft">
+            <pivot value="0 0" />
+        </Trait>
+        <Trait name="pivotBottomCenter">
+            <pivot value="0.5 0" />
+        </Trait>
+        <Trait name="pivotBottomRight">
+            <pivot value="1 0" />
+        </Trait>
+        <Trait name="defaultGameFrame">
+            <hasFrame value="true" />
+            <frameThickness value="0dp 0dp 0dp 4px" />
+            <frameBottomColor value="$preset_colorMainUI" />
+        </Trait>
+        <Trait name="lightFrame">
+            <hasFrame value="true" />
+            <frameThickness value="1dp 1dp 1dp 1dp" />
+            <frameLeftColor value="$preset_colorGlassLight" />
+            <frameTopColor value="$preset_colorGlassLight" />
+            <frameRightColor value="$preset_colorGlassLight" />
+            <frameBottomColor value="$preset_colorGlassLight" />
+        </Trait>
+        <Trait name="alternateRow">
+            <imageColor value="$preset_colorListRowAlternateBackground" />
+        </Trait>
+        <Trait name="alternating">
+            <alternateBackgroundColor value="$preset_colorListRowAlternateBackground" />
+        </Trait>
+        <Trait name="ingameMenuMapFilterButtonIconInactive">
+            <imageColor value="0.3 0.3 0.3 0.6" />
+            <imageHighlightedColor value="0.3 0.3 0.3 1" />
+            <imageFocusedColor value="0.3 0.3 0.3 1" />
+        </Trait>
+        <Trait name="inGameMenuMapFilterButtonIconInactive">
+            <imageColor value="0.3 0.3 0.3 0.6" />
+            <imageHighlightedColor value="0.3 0.3 0.3 1" />
+            <imageFocusedColor value="0.3 0.3 0.3 1" />
+        </Trait>
+        <Trait name="mainMenuLeftsideFrame">
+            <hasFrame value="true" />
+            <frameThickness value="0dp 1dp 1dp 1dp" />
+            <frameLeftColor value="$preset_colorGlassLight" />
+            <frameTopColor value="$preset_colorGlassLight" />
+            <frameRightColor value="$preset_colorGlassLight" />
+            <frameBottomColor value="$preset_colorGlassLight" />
+        </Trait>
+        <Trait name="mobilePaginatedList">
+            <supportsMouseScrolling value="false" />
+            <keepSelectedInView value="true" />
+            <focusScrollsList value="false" />
+        </Trait>
+        <Trait name="touchButton">
+            <isTouchButton value="true" />
+            <gamepadUsesTouchButton value="true" />
+            <touchIconFilename value="g_baseUIFilename" />
+            <touchIconRotation value="0" />
+            <touchIconColor value="$preset_colorBlack" />
+            <touchIconHighlightedColor value="$preset_colorBlack" />
+            <touchIconFocusedColor value="$preset_colorBlack" />
+            <touchIconSelectedColor value="$preset_colorBlack" />
+            <touchIconDisabledColor value="$preset_colorDisabled" />
+        </Trait>
+        <Trait name="touchButtonWithBg">
+            <isTouchButtonWithBg value="true" />
+        </Trait>
+        <Trait name="gamepadUsesTouchButton">
+            <gamepadUsesTouchButton value="true" />
+        </Trait>
+        <Trait name="ingameMenuMapDetailsIconTrait">
+            <size value="60px 60px" />
+            <margin value="0 5px 8px 5px" />
+        </Trait>
+        <Trait name="inGameMenuMapDetailsIconTrait">
+            <size value="60px 60px" />
+            <margin value="0 5px 8px 5px" />
+        </Trait>
+        <Trait name="ingameMenuBox">
+            <anchors value="0.5 0.5 0.5 0.5" />
+            <pivot value="0.5 0.5" />
+            <size value="1400px 756px" />
+            <position value="0 0" />
+        </Trait>
+        <Trait name="ingameMenuBoxMobile">
+            <anchors value="0.5 0.5 0.5 0.5" />
+            <pivot value="0.5 0.5" />
+            <size value="1768px 670px" />
+            <position value="0 30px" />
+        </Trait>
+        <Trait name="ingameMenuHeaderBox">
+            <size value="1400px 100px" />
+            <anchors value="0 0 1 1" />
+            <pivot value="0 1" />
+            <imageSliceId value="gui.colorPreset" />
+            <imageColor value="$preset_colorListHeaderBackground" />
+        </Trait>
+        <Trait name="ingameMenuHeaderBoxMobile">
+            <size value="1768px 100px" />
+            <anchors value="0 0 1 1" />
+            <pivot value="0 1" />
+            <imageSliceId value="gui.colorPreset" />
+            <imageColor value="$preset_colorListHeaderBackground" />
+        </Trait>
+    </Traits>
+    <Profile name="baseReference" with="anchorBottomLeft">
+        <size value="100% 100%" />
+        <imageFilename value="g_baseUIFilename" />
+        <imageSliceId value="gui.colorPreset" />
+    </Profile>
+    <Profile name="baseIcon" extends="baseReference" with="anchorMiddleLeft">
+        <size value="36px 36px" />
+        <imageColor value="$preset_colorWhite" />
+    </Profile>
+    <Profile name="lineSeparator" extends="baseReference" with="anchorBottomLeft">
+        <size value="1dp 1dp" />
+        <imageSliceId value="gui.colorPreset" />
+        <imageColor value="$preset_colorGlassLight" />
+    </Profile>
+    <Profile name="singleLineSeparator" extends="baseReference" with="anchorBottomLeft">
+        <size value="1dp 1dp" />
+        <hasFrame value="true" />
+        <frameThickness value="0px 1dp 0px 0px" />
+        <frameTopColor value="$preset_colorGlassLight" />
+    </Profile>
+    <Profile name="emptyPanel" extends="baseReference">
+        <imageSliceId value="noSlice" />
+        <imageColor value="0 0 0 0" />
+        <imageHighlightedColor value="0 0 0 0" />
+        <imageFocusedColor value="0 0 0 0" />
+        <imageSelectedColor value="0 0 0 0" />
+        <imageDisabledColor value="0 0 0 0" />
+    </Profile>
+    <Profile name="emptyFullPanel" extends="emptyPanel" with="anchorStretchingYStretchingX" />
+    <Profile name="textDefault" extends="baseReference">
+        <size value="0 0" />
+        <textSize value="15px" />
+        <textAlignment value="left" />
+        <textColor value="$preset_fs25_colorMainLight" />
+        <textSelectedColor value="$preset_fs25_colorLightBeige" />
+        <textFocusedColor value="$preset_fs25_colorLightBeige" />
+        <textHighlightedColor value="$preset_fs25_colorDarkGreen" />
+        <text2Color value="$preset_colorBlack" />
+    </Profile>
+    <Profile name="buttonBase" extends="baseReference">
+        <size value="20px 20px" />
+        <textAlignment value="center" />
+        <iconColor value="$preset_colorWhite" />
+    </Profile>
+    <Profile name="mainScreenSidebar" extends="baseReference" with="anchorStretchingYLeft">
+        <size value="567px 100%" />
+        <imageColor value="0 0.03 0 0.8" />
+        <Variant name="mobile">
+            <size value="763px 100%" />
+            <imageUVs value="0.05 0.2 0.3179166666666667 0.8" />
+            <imageFilename value="shared/splashBlur.png" />
+        </Variant>
+    </Profile>
+    <Profile name="mainScreenBackgroundBlur" extends="baseReference" with="anchorStretchingYStretchingX">
+        <pictureContentMode value="scaleToFill" />
+        <imageSliceId value="noSlice" />
+        <imageUVs value="0 0 1 1" />
+        <imageColor value="0 0 0 0.6" />
+    </Profile>
+    <Profile name="mainScreenLogo" extends="baseReference" with="anchorTopLeft">
+        <size value="460px 230px" />
+        <position value="80px -120px" />
+        <imageSliceId value="noSlice" />
+        <imageUVs value="0 0 1 1" />
+        <imageFilename value="dataS/menu/main_logo_en.png" />
+        <fadeOutTime value="1" />
+        <fadeInTime value="1" />
+        <Variant name="mobile" with="anchorMiddleLeft">
+            <position value="60px 280px" />
+            <size value="610px 305px" />
+            <imageFilename value="dataS/menu/black.png" />
+        </Variant>
+    </Profile>
+    <Profile name="mainScreenButtonBox" extends="baseReference" with="anchorMiddleLeft">
+        <size value="567px 420px" />
+        <position value="0px -240px" />
+        <wrapAround value="true" />
+        <alignmentY value="middle" />
+        <flowDirection value="vertical" />
+        <imageColor value="$preset_colorTransparent" />
+        <Variant name="mobile">
+            <size value="700px 500px" />
+            <position value="0px -200px" />
+        </Variant>
+    </Profile>
+    <Profile name="backgroundImage" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageUVs value="0 0 1 1" />
+        <pictureContentMode value="scaleToFill" />
+        <imageSliceId value="noSlice" />
+        <imageFilename value="shared/splash.png" />
+    </Profile>
+    <Profile name="bgBlack" extends="baseReference" with="anchorStretchingYStretchingX">
+        <size value="100% 100%" />
+        <imageColor value="0 0 0 1" />
+    </Profile>
+    <Profile name="uiFullBlurBG" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageUVs value="0 0 1 1" />
+        <pictureContentMode value="scaleToFill" />
+        <imageSliceId value="noSlice" />
+        <imageColor value="0 0 0 0.6" />
+    </Profile>
+    <Profile name="bgVignette" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageSliceId value="noSlice" />
+        <imageUVs value="0 0 1 1" />
+        <imageFilename value="dataS/menu/vignette.png" />
+        <Variant name="mobile">
+            <visible value="false" />
+        </Variant>
+    </Profile>
+    <Profile name="uiElementContainerFullScreen" extends="baseReference" with="pivotMiddleCenter">
+        <size value="1920px 840px" />
+        <imageColor value="$preset_colorTransparent" />
+    </Profile>
+    <Profile name="uiElementCenter" extends="uiElementContainerFullScreen">
+        <size value="1258px 698px" />
+    </Profile>
+    <Profile name="wideButton" extends="buttonBase">
+        <handleFocus value="false" />
+        <size value="200px 34px" />
+        <fitToContent value="true" />
+        <fitExtraWidth value="32px" />
+        <imageSliceId value="gui.colorPreset" />
+        <imageColor value="$preset_colorTransparent" />
+        <imageFocusedColor value="$preset_colorTransparent" />
+        <imageHighlightedColor value="$preset_colorTransparent" />
+        <imageSelectedColor value="$preset_colorTransparent" />
+        <imageDisabledColor value="$preset_colorTransparent" />
+        <iconSize value="36px 36px" />
+        <iconTextOffset value="-8px 0" />
+        <iconColor value="$preset_colorMainUI_50" />
+        <iconFocusedColor value="$preset_colorWhite" />
+        <iconHighlightedColor value="$preset_colorWhite" />
+        <iconSelectedColor value="$preset_colorWhite" />
+        <iconDisabledColor value="$preset_colorDisabled" />
+        <textAlignment value="left" />
+        <textSize value="17px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textMaxNumLines value="1" />
+        <textAutoWidth value="true" />
+        <textColor value="$preset_fs25_colorDarkGreen" />
+        <textFocusedColor value="$preset_fs25_colorBeige" />
+        <textHighlightedColor value="$preset_fs25_colorBeige" />
+        <textDisabledColor value="$preset_fs25_colorDarkBeige" />
+        <Variant name="mobile">
+            <textSize value="38px" />
+            <fitExtraWidth value="0px" />
+            <gamepadIconSize value="60px 60px" />
+            <iconSize value="61px 61px" />
+            <iconTextOffset value="0px -4px" />
+            <iconColor value="$preset_colorBlack" />
+            <iconFocusedColor value="$preset_colorBlack" />
+            <iconHighlightedColor value="$preset_colorBlack" />
+            <iconSelectedColor value="$preset_colorBlack" />
+            <textColor value="$preset_colorBlack" />
+            <textHighlightedColor value="$preset_colorBlack" />
+            <textFocusedColor value="$preset_colorBlack" />
+            <textSelectedColor value="$preset_colorBlack" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_largeSelectorLeftGamepad" extends="fs25_wideButton" with="anchorMiddleLeft">
+        <disable value="true" />
+        <size value="40px 0" />
+        <position value="40px 0px" />
+        <iconSize value="40px 40px" />
+        <iconTextOffset value="0 0" />
+        <textAlignment value="center" />
+        <fitToContent value="false" />
+        <inputAction value="MENU_PAGE_PREV" />
+        <hideKeyboardGlyph value="true" />
+        <Variant name="mobile">
+            <size value="250px 400px" />
+            <iconSize value="80px 80px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_largeSelectorRightGamepad" extends="fs25_largeSelectorLeftGamepad" with="anchorMiddleRight">
+        <position value="-40px 0px" />
+        <inputAction value="MENU_PAGE_NEXT" />
+    </Profile>
+    <Profile name="buttonBox" extends="baseReference">
+        <size value="1680px 120px" />
+        <position value="120px 0px" />
+        <alignmentX value="right" />
+        <alignmentY value="middle" />
+        <imageColor value="$preset_colorTransparent" />
+        <useFullVisibility value="false" />
+        <autoValidateLayout value="true" />
+        <Variant name="mobile">
+            <visible value="true" />
+        </Variant>
+    </Profile>
+    <Profile name="buttonBoxDocked" extends="buttonBox" with="anchorBottomLeft">
+        <size value="740px 60px" />
+        <position value="0px -60px" />
+        <alignmentX value="left" />
+        <alignmentY value="middle" />
+        <imageColor value="$preset_colorTransparent" />
+        <Variant name="mobile">
+            <size value="740px 200px" />
+            <position value="0px -170px" />
+            <elementSpacing value="30px" />
+        </Variant>
+    </Profile>
+    <Profile name="buttonBoxDockedOnScreen" extends="baseReference" with="anchorBottomLeft">
+        <size value="1400px 40px" />
+        <position value="40px 40px" />
+        <handleFocus value="false" />
+        <imageColor value="$preset_colorTransparent" />
+        <alignmentY value="middle" />
+        <useFullVisibility value="false" />
+        <autoValidateLayout value="true" />
+        <Variant name="mobile">
+            <size value="1760px 200px" />
+            <position value="80px 0px" />
+            <elementSpacing value="30px" />
+        </Variant>
+    </Profile>
+    <Profile name="buttonBoxDockedOnScreenWithTabBar" extends="buttonBoxDockedOnScreen">
+        <position value="170px 40px" />
+        <Variant name="mobile">
+            <position value="80px 40px" />
+        </Variant>
+    </Profile>
+    <Profile name="buttonBoxDialog" extends="buttonBoxDocked">
+        <Variant name="mobile">
+            <size value="1400px 200px" />
+            <alignmentX value="right" />
+        </Variant>
+    </Profile>
+    <Profile name="headerBoxDocked" extends="baseReference" with="anchorTopLeft">
+        <alignmentX value="Left" />
+        <alignmentY value="middle" />
+        <size value="540px 60px" />
+        <position value="0px 60px" />
+        <imageColor value="$preset_colorTransparent" />
+        <Variant name="mobile">
+            <size value="540px 80px" />
+            <position value="0px 80px" />
+        </Variant>
+    </Profile>
+    <Profile name="headerText" extends="textDefault" with="anchorMiddleLeft">
+        <size value="1200px 30px" />
+        <textSize value="28px" />
+        <textOffset value="48px 0px" />
+        <textUpperCase value="true" />
+        <Variant name="mobile">
+            <textSize value="53px" />
+            <textOffset value="80px 0px" />
+            <size value="1200px 60px" />
+        </Variant>
+    </Profile>
+    <Profile name="headerBoxSelector" extends="baseReference" with="anchorTopLeft">
+        <size value="1920px 120px" />
+        <buttonLRChange value="true" />
+    </Profile>
+    <Profile name="textInput" extends="textDefault">
+        <size value="316px 48px" />
+        <textAlignment value="center" />
+        <maxInputTextWidth value="290px" />
+        <imageSliceId value="gui.colorPreset" />
+        <imageColor value="$preset_colorMainUI_10" />
+        <imageFocusedColor value="$preset_colorMainUI" />
+        <cursorFilename value="g_baseUIFilename" />
+        <cursorSliceId value="gui.colorPreset" />
+        <cursorSize value="1px 20px" />
+        <cursorOffset value="4px -2px" />
+        <cursorColor value="$preset_colorWhite" />
+    </Profile>
+    <Profile name="multiTextOptionWithTitleText">
+        <size value="1400px 48px" />
+    </Profile>
+    <Profile name="multiTextOption" extends="baseReference" with="anchorMiddleCenter">
+        <size value="316px 48px" />
+        <margin value="0px 0px 24px 0px" />
+        <autoAddDefaultElements value="true" />
+        <defaultProfileButtonLeft value="multiTextOptionLeft" />
+        <defaultProfileButtonRight value="multiTextOptionRight" />
+        <defaultProfileText value="multiTextOptionText" />
+        <defaultProfileBg value="multiTextOptionBg" />
+        <imageHighlightedColor value="$preset_colorMainUI" />
+        <iconHighlightedColor value="$preset_colorBlack3" />
+        <Variant name="mobile">
+            <size value="568px 105px" />
+        </Variant>
+    </Profile>
+    <Profile name="multiTextOptionLeft" extends="buttonBase" with="anchorBottomLeft">
+        <size value="48px 48px" />
+        <clickSound value="NONE" />
+        <sendActionOnRelease value="false" />
+        <iconSliceId value="gui.arrowSmall" />
+        <iconSize value="18px 18px" />
+        <iconUVRotation value="180" />
+        <iconTextOffset value="-6px 0px" />
+        <iconColor value="$preset_colorMainUI" />
+        <iconDisabledColor value="$preset_colorLightGrey" />
+        <iconFocusedColor value="$preset_colorWhite" />
+        <iconHighlightedColor value="$preset_colorGlassDark" />
+        <imageSliceId value="gui.colorPreset" />
+        <imageColor value="$preset_colorMainUI_30" />
+        <imageDisabledColor value="$preset_colorGlass" />
+        <imageFocusedColor value="$preset_colorMainUI" />
+        <imageHighlightedColor value="$preset_colorMainUI" />
+        <Variant name="mobile">
+            <size value="106px 106px" />
+            <iconTextOffset value="-5px 0px" />
+            <iconColor value="$preset_colorWhite" />
+            <iconSize value="36px 36px" />
+            <imageFilename value="g_baseHUDFilename" />
+            <imageUVs value="132px 908px 106px 106px" />
+            <imageDisabledUVs value="344px 908px 106px 106px" />
+            <imageFocusedUVs value="238px 908px 106px 106px" />
+            <imageHighlightedUVs value="238px 908px 106px 106px" />
+            <imageColor value="$preset_colorWhite" />
+            <imageDisabledColor value="$preset_colorWhite" />
+            <imageFocusedColor value="$preset_colorWhite" />
+            <imageHighlightedColor value="$preset_colorWhite" />
+        </Variant>
+    </Profile>
+    <Profile name="multiTextOptionRight" extends="multiTextOptionLeft" with="anchorBottomRight">
+        <iconUVRotation value="0" />
+        <iconTextOffset value="6px 0px" />
+        <Variant name="mobile">
+            <iconTextOffset value="5px 0px" />
+        </Variant>
+    </Profile>
+    <Profile name="multiTextOptionBg" extends="baseReference" with="anchorMiddleStretchingX">
+        <size value="100% 48px" />
+        <imageColor value="$preset_colorMainUI_10" />
+        <imageDisabledColor value="$preset_colorGlass" />
+        <Variant name="mobile">
+            <size value="100% 105px" />
+            <imageColor value="$preset_colorTransparent" />
+        </Variant>
+    </Profile>
+    <Profile name="multiTextOptionText" extends="textDefault" with="anchorMiddleCenter">
+        <size value="0 48px" />
+        <textAlignment value="center" />
+        <textMaxWidth value="215px" />
+        <textBold value="true" />
+        <textLayoutMode value="resize" />
+        <textMaxNumLines value="1" />
+        <Variant name="mobile">
+            <textSize value="35px" />
+            <textMaxWidth value="320px" />
+        </Variant>
+    </Profile>
+    <Profile name="multiTextOptionTitle" extends="textDefault" with="anchorMiddleLeft">
+        <size value="500px 48px" />
+        <textSize value="20px" />
+        <textMaxWidth value="480px" />
+        <Variant name="mobile">
+            <textSize value="35px" />
+            <textBold value="true" />
+        </Variant>
+    </Profile>
+    <Profile name="list" extends="baseReference" with="anchorBottomCenter">
+        <size value="1920px 540px" />
+        <isHorizontalList value="true" />
+    </Profile>
+    <Profile name="listItem" extends="baseReference" with="anchorTopLeft">
+        <size value="320px 540px" />
+        <imageSliceId value="gui.colorPreset" />
+        <imageColor value="$preset_colorTransparent" />
+        <imageFocusedColor value="$preset_colorTransparent" />
+        <imageHighlightedColor value="$preset_colorTransparent" />
+        <imageSelectedColor value="$preset_colorTransparent" />
+        <imageDisabledColor value="$preset_colorTransparent" />
+        <iconColor value="$preset_colorWhite" />
+        <iconFocusedColor value="$preset_colorWhite" />
+        <iconHighlightedColor value="$preset_colorWhite" />
+        <iconSelectedColor value="$preset_colorWhite" />
+        <iconDisabledColor value="$preset_colorWhite" />
+    </Profile>
+    <Profile name="listItemSelector" extends="baseReference" with="anchorBottomStretchingX">
+        <size value="100% 4px" />
+        <imageColor value="$preset_colorSelectorInactive" />
+        <imageSelectedColor value="$preset_colorMainUI" />
+        <imageFocusedColor value="$preset_colorMainUI" />
+        <imageHighlightedColor value="$preset_colorMainUI" />
+        <imageDisabledColor value="$preset_colorDisabled" />
+    </Profile>
+    <Profile name="listSectionHeader" extends="listItem">
+        <size value="100px 50px" />
+        <hasFrame value="true" />
+        <frameThickness value="0 0 0 2dp" />
+        <frameBottomColor value="$preset_colorMainUI_30" />
+    </Profile>
+    <Profile name="listSectionHeaderTitle" extends="textDefault" with="anchorMiddleLeft">
+        <textAutoWidth value="true" />
+        <textSize value="24px" />
+        <textBold value="true" />
+    </Profile>
+    <Profile name="newLayer" extends="baseReference">
+        <newLayer value="true" />
+    </Profile>
+    <Profile name="dialogFullscreenBg" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageColor value="$preset_colorDialogBackdrop" />
+        <Variant name="mobile">
+            <imageColor value="$preset_colorDialogBackdropMobile" />
+        </Variant>
+    </Profile>
+    <Profile name="dialogFullscreenBgNoMenu">
+        <Variant name="mobile">
+            <imageColor value="$preset_colorDialogBackdropMobile" />
+        </Variant>
+    </Profile>
+    <Profile name="dialogFullscreenBgWithMenu">
+        <Variant name="mobile">
+            <imageColor value="$preset_colorDialogBackdropWithMenuMobile" />
+        </Variant>
+    </Profile>
+    <Profile name="dialogElementNoMenu">
+        <Variant name="mobile">
+            <color value="$preset_colorBlack80" />
+        </Variant>
+    </Profile>
+    <Profile name="dialogElementWithMenu">
+        <Variant name="mobile">
+            <color value="$preset_colorBlack90" />
+        </Variant>
+    </Profile>
+    <Profile name="dialogBg" extends="uiElementContainerFullScreen">
+        <size value="630px 225px" />
+        <color value="$preset_colorDialogBackground" />
+        <imageColor value="$preset_colorDialogBackground" />
+        <imageFocusedColor value="$preset_colorDialogBackground" />
+        <imageSelectedColor value="$preset_colorDialogBackground" />
+        <hasFrame value="true" />
+        <frameThickness value="0 0 0 2dp" />
+        <frameBottomColor value="$preset_colorMainUI" />
+        <Variant name="mobile">
+            <size value="1400px 450px" />
+            <position value="0px 54px" />
+            <hasFrame value="false" />
+            <color value="$preset_colorBlack80" />
+        </Variant>
+    </Profile>
+    <Profile name="dialogHeaderDocked" extends="headerBoxDocked" />
+    <Profile name="dialogHeaderText" extends="headerText">
+        <textOffset value="0 0" />
+    </Profile>
+    <Profile name="dialogCircle" extends="baseReference" with="anchorTopCenter">
+        <size value="80px 80px" />
+        <position value="0px -40px" />
+        <imageColor value="$preset_colorMainUI" />
+        <imageSliceId value="gui.loadingAnimationFull" />
+        <Variant name="mobile">
+            <visible value="false" />
+            <size value="100px 100px" />
+            <imageColor value="$preset_colorWhite" />
+        </Variant>
+    </Profile>
+    <Profile name="dialogCircleWarning" extends="dialogCircle" />
+    <Profile name="dialogLoading" extends="baseReference" with="anchorTopCenter pivotMiddleCenter">
+        <size value="80px 80px" />
+        <position value="0px -80px" />
+        <imageSliceId value="gui.loadingAnimation" />
+        <imageColor value="$preset_colorMainUI" />
+        <animationMode value="rotate" />
+        <animationSpeed value="1000" />
+        <Variant name="mobile">
+            <position value="0px -130px" />
+            <size value="100px 100px" />
+        </Variant>
+    </Profile>
+    <Profile name="dialogWarning" extends="baseReference" with="anchorMiddleCenter">
+        <size value="9px 38px" />
+        <imageSliceId value="gui.dialogType_warning" />
+        <imageColor value="$preset_colorMainUI" />
+        <Variant name="mobile">
+            <size value="20px 67px" />
+            <imageColor value="$preset_colorWhite" />
+        </Variant>
+    </Profile>
+    <Profile name="dialogInfo" extends="dialogWarning">
+        <imageSliceId value="gui.dialogType_info" />
+        <size value="11px 38px" />
+        <Variant name="mobile">
+            <size value="20px 67px" />
+        </Variant>
+    </Profile>
+    <Profile name="dialogKey" extends="dialogQuestion" />
+    <Profile name="dialogUser" extends="dialogWarning">
+        <imageSliceId value="gui.dialogType_user" />
+        <size value="11px 38px" />
+        <Variant name="mobile">
+            <size value="22px 75px" />
+        </Variant>
+    </Profile>
+    <Profile name="dialogQuestion" extends="dialogWarning">
+        <size value="23px 38px" />
+        <imageSliceId value="gui.dialogType_question" />
+        <Variant name="mobile">
+            <size value="30px 50px" />
+        </Variant>
+    </Profile>
+    <Profile name="dialogText" extends="textDefault" with="anchorTopCenter">
+        <textColor value="$preset_colorDescriptionText2" />
+        <position value="0px -155px" />
+        <textSize value="16px" />
+        <size value="510px 20px" />
+        <textAlignment value="center" />
+        <textVerticalAlignment value="top" />
+        <textLineHeightScale value="1.5" />
+        <textMaxNumLines value="20" />
+        <Variant name="mobile">
+            <textSize value="40px" />
+            <size value="1200px 20px" />
+            <position value="0px -180px" />
+        </Variant>
+    </Profile>
+    <Profile name="dialogTitle" extends="dialogText">
+        <position value="0px -130px" />
+        <textColor value="$preset_colorWhite" />
+        <textBold value="true" />
+        <textSize value="24px" />
+        <textMaxWidth value="510px" />
+        <textLayoutMode value="resize" />
+        <textMaxNumLines value="1" />
+        <Variant name="mobile">
+            <textSize value="55px" />
+            <textWrapWidth value="1000px" />
+            <textMaxWidth value="1000px" />
+            <position value="0px -70px" />
+        </Variant>
+    </Profile>
+    <Profile name="dialogTextWithTitle" extends="dialogText">
+        <position value="0px -160px" />
+        <Variant name="mobile">
+            <position value="0px -240px" />
+        </Variant>
+    </Profile>
+    <Profile name="dialogTextWarning" extends="dialogText">
+        <position value="0px -195px" />
+        <textSize value="12px" />
+        <Variant name="mobile">
+            <position value="0px -310px" />
+            <textSize value="25px" />
+        </Variant>
+    </Profile>
+    <Profile name="dialogTextInput" extends="textInput" with="anchorBottomCenter">
+        <size value="340px 48px" />
+        <position value="0px 50px" />
+        <maxCharacters value="30" />
+    </Profile>
+    <Profile name="infoDialogBg" extends="fs25_dialogBg">
+        <height value="270px" />
+        <Variant name="mobile">
+            <size value="1400px 300px" />
+        </Variant>
+    </Profile>
+    <Profile name="infoDialogText" extends="fs25_dialogText">
+        <Variant name="mobile">
+            <textSize value="40px" />
+            <position value="0px -210px" />
+            <textMaxNumLines value="7" />
+        </Variant>
+    </Profile>
+    <Profile name="sliderInvisible" extends="baseReference" with="anchorMiddleStretchingX pivotMiddleLeft">
+        <size value="100% 0px" />
+        <offset value="0" />
+        <direction value="x" />
+        <hasButtons value="true" />
+        <imageColor value="$preset_colorTransparent" />
+        <sliderSize value="0 0" />
+        <sliderImageColor value="$preset_colorTransparent" />
+    </Profile>
+    <Profile name="sliderHorizontal" extends="baseReference" with="anchorBottomCenter">
+        <size value="1920 16px" />
+        <position value="0px 80px" />
+        <hasButtons value="false" />
+        <offset value="0" />
+        <direction value="x" />
+        <stepSize value="1" />
+        <imageColor value="$preset_colorGlassDark" />
+        <imageSliceId value="gui.colorPreset" />
+        <imageHighlightedColor value="$preset_colorMainUI" />
+        <sliderSize value="200px 16px" />
+        <sliderOffset value="0" />
+        <sliderImageSliceId value="gui.colorPreset" />
+        <sliderImageColor value="$preset_colorMainUI" />
+    </Profile>
+    <Profile name="sliderVertical" extends="sliderHorizontal" with="anchorMiddleRight">
+        <size value="16px 488px" />
+        <direction value="y" />
+        <position value="0 0" />
+        <sliderSize value="16px 100px" />
+    </Profile>
+    <Profile name="verticalListSliderRightDocked" extends="baseReference" with="anchorTopRight">
+        <size value="12px 756px" />
+        <position value="28px 0px" />
+        <isHorizontal value="false" />
+        <imageColor value="$preset_colorMainUI_40" />
+        <imageSliceId value="gui.sliderMid" />
+        <midImageSize value="12px 1px" />
+        <startImageSliceId value="gui.sliderStart" />
+        <startImageSize value="0 6px" />
+        <startImageColor value="$preset_colorMainUI_40" />
+        <endImageSliceId value="gui.sliderEnd" />
+        <endImageSize value="0 6px" />
+        <endImageColor value="$preset_colorMainUI_40" />
+    </Profile>
+    <Profile name="verticalListSliderBar" extends="sliderVertical" with="anchorMiddleCenter">
+        <size value="6px 748px" />
+        <handleFocus value="false" />
+        <sliderSize value="6px 100px" />
+        <hideParentWhenEmpty value="true" />
+        <imageColor value="$preset_colorTransparent" />
+        <isThreePartBitmap value="true" />
+        <sliderImageSliceId value="gui.sliderBarMid" />
+        <sliderImageColor value="$preset_colorMainUI" />
+        <midImageSize value="6px 1px" />
+        <startImageSliceId value="gui.sliderBarStart" />
+        <startImageSize value="0 3px" />
+        <startImageColor value="$preset_colorMainUI" />
+        <endImageSliceId value="gui.sliderBarEnd" />
+        <endImageSize value="0 3px" />
+        <endImageColor value="$preset_colorMainUI" />
+    </Profile>
+    <Profile name="horizontalListSliderRightDocked" extends="verticalListSliderRightDocked" with="anchorBottomLeft">
+        <position value="0px -28px" />
+        <isHorizontal value="true" />
+        <imageUVRotation value="-90" />
+        <midImageSize value="1px 12px" />
+        <startImageSize value="6px 12px" />
+        <startImageUVRotation value="-90" />
+        <endImageSize value="6px 12px" />
+        <endImageUVRotation value="-90" />
+    </Profile>
+    <Profile name="horizontalListSliderBar" extends="verticalListSliderBar" with="anchorMiddleCenter">
+        <direction value="x" />
+        <sliderSize value="100px 6px" />
+        <hideParentWhenEmpty value="true" />
+        <midImageSize value="1px 6px" />
+        <sliderImageUVRotation value="-90" />
+        <startImageSize value="3px 6px" />
+        <startImageUVRotation value="-90" />
+        <endImageSize value="3px 6px" />
+        <endImageUVRotation value="-90" />
+    </Profile>
+    <Profile name="mapPreview" extends="baseReference" with="anchorStretchingYStretchingX">
+        <pictureContentMode value="scaleToFill" />
+        <imageSliceId value="noSlice" />
+        <imageFilename value="dataS/menu/black.png" />
+        <imageUVs value="0 0 1 1" />
+        <Variant name="mobile">
+            <size value="1769px 732px" />
+        </Variant>
+    </Profile>
+    <Profile name="multiplayerIcon" extends="baseIcon">
+        <imageSliceId value="gui.owned" />
+    </Profile>
+    <Profile name="versionText" extends="textDefault" with="anchorTopLeft">
+        <size value="300px 13px" />
+        <position value="20px -20px" />
+        <textSize value="13px" />
+        <text2Size value="13px" />
+        <text2Color value="0 0 0 1" />
+        <text2Offset value="-1px -1px" />
+    </Profile>
+    <Profile name="ingameMenuSettingsBox" extends="emptyPanel" with="anchorTopLeft">
+        <size value="1400px 756px" />
+        <Variant name="mobile" with="anchorMiddleCenter">
+            <size value="1768px 700px" />
+            <position value="0px 40px" />
+        </Variant>
+    </Profile>
+    <Profile name="mainMenuSettingsBox" extends="ingameMenuSettingsBox" />
+    <Profile name="ingameMenuCenterBox" extends="emptyPanel" with="anchorMiddleCenter">
+        <size value="1400px 756px" />
+        <Variant name="mobile">
+            <size value="1768px 700px" />
+            <position value="0px 40px" />
+        </Variant>
+    </Profile>
+    <Profile name="ingameMenuSettingsLayout" extends="baseReference" with="anchorTopLeft">
+        <size value="1400px 756px" />
+        <fitFlowToElements value="true" />
+        <flowDirection value="vertical" />
+        <imageColor value="$preset_colorTransparent" />
+        <Variant name="mobile">
+            <size value="1768px 700px" />
+            <supportsTouchScrolling value="true" />
+        </Variant>
+    </Profile>
+    <Profile name="topScrollClipper" extends="baseReference" with="anchorTopStretchingX">
+        <position value="0 2dp" />
+        <size value="100% 2dp" />
+        <imageColor value="$preset_colorMainUI" />
+        <imageSliceId value="gui.gradientDoublesided" />
+    </Profile>
+    <Profile name="bottomScrollClipper" extends="topScrollClipper" with="anchorBottomStretchingX">
+        <position value="0 -2dp" />
+    </Profile>
+    <Profile name="leftScrollClipper" extends="baseReference" with="anchorStretchingYLeft">
+        <position value="-2dp 0" />
+        <size value="2dp 100%" />
+        <imageColor value="$preset_colorMainUI" />
+        <imageSliceId value="gui.gradientDoublesided" />
+        <imageUVRotation value="90" />
+    </Profile>
+    <Profile name="rightScrollClipper" extends="leftScrollClipper" with="anchorStretchingYRight">
+        <position value="2dp 0" />
+    </Profile>
+    <Profile name="serverDetailNoModsDLCs" extends="textDefault" with="anchorMiddleCenter">
+        <textAlignment value="center" />
+        <size value="818px 40px" />
+        <position value="200px 0" />
+        <textSize value="20px" />
+    </Profile>
+    <Profile name="ingameMenuSettingsNativeHelpButton" extends="wideButton" with="anchorMiddleLeft">
+        <handleFocus value="true" />
+        <size value="316px 48px" />
+        <fitToContent value="false" />
+        <position value="400px 0" />
+        <textMaxWidth value="300px" />
+        <textLayoutMode value="resize" />
+        <iconSize value="0 0" />
+        <textFocusedColor value="$preset_colorWhite" />
+        <textSelectedColor value="$preset_colorWhite" />
+        <textHighlightedColor value="$preset_colorWhite" />
+        <textAlignment value="center" />
+        <imageColor value="$preset_colorMainUI_30" />
+        <imageDisabledColor value="$preset_colorGlass" />
+        <imageFocusedColor value="$preset_colorMainUI" />
+        <imageHighlightedColor value="$preset_colorMainUI" />
+    </Profile>
+    <Profile name="settingsMenuSubtitle" extends="textDefault">
+        <margin value="0 12px 0 12px" />
+        <size value="1400px 30px" />
+        <textSize value="20px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <Variant name="mobile">
+            <size value="1750px 55px" />
+            <textSize value="35px" />
+            <margin value="0 65px 0 25px" />
+            <hasFrame value="true" />
+            <frameThickness value="0dp 0dp 0dp 2dp" />
+            <frameLeftColor value="$preset_colorGlassLight" />
+            <frameTopColor value="$preset_colorGlassLight" />
+            <frameRightColor value="$preset_colorGlassLight" />
+            <frameBottomColor value="$preset_colorGlassLight" />
+        </Variant>
+    </Profile>
+    <Profile name="multiTextOptionSettingsWithTitleText" extends="multiTextOptionWithTitleText">
+        <size value="1400px 48px" />
+        <margin value="0 12px 0 12px" />
+        <Variant name="mobile">
+            <size value="1800px 105px" />
+            <margin value="0px 15px 0px 15px" />
+        </Variant>
+    </Profile>
+    <Profile name="multiTextOptionSettings" extends="multiTextOption">
+        <position value="-140px 0px" />
+    </Profile>
+    <Profile name="multiTextOptionSettingsTitle" extends="textDefault" with="anchorMiddleLeft">
+        <size value="0 48px" />
+        <textSize value="20px" />
+        <textMaxWidth value="380px" />
+        <textAutoWidth value="true" />
+        <textMaxNumLines value="2" />
+        <Variant name="mobile">
+            <textSize value="33px" />
+            <textMaxWidth value="420px" />
+            <textLayoutMode value="resize" />
+        </Variant>
+    </Profile>
+    <Profile name="multiTextOptionSettingsBg" extends="multiTextOptionBg">
+        <size value="218px 48px" />
+        <position value="449px 0" />
+        <Variant name="mobile">
+            <size value="218px 105px" />
+            <position value="506px 0px" />
+        </Variant>
+    </Profile>
+    <Profile name="multiTextOptionSettingsTooltip" extends="textDefault" with="anchorMiddleLeft">
+        <size value="0 48px" />
+        <position value="824px 0" />
+        <textAutoWidth value="true" />
+        <textMaxWidth value="532px" />
+        <textMaxNumLines value="4" />
+        <textSize value="14px" />
+        <textColor value="1 1 1 0.5" />
+        <Variant name="mobile">
+            <textMaxWidth value="620px" />
+            <textSize value="25px" />
+            <position value="1100px 0" />
+        </Variant>
+    </Profile>
+    <Profile name="ingameMenuSettingsButton" extends="ingameMenuSettingsNativeHelpButton">
+        <position value="400px 0" />
+        <textMaxWidth value="300px" />
+        <textLayoutMode value="resize" />
+        <textColor value="$preset_colorWhite" />
+    </Profile>
+    <Profile name="uiFullInGameBackground" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageColor value="0.0111 0.0276 0.0377 0.95" />
+        <Variant name="mobile">
+            <pictureContentMode value="scaleToFill" />
+            <imageFilename value="dataS/menu/uiMenuBackground.png" />
+            <imageUVs value="0 0 1 1" />
+            <imageColor value="0.3 0.3 0.3 1" />
+        </Variant>
+    </Profile>
+    <Profile name="uiElementContainerFullScreenSpanning" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageColor value="$preset_colorTransparent" />
+    </Profile>
+    <Profile name="uiInGameMenuFrame" extends="emptyPanel" with="anchorMiddleCenter">
+        <size value="1400px 756px" />
+        <Variant name="mobile" with="anchorStretchingYStretchingX">
+            <size value="100% 100%" />
+        </Variant>
+    </Profile>
+    <Profile name="uiInGameMenuPaging" extends="emptyPanel" with="anchorStretchingYStretchingX pivotMiddleLeft">
+        <absoluteSizeOffset value="125px 0px" />
+        <position value="125px 0" />
+        <Variant name="mobile" with="anchorStretchingYStretchingX">
+            <absoluteSizeOffset value="0 0" />
+            <position value="0 0" />
+        </Variant>
+    </Profile>
+    <Profile name="uiInGameMenuHeader" extends="baseReference" with="anchorStretchingYLeft">
+        <size value="115px 100%" />
+        <imageColor value="0.0036 0.0042 0.0044 0.3" />
+        <Variant name="mobile" with="anchorTopStretchingX">
+            <size value="100% 115px" />
+            <alignmentX value="center" />
+            <alignmentY value="middle" />
+        </Variant>
+    </Profile>
+    <Profile name="uiInGameMenuHeaderSelector" extends="headerBoxSelector" with="anchorStretchingYCenter pivotBottomCenter">
+        <size value="0 100%" />
+        <handleFocus value="false" />
+        <Variant name="mobile" with="anchorTopStretchingX">
+            <size value="100% 115px" />
+        </Variant>
+    </Profile>
+    <Profile name="uiInGameMenuPagingButtonLeft" extends="buttonBase" with="anchorTopCenter">
+        <size value="35px 35px" />
+        <position value="0px -40px" />
+        <inputAction value="MENU_PAGE_PREV" />
+        <imageSliceId value="gui.colorPreset" />
+        <imageColor value="$preset_colorTransparent" />
+        <iconSliceId value="gui.colorPreset" />
+        <iconSize value="35px 35px" />
+        <iconColor value="$preset_colorMainUI_50" />
+        <iconFocusedColor value="$preset_colorWhite" />
+        <iconDisabledColor value="$preset_colorGlass" />
+        <textColor value="$preset_colorMainUI" />
+        <textAlignment value="left" />
+        <Variant name="mobile" with="anchorBottomLeft">
+            <size value="115px 115px" />
+            <position value="-10px 0px" />
+            <inputAction value="none" />
+            <textAlignment value="center" />
+            <imageColor value="$preset_colorItemBgNormal" />
+            <iconSize value="30px 45px" />
+            <iconSliceId value="gui.arrow" />
+            <iconRotation value="180" />
+            <iconColor value="$preset_colorWhite" />
+            <iconFocusedColor value="$preset_colorMainUI" />
+        </Variant>
+    </Profile>
+    <Profile name="uiInGameMenuPagingButtonRight" extends="uiInGameMenuPagingButtonLeft" with="anchorBottomCenter">
+        <position value="0px 40px" />
+        <inputAction value="MENU_PAGE_NEXT" />
+        <Variant name="mobile" with="anchorBottomRight">
+            <position value="10px 0px" />
+            <inputAction value="none" />
+            <iconRotation value="0" />
+        </Variant>
+    </Profile>
+    <Profile name="uiTabbedMenuPageTab" extends="baseReference" with="anchorTopLeft">
+        <size value="115px 80px" />
+        <imageColor value="$preset_colorTransparent" />
+        <imageSliceId value="gui.colorPreset" />
+        <imageSelectedColor value="$preset_colorFocusBackgroundGradient" />
+        <imageSelectedSliceId value="gui.colorPreset" />
+    </Profile>
+    <Profile name="uiInGameMenuPagingTabPrevious" extends="baseReference" with="anchorMiddleRight pivotBottomRight">
+        <size value="115px 80px" />
+        <position value="0 360px" />
+        <imageColor value="$preset_colorTransparent" />
+        <Variant name="mobile">
+            <visible value="false" />
+        </Variant>
+    </Profile>
+    <Profile name="uiInGameMenuPagingTabNext" extends="baseReference" with="anchorMiddleRight pivotTopRight">
+        <size value="115px 80px" />
+        <position value="0 -360px" />
+        <imageColor value="$preset_colorTransparent" />
+        <Variant name="mobile">
+            <visible value="false" />
+        </Variant>
+    </Profile>
+    <Profile name="uiInGameMenuPagingTabPrevIcon" extends="baseReference" with="anchorMiddleCenter">
+        <size value="64px 64px" />
+        <imageUVs value="0 0 1 1" />
+        <imageFilename value="g_iconsUIFilename" />
+        <imageColor value="0.0003 0.5647 0.9822 0.5 0.0003 0.5647 0.9822 0 0.0003 0.5647 0.9822 0.5 0.0003 0.5647 0.9822 0" />
+        <imageHighlightedColor value="1 1 1 0 1 1 1 0.5 1 1 1 0 1 1 1 0.5" />
+    </Profile>
+    <Profile name="uiInGameMenuPagingTabNextIcon" extends="baseReference" with="anchorMiddleCenter">
+        <size value="64px 64px" />
+        <imageUVs value="0 0 1 1" />
+        <imageFilename value="g_iconsUIFilename" />
+        <imageColor value="0.0003 0.5647 0.9822 0 0.0003 0.5647 0.9822 0.5 0.0003 0.5647 0.9822 0 0.0003 0.5647 0.9822 0.5" />
+        <imageHighlightedColor value="1 1 1 0 1 1 1 0.3 1 1 1 0 1 1 1 0.3" />
+    </Profile>
+    <Profile name="uiTabbedMenuPageTabButton" extends="buttonBase" with="anchorMiddleCenter">
+        <size value="115px 80px" />
+        <fixedWidth value="true" />
+        <textAlignment value="center" />
+        <clickSound value="NONE" />
+        <imageSliceId value="gui.colorPreset" />
+        <imageColor value="$preset_colorTransparent" />
+        <iconSize value="64px 64px" />
+        <iconColor value="$preset_colorMainUI" />
+        <iconFocusedColor value="$preset_colorWhite" />
+        <iconSelectedColor value="$preset_colorWhite" />
+        <iconHighlightedColor value="$preset_colorWhite" />
+        <iconDisabledColor value="$preset_colorDisabled" />
+    </Profile>
+    <Profile name="uiInGameMenuPagingTabList" extends="baseReference" with="anchorMiddleRight">
+        <size value="115px 880px" />
+        <isHorizontalList value="false" />
+        <keepSelectedInView value="false" />
+        <supportsMouseScrolling value="true" />
+        <itemizedScrollDelta value="1" />
+        <selectionMarginItems value="1" />
+        <Variant name="mobile">
+            <visible value="false" />
+        </Variant>
+    </Profile>
+    <Profile name="ingameMapOverview" extends="baseReference" with="anchorMiddleCenter">
+        <absoluteSizeOffset value="536px 40px" />
+        <mapAlpha value="0.9" />
+        <limitMapWidth value="true" />
+        <Variant name="mobile">
+            <limitMapWidth value="true" />
+            <mapAlpha value="1" />
+        </Variant>
+    </Profile>
+    <Profile name="ingameMapCursor" extends="baseReference" with="anchorMiddleCenter">
+        <size value="128px 128px" />
+        <position value="-28px 0" />
+        <imageSliceId value="gui.ingameMap_cursorGamepad" />
+        <Variant name="mobile">
+            <position value="0 0" />
+        </Variant>
+    </Profile>
+    <Profile name="ingameMenuMapSafeArea" extends="baseReference" with="anchorMiddleCenter">
+        <position value="-100px 0" />
+        <size value="1250px 1000px" />
+    </Profile>
+    <Profile name="ingameMenuMapFilterBackground" extends="emptyPanel" with="anchorStretchingYRight pivotMiddleRight">
+        <size value="1000px 100%" />
+        <imageColor value="0 0 0 0.8" />
+        <imageSliceId value="gui.gradientFat" />
+        <Variant name="mobile" with="anchorStretchingYStretchingX pivotMiddleLeft">
+            <position value="0px -105px" />
+            <imageColor value="0 0 0 0" />
+        </Variant>
+    </Profile>
+    <Profile name="ingameMenuMapContextBox" extends="baseReference" with="defaultGameFrame">
+        <size value="220px 220px" />
+    </Profile>
+    <Profile name="ingameMenuMapContextBoxSmall" extends="ingameMenuMapContextBox">
+        <size value="220px 80px" />
+    </Profile>
+    <Profile name="ingameMenuMapContextBoxFrameBottom">
+        <imageColor value="$preset_colorDialogBackground" />
+    </Profile>
+    <Profile name="ingameMenuMapContextBoxFrameTop" extends="ingameMenuMapContextBoxFrameBottom">
+        <frameThickness value="0 4px 0 0" />
+        <frameTopColor value="$preset_colorMainUI" />
+    </Profile>
+    <Profile name="ingameMenuMapContextCorner" extends="baseReference" with="anchorBottomLeft">
+        <size value="28px 28px" />
+        <position value="14px 14px" />
+        <imageSliceId value="gui.ingameMap_contextCorner" />
+        <imageColor value="$preset_colorMainUI" />
+    </Profile>
+    <Profile name="ingameMenuMapContextCornerBottomLeft" extends="ingameMenuMapContextCorner" with="anchorTopRight">
+        <position value="0 0" />
+        <imageRotation value="180" />
+    </Profile>
+    <Profile name="ingameMenuMapContextCornerBottomRight" extends="ingameMenuMapContextCorner" with="anchorTopLeft">
+        <position value="0 0" />
+        <imageRotation value="270" />
+    </Profile>
+    <Profile name="ingameMenuMapContextCornerTopLeft" extends="ingameMenuMapContextCorner" with="anchorBottomRight">
+        <position value="0 0" />
+        <imageRotation value="90" />
+    </Profile>
+    <Profile name="ingameMenuMapContextCornerTopRight" extends="ingameMenuMapContextCorner" with="anchorBottomLeft">
+        <position value="0 0" />
+        <imageRotation value="0" />
+    </Profile>
+    <Profile name="ingameMenuMapContextImage" extends="baseReference" with="anchorTopCenter">
+        <position value="0px -4px" />
+        <size value="160px 160px" />
+    </Profile>
+    <Profile name="ingameMenuMapContextText" extends="textDefault" with="anchorBottomCenter">
+        <position value="0px 32px" />
+        <size value="180px 20px" />
+        <textAlignment value="center" />
+        <textVerticalAlignment value="bottom" />
+        <textMaxNumLines value="2" />
+    </Profile>
+    <Profile name="ingameMenuMapContextFarm" extends="ingameMenuMapContextText">
+        <position value="0px 8px" />
+        <textSize value="16px" />
+        <textColor value="$preset_colorMainUI" />
+        <textMaxNumLines value="1" />
+        <textLayoutMode value="clip" />
+    </Profile>
+    <Profile name="ingameMenuNoContentText" extends="textDefault" with="anchorMiddleCenter">
+        <size value="500px 50px" />
+        <textSize value="26px" />
+        <textAlignment value="center" />
+        <Variant name="mobile" with="anchorMiddleCenter">
+            <textSize value="33px" />
+            <size value="1500px 50px" />
+        </Variant>
+    </Profile>
+    <Profile name="shopItemsNavLayout" extends="emptyPanel" with="anchorTopLeft">
+        <size value="1400px 42px" />
+        <Variant name="mobile">
+            <visible value="false" />
+        </Variant>
+    </Profile>
+    <Profile name="shopItemsNavItemText" extends="textDefault" with="anchorMiddleLeft">
+        <size value="100px 42px" />
+        <textAutoWidth value="true" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textSize value="16px" />
+        <textColor value="1 1 1 0.6" />
+        <textMaxWidth value="500px" />
+    </Profile>
+    <Profile name="shopItemsNavItemTextBackdrop" extends="emptyPanel">
+        <size value="100px 42px" />
+        <padding value="15px 0px 10px 0px" />
+        <imageColor value="0 0 0 0.5" />
+    </Profile>
+    <Profile name="shopItemsNavItemTextBackdropActive" extends="shopItemsNavItemTextBackdrop">
+        <imageColor value="0 0 0 0.85" />
+    </Profile>
+    <Profile name="shopItemsNavFilledArrow" extends="baseReference">
+        <size value="28px 42px" />
+        <imageColor value="0 0 0 0.5" />
+        <imageSliceId value="gui.navArrowActive" />
+    </Profile>
+    <Profile name="shopItemsNavFilledArrowActive" extends="shopItemsNavFilledArrow">
+        <imageSliceId value="gui.navArrowInactive" />
+        <imageColor value="0 0 0 0.85" />
+    </Profile>
+    <Profile name="shopItemsNavArrow" extends="baseReference">
+        <size value="24px 42px" />
+        <imageSliceId value="gui.navArrowFront" />
+        <imageColor value="0 0 0 0.85" />
+    </Profile>
+    <Profile name="modHubFrame" extends="uiInGameMenuFrame" />
+    <Profile name="modHubItemsListContainer" extends="emptyPanel" with="anchorTopLeft">
+        <size value="1400px 640px" />
+        <position value="0 -48px" />
+    </Profile>
+    <Profile name="modHubItemsList" extends="baseReference" with="anchorTopLeft">
+        <selectOnClick value="true" />
+        <size value="1400px 640px" />
+        <isHorizontalList value="false" />
+        <numLateralItems value="6" />
+        <listItemSpacing value="10px" />
+        <listItemLateralSpacing value="10px" />
+        <Variant name="mobile" with="anchorMiddleCenter mobilePaginatedList">
+            <size value="1760px 475px" />
+            <position value="0px 120px" />
+            <supportsTouchScrolling value="true" />
+            <listItemPadding value="20px" />
+        </Variant>
+    </Profile>
+    <Profile name="modHubItemsListItem" extends="emptyPanel" with="anchorTopLeft">
+        <size value="225px 295px" />
+        <imageColor value="$preset_colorItemBgNormal" />
+        <imageFocusedColor value="$preset_colorItemBgSelected" />
+        <imageSelectedColor value="$preset_colorItemBgSelected" />
+    </Profile>
+    <Profile name="modHubListItemImage" extends="emptyPanel" with="anchorTopCenter">
+        <size value="225px 225px" />
+        <imageSize value="512 512" />
+        <imageUVs value="2px 2px 508px 508px" />
+        <imageColor value="$preset_colorWhite" />
+        <imagePreviewFilename value="dataS/menu/modIconBg.png" />
+    </Profile>
+    <Profile name="modHubListItemLabelText" extends="textDefault" with="anchorBottomCenter">
+        <size value="225px 44px" />
+        <position value="0px -175px" />
+        <textMaxWidth value="220px" />
+        <textMaxNumLines value="2" />
+        <textAlignment value="center" />
+        <textColor value="$preset_colorWhite_50" />
+        <textSelectedColor value="$preset_colorMainUI" />
+        <imageColor value="$preset_colorWhite" />
+        <Variant name="mobile" with="anchorBottomCenter">
+            <size value="270px 64px" />
+            <position value="0px 0px" />
+            <textSize value="33px" />
+            <textMaxWidth value="250px" />
+            <textMaxNumLines value="2" />
+            <textResizeLines value="1" />
+            <textResizeWidth value="250px" />
+            <textColor value="$preset_colorWhite" />
+            <textSelectedColor value="$preset_colorWhite" />
+        </Variant>
+    </Profile>
+    <Profile name="modHubStatusBoxText" extends="textDefault" with="anchorTopCenter">
+        <size value="225px 21px" />
+        <textSize value="14px" />
+        <textMaxWidth value="220px" />
+        <textAlignment value="center" />
+        <textColor value="1 1 1 0.7" />
+    </Profile>
+    <Profile name="modHubStatusBox" extends="baseReference">
+        <size value="225px 25px" />
+    </Profile>
+    <Profile name="modHubInfoBox" extends="emptyPanel" with="anchorBottomCenter">
+        <size value="1400px 50px" />
+        <Variant name="mobile" with="anchorMiddleCenter defaultGameFrame">
+            <size value="1760px 150px" />
+            <position value="0px -240px" />
+            <imageColor value="$preset_colorItemBgNormal" />
+        </Variant>
+    </Profile>
+    <Profile name="modHubListItemAbuseText" extends="fs25_textDefault" with="anchorTopRight">
+        <textSize value="12px" />
+        <textAlignment value="right" />
+        <size value="840px 42px" />
+        <textMaxNumLines value="4" />
+        <textLayoutMode value="resize" />
+        <textColor value="1 1 1 0.5" />
+        <textLineHeightScale value="0.9" />
+    </Profile>
+    <Profile name="modHubAttributeBox" extends="emptyPanel">
+        <useFullVisibility value="false" />
+        <autoValidateLayout value="true" />
+        <size value="1400px 50px" />
+        <alignmentX value="center" />
+        <alignmentY value="middle" />
+        <imageColor value="$preset_colorDetailBackground" />
+    </Profile>
+    <Profile name="modHubAttributeInfo" extends="textDefault">
+        <textAutoWidth value="true" />
+    </Profile>
+    <Profile name="modHubMarkerBox" extends="shopItemsNavLayout" with="anchorTopRight">
+        <imageColor value="$preset_colorTransparent" />
+        <alignmentX value="right" />
+        <alignmentY value="middle" />
+        <position value="-5px -5px" />
+        <size value="100px 30px" />
+        <useFullVisibility value="false" />
+        <hasFrame value="false" />
+    </Profile>
+    <Profile name="modHubMarkerNew" extends="baseReference">
+        <size value="30px 30px" />
+        <margin value="5px 0px 0px 0px" />
+        <imageSliceId value="gui.roundButtonPlus" />
+    </Profile>
+    <Profile name="modHubMarkerUpdate" extends="modHubMarkerNew">
+        <imageSliceId value="gui.roundButtonSwap" />
+    </Profile>
+    <Profile name="modHubMarkerConflict" extends="modHubMarkerNew">
+        <imageSliceId value="gui.roundButtonExclamation" />
+    </Profile>
+    <Profile name="shopMoneyBox" with="anchorMiddleRight">
+        <size value="450px 40px" />
+        <alignmentX value="right" />
+        <alignmentY value="middle" />
+        <autoValidateLayout value="true" />
+        <Variant name="mobile" with="anchorMiddleRight">
+            <position value="-80px -882px" />
+        </Variant>
+    </Profile>
+    <Profile name="shopBalance" extends="textDefault" with="anchorBottomLeft">
+        <size value="160px 20px" />
+        <margin value="0 0 10px 0" />
+        <textSize value="20px" />
+        <textUpperCase value="true" />
+        <textAutoWidth value="true" />
+        <textAlignment value="right" />
+        <Variant name="mobile">
+            <textSize value="33px" />
+            <textAlignment value="left" />
+            <position value="50px -50px" />
+        </Variant>
+    </Profile>
+    <Profile name="shopMoney" extends="textDefault">
+        <textColor value="$preset_colorMainUI" />
+        <textAutoWidth value="true" />
+        <textBold value="true" />
+        <textSize value="20px" />
+        <textUpperCase value="true" />
+        <format value="accounting" />
+        <formatDecimalPlaces value="0" />
+        <Variant name="mobile" with="anchorBottomLeft">
+            <textColor value="$preset_colorWhite" />
+            <textSize value="33px" />
+        </Variant>
+    </Profile>
+    <Profile name="shopMoneyNeg" extends="shopMoney">
+        <textColor value="$preset_colorDarkRed" />
+    </Profile>
+    <Profile name="shopConfigInputGlyph" extends="baseReference">
+        <size value="36px 36px" />
+        <glyphColor value="$preset_colorMainUI" />
+    </Profile>
+    <Profile name="shopConfigInputGlyphText" extends="textDefault">
+        <textSize value="17px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textColor value="$preset_colorMainUI" />
+        <textMaxNumLines value="1" />
+        <textAutoWidth value="true" />
+        <margin value="8px 0 32px 0" />
+    </Profile>
+    <Profile name="ingameMenuFrameHeaderText" extends="textDefault" with="anchorMiddleLeft">
+        <size value="1200px 64px" />
+        <textSize value="31px" />
+        <textUpperCase value="true" />
+        <Variant name="mobile" with="anchorMiddleCenter">
+            <textSize value="64px" />
+            <textAlignment value="center" />
+            <size value="1920px 115px" />
+        </Variant>
+    </Profile>
+    <Profile name="ingameMenuFrameHeaderPanel" extends="emptyPanel" with="anchorTopLeft">
+        <size value="1400px 64px" />
+        <position value="0 64px" />
+        <Variant name="mobile" with="anchorTopCenter">
+            <position value="0 0px" />
+            <size value="1920px 115px" />
+        </Variant>
+    </Profile>
+    <Profile name="wardrobeFrameTitle" extends="textDefault" with="anchorMiddleCenter">
+        <size value="590px 40px" />
+        <position value="0px 400px" />
+        <textSize value="31px" />
+        <textUpperCase value="true" />
+    </Profile>
+    <Profile name="wardrobeFrameInfoText" extends="textDefault" with="anchorMiddleCenter">
+        <textAutoWidth value="true" />
+        <textMaxNumLines value="2" />
+        <textMaxWidth value="300px" />
+        <textAlignment value="center" />
+    </Profile>
+    <Profile name="wardrobeFrame" extends="emptyPanel" with="anchorMiddleCenter">
+        <size value="660px 1080px" />
+    </Profile>
+    <Profile name="wardrobeListFrame" extends="baseReference" with="anchorMiddleCenter">
+        <size value="590px 740px" />
+    </Profile>
+    <Profile name="wardrobeItemSelection" extends="baseReference" with="anchorBottomRight">
+        <position value="-5px 5px" />
+        <size value="30px 30px" />
+        <imageSliceId value="gui.whiteCircleFilledSmall" />
+        <imageColor value="$preset_colorMainUI" />
+    </Profile>
+    <Profile name="wardrobeItemSelectionTick" extends="baseReference" with="anchorMiddleCenter">
+        <size value="16px 16px" />
+        <imageSliceId value="gui.tick" />
+        <imageColor value="$preset_colorWhite" />
+    </Profile>
+    <Profile name="multiTextOptionAnimalDealerNumAnimals" extends="multiTextOption" with="anchorBottomCenter">
+        <size value="220px 48px" />
+        <position value="0px 232px" />
+        <margin value="0 12px 0 12px" />
+        <defaultProfileButtonLeft value="multiTextOptionAnimalDealerNumAnimalsLeft" />
+        <defaultProfileButtonRight value="multiTextOptionAnimalDealerNumAnimalsRight" />
+        <defaultProfileBg value="multiTextOptionAnimalDealerNumAnimalsBg" />
+        <Variant name="mobile">
+            <size value="400px 105px" />
+            <position value="-400px 100px" />
+        </Variant>
+    </Profile>
+    <Profile name="multiTextOptionAnimalDealerNumAnimalsLeft" extends="multiTextOptionLeft">
+        <iconSliceId value="gui.minus" />
+        <iconTextOffset value="0px 0px" />
+        <iconSize value="20px 20px" />
+        <imageDisabledColor value="$preset_colorMainUI_30" />
+        <iconDisabledColor value="$preset_colorMainUI" />
+        <Variant name="mobile">
+            <imageColor value="$preset_colorWhite" />
+            <iconDisabledColor value="$preset_colorWhite" />
+            <imageDisabledColor value="$preset_colorWhite" />
+        </Variant>
+    </Profile>
+    <Profile name="multiTextOptionAnimalDealerNumAnimalsRight" extends="multiTextOptionRight">
+        <iconSliceId value="gui.plus" />
+        <iconSize value="20px 20px" />
+        <iconTextOffset value="0px 0px" />
+        <imageDisabledColor value="$preset_colorMainUI_30" />
+        <iconDisabledColor value="$preset_colorMainUI" />
+        <Variant name="mobile">
+            <imageColor value="$preset_colorWhite" />
+            <iconDisabledColor value="$preset_colorWhite" />
+            <imageDisabledColor value="$preset_colorWhite" />
+        </Variant>
+    </Profile>
+    <Profile name="multiTextOptionAnimalDealerNumAnimalsBg" extends="multiTextOptionBg">
+        <imageColor value="$preset_colorDetailBackground" />
+        <imageDisabledColor value="$preset_colorDetailBackground" />
+        <Variant name="mobile">
+            <imageColor value="$preset_colorTransparent" />
+            <imageDisabledColor value="$preset_colorTransparent" />
+        </Variant>
+    </Profile>
+    <Profile name="animalDealerInfoBox" extends="emptyPanel" with="anchorBottomCenter">
+        <size value="510px 280px" />
+        <Variant name="mobile">
+            <size value="700px 140px" />
+            <position value="250px 90px" />
+        </Variant>
+    </Profile>
+    <Profile name="animalDealerMoneyTitle" extends="textDefault" with="anchorBottomLeft">
+        <textAutoWidth value="true" />
+        <textBold value="true" />
+        <Variant name="mobile">
+            <textSize value="35px" />
+            <textBold value="false" />
+        </Variant>
+    </Profile>
+    <Profile name="animalDealerMoneyValue" extends="textDefault" with="anchorBottomRight">
+        <format value="accounting" />
+        <formatDecimalPlaces value="0" />
+        <textAutoWidth value="true" />
+        <textAlignment value="right" />
+        <Variant name="mobile">
+            <textSize value="35px" />
+        </Variant>
+    </Profile>
+    <Profile name="animalDealerInfo" extends="textDefault" with="anchorBottomLeft">
+        <size value="470px 80px" />
+        <position value="40px 15px" />
+        <textLayoutMode value="resize" />
+        <textMaxNumLines value="6" />
+        <textSize value="14px" />
+        <Variant name="mobile" with="anchorMiddleCenter">
+            <size value="600px 120px" />
+            <position value="20px 0px" />
+            <textMaxNumLines value="3" />
+            <textAlignment value="center" />
+            <textSize value="32px" />
+        </Variant>
+    </Profile>
+    <Profile name="animalDealerInfoIcon" extends="baseReference" with="anchorBottomLeft">
+        <imageColor value="$preset_colorMainUI" />
+        <imageSliceId value="gui.roundButtonPlus" />
+        <size value="30px 30px" />
+        <position value="0px 40px" />
+        <margin value="0 4px 12px 4px" />
+        <Variant name="mobile" with="anchorBottomCenter">
+            <size value="70px 70px" />
+            <position value="-310px 40px" />
+        </Variant>
+    </Profile>
+    <Profile name="buttonBack" extends="fs25_wideButton" with="touchButton">
+        <inputAction value="MENU_BACK" />
+        <clickSound value="BACK" />
+        <touchIconSliceId value="gui.arrowBold" />
+        <touchIconSize value="24px 36px" />
+        <touchIconRotation value="180" />
+        <Variant name="switch">
+            <hotspot value="0px 10px 0px -10px" />
+        </Variant>
+    </Profile>
+    <Profile name="buttonCancel" extends="fs25_wideButton" with="touchButton">
+        <inputAction value="MENU_CANCEL" />
+        <touchIconSliceId value="gui.cross" />
+        <Variant name="switch">
+            <hotspot value="0px 10px 0px -10px" />
+        </Variant>
+    </Profile>
+    <Profile name="buttonDelete" extends="fs25_wideButton" with="touchButton">
+        <inputAction value="MENU_CANCEL" />
+        <touchIconSliceId value="gui.cross" />
+        <Variant name="switch">
+            <hotspot value="0px 10px 0px -10px" />
+        </Variant>
+    </Profile>
+    <Profile name="buttonOK" extends="fs25_wideButton" with="touchButton">
+        <inputAction value="MENU_ACCEPT" />
+        <touchIconSliceId value="gui.tick" />
+        <Variant name="switch">
+            <hotspot value="0px 10px 0px -10px" />
+        </Variant>
+    </Profile>
+    <Profile name="buttonYes" extends="buttonOK">
+        <clickSound value="YES" />
+    </Profile>
+    <Profile name="buttonNo" extends="buttonBack" with="touchButton">
+        <touchIconSliceId value="gui.cross" />
+        <clickSound value="NO" />
+    </Profile>
+    <Profile name="buttonActivate" extends="fs25_wideButton" with="touchButton">
+        <inputAction value="MENU_ACTIVATE" />
+        <touchIconSliceId value="gui.tick" />
+    </Profile>
+    <Profile name="buttonSelect" extends="fs25_wideButton" with="touchButton">
+        <inputAction value="MENU_ACTIVATE" />
+        <touchIconSliceId value="gui.tick" />
+        <touchIconSize value="36px 36px" />
+    </Profile>
+    <Profile name="buttonMenuPrev" extends="fs25_wideButton" with="touchButton">
+        <inputAction value="MENU_PAGE_PREV" />
+    </Profile>
+    <Profile name="buttonMenuNext" extends="fs25_wideButton" with="touchButton">
+        <inputAction value="MENU_PAGE_NEXT" />
+    </Profile>
+    <Profile name="buttonMenuSwitch" extends="fs25_wideButton" with="touchButton">
+        <inputAction value="MENU_EXTRA_1" />
+    </Profile>
+    <Profile name="buttonClean" extends="wideButton" with="touchButton">
+        <inputAction value="MENU_CANCEL" />
+        <touchIconSliceId value="gui.multiplayer_PC" />
+        <touchIconSize value="36px 36px" />
+    </Profile>
+    <Profile name="buttonSelectMap" extends="fs25_wideButton" with="touchButton">
+        <inputAction value="INGAMEMAP_ACCEPT" />
+    </Profile>
+    <Profile name="buttonBlock" extends="fs25_wideButton" with="touchButton">
+        <inputAction value="MENU_ACTIVATE" />
+        <Variant name="mobile">
+            <touchIconSliceId value="gui.cross" />
+            <touchIconSize value="36px 36px" />
+        </Variant>
+    </Profile>
+    <Profile name="buttonHotspot" extends="wideButton" with="touchButton">
+        <touchIconSliceId value="gui.visit" />
+        <touchIconSize value="42px 42px" />
+    </Profile>
+    <Profile name="buttonSwitch" extends="wideButton" with="touchButton">
+        <touchIconUVs value="872px 539px 36px 36px" />
+        <touchIconSize value="42px 42px" />
+    </Profile>
+    <Profile name="buttonRefuse" extends="fs25_wideButton" with="touchButton">
+        <inputAction value="MENU_CANCEL" />
+        <Variant name="mobile">
+            <touchIconSliceId value="gui.cross" />
+            <touchIconSize value="36px 36px" />
+        </Variant>
+    </Profile>
+    <Profile name="buttonBuy" extends="fs25_wideButton" with="touchButton">
+        <inputAction value="MENU_ACCEPT" />
+        <touchIconUVs value="835px 502px 36px 36px" />
+        <touchIconSize value="36px 36px" />
+    </Profile>
+    <Profile name="buttonBuyIAP" extends="buttonBuy">
+        <touchAreaColor value="1.0000 0.6500 0.0000 1" />
+    </Profile>
+    <Profile name="buttonRecover" extends="buttonBuyIAP">
+        <touchAreaColor value="$preset_colorMainUI" />
+    </Profile>
+    <Profile name="buttonSell" extends="fs25_wideButton" with="touchButton">
+        <inputAction value="MENU_CANCEL" />
+        <touchIconUVs value="835px 539px 36px 36px" />
+        <touchIconSize value="36px 36px" />
+    </Profile>
+    <Profile name="buttonVisitPlace" extends="buttonActivate" />
+    <Profile name="buttonShowInfo" extends="wideButton" with="touchButton">
+        <touchIconSliceId value="gui.multiplayer_toggle" />
+        <touchIconSize value="48px 48px" />
+    </Profile>
+    <Profile name="buttonCombinations" extends="wideButton" with="touchButton">
+        <touchIconUVs value="946px 502px 36px 36px" />
+        <touchIconSize value="48px 48px" />
+    </Profile>
+    <Profile name="buttonViewVehicleOnMap" extends="wideButton" with="touchButton">
+        <touchIconSliceId value="gui.mapSelection" />
+        <touchIconSize value="42px 42px" />
+    </Profile>
+    <Profile name="buttonEnterVehicle" extends="buttonActivate" with="touchButton">
+        <touchIconUVs value="909px 502px 36px 36px" />
+        <touchIconSize value="48px 48px" />
+    </Profile>
+    <Profile name="buttonResetVehicle" extends="buttonCancel" with="touchButton">
+        <touchIconUVs value="872px 502px 36px 36px" />
+        <touchIconSize value="48px 48px" />
+    </Profile>
+    <Profile name="buttonSetMarker" extends="buttonCancel" with="touchButton">
+        <touchIconSliceId value="gui.visit" />
+        <touchIconSize value="48px 48px" />
+    </Profile>
+    <Profile name="fs25_textDefault" extends="baseReference">
+        <size value="250px 20px" />
+        <textSize value="15px" />
+        <textAlignment value="left" />
+        <textColor value="$preset_fs25_colorMainLight" />
+        <textDisabledColor value="$preset_colorDisabled" />
+    </Profile>
+    <Profile name="fs25_textDarkHighlight" extends="fs25_textDefault">
+        <textSelectedColor value="$preset_fs25_colorMainDark" />
+    </Profile>
+    <Profile name="fs25_textGrey" extends="fs25_textDefault">
+        <textColor value="$preset_fs25_colorGreyText" />
+    </Profile>
+    <Profile name="fs25_startClipper" extends="baseReference" with="anchorTopCenter">
+        <size value="1561px 82px" />
+        <imageRotation value="180" />
+        <imageSliceId value="gui.divider_1" />
+    </Profile>
+    <Profile name="fs25_stopClipper" extends="fs25_startClipper" with="anchorBottomCenter">
+        <imageRotation value="0" />
+    </Profile>
+    <Profile name="fs25_startClipperSmall" extends="baseReference" with="anchorTopCenter">
+        <size value="391px 39px" />
+        <imageRotation value="180" />
+        <imageSliceId value="gui.buildmenu_gradient" />
+    </Profile>
+    <Profile name="fs25_stopClipperSmall" extends="fs25_startClipperSmall" with="anchorBottomCenter">
+        <imageRotation value="0" />
+    </Profile>
+    <Profile name="fs25_wardrobeListStartClipper" extends="fs25_startClipper">
+        <width value="670px" />
+    </Profile>
+    <Profile name="fs25_wardrobeListStopClipper" extends="fs25_stopClipper">
+        <width value="670px" />
+    </Profile>
+    <Profile name="fs25_textInput" extends="fs25_textDefault">
+        <size value="249px 31px" />
+        <textAlignment value="center" />
+        <maxInputTextWidth value="229px" />
+        <imageSliceId value="noSlice" />
+        <imageColor value="0 0 0 0" />
+        <imageHighlightedColor value="0 0 0 0" />
+        <imageFocusedColor value="0 0 0 0" />
+        <imageSelectedColor value="0 0 0 0" />
+        <imageDisabledColor value="0 0 0 0" />
+        <cursorFilename value="g_baseUIFilename" />
+        <cursorSliceId value="gui.colorPreset" />
+        <cursorSize value="1px 16px" />
+        <cursorOffset value="1px -2px" />
+        <cursorColor value="$preset_colorWhite" />
+    </Profile>
+    <Profile name="fs25_textInputBg" extends="baseReference" with="pivotMiddleLeft">
+        <absoluteSizeOffset value="-31px 0px" />
+        <imageSliceId value="gui.3dShop_button_middle" />
+        <imageColor value="$preset_fs25_colorTextInput" />
+        <imageDisabledColor value="$preset_fs25_colorMainDark_40" />
+        <startImageSize value="6px 0" />
+        <startImageSliceId value="gui.3dShop_button_left" />
+        <startImageColor value="$preset_fs25_colorTextInput" />
+        <startImageDisabledColor value="$preset_fs25_colorMainDark_40" />
+        <endImageSize value="6px 0" />
+        <endImageSliceId value="gui.3dShop_button_right" />
+        <endImageColor value="$preset_fs25_colorTextInput" />
+        <endImageDisabledColor value="$preset_fs25_colorMainDark_40" />
+    </Profile>
+    <Profile name="fs25_textInputIconBox" extends="baseReference" with="anchorMiddleRight">
+        <size value="31px 31px" />
+        <position value="31px 0px" />
+        <imageSliceId value="gui.3dShop_button" />
+        <imageFocusedSliceId value="gui.3dShop_button_selected" />
+    </Profile>
+    <Profile name="fs25_textInputIcon" extends="baseReference" with="anchorMiddleCenter">
+        <size value="10px 10px" />
+        <imageSliceId value="gui.icon_pen" />
+        <imageFocusedColor value="$preset_fs25_colorMainDark" />
+    </Profile>
+    <Profile name="fs25_multiTextOptionContainer" extends="baseReference" with="anchorTopLeft">
+        <size value="815px 50px" />
+    </Profile>
+    <Profile name="fs25_multiTextOption" extends="baseReference">
+        <size value="280px 36px" />
+        <autoAddDefaultElements value="true" />
+        <defaultProfileButtonLeft value="fs25_multiTextOptionLeft" />
+        <defaultProfileButtonRight value="fs25_multiTextOptionRight" />
+        <defaultProfileText value="fs25_multiTextOptionText" />
+        <defaultProfileBgThreePart value="fs25_multiTextOptionBg" />
+        <Variant name="switch">
+            <hotspot value="-20px 20px 20px -20px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_multiTextOptionLeft" extends="buttonBase" with="anchorStretchingYLeft">
+        <size value="40px 100%" />
+        <clickSound value="NONE" />
+        <sendActionOnRelease value="false" />
+        <iconRotation value="180" />
+        <iconSize value="7px 8px" />
+        <iconTextOffset value="-7px 0px" />
+        <iconSliceId value="gui.3dShop_arrow" />
+        <iconColor value="$preset_fs25_colorGreyLight" />
+        <iconHighlightedColor value="$preset_fs25_colorMainLight" />
+        <iconFocusedColor value="$preset_fs25_colorMainLight" />
+        <iconPressedColor value="$preset_fs25_colorMainHighlight" />
+        <iconDisabledColor value="$preset_colorTransparent" />
+        <imageSliceId value="noSlice" />
+        <imageColor value="0 0 0 0" />
+        <imageHighlightedColor value="0 0 0 0" />
+        <imageFocusedColor value="0 0 0 0" />
+        <imageSelectedColor value="0 0 0 0" />
+        <imageDisabledColor value="0 0 0 0" />
+        <Variant name="switch">
+            <hotspot value="-20px 20px 20px -20px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_multiTextOptionRight" extends="fs25_multiTextOptionLeft" with="anchorStretchingYRight">
+        <iconRotation value="0" />
+        <iconTextOffset value="7px 0px" />
+    </Profile>
+    <Profile name="fs25_multiTextOptionText" extends="fs25_textDefault" with="anchorStretchingYStretchingX">
+        <size value="100% 100%" />
+        <absoluteSizeOffset value="50px 0px" />
+        <textSize value="16px" />
+        <textMaxNumLines value="1" />
+        <textUpperCase value="true" />
+        <textAlignment value="center" />
+        <textLayoutMode value="scrolling" />
+        <textScrollOnFocusOnly value="true" />
+    </Profile>
+    <Profile name="fs25_multiTextOptionBg" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageColor value="$preset_fs25_colorGrey" />
+        <imageFocusedColor value="$preset_fs25_colorMainHighlight" />
+        <imageDisabledColor value="$preset_fs25_colorGreyMTODisabled" />
+        <imageSliceId value="gui.3dShop_button_outline_middle" />
+        <startImageSize value="10px 0" />
+        <startImageColor value="$preset_fs25_colorGrey" />
+        <startImageFocusedColor value="$preset_fs25_colorMainHighlight" />
+        <startImageDisabledColor value="$preset_fs25_colorGreyMTODisabled" />
+        <startImageSliceId value="gui.3dShop_button_outline_left" />
+        <endImageSize value="10px 0" />
+        <endImageColor value="$preset_fs25_colorGrey" />
+        <endImageFocusedColor value="$preset_fs25_colorMainHighlight" />
+        <endImageDisabledColor value="$preset_fs25_colorGreyMTODisabled" />
+        <endImageSliceId value="gui.3dShop_button_outline_right" />
+    </Profile>
+    <Profile name="fs25_multiTextOptionTitle" extends="fs25_textDefault" with="anchorMiddleLeft">
+        <size value="210px 48px" />
+        <textSize value="18px" />
+        <textAlignment value="right" />
+        <Variant name="mobile">
+            <textSize value="35px" />
+            <textBold value="true" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_multiTextOptionTooltip" extends="fs25_textDefault" with="anchorTopRight">
+        <width value="580px" />
+        <position value="650px 0px" />
+        <textMaxNumLines value="10" />
+        <textColor value="$preset_colorTransparent" />
+        <textFocusedColor value="$preset_fs25_colorGreyText" />
+        <textHighlightedColor value="$preset_fs25_colorGreyText" />
+        <textDisabledColor value="$preset_colorTransparent" />
+    </Profile>
+    <Profile name="fs25_sliderDockedBg" extends="baseReference" with="anchorMiddleRight">
+        <size value="36px 760px" />
+        <position value="0px 20px" />
+        <isHorizontal value="false" />
+        <imageSliceId value="gui.scrollbar_element_middle" />
+        <startImageSliceId value="gui.scrollbar_element_top" />
+        <startImageSize value="0 63px" />
+        <endImageSliceId value="gui.scrollbar_element_bottom" />
+        <endImageSize value="0 63px" />
+    </Profile>
+    <Profile name="fs25_sliderDockedBox" extends="emptyPanel" with="anchorStretchingYCenter">
+        <width value="10px" />
+        <absoluteSizeOffset value="0px 120px" />
+        <isHorizontal value="false" />
+        <imageSliceId value="gui.scrollbar_middle" />
+        <imageColor value="$preset_colorBlack" />
+        <startImageSliceId value="gui.scrollbar_top" />
+        <startImageColor value="$preset_colorBlack" />
+        <startImageSize value="0 5px" />
+        <endImageSliceId value="gui.scrollbar_bottom" />
+        <endImageColor value="$preset_colorBlack" />
+        <endImageSize value="0 5px" />
+    </Profile>
+    <Profile name="fs25_sliderDocked" extends="emptyPanel" with="anchorStretchingYStretchingX">
+        <hasButtons value="false" />
+        <handleFocus value="false" />
+        <isHorizontal value="false" />
+        <isThreePartBitmap value="true" />
+        <sliderImageSliceId value="gui.scrollbar_middle" />
+        <sliderImageColor value="$preset_fs25_colorMainHighlight" />
+        <sliderSize value="10px 0" />
+        <startImageSliceId value="gui.scrollbar_top" />
+        <startImageColor value="$preset_fs25_colorMainHighlight" />
+        <startImageSize value="0 5px" />
+        <endImageSliceId value="gui.scrollbar_bottom" />
+        <endImageColor value="$preset_fs25_colorMainHighlight" />
+        <endImageSize value="0 5px" />
+    </Profile>
+    <Profile name="fs25_listSliderBox" extends="baseReference" with="anchorStretchingYRight">
+        <size value="6px 100%" />
+        <position value="21px 0px" />
+        <isHorizontal value="false" />
+        <imageSliceId value="gui.sliderBarMid" />
+        <imageColor value="$preset_fs25_colorGrey" />
+        <startImageSliceId value="gui.sliderBarStart" />
+        <startImageColor value="$preset_fs25_colorGrey" />
+        <startImageSize value="6px 3px" />
+        <endImageSliceId value="gui.sliderBarEnd" />
+        <endImageColor value="$preset_fs25_colorGrey" />
+        <endImageSize value="6px 3px" />
+    </Profile>
+    <Profile name="fs25_listSlider" extends="emptyPanel" with="anchorStretchingYStretchingX">
+        <hasButtons value="false" />
+        <handleFocus value="false" />
+        <isThreePartBitmap value="true" />
+        <sliderImageSliceId value="gui.sliderBarMid" />
+        <sliderImageColor value="$preset_fs25_colorGreyLight" />
+        <sliderSize value="6px 0" />
+        <startImageSliceId value="gui.sliderBarStart" />
+        <startImageColor value="$preset_fs25_colorGreyLight" />
+        <startImageSize value="0 3px" />
+        <endImageSliceId value="gui.sliderBarEnd" />
+        <endImageColor value="$preset_fs25_colorGreyLight" />
+        <endImageSize value="0 3px" />
+    </Profile>
+    <Profile name="fs25_listSliderBackground" extends="baseReference" with="anchorStretchingYStretchingX">
+        <cornerSize value="0.15" />
+        <color value="$preset_fs25_colorDarkGreen" />
+    </Profile>
+    <Profile name="fs25_binaryOption" extends="baseReference" with="anchorBottomCenter">
+        <size value="276px 32px" />
+        <autoAddDefaultElements value="true" />
+        <defaultProfileBgThreePart value="fs25_binaryOptionBg" />
+        <defaultProfileButtonLeft value="fs25_binaryOptionLeft" />
+        <defaultProfileButtonRight value="fs25_binaryOptionRight" />
+        <defaultProfileSliderThreePart value="fs25_binaryOptionSlider" />
+        <Variant name="switch">
+            <hotspot value="-20px 20px 20px -20px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_binaryOptionLeft" extends="emptyPanel" with="anchorStretchingYLeft">
+        <size value="50% 100%" />
+        <absoluteSizeOffset value="20px 0px" />
+        <position value="10px 0px" />
+        <textSize value="16px" />
+        <textMaxNumLines value="1" />
+        <textUpperCase value="true" />
+        <textAlignment value="center" />
+        <textLayoutMode value="scrolling" />
+        <textColor value="$preset_fs25_colorMainLight_80" />
+        <textSelectedColor value="$preset_fs25_colorMainDark" />
+        <Variant name="switch">
+            <hotspot value="-30px 20px 10px -20px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_binaryOptionRight" extends="fs25_binaryOptionLeft" with="anchorStretchingYRight">
+        <position value="-10px 0px" />
+        <Variant name="switch">
+            <hotspot value="-10px 20px 30px -20px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_binaryOptionBg" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageSliceId value="gui.3dShop_button_middle" />
+        <imageColor value="$preset_fs25_colorGrey" />
+        <startImageSize value="6px 0" />
+        <startImageSliceId value="gui.3dShop_button_left" />
+        <startImageColor value="$preset_fs25_colorGrey" />
+        <endImageSize value="6px 0" />
+        <endImageSliceId value="gui.3dShop_button_right" />
+        <endImageColor value="$preset_fs25_colorGrey" />
+    </Profile>
+    <Profile name="fs25_binaryOptionSlider" extends="baseReference" with="anchorStretchingYLeft">
+        <size value="50% 100%" />
+        <imageSliceId value="gui.3dShop_button_middle" />
+        <imageColor value="$preset_fs25_colorGreyBinarySlider" />
+        <imageFocusedColor value="$preset_fs25_colorMainHighlight" />
+        <imageHighlightedColor value="$preset_fs25_colorMainHighlight" />
+        <startImageSize value="6px 0" />
+        <startImageSliceId value="gui.3dShop_button_left" />
+        <startImageColor value="$preset_fs25_colorGreyBinarySlider" />
+        <startImageFocusedColor value="$preset_fs25_colorMainHighlight" />
+        <startImageHighlightedColor value="$preset_fs25_colorMainHighlight" />
+        <endImageSize value="6px 0" />
+        <endImageSliceId value="gui.3dShop_button_right" />
+        <endImageColor value="$preset_fs25_colorGreyBinarySlider" />
+        <endImageFocusedColor value="$preset_fs25_colorMainHighlight" />
+        <endImageHighlightedColor value="$preset_fs25_colorMainHighlight" />
+    </Profile>
+    <Profile name="fs25_optionSlider" extends="fs25_multiTextOption" with="anchorBottomCenter">
+        <width value="270px" />
+        <sliderOffset value="-11px" />
+        <useFillingBar value="true" />
+        <updateTextPosition value="false" />
+        <hideLeftRightButtons value="true" />
+        <defaultProfileBgThreePart value="fs25_optionSliderBg" />
+        <defaultProfileText value="fs25_optionSliderText" />
+        <defaultProfileSlider value="fs25_optionSliderIcon" />
+        <defaultProfileFillingBarThreePart value="fs25_optionSliderFillingBar" />
+    </Profile>
+    <Profile name="fs25_optionSliderBg" extends="baseReference" with="anchorMiddleStretchingX">
+        <height value="6px" />
+        <imageSliceId value="gui.progressbar_middle" />
+        <imageColor value="$preset_fs25_colorMainDark" />
+        <startImageSize value="5px 0" />
+        <startImageSliceId value="gui.progressbar_left" />
+        <startImageColor value="$preset_fs25_colorMainDark" />
+        <endImageSize value="5px 0" />
+        <endImageSliceId value="gui.progressbar_right" />
+        <endImageColor value="$preset_fs25_colorMainDark" />
+    </Profile>
+    <Profile name="fs25_optionSliderFillingBar" extends="baseReference" with="anchorMiddleStretchingX pivotMiddleLeft">
+        <height value="6px" />
+        <imageSliceId value="gui.progressbar_middle" />
+        <imageColor value="$preset_fs25_colorGreyLight" />
+        <startImageSize value="5px 0" />
+        <startImageSliceId value="gui.progressbar_left" />
+        <startImageColor value="$preset_fs25_colorGreyLight" />
+        <endImageSize value="5px 0" />
+        <endImageSliceId value="gui.progressbar_right" />
+        <endImageColor value="$preset_fs25_colorGreyLight" />
+    </Profile>
+    <Profile name="fs25_optionSliderIcon" extends="baseReference" with="anchorMiddleLeft">
+        <size value="22.5px 22px" />
+        <imageSliceId value="gui.gearBg" />
+        <imageFocusedColor value="$preset_fs25_colorMainHighlight" />
+    </Profile>
+    <Profile name="fs25_optionSliderText" extends="fs25_multiTextOptionText">
+        <position value="0px -30px" />
+    </Profile>
+    <Profile name="fs25_optionSliderWithoutButtons" extends="fs25_optionSlider">
+        <defaultProfileButtonLeft value="fs25_optionSliderNoButton" />
+        <defaultProfileButtonRight value="fs25_optionSliderNoButton" />
+    </Profile>
+    <Profile name="fs25_optionSliderNoButton" extends="emptyPanel">
+        <size value="0px 0px" />
+    </Profile>
+    <Profile name="fs25_lineSeparatorTop" extends="baseReference" with="anchorTopStretchingX">
+        <height value="2dp" />
+        <imageColor value="$preset_fs25_colorGreyLight" />
+        <startImageSize value="50px 0px" />
+        <startImageSliceId value="gui.list_divider" />
+        <endImageSize value="50px 0px" />
+        <endImageInvertX value="true" />
+        <endImageSliceId value="gui.list_divider" />
+    </Profile>
+    <Profile name="fs25_lineSeparatorBottom" extends="fs25_lineSeparatorTop" with="anchorBottomStretchingX" />
+    <Profile name="fs25_lineSeparatorTopSoft" extends="fs25_lineSeparatorTop">
+        <imageColor value="$preset_fs25_colorGreyLight_20" />
+    </Profile>
+    <Profile name="fs25_lineSeparatorBottomSoft" extends="fs25_lineSeparatorTopSoft" with="anchorBottomStretchingX" />
+    <Profile name="fs25_lineSeparatorLeft" extends="baseReference" with="anchorStretchingYLeft">
+        <width value="2dp" />
+        <isHorizontal value="false" />
+        <imageColor value="$preset_fs25_colorGreyLight" />
+        <startImageSize value="0px 50px" />
+        <startImageInvertY value="true" />
+        <startImageSliceId value="gui.list_divider2" />
+        <endImageSize value="0px 50px" />
+        <endImageSliceId value="gui.list_divider2" />
+    </Profile>
+    <Profile name="fs25_lineSeparatorRight" extends="fs25_lineSeparatorLeft" with="anchorStretchingYRight" />
+    <Profile name="fs25_lineSeparatorLeftSoft" extends="fs25_lineSeparatorLeft">
+        <imageColor value="$preset_fs25_colorGreyLight_20" />
+    </Profile>
+    <Profile name="fs25_lineSeparatorRightSoft" extends="fs25_lineSeparatorLeftSoft" with="anchorStretchingYRight" />
+    <Profile name="fs25_lineSeparatorTopHighlighted" extends="fs25_lineSeparatorTop">
+        <imageColor value="$preset_fs25_colorMainHighlight" />
+    </Profile>
+    <Profile name="fs25_lineSeparatorBottomHighlighted" extends="fs25_lineSeparatorBottom">
+        <imageColor value="$preset_fs25_colorMainHighlight" />
+    </Profile>
+    <Profile name="fs25_buttonBox" extends="baseReference" with="anchorBottomStretchingX pivotBottomRight">
+        <height value="40px" />
+        <absoluteSizeOffset value="-125px 0px" />
+        <imageColor value="$preset_colorBlack" />
+        <alignmentX value="right" />
+        <alignmentY value="middle" />
+        <fillDirectionX value="rightToLeft" />
+        <autoValidateLayout value="true" />
+    </Profile>
+    <Profile name="fs25_buttonBoxSeparator" extends="baseReference" with="anchorMiddleRight">
+        <size value="2dp 20px" />
+        <imageColor value="$preset_fs25_colorMainGrey" />
+    </Profile>
+    <Profile name="fs25_wideButton" extends="emptyPanel">
+        <handleFocus value="false" />
+        <size value="200px 30px" />
+        <fitToContent value="true" />
+        <fitExtraWidth value="38px" />
+        <iconSize value="30px 30px" />
+        <iconTextOffset value="-10px -1px" />
+        <iconColor value="$preset_fs25_colorMainHighlight" />
+        <iconFocusedColor value="$preset_colorWhite" />
+        <iconHighlightedColor value="$preset_colorWhite" />
+        <iconSelectedColor value="$preset_colorWhite" />
+        <iconDisabledColor value="$preset_fs25_colorMainHighlight_40" />
+        <iconBgColor value="$preset_fs25_colorGreenDark" />
+        <iconBgFocusedColor value="$preset_fs25_colorMainHighlight" />
+        <iconBgHighlightedColor value="$preset_fs25_colorMainHighlight" />
+        <iconBgSelectedColor value="$preset_fs25_colorMainHighlight" />
+        <iconBgDisabledColor value="$preset_fs25_colorGreenDark_40" />
+        <textSize value="16px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textAutoWidth value="true" />
+        <textAlignment value="center" />
+        <textColor value="$preset_fs25_colorMainLight" />
+        <textDisabledColor value="$preset_colorDisabled" />
+        <textFocusedColor value="$preset_fs25_colorMainHighlight" />
+        <textHighlightedColor value="$preset_fs25_colorMainHighlight" />
+        <touchIconSize value="36px 36px" />
+    </Profile>
+    <Profile name="fs25_inputGlyph" extends="baseReference">
+        <size value="30px 30px" />
+        <margin value="16px 0 10px 0" />
+        <isLeftAligned value="true" />
+        <glyphColor value="$preset_fs25_colorMainHighlight" />
+        <buttonGlyphColor value="$preset_fs25_colorMainHighlight" />
+    </Profile>
+    <Profile name="fs25_inputGlyphText" extends="fs25_textDefault">
+        <margin value="0px 0 13px 0" />
+        <textSize value="16px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textAutoWidth value="true" />
+    </Profile>
+    <Profile name="fs25_buttonCircleArrowLeft" extends="baseReference" with="anchorMiddleLeft">
+        <size value="42px 42px" />
+        <imageSize value="50px 50px" />
+        <imageSliceId value="gui.whiteCircleFilled" />
+        <imageColor value="$preset_fs25_colorGrey" />
+        <imageFocusedColor value="$preset_fs25_colorMainHighlight" />
+        <imageHighlightedColor value="$preset_fs25_colorMainDark" />
+        <imageSelectedColor value="$preset_fs25_colorMainHighlight" />
+        <imageDisabledColor value="$preset_colorDisabled_30" />
+        <iconSize value="7px 7px" />
+        <iconRotation value="180" />
+        <iconSliceId value="gui.arrow_round" />
+        <iconFocusedColor value="$preset_fs25_colorMainDark" />
+        <iconPressedColor value="$preset_colorWhite" />
+        <iconDisabledColor value="$preset_colorWhite_25" />
+    </Profile>
+    <Profile name="fs25_buttonCircleArrowRight" extends="fs25_buttonCircleArrowLeft" with="anchorMiddleRight">
+        <iconRotation value="0" />
+    </Profile>
+    <Profile name="fs25_dialogBgTop" extends="baseReference" with="anchorTopStretchingX">
+        <size value="100% 263px" />
+        <startImageSize value="24px 0" />
+        <startImageSliceId value="gui.dialogue_box_gradient_left" />
+        <endImageSize value="37px 0" />
+        <endImageSliceId value="gui.dialogue_box_gradient_right" />
+        <imageSliceId value="gui.dialogue_box_gradient_middle" />
+    </Profile>
+    <Profile name="fs25_dialogBgMiddle" extends="baseReference" with="anchorStretchingYStretchingX pivotBottomCenter">
+        <absoluteSizeOffset value="0px 353px" />
+        <position value="0px 90px" />
+        <startImageSize value="24px 0" />
+        <startImageSliceId value="gui.dialogue_box_left" />
+        <endImageSize value="37px 0" />
+        <endImageSliceId value="gui.dialogue_box_right" />
+        <imageSliceId value="gui.dialogue_box_center" />
+    </Profile>
+    <Profile name="fs25_dialogBgTopSmall" extends="baseReference" with="anchorTopStretchingX">
+        <size value="100% 87px" />
+        <startImageSize value="24px 0" />
+        <startImageSliceId value="gui.dialogue_box_small_gradient_left" />
+        <endImageSize value="37px 0" />
+        <endImageSliceId value="gui.dialogue_box_small_gradient_right" />
+        <imageSliceId value="gui.dialogue_box_small_gradient_middle" />
+    </Profile>
+    <Profile name="fs25_dialogBgMiddleSmall" extends="baseReference" with="anchorStretchingYStretchingX pivotBottomCenter">
+        <absoluteSizeOffset value="0px 177px" />
+        <position value="0px 90px" />
+        <startImageSize value="24px 0" />
+        <startImageSliceId value="gui.dialogue_box_left" />
+        <endImageSize value="37px 0" />
+        <endImageSliceId value="gui.dialogue_box_right" />
+        <imageSliceId value="gui.dialogue_box_center" />
+    </Profile>
+    <Profile name="fs25_dialogBgBottom" extends="baseReference" with="anchorBottomStretchingX">
+        <size value="100% 90px" />
+        <startImageSize value="24px 0" />
+        <startImageSliceId value="gui.dialogue_box_lower_left" />
+        <endImageSize value="37px 0" />
+        <endImageSliceId value="gui.dialogue_box_lower_right" />
+        <imageSliceId value="gui.dialogue_box_lower_middle" />
+    </Profile>
+    <Profile name="fs25_dialogBg" extends="baseReference" with="pivotMiddleCenter">
+        <size value="731px 353px" />
+        <Variant name="mobile">
+            <size value="1400px 450px" />
+            <position value="0px 54px" />
+            <hasFrame value="false" />
+            <color value="$preset_colorBlack80" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_dialogContentContainer" extends="emptyPanel" with="anchorStretchingYStretchingX pivotTopLeft">
+        <absoluteSizeOffset value="21px 79px" />
+        <position value="4px -4px" />
+    </Profile>
+    <Profile name="fs25_dialogHeaderText" extends="fs25_textDefault" with="anchorTopCenter">
+        <size value="500px 30px" />
+        <position value="0px -30px" />
+        <textSize value="30px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textAlignment value="center" />
+        <Variant name="mobile">
+            <textSize value="53px" />
+            <textOffset value="80px 0px" />
+            <size value="1200px 60px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_dialogLine" extends="baseReference" with="anchorTopLeft">
+        <size value="100px 2dp" />
+        <position value="0px 145px" />
+        <imageColor value="$preset_fs25_colorGreyDark" />
+    </Profile>
+    <Profile name="fs25_dialogLineRight" extends="fs25_dialogLine" with="anchorTopRight" />
+    <Profile name="fs25_dialogCircle" extends="baseReference" with="anchorTopCenter">
+        <size value="80px 80px" />
+        <position value="0px -40px" />
+        <imageColor value="$preset_fs25_colorMainHighlight" />
+        <imageSliceId value="gui.loadingAnimationFull" />
+        <Variant name="mobile">
+            <visible value="false" />
+            <size value="100px 100px" />
+            <imageColor value="$preset_colorWhite" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_dialogCircleWarning" extends="fs25_dialogCircle">
+        <imageColor value="$preset_fs25_colorOrangeDark" />
+    </Profile>
+    <Profile name="fs25_dialogLoading" extends="fs25_dialogCircle" with="anchorTopCenter pivotMiddleCenter">
+        <position value="0px 20px" />
+        <imageSliceId value="gui.loadingAnimation" />
+        <animationMode value="rotate" />
+        <animationSpeed value="1000" />
+        <Variant name="mobile">
+            <position value="0px -130px" />
+            <size value="100px 100px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_dialogInfo" extends="baseReference" with="anchorMiddleCenter">
+        <size value="11px 38px" />
+        <imageSliceId value="gui.dialogType_info" />
+        <imageColor value="$preset_fs25_colorMainHighlight" />
+        <Variant name="mobile">
+            <size value="20px 67px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_dialogWarning" extends="fs25_dialogInfo">
+        <size value="9px 38px" />
+        <imageSliceId value="gui.dialogType_warning" />
+        <imageColor value="$preset_fs25_colorOrangeDark" />
+        <Variant name="mobile">
+            <size value="20px 67px" />
+            <imageColor value="$preset_colorWhite" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_dialogKey" extends="fs25_dialogQuestion" />
+    <Profile name="fs25_dialogUser" extends="fs25_dialogInfo">
+        <imageSliceId value="gui.dialogType_user" />
+        <Variant name="mobile">
+            <size value="22px 75px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_dialogQuestion" extends="fs25_dialogInfo">
+        <size value="23px 38px" />
+        <imageSliceId value="gui.dialogType_question" />
+        <Variant name="mobile">
+            <size value="30px 50px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_dialogText" extends="fs25_textDefault" with="anchorTopCenter">
+        <size value="620px 20px" />
+        <position value="0px -145px" />
+        <textSize value="16px" />
+        <textMaxNumLines value="20" />
+        <textAlignment value="center" />
+        <textLineHeightScale value="1.5" />
+        <textVerticalAlignment value="top" />
+        <Variant name="mobile">
+            <textSize value="40px" />
+            <size value="1200px 20px" />
+            <position value="0px -180px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_dialogTitle" extends="fs25_dialogText">
+        <position value="0px -135px" />
+        <textBold value="true" />
+        <textSize value="24px" />
+        <textMaxNumLines value="1" />
+        <textUpperCase value="true" />
+        <textLayoutMode value="resize" />
+        <Variant name="mobile">
+            <textSize value="55px" />
+            <textWrapWidth value="1000px" />
+            <textMaxWidth value="1000px" />
+            <position value="0px -70px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_dialogMultiTextOption" extends="fs25_multiTextOption" with="anchorBottomCenter" />
+    <Profile name="fs25_dialogTextWithTitle" extends="fs25_dialogText">
+        <position value="0px -175px" />
+        <Variant name="mobile">
+            <position value="0px -240px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_dialogTextWarning" extends="fs25_dialogText">
+        <position value="0px -195px" />
+        <textSize value="12px" />
+        <Variant name="mobile">
+            <position value="0px -310px" />
+            <textSize value="25px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_dialogTextInput" extends="fs25_textInput" with="anchorBottomCenter">
+        <size value="340px 40px" />
+        <position value="-20px 20px" />
+        <textBold value="true" />
+        <maxCharacters value="30" />
+        <maxInputTextWidth value="310px" />
+    </Profile>
+    <Profile name="fs25_dialogTextInputIconBox" extends="fs25_textInputIconBox">
+        <size value="40px 40px" />
+        <position value="40px 0px" />
+    </Profile>
+    <Profile name="fs25_dialogTextInputIcon" extends="fs25_textInputIcon">
+        <size value="16px 16px" />
+    </Profile>
+    <Profile name="fs25_dialogButtonBox" extends="emptyPanel" with="anchorBottomStretchingX">
+        <height value="36px" />
+        <position value="0px 32px" />
+        <absoluteSizeOffset value="50px 0px" />
+        <alignmentX value="right" />
+        <alignmentY value="middle" />
+        <useFullVisibility value="false" />
+        <autoValidateLayout value="true" />
+        <Variant name="mobile">
+            <size value="1400px 200px" />
+            <alignmentX value="right" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_dialogButtonBoxSeparator" extends="baseReference" with="anchorMiddleRight">
+        <size value="2dp 20px" />
+        <imageColor value="$preset_fs25_colorMainGrey" />
+    </Profile>
+    <Profile name="fs25_dialogWarningIcon" extends="baseReference" with="anchorMiddleLeft">
+        <size value="20px 20px" />
+        <position value="-24px 0px" />
+        <imageSliceId value="gui.fieldInfo_warning" />
+    </Profile>
+    <Profile name="fs25_dialogWarningText" extends="fs25_textDefault" with="anchorTopCenter">
+        <size value="360px 40px" />
+        <position value="12px -250px" />
+        <textSize value="12px" />
+        <textMaxNumLines value="2" />
+        <textMaxWidth value="360px" />
+        <textAutoWidth value="true" />
+    </Profile>
+    <Profile name="fs25_fullScreenBackground" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageColor value="$preset_fs25_colorMainGrey" />
+    </Profile>
+    <Profile name="fs25_backgroundTest" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageSliceId value="noSlice" />
+        <imageFilename value="dataS/menu/multiplayerFarmsTest.png" />
+    </Profile>
+    <Profile name="fs25_backgroundTest2" extends="baseReference" with="anchorStretchingYStretchingX">
+        <startImageSliceId value="gui.colorPreset" />
+    </Profile>
+    <Profile name="fs25_menuContainer" extends="emptyPanel" with="anchorStretchingYCenter pivotBottomCenter">
+        <width value="1550px" />
+        <position value="-14px 80px" />
+        <absoluteSizeOffset value="0px 250px" />
+    </Profile>
+    <Profile name="fs25_menuHeaderPanel" extends="emptyPanel" with="anchorTopStretchingX">
+        <height value="80px" />
+        <absoluteSizeOffset value="56px 0px" />
+        <position value="0px 92px" />
+        <Variant name="mobile" with="anchorTopCenter">
+            <position value="0 0px" />
+            <size value="1920px 115px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_menuHeaderIconBg" extends="baseReference" with="anchorMiddleLeft">
+        <size value="66px 66px" />
+        <position value="15px 0px" />
+        <imageSliceId value="gui.heading_iconBackground" />
+    </Profile>
+    <Profile name="fs25_menuHeaderIcon" extends="baseReference" with="anchorMiddleCenter">
+        <size value="50px 50px" />
+        <imageSliceId value="gui.icon_vehicleDealer_machines" />
+        <imageColor value="$preset_fs25_colorMainDark" />
+    </Profile>
+    <Profile name="fs25_menuHeaderTitle" extends="fs25_textDefault" with="anchorMiddleLeft">
+        <size value="1200px 70px" />
+        <position value="100px 0px" />
+        <textSize value="40px" />
+        <textUpperCase value="true" />
+        <textLayoutMode value="scrolling" />
+        <textScrollOnFocusOnly value="false" />
+        <Variant name="mobile" with="anchorMiddleCenter">
+            <textSize value="64px" />
+            <textAlignment value="center" />
+            <size value="1920px 115px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_tabListContainer" extends="baseReference" with="anchorStretchingYLeft pivotTopLeft">
+        <width value="125px" />
+        <absoluteSizeOffset value="0px 40px" />
+        <imageColor value="$preset_fs25_colorMainDark" />
+    </Profile>
+    <Profile name="fs25_tabList" extends="emptyPanel" with="anchorStretchingYStretchingX anchorMiddleLeft">
+        <absoluteSizeOffset value="-15px 0px" />
+        <handleFocus value="false" />
+        <soundDisabled value="true" />
+        <listItemAlignment value="middle" />
+    </Profile>
+    <Profile name="fs25_tabListItem" extends="emptyPanel" with="anchorTopLeft">
+        <size value="140px 124px" />
+        <handleFocus value="false" />
+    </Profile>
+    <Profile name="fs25_tabListItemButton" extends="baseReference" with="anchorStretchingYStretchingX">
+        <handleFocus value="false" />
+        <textAlignment value="center" />
+        <ignorePressedOverlayState value="true" />
+        <imageColor value="$preset_colorTransparent" />
+        <imageFocusedColor value="$preset_colorWhite" />
+        <imageSelectedColor value="$preset_colorWhite" />
+        <imageSliceId value="gui.colorPreset" />
+        <imageFocusedSliceId value="gui.sidebar_focused" />
+        <imageSelectedSliceId value="gui.sidebar_focused" />
+        <iconSize value="64px 64px" />
+        <iconTextOffset value="-6px 0px" />
+        <iconSliceId value="gui.icon_ingameMenu_animals" />
+        <iconColor value="$preset_fs25_colorMainLight" />
+        <iconFocusedColor value="$preset_fs25_colorMainLight" />
+        <iconSelectedColor value="$preset_fs25_colorMainDark" />
+    </Profile>
+    <Profile name="fs25_tabListItemSeparator" extends="baseReference" with="anchorTopLeft">
+        <size value="125px 22px" />
+        <imageSliceId value="gui.sidebar_highlightLight" />
+    </Profile>
+    <Profile name="fs25_tabListItemSeparatorBottom" extends="fs25_tabListItemSeparator" with="anchorBottomLeft">
+        <position value="0px -22px" />
+    </Profile>
+    <Profile name="fs25_subCategoryContainer" extends="emptyPanel" with="anchorStretchingYLeft">
+        <width value="410px" />
+    </Profile>
+    <Profile name="fs25_subCategoryContainerBg" extends="baseReference" with="anchorStretchingYLeft">
+        <width value="463px" />
+        <imageDisabledColor value="$preset_colorTransparent" />
+        <imageSliceId value="gui.animalScreen_left" />
+        <startImageSize value="0 0" />
+        <startImageSliceId value="gui.animalScreen_left" />
+        <startImageDisabledColor value="$preset_colorTransparent" />
+        <endImageSize value="65px 0" />
+        <endImageSliceId value="gui.animalScreen_down" />
+        <endImageDisabledColor value="$preset_colorTransparent" />
+    </Profile>
+    <Profile name="fs25_subCategoryContainerArrow" extends="baseReference" with="anchorMiddleRight">
+        <size value="65px 84px" />
+        <imageDisabledColor value="$preset_colorTransparent" />
+        <imageSliceId value="gui.animalScreen_middle" />
+    </Profile>
+    <Profile name="fs25_subCategorySelector" extends="fs25_multiTextOption" with="anchorTopStretchingX">
+        <size value="100% 42px" />
+        <absoluteSizeOffset value="56px 0px" />
+        <position value="0px -55px" />
+        <disableButtonsOnSingleText value="true" />
+        <defaultProfileButtonLeft value="fs25_buttonCircleArrowLeft" />
+        <defaultProfileButtonRight value="fs25_buttonCircleArrowRight" />
+        <defaultProfileText value="fs25_subCategorySelectorText" />
+        <defaultProfileBgThreePart value="emptyPanel" />
+    </Profile>
+    <Profile name="fs25_subCategorySelectorText" extends="fs25_multiTextOptionText">
+        <textSize value="28px" />
+        <textBold value="true" />
+        <textMaxWidth value="240px" />
+        <textLayoutMode value="resize" />
+        <textDisabledColor value="$preset_fs25_colorMainLight" />
+    </Profile>
+    <Profile name="fs25_subCategorySelectorBox" extends="emptyPanel" with="anchorTopStretchingX">
+        <height value="10px" />
+        <position value="0px -105px" />
+        <handleFocus value="false" />
+        <alignmentX value="center" />
+        <elementSpacing value="10px" />
+    </Profile>
+    <Profile name="fs25_subCategorySelectorDot" extends="baseReference">
+        <size value="10px 10px" />
+        <cornerSize value="0.25" />
+        <color value="$preset_fs25_colorGreyLight" />
+        <colorSelected value="$preset_fs25_colorMainHighlight" />
+    </Profile>
+    <Profile name="fs25_subCategorySelectorBoxText" extends="fs25_textDefault" with="anchorTopStretchingX">
+        <width value="100%" />
+        <position value="0px -60px" />
+        <textBold value="true" />
+        <textAlignment value="center" />
+    </Profile>
+    <Profile name="fs25_subCategorySelectorTabbedBox" extends="emptyPanel" with="anchorTopStretchingX">
+        <height value="57px" />
+        <handleFocus value="false" />
+        <alignmentX value="center" />
+        <alignmentY value="bottom" />
+        <elementSpacing value="10px" />
+    </Profile>
+    <Profile name="fs25_subCategorySelectorTabbedTab" extends="emptyPanel">
+        <size value="200px 50px" />
+        <handleFocus value="false" />
+        <fitExtraWidth value="40px" />
+        <ignorePressedOverlayState value="true" />
+        <textSize value="18px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textAutoWidth value="true" />
+        <textAlignment value="center" />
+        <textOffset value="0px 5px" />
+        <textColor value="$preset_fs25_colorMainLight" />
+        <textSelectedColor value="$preset_fs25_colorMainDark" />
+        <textDisabledColor value="$preset_colorDisabled" />
+    </Profile>
+    <Profile name="fs25_subCategorySelectorTabbedTabBg" extends="emptyPanel">
+        <handleFocus value="false" />
+        <imageSelectedColor value="$preset_colorWhite" />
+        <imageSelectedSliceId value="gui.tab_selected_middle" />
+        <startImageSize value="12px 0" />
+        <startImageSliceId value="gui.empty" />
+        <startImageSelectedColor value="$preset_colorWhite" />
+        <startImageSelectedSliceId value="gui.tab_selected_left" />
+        <endImageSize value="12px 0" />
+        <endImageSliceId value="gui.empty" />
+        <endImageSelectedColor value="$preset_colorWhite" />
+        <endImageSelectedSliceId value="gui.tab_selected_right" />
+    </Profile>
+    <Profile name="fs25_subCategorySelectorTabbed" extends="fs25_subCategorySelector">
+        <position value="0px -10px" />
+        <defaultProfileText value="fs25_subCategorySelectorTabbedText" />
+    </Profile>
+    <Profile name="fs25_subCategorySelectorTabbedText">
+        <visible value="false" />
+    </Profile>
+    <Profile name="fs25_subCategorySelectorTabbedContainer" extends="emptyPanel" with="anchorStretchingYStretchingX pivotBottomCenter">
+        <absoluteSizeOffset value="0px 80px" />
+    </Profile>
+    <Profile name="fs25_subCategoryListContainer" extends="emptyPanel" with="anchorStretchingYLeft pivotTopLeft">
+        <absoluteSizeOffset value="52px 215px" />
+        <position value="23px -145px" />
+    </Profile>
+    <Profile name="fs25_subCategoryStartClipper" extends="baseReference" with="anchorTopStretchingX pivotTopLeft">
+        <height value="2dp" />
+        <position value="0px 2dp" />
+        <absoluteSizeOffset value="19px 0px" />
+        <imageColor value="$preset_fs25_colorGreyLight" />
+    </Profile>
+    <Profile name="fs25_subCategoryStopClipper" extends="fs25_subCategoryStartClipper" with="anchorBottomStretchingX pivotBottomLeft">
+        <position value="0 -2dp" />
+    </Profile>
+    <Profile name="fs25_subCategoryList" extends="emptyPanel" value="anchorStretchingYStretchingX">
+        <showHighlights value="true" />
+        <listItemSpacing value="-20px" />
+    </Profile>
+    <Profile name="fs25_subCategoryListItem" extends="baseReference" with="anchorTopStretchingX">
+        <height value="100px" />
+        <imageSliceId value="gui.animalDealer_box" />
+        <imageSelectedSliceId value="gui.animalDealer_box_selected" />
+        <imageHighlightedSliceId value="gui.animalDealer_box_hover" />
+    </Profile>
+    <Profile name="fs25_subCategoryListItemEmpty" extends="baseReference" with="anchorTopStretchingX">
+        <height value="100px" />
+        <imageColor value="$preset_colorWhite_25" />
+        <imageSliceId value="gui.animalDealer_box_hover" />
+    </Profile>
+    <Profile name="fs25_subCategoryListItemIcon" extends="baseReference" with="anchorMiddleLeft">
+        <size value="66px 65px" />
+        <position value="11px 8px" />
+        <imageSliceId value="noSlice" />
+    </Profile>
+    <Profile name="fs25_subCategoryListItemIconFull" extends="baseReference" with="anchorMiddleLeft">
+        <size value="75px 75px" />
+        <position value="6px 7px" />
+        <imageSliceId value="noSlice" />
+    </Profile>
+    <Profile name="fs25_subCategoryListItemName" extends="fs25_textDarkHighlight" with="anchorTopLeft">
+        <width value="175px" />
+        <position value="100px -20px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textLayoutMode value="scrolling" />
+    </Profile>
+    <Profile name="fs25_subCategoryListSectionHeader" extends="emptyPanel" with="anchorTopStretchingX">
+        <height value="50px" />
+    </Profile>
+    <Profile name="fs25_subCategoryListSectionHeaderTitle" extends="fs25_textDefault" with="anchorTopStretchingX">
+        <size value="100% 30px" />
+        <absoluteSizeOffset value="10px" />
+        <position value="0px -5px" />
+        <textUpperCase value="true" />
+        <textBold value="true" />
+        <textSize value="15px" />
+    </Profile>
+    <Profile name="fs25_subCategoryListSliderBox" extends="fs25_listSliderBox" with="pivotTopRight">
+        <position value="8px 0px" />
+    </Profile>
+    <Profile name="fs25_menuContentContainer" extends="baseReference" with="anchorStretchingYCenter pivotBottomCenter">
+        <width value="1312px" />
+        <position value="226px 40px" />
+        <absoluteSizeOffset value="0px 192px" />
+    </Profile>
+    <Profile name="fs25_menuContainerArrow" extends="baseReference" with="anchorMiddleRight">
+        <size value="65px 84px" />
+        <imageColor value="$preset_colorWhite_25" />
+        <imageSelectedColor value="$preset_colorWhite" />
+        <imageSliceId value="gui.animalScreen_middle" />
+    </Profile>
+    <Profile name="fs25_primaryMenuContainerBg" extends="baseReference" with="anchorStretchingYLeft">
+        <width value="463px" />
+        <imageSliceId value="gui.animalScreen_left" />
+        <imageColor value="$preset_colorWhite_25" />
+        <imageSelectedColor value="$preset_colorWhite" />
+        <startImageSize value="0 0" />
+        <startImageRotation value="180" />
+        <startImageSliceId value="gui.animalScreen_down" />
+        <startImageColor value="$preset_colorWhite_25" />
+        <startImageSelectedColor value="$preset_colorWhite" />
+        <endImageSize value="65px 0" />
+        <endImageSliceId value="gui.animalScreen_down" />
+        <endImageColor value="$preset_colorWhite_25" />
+        <endImageSelectedColor value="$preset_colorWhite" />
+    </Profile>
+    <Profile name="fs25_secondaryMenuContainer" extends="baseReference" with="anchorStretchingYLeft pivotBottomLeft">
+        <width value="436px" />
+        <absoluteSizeOffset value="0px 12px" />
+        <position value="25px 0px" />
+    </Profile>
+    <Profile name="fs25_secondaryMenuContainerBg" extends="fs25_primaryMenuContainerBg" with="anchorStretchingYLeft pivotBottomLeft">
+        <width value="510px" />
+        <absoluteSizeOffset value="0px 55px" />
+        <position value="-28px 0px" />
+        <startImageSize value="65px 0" />
+    </Profile>
+    <Profile name="fs25_secondaryMenuContainerBgTop" extends="baseReference" with="anchorTopStretchingX">
+        <height value="65px" />
+        <position value="0px 65px" />
+        <imageSliceId value="gui.animalScreen_top" />
+        <imageColor value="$preset_colorWhite_25" />
+        <imageSelectedColor value="$preset_colorWhite" />
+        <startImageSize value="65px 0" />
+        <startImageInvertX value="true" />
+        <startImageSliceId value="gui.animalScreen_roundedCorner" />
+        <startImageColor value="$preset_colorWhite_25" />
+        <startImageSelectedColor value="$preset_colorWhite" />
+        <endImageSize value="65px 0" />
+        <endImageSliceId value="gui.animalScreen_roundedCorner" />
+        <endImageColor value="$preset_colorWhite_25" />
+        <endImageSelectedColor value="$preset_colorWhite" />
+    </Profile>
+    <Profile name="fs25_secondaryMenuContainerArrow" extends="baseReference" with="anchorMiddleRight">
+        <size value="65px 84px" />
+        <imageSliceId value="gui.animalScreen_middle" />
+        <imageColor value="$preset_colorTransparent" />
+        <imageSelectedColor value="$preset_colorWhite" />
+        <imageDisabledColor value="$preset_colorTransparent" />
+    </Profile>
+    <Profile name="fs25_secondaryMenuTitle" extends="fs25_textDefault" with="anchorTopStretchingX">
+        <width value="100%" />
+        <position value="0px -60px" />
+        <textSize value="20px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textOffset value="25px 0px" />
+    </Profile>
+    <Profile name="fs25_secondaryMenuStartClipper" extends="baseReference" with="anchorTopStretchingX">
+        <height value="39px" />
+        <position value="0px 2dp" />
+        <absoluteSizeOffset value="-20px 0px" />
+        <imageSliceId value="gui.buildmenu_gradient" />
+        <imageInvertY value="true" />
+    </Profile>
+    <Profile name="fs25_secondaryMenuStopClipper" extends="fs25_secondaryMenuStartClipper" with="anchorBottomStretchingX">
+        <position value="0 -2dp" />
+        <imageInvertY value="false" />
+    </Profile>
+    <Profile name="fs25_tertiaryMenuContainer" extends="baseReference" with="anchorStretchingYStretchingX pivotBottomRight">
+        <absoluteSizeOffset value="625px 102px" />
+        <position value="-93px 30px" />
+    </Profile>
+    <Profile name="fs25_tertiaryMenuContainerBg" extends="fs25_secondaryMenuContainerBg" with="anchorStretchingYRight pivotBottomRight">
+        <width value="100%" />
+        <absoluteSizeOffset value="440px 55px" />
+        <position value="14px 0px" />
+    </Profile>
+    <Profile name="fs25_tertiaryMenuContainerBgTop" extends="fs25_secondaryMenuContainerBgTop" with="anchorTopStretchingX pivotTopRight" />
+    <Profile name="fs25_hintMultiTextOption" extends="fs25_subCategorySelector" with="anchorBottomCenter">
+        <width value="1100px" />
+        <position value="0px -100px" />
+        <defaultProfileText value="fs25_hintMultiTextOptionText" />
+    </Profile>
+    <Profile name="fs25_hintMultiTextOptionText" extends="fs25_multiTextOptionText">
+        <textUpperCase value="false" />
+        <textMaxNumLines value="4" />
+        <textMaxWidth value="900px" />
+        <textLayoutMode value="resize" />
+    </Profile>
+    <Profile name="fs25_hintSelectorBox" extends="fs25_subCategorySelectorBox" with="anchorBottomCenter">
+        <position value="0px -140px" />
+    </Profile>
+    <Profile name="fs25_colorButton" extends="emptyPanel" with="anchorBottomStretchingX">
+        <size value="100% 31px" />
+    </Profile>
+    <Profile name="fs25_colorButtonPicked" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageSliceId value="gui.3dShop_button_middle" />
+        <startImageSize value="6px 0" />
+        <startImageSliceId value="gui.3dShop_button_left" />
+        <endImageSize value="31px 0" />
+        <endImageSliceId value="gui.empty" />
+    </Profile>
+    <Profile name="fs25_colorButtonPickedMetallic" extends="baseReference" with="anchorMiddleLeft">
+        <size value="24px 24px" />
+        <position value="5px 0px" />
+        <imageSliceId value="gui.metallicBig" />
+    </Profile>
+    <Profile name="fs25_colorButtonPickedGlossy" extends="baseReference" with="anchorMiddleLeft">
+        <size value="24px 24px" />
+        <position value="5px 0px" />
+        <imageSliceId value="gui.glossyBig" />
+    </Profile>
+    <Profile name="fs25_colorButtonPickedMatte" extends="baseReference" with="anchorMiddleLeft">
+        <size value="24px 24px" />
+        <position value="5px 0px" />
+        <imageSliceId value="gui.matteBig" />
+    </Profile>
+    <Profile name="fs25_colorButtonIconBox" extends="baseReference" with="anchorStretchingYRight">
+        <size value="31px 100%" />
+        <imageSliceId value="gui.3dShop_button" />
+        <imageFocusedSliceId value="gui.3dShop_button_selected" />
+    </Profile>
+    <Profile name="fs25_colorButtonIcon" extends="baseReference" with="anchorMiddleCenter">
+        <size value="16px 16px" />
+        <imageSliceId value="gui.icon_character_paintBucket" />
+        <imageFocusedColor value="$preset_fs25_colorMainDark" />
+    </Profile>
+    <Profile name="fs25_colorButtonOverlay" extends="baseReference" with="anchorStretchingYLeft">
+        <size value="172px 100%" />
+        <position value="20px 0px" />
+        <imageSliceId value="gui.3dShop_color_overlay" />
+        <imageColor value="$preset_colorWhite_08" />
+    </Profile>
+    <Profile name="fs25_shopHeaderPanel" extends="emptyPanel" with="anchorTopStretchingX">
+        <height value="80px" />
+        <position value="0px 92px" />
+        <Variant name="mobile" with="anchorTopCenter">
+            <position value="0 0px" />
+            <size value="1920px 115px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_shopContainer" extends="emptyPanel" with="anchorStretchingYCenter pivotBottomCenter">
+        <width value="1503px" />
+        <position value="-14px 40px" />
+        <absoluteSizeOffset value="0px 210px" />
+    </Profile>
+    <Profile name="fs25_shopList" extends="emptyPanel" with="anchorStretchingYStretchingX">
+        <selectOnClick value="true" />
+        <showHighlights value="true" />
+        <numLateralItems value="6" />
+        <itemizedScrollDelta value="1" />
+        <listSectionSpacing value="24px" />
+        <listItemSpacing value="0px" />
+        <listItemLateralSpacing value="-16px" />
+    </Profile>
+    <Profile name="fs25_shopListItem" extends="emptyPanel" with="anchorTopLeft">
+        <size value="261px 230px" />
+    </Profile>
+    <Profile name="fs25_shopListItemBackground" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageSliceId value="gui.category" />
+        <imageHighlightedSliceId value="gui.category_hover" />
+        <imageSelectedSliceId value="gui.category_highlight" />
+    </Profile>
+    <Profile name="fs25_shopListItemBackgroundEmpty" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageSliceId value="gui.category" />
+        <imageColor value="$preset_colorWhite_25" />
+    </Profile>
+    <Profile name="fs25_shopListItemTitle" extends="fs25_textDarkHighlight" with="anchorBottomCenter">
+        <size value="200px 30px" />
+        <position value="0px 33px" />
+        <textSize value="16px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textLayoutMode value="scrolling" />
+        <textSelectedOffset value="0px 15px" />
+    </Profile>
+    <Profile name="fs25_shopListItemCategory" extends="fs25_textDarkHighlight" with="anchorBottomCenter">
+        <size value="200px 29px" />
+        <position value="0px 50px" />
+        <textSize value="13px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textSelectedOffset value="0px 15px" />
+        <textColor value="$preset_fs25_colorMainHighlight" />
+        <textHighlightedColor value="$preset_fs25_colorMainHighlight" />
+    </Profile>
+    <Profile name="fs25_shopListItemImage" extends="baseReference" with="anchorBottomCenter">
+        <size value="200px 200px" />
+        <position value="0px 95px" />
+        <imageSliceId value="noSlice" />
+        <selectedOffset value="0px 15px" />
+    </Profile>
+    <Profile name="fs25_shopListItemImagePacks" extends="baseReference" with="anchorBottomCenter">
+        <size value="120px 120px" />
+        <position value="0px 85px" />
+        <imageSliceId value="noSlice" />
+        <selectedOffset value="0px 15px" />
+    </Profile>
+    <Profile name="fs25_shopListItemBrandBackground" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageSliceId value="gui.brandbox" />
+        <imageHighlightedSliceId value="gui.brandbox_hover" />
+        <imageSelectedSliceId value="gui.brandbox_selected" />
+    </Profile>
+    <Profile name="fs25_shopListItemBrandBackgroundEmpty" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageColor value="1 1 1 0.25" />
+        <imageSliceId value="gui.brandbox" />
+    </Profile>
+    <Profile name="fs25_shopListItemBrandImage" extends="baseReference" with="anchorTopCenter">
+        <size value="200px 100px" />
+        <position value="0px -40px" />
+        <selectedOffset value="0px 15px" />
+        <imageUVs value="0 0 1 1" />
+        <imageSliceId value="noSlice" />
+    </Profile>
+    <Profile name="fs25_shopListItemBrandTitle" extends="fs25_shopListItemTitle">
+        <position value="0px 30px" />
+        <textAlignment value="center" />
+    </Profile>
+    <Profile name="fs25_shopListSection" extends="emptyPanel" with="anchorTopStretchingX">
+        <height value="55px" />
+    </Profile>
+    <Profile name="fs25_shopListSectionTitle" extends="fs25_textDefault" with="anchorTopLeft">
+        <size value="500px 30px" />
+        <position value="0px -10px" />
+        <textSize value="22px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textOffset value="15px 0px" />
+    </Profile>
+    <Profile name="fs25_shopMoneyBoxBg" extends="baseReference" with="anchorMiddleRight">
+        <size value="370px 70px" />
+        <position value="-15px 0px" />
+        <color value="$preset_fs25_colorMainDark" />
+        <cornerSize value="1.25" />
+    </Profile>
+    <Profile name="fs25_shopMoneySlotsBoxBg" extends="baseReference" with="anchorMiddleRight">
+        <size value="620px 70px" />
+        <position value="-15px 0px" />
+        <color value="$preset_fs25_colorMainDark" />
+        <cornerSize value="1.25" />
+    </Profile>
+    <Profile name="fs25_shopMoneyBox" with="anchorMiddleRight">
+        <size value="740px 40px" />
+        <position value="-45px 0px" />
+        <alignmentX value="right" />
+        <alignmentY value="middle" />
+        <autoValidateLayout value="true" />
+        <Variant name="mobile" with="anchorMiddleRight">
+            <position value="-80px -882px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_shopBalance" extends="fs25_textDefault" with="anchorBottomLeft">
+        <size value="160px 20px" />
+        <margin value="0 0 10px 0" />
+        <textSize value="26px" />
+        <textUpperCase value="true" />
+        <textAutoWidth value="true" />
+        <textAlignment value="right" />
+    </Profile>
+    <Profile name="fs25_shopMoney" extends="fs25_textDefault">
+        <textSize value="26px" />
+        <textBold value="true" />
+        <textAutoWidth value="true" />
+        <textUpperCase value="true" />
+        <textColor value="$preset_fs25_colorMainHighlight" />
+        <format value="accounting" />
+        <formatDecimalPlaces value="0" />
+    </Profile>
+    <Profile name="fs25_shopMoneyNeg" extends="fs25_shopMoney">
+        <textColor value="$preset_colorDarkRed" />
+    </Profile>
+    <Profile name="fs25_shopSlotsIcon" extends="shopListAttributeIconSlots" with="anchorBottomLeft">
+        <size value="36px 36px" />
+        <imageColor value="$preset_colorWhite" />
+        <margin value="0 0 10px 0" />
+    </Profile>
+    <Profile name="fs25_shopSlots" extends="fs25_shopMoney">
+        <margin value="0 0 40px 0" />
+    </Profile>
+    <Profile name="fs25_shopConfigConfigurationTitle" extends="fs25_textDefault" with="anchorTopLeft">
+        <position value="40px -72px" />
+        <textSize value="22px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textAutoWidth value="true" />
+    </Profile>
+    <Profile name="fs25_shopConfigConfigurationLayoutBox" extends="emptyPanel" with="anchorStretchingYCenter pivotTopCenter">
+        <width value="330px" />
+        <position value="0px -100px" />
+        <absoluteSizeOffset value="0px 345px" />
+    </Profile>
+    <Profile name="fs25_shopConfigStartClipper" extends="baseReference" with="anchorTopStretchingX">
+        <height value="2dp" />
+        <position value="0px 2dp" />
+        <imageColor value="$preset_fs25_colorGreyDark" />
+    </Profile>
+    <Profile name="fs25_shopConfigStopClipper" extends="fs25_shopConfigStartClipper" with="anchorBottomStretchingX">
+        <position value="0 -2dp" />
+    </Profile>
+    <Profile name="fs25_shopConfigConfigurationLayout" extends="emptyPanel" with="anchorStretchingYStretchingX">
+        <flowDirection value="vertical" />
+        <autoValidateLayout value="false" />
+        <Variant name="mobile">
+            <supportsTouchScrolling value="true" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_shopConfigConfigurationItem" extends="baseReference" with="anchorTopStretchingX">
+        <height value="63px" />
+        <margin value="0 15px 0 4px" />
+    </Profile>
+    <Profile name="fs25_shopConfigConfigurationItemLarge" extends="fs25_shopConfigConfigurationItem">
+        <height value="95px" />
+    </Profile>
+    <Profile name="fs25_shopConfigConfigurationItemPlate" extends="fs25_shopConfigConfigurationItem" />
+    <Profile name="fs25_shopMultiTextOptionTitle" extends="fs25_textDefault" with="anchorTopLeft">
+        <textSize value="17px" />
+        <textUpperCase value="true" />
+        <textAutoWidth value="true" />
+        <textMaxWidth value="225px" />
+        <textSelectedBold value="true" />
+        <textLayoutMode value="resize" />
+    </Profile>
+    <Profile name="fs25_shopMultiTextOptionPrice" extends="fs25_textDefault" with="anchorTopRight">
+        <textSize value="17px" />
+        <textAutoWidth value="true" />
+        <textMaxWidth value="90px" />
+        <textAlignment value="right" />
+        <textLayoutMode value="resize" />
+        <textColor value="$preset_fs25_colorMainHighlight" />
+    </Profile>
+    <Profile name="fs25_shopMultiTextOptionLarge" extends="fs25_multiTextOption">
+        <size value="100% 64px" />
+        <defaultProfileBgThreePart value="fs25_shopMultiTextOptionLargeBg" />
+    </Profile>
+    <Profile name="fs25_shopMultiTextOptionLargeBg" extends="fs25_multiTextOptionBg">
+        <imageSliceId value="gui.3dShop_button_outline_big_middle" />
+        <startImageSliceId value="gui.3dShop_button_outline_big_left" />
+        <endImageSliceId value="gui.3dShop_button_outline_big_right" />
+    </Profile>
+    <Profile name="fs25_shopMultiTextOptionLargeIcon" extends="baseReference" with="anchorMiddleCenter">
+        <size value="100px 50px" />
+        <imageSize value="256 128" />
+        <imageSliceId value="noSlice" />
+    </Profile>
+    <Profile name="fs25_sliderBoxVertical" extends="baseReference" with="anchorStretchingYRight">
+        <width value="12px" />
+        <position value="21px 0px" />
+        <cornerSize value="0.25" />
+        <color value="$preset_fs25_colorDarkBeige" />
+    </Profile>
+    <Profile name="fs25_slider" extends="emptyPanel" with="anchorStretchingYStretchingX">
+        <absoluteSizeOffset value="6px 6px" />
+        <handleFocus value="false" />
+        <direction value="y" />
+        <hasButtons value="false" />
+    </Profile>
+    <Profile name="fs25_sliderBackgroundVertical" extends="baseReference" with="anchorStretchingYStretchingX">
+        <cornerSize value="0.15" />
+        <color value="$preset_fs25_colorBeige" />
+    </Profile>
+    <Profile name="fs25_itemDetailsFruitIcon" extends="baseReference">
+        <size value="30px 30px" />
+        <margin value="0 0 4px 0" />
+        <imageSliceId value="noSlice" />
+        <Variant name="mobile">
+            <margin value="0 0 0 0" />
+            <size value="50px 50px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_itemDetailsTemplateBox" extends="emptyPanel">
+        <size value="100px 30px" />
+        <margin value="0 5px 15px 0" />
+    </Profile>
+    <Profile name="fs25_itemDetailsFillTypeTemplateBox" extends="emptyPanel" with="anchorTopStretchingX">
+        <size value="100% 55px" />
+    </Profile>
+    <Profile name="fs25_itemDetailsFillTypeSeparator" extends="baseReference" with="anchorTopLeft">
+        <size value="100% 2dp" />
+        <position value="0px -12px" />
+        <imageColor value="$preset_fs25_colorGreyDark" />
+    </Profile>
+    <Profile name="fs25_itemDetailsText" extends="fs25_textGrey" with="anchorMiddleRight">
+        <size value="0 30px" />
+        <disallowFlowCut value="true" />
+        <textMinWidth value="35px" />
+        <textAutoWidth value="true" />
+        <Variant name="mobile">
+            <position value="65px 0px" />
+            <textSize value="33px" />
+            <size value="260px 73px" />
+            <textResizeWidth value="260px" />
+            <textMaxWidth value="260px" />
+            <margin value="0 4px 60px 4px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_itemDetailsIconsLayoutBox" extends="emptyPanel" with="anchorMiddleLeft">
+        <size value="10px 100%" />
+        <position value="35px 0px" />
+        <clipping value="true" />
+    </Profile>
+    <Profile name="fs25_itemDetailsIconsLayout" extends="emptyPanel" with="anchorBottomLeft">
+        <size value="10px 100%" />
+        <numFlows value="1" />
+        <alignmentY value="bottom" />
+        <Variant name="mobile">
+            <size value="50px 50px" />
+        </Variant>
+    </Profile>
+    <Profile name="fs25_itemDetailsIcon" extends="baseReference" with="anchorBottomLeft">
+        <size value="30px 30px" />
+        <margin value="5px 0 0 0" />
+        <Variant name="mobile">
+            <size value="50px 50px" />
+        </Variant>
+    </Profile>
+    <Profile name="shopListAttributeIconPrice" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.currency_dollar" />
+    </Profile>
+    <Profile name="shopListAttributeIconMaintenanceCosts" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_maintenanceCost" />
+    </Profile>
+    <Profile name="shopListAttributeIconPower" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_power" />
+    </Profile>
+    <Profile name="shopListAttributeIconPowerReq" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_requiredPower" />
+    </Profile>
+    <Profile name="shopListAttributeIconTransmission" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_gears" />
+    </Profile>
+    <Profile name="shopListAttributeIconOwned" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_owned" />
+    </Profile>
+    <Profile name="shopListAttributeIconLeased" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_leased" />
+    </Profile>
+    <Profile name="shopListAttributeIconWorkingWidth" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_workingWidth" />
+    </Profile>
+    <Profile name="shopListAttributeIconCapacity" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_capacity" />
+    </Profile>
+    <Profile name="shopListAttributeIconWeight" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_maxLoadCapacity" />
+    </Profile>
+    <Profile name="shopListAttributeIconAdditionalWeight" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_tareWeight" />
+    </Profile>
+    <Profile name="shopListAttributeIconCow" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_cowCapacity" />
+    </Profile>
+    <Profile name="shopListAttributeIconPig" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_pigCapacity" />
+    </Profile>
+    <Profile name="shopListAttributeIconSheep" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_sheepCapacity" />
+    </Profile>
+    <Profile name="shopListAttributeIconHorse" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_horseCapacity" />
+    </Profile>
+    <Profile name="shopListAttributeIconChicken" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_chickenCapacity" />
+    </Profile>
+    <Profile name="shopListAttributeIconCombinations" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_compatibility" />
+    </Profile>
+    <Profile name="shopListAttributeIconInfo" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_info" />
+    </Profile>
+    <Profile name="shopListAttributeIconFuel" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_fuel" />
+    </Profile>
+    <Profile name="shopListAttributeIconElectricCharge" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_electricCharge" />
+    </Profile>
+    <Profile name="shopListAttributeIconMethane" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_CNG" />
+    </Profile>
+    <Profile name="shopListAttributeIconWheels" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_tireName" />
+    </Profile>
+    <Profile name="shopListAttributeIconLicensePlate" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_licensePlate" />
+    </Profile>
+    <Profile name="shopListAttributeIconLifeTime" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_time" />
+    </Profile>
+    <Profile name="shopListAttributeIconMaxSpeed" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_maxSpeed" />
+    </Profile>
+    <Profile name="shopListAttributeIconWorkSpeed" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_workSpeed" />
+    </Profile>
+    <Profile name="shopListAttributeIconSeeds" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_seeding" />
+    </Profile>
+    <Profile name="shopListAttributeIconFillTypes" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_crops" />
+    </Profile>
+    <Profile name="shopListAttributeIconBaleSizeRound" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_roundBaleDiameter" />
+    </Profile>
+    <Profile name="shopListAttributeIconBaleSizeSquare" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_squareBaleLength" />
+    </Profile>
+    <Profile name="shopListAttributeIconBaleWrapperBaleSizeRound" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_wrappedRoundBaleDiameter" />
+    </Profile>
+    <Profile name="shopListAttributeIconBaleWrapperBaleSizeSquare" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_wrappedSquareBaleLength" />
+    </Profile>
+    <Profile name="shopListAttributeIconIncomePerHour" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_hourlyIncome" />
+    </Profile>
+    <Profile name="shopListAttributeIconOperatingHours" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_operatingHours" />
+    </Profile>
+    <Profile name="shopListAttributeIconSlots" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_consoleSlots" />
+    </Profile>
+    <Profile name="shopListAttributeIconPlus" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.plus" />
+        <imageColor value="1 1 1 0.5" />
+        <size value="28px 28px" />
+        <margin value="0 0 5px 0" />
+    </Profile>
+    <Profile name="shopListAttributeIconValue" extends="fs25_itemDetailsIcon">
+        <imageUVs value="780px 209px 65px 65px" />
+    </Profile>
+    <Profile name="shopListAttributeIconInput" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_productionInput" />
+    </Profile>
+    <Profile name="shopListAttributeIconOutput" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_productionOutput" />
+    </Profile>
+    <Profile name="shopListAttributeIconCondition" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_condition" />
+    </Profile>
+    <Profile name="shopListAttributeIconWinchMaxLength" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_maxRopeLength" />
+    </Profile>
+    <Profile name="shopListAttributeIconWinchMaxMass" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_maxTreeWeight" />
+    </Profile>
+    <Profile name="shopListAttributeIconMaxTreeSize" extends="fs25_itemDetailsIcon">
+        <imageSliceId value="gui.storeAttribute_treeCutDiameter" />
+    </Profile>
+    <Profile name="fs25_settingsLayout" extends="baseReference" with="anchorStretchingYStretchingX pivotTopCenter">
+        <size value="100% 100%" />
+        <absoluteSizeOffset value="90px 0px" />
+        <wrapAround value="false" />
+        <fitFlowToElements value="true" />
+        <flowDirection value="vertical" />
+        <imageColor value="$preset_colorTransparent" />
+    </Profile>
+    <Profile name="fs25_settingsSectionHeader" extends="fs25_textDefault" with="anchorTopStretchingX">
+        <size value="100% 80px" />
+        <textSize value="30px" />
+        <textUpperCase value="true" />
+    </Profile>
+    <Profile name="fs25_settingsButtonBg" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageSliceId value="gui.3dShop_button_middle" />
+        <imageColor value="$preset_fs25_colorMainDark" />
+        <imageFocusedColor value="$preset_fs25_colorMainHighlight" />
+        <imageDisabledColor value="$preset_fs25_colorMainDark_40" />
+        <startImageSize value="6px 0" />
+        <startImageSliceId value="gui.3dShop_button_left" />
+        <startImageColor value="$preset_fs25_colorMainDark" />
+        <startImageFocusedColor value="$preset_fs25_colorMainHighlight" />
+        <startImageDisabledColor value="$preset_fs25_colorMainDark_40" />
+        <endImageSize value="6px 0" />
+        <endImageSliceId value="gui.3dShop_button_right" />
+        <endImageColor value="$preset_fs25_colorMainDark" />
+        <endImageFocusedColor value="$preset_fs25_colorMainHighlight" />
+        <endImageDisabledColor value="$preset_fs25_colorMainDark_40" />
+    </Profile>
+    <Profile name="fs25_settingsMultiTextOption" extends="fs25_multiTextOption" with="anchorMiddleRight">
+        <position value="-10px 0px" />
+        <focusOnHighlight value="true" />
+        <wrap value="false" />
+        <hideButtonOnLimitReached value="true" />
+    </Profile>
+    <Profile name="fs25_settingsMultiTextOptionTitle" extends="fs25_textDefault" with="anchorStretchingYLeft">
+        <width value="450px" />
+        <position value="20px 0px" />
+        <textSize value="16px" />
+        <textBold value="true" />
+    </Profile>
+    <Profile name="fs25_settingsMultiTextOptionLocked" extends="emptyPanel" with="anchorMiddleRight">
+        <size value="20px 27px" />
+        <position value="-300px 0px" />
+        <focusOnHighlight value="true" />
+        <iconSize value="20px 27px" />
+        <iconSliceId value="gui.multiplayer_lock" />
+        <iconDisabledColor value="$preset_colorTransparent" />
+        <iconFocusedColor value="$preset_fs25_colorMainHighlight" />
+        <iconHighlightedColor value="$preset_fs25_colorMainHighlight" />
+    </Profile>
+    <Profile name="fs25_settingsBinaryOption" extends="fs25_binaryOption" with="anchorMiddleRight">
+        <position value="-12px 0px" />
+        <focusOnHighlight value="true" />
+    </Profile>
+    <Profile name="fs25_settingsTooltipSeparator" extends="baseReference" with="anchorStretchingYLeft pivotTopLeft">
+        <width value="1dp" />
+        <position value="895px 0px" />
+        <imageColor value="$preset_fs25_colorGreyLight_50" />
+    </Profile>
+    <Profile name="fs25_settingsControlsListHeader" extends="emptyPanel" with="anchorTopStretchingX">
+        <height value="70px" />
+    </Profile>
+    <Profile name="fs25_settingsControlsListHeaderButtonNext" extends="emptyPanel">
+        <size value="15px 16px" />
+        <handleFocus value="false" />
+        <imageSize value="15px 16px" />
+        <imageSliceId value="gui.dialogue_arrow" />
+        <imageColor value="$preset_colorWhite" />
+        <imagePressedColor value="$preset_fs25_colorMainHighlight" />
+        <imageHighlightedColor value="$preset_fs25_colorMainHighlight" />
+    </Profile>
+    <Profile name="fs25_settingsControlsListHeaderButtonPrev" extends="fs25_settingsControlsListHeaderButtonNext" with="anchorBottomLeft">
+        <imageInvertX value="true" />
+    </Profile>
+    <Profile name="fs25_settingsControlsListHeaderTitle" extends="fs25_textDefault" with="anchorBottomLeft">
+        <width value="400px" />
+        <position value="0px 10px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+    </Profile>
+    <Profile name="fs25_settingsControlsListHeaderName" extends="fs25_textDefault" with="anchorBottomLeft">
+        <width value="300px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textAlignment value="center" />
+        <textSelectedColor value="$preset_fs25_colorMainHighlight" />
+    </Profile>
+    <Profile name="fs25_settingsControlsList" extends="emptyPanel" with="anchorStretchingYStretchingX pivotBottomCenter">
+        <absoluteSizeOffset value="0px 70px" />
+        <handleFocus value="false" />
+        <selectedWithoutFocus value="false" />
+    </Profile>
+    <Profile name="fs25_settingsControlsListItem" extends="emptyPanel" with="anchorTopStretchingX">
+        <height value="45px" />
+        <alternateChildren value="true" />
+        <imageSliceId value="gui.empty" />
+        <imageColor value="$preset_fs25_colorGreyListItem" />
+        <alternateBackgroundColor value="$preset_colorTransparent" />
+    </Profile>
+    <Profile name="fs25_settingsControlsListItemBg" extends="baseReference" with="anchorStretchingYStretchingX">
+        <startImageSize value="0px 0" />
+        <endImageSize value="100px 0" />
+        <endImageSliceId value="gui.list_gradient" />
+        <endImageInvertX value="true" />
+    </Profile>
+    <Profile name="fs25_settingsControlsListName" extends="fs25_textDefault" with="anchorMiddleLeft">
+        <width value="450px" />
+        <position value="20px 0px" />
+        <textBold value="true" />
+    </Profile>
+    <Profile name="fs25_settingsControlsListButton" extends="fs25_textDefault" with="anchorMiddleLeft">
+        <size value="290px 35px" />
+        <focusOnHighlight value="true" />
+        <textSize value="20px" />
+        <textBold value="true" />
+        <textAlignment value="center" />
+        <textColor value="$preset_fs25_colorMainHighlight" />
+        <textFocusedColor value="$preset_fs25_colorMainDark" />
+        <imageSliceId value="noSlice" />
+        <imageColor value="0 0 0 0" />
+        <imageHighlightedColor value="0 0 0 0" />
+        <imageFocusedColor value="0 0 0 0" />
+        <imageSelectedColor value="0 0 0 0" />
+        <imageDisabledColor value="0 0 0 0" />
+    </Profile>
+    <Profile name="fs25_settingsControlsListButtonBg" extends="emptyPanel" with="anchorStretchingYStretchingX">
+        <imageSliceId value="gui.gamepadBindingsBox_middle" />
+        <imageFocusedColor value="$preset_fs25_colorMainHighlight" />
+        <startImageSize value="8px 0" />
+        <startImageSliceId value="gui.gamepadBindingsBox_left" />
+        <startImageFocusedColor value="$preset_fs25_colorMainHighlight" />
+        <endImageSize value="8px 0" />
+        <endImageSliceId value="gui.gamepadBindingsBox_right" />
+        <endImageFocusedColor value="$preset_fs25_colorMainHighlight" />
+    </Profile>
+    <Profile name="fs25_settingsControlsListGlyph" extends="fs25_inputGlyph" with="anchorMiddleCenter" />
+    <Profile name="fs25_settingsControlsListSection" extends="emptyPanel" with="anchorTopStretchingX">
+        <height value="80px" />
+    </Profile>
+    <Profile name="fs25_settingsControlsListSectionTitle" extends="fs25_textDefault" with="anchorStretchingYStretchingX">
+        <size value="100% 100%" />
+        <textSize value="30px" />
+        <textUpperCase value="true" />
+    </Profile>
+    <Profile name="fs25_settingsControlsSeparator" extends="baseReference" with="anchorStretchingYLeft">
+        <width value="1dp" />
+        <imageColor value="$preset_fs25_colorGreyLight_50" />
+    </Profile>
+    <Profile name="fs25_settingsDeviceValueBox" extends="baseReference" with="anchorMiddleLeft">
+        <size value="314px 10px" />
+        <position value="400px 0" />
+        <imageColor value="$preset_fs25_colorGrey" />
+    </Profile>
+    <Profile name="fs25_settingsDeviceValueBar" extends="baseReference" with="anchorMiddleLeft">
+        <size value="400px 8px" />
+        <imageColor value="$preset_fs25_colorMainHighlight" />
+    </Profile>
+    <Profile name="fs25_wardrobeContainer" extends="emptyPanel" with="anchorStretchingYStretchingX pivotBottomLeft">
+        <absoluteSizeOffset value="40px 150px" />
+        <position value="20px 40px" />
+    </Profile>
+    <Profile name="fs25_wardrobeHeaderPanel" extends="fs25_menuHeaderPanel">
+        <position value="-32px 92px" />
+    </Profile>
+    <Profile name="fs25_wardrobeList" extends="emptyPanel" with="anchorStretchingYStretchingX">
+        <showHighlights value="true" />
+        <numLateralItems value="4" />
+        <itemizedScrollDelta value="1" />
+        <listSectionSpacing value="62px" />
+        <listItemSpacing value="10px" />
+        <listItemLateralSpacing value="-16px" />
+    </Profile>
+    <Profile name="fs25_wardrobeListItem" extends="emptyPanel" with="anchorTopLeft">
+        <size value="180px 158px" />
+    </Profile>
+    <Profile name="fs25_wardrobeListItemBackground" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageSliceId value="gui.category" />
+        <imageFocusedSliceId value="gui.category_hover" />
+        <imageSelectedSliceId value="gui.category_highlight" />
+    </Profile>
+    <Profile name="fs25_wardrobeListItemBackgroundEmpty" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageSliceId value="gui.category" />
+        <imageColor value="1 1 1 0.25" />
+    </Profile>
+    <Profile name="fs25_wardrobeListItemImage" extends="baseReference" with="anchorBottomCenter">
+        <size value="140px 140px" />
+        <position value="0px 25px" />
+        <imageSliceId value="noSlice" />
+        <selectedOffset value="0px 10px" />
+    </Profile>
+    <Profile name="fs25_wardrobeListSection" extends="emptyPanel" with="anchorTopStretchingX">
+        <height value="17px" />
+    </Profile>
+    <Profile name="fs25_wardrobeListSectionTitle" extends="fs25_textDefault" with="anchorTopLeft">
+        <size value="500px 30px" />
+        <position value="0px 10px" />
+        <textSize value="22px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textOffset value="15px 0px" />
+    </Profile>
+    <Profile name="fs25_wardrobeFrameInfoText" extends="fs25_textDefault" with="anchorMiddleCenter">
+        <textAutoWidth value="true" />
+        <textMaxNumLines value="2" />
+        <textMaxWidth value="300px" />
+        <textAlignment value="center" />
+    </Profile>
+    <Profile name="fs25_modHubMarkerBox" extends="emptyPanel" with="anchorTopRight">
+        <size value="100px 30px" />
+        <position value="-20px -20px" />
+        <useFullVisibility value="false" />
+        <alignmentX value="right" />
+        <alignmentY value="middle" />
+    </Profile>
+    <Profile name="fs25_modHubMarkerNew" extends="baseReference">
+        <size value="30px 30px" />
+        <margin value="5px 0px 0px 0px" />
+        <selectedOffset value="0px 15px" />
+        <imageSliceId value="gui.roundButtonPlus" />
+    </Profile>
+    <Profile name="fs25_modHubMarkerUpdate" extends="fs25_modHubMarkerNew">
+        <imageSliceId value="gui.roundButtonSwap" />
+    </Profile>
+    <Profile name="fs25_modHubMarkerConflict" extends="fs25_modHubMarkerNew">
+        <imageSliceId value="gui.roundButtonExclamation" />
+    </Profile>
+    <Profile name="fs25_modHubInstalledBox" extends="baseReference" with="anchorBottomLeft">
+        <size value="30px 30px" />
+        <position value="27px 75px" />
+        <selectedOffset value="0px 15px" />
+        <imageSliceId value="gui.farm_color" />
+        <imageColor value="$preset_fs25_colorMainHighlight" />
+    </Profile>
+    <Profile name="fs25_modHubInstalledTick" extends="baseReference" with="anchorMiddleCenter">
+        <size value="20px 20px" />
+        <selectedOffset value="0px 15px" />
+        <imageSliceId value="gui.tickSmall" />
+        <imageColor value="$preset_fs25_colorMainDark" />
+    </Profile>
+    <Profile name="fs25_modHubDLCTag" extends="baseReference" with="anchorBottomLeft">
+        <size value="35px 20px" />
+        <position value="60px 78px" />
+        <selectedOffset value="0px 15px" />
+        <imageSliceId value="gui.3dShop_button_middle" />
+        <imageColor value="$preset_fs25_colorMainDark" />
+        <startImageSize value="6px 0" />
+        <startImageSliceId value="gui.3dShop_button_left" />
+        <endImageSize value="6px 0" />
+        <endImageSliceId value="gui.3dShop_button_right" />
+    </Profile>
+    <Profile name="fs25_modHubDLCTagText" extends="fs25_textDefault" with="anchorMiddleCenter">
+        <size value="100px 30px" />
+        <textSize value="15px" />
+        <textBold value="true" />
+        <textAutoWidth value="true" />
+        <textSelectedOffset value="0px 15px" />
+        <textColor value="$preset_fs25_colorMainHighlight" />
+    </Profile>
+    <Profile name="fs25_modHubCategoriesListContainer" extends="emptyPanel" with="anchorStretchingYStretchingX pivotBottomCenter">
+        <absoluteSizeOffset value="0px 59px" />
+    </Profile>
+    <Profile name="fs25_modHubItemsListContainer" extends="emptyPanel" with="anchorStretchingYStretchingX pivotBottomCenter">
+        <absoluteSizeOffset value="0px 119px" />
+        <position value="0px 60px" />
+    </Profile>
+    <Profile name="fs25_modHubListContainer" extends="emptyPanel" with="anchorStretchingYStretchingX pivotBottomCenter">
+        <absoluteSizeOffset value="0px 60px" />
+        <position value="0px 60px" />
+    </Profile>
+    <Profile name="fs25_modHubListItem" extends="emptyPanel" with="anchorTopLeft">
+        <size value="270px 315px" />
+    </Profile>
+    <Profile name="fs25_modHubIconStorageSpace" extends="baseReference">
+        <size value="40px 40px" />
+        <margin value="0px 0px 10px 0px" />
+        <imageSliceId value="gui.icon_modStorageSpace" />
+    </Profile>
+    <Profile name="fs25_modHubListItemBackground" extends="baseReference" with="anchorStretchingYStretchingX">
+        <absoluteSizeOffset value="1px 1px" />
+        <imageSliceId value="gui.shopMods" />
+        <imageHighlightedSliceId value="gui.shopMods_hover" />
+        <imageSelectedSliceId value="gui.shopMods_selected" />
+    </Profile>
+    <Profile name="fs25_modHubListItemBackgroundEmpty" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageSliceId value="gui.shopMods" />
+        <imageColor value="$preset_colorWhite_25" />
+    </Profile>
+    <Profile name="fs25_modHubListItemImage" extends="baseReference" with="anchorTopCenter">
+        <size value="230px 230px" />
+        <position value="0px -19px" />
+        <imageSliceId value="noSlice" />
+        <imageFilename value="shared/splash.png" />
+        <imageMaskFilename value="dataS/menu/mask_mods.png" />
+        <selectedOffset value="0px 15px" />
+        <overlayMaskSize value="512px 512px" />
+        <overlayMaskPos value="-141px -141px" />
+    </Profile>
+    <Profile name="fs25_modHubListItemTitle" extends="fs25_textDarkHighlight" with="anchorBottomCenter">
+        <size value="200px 40px" />
+        <position value="0px 22px" />
+        <textBold value="true" />
+        <textMinSize value="14px" />
+        <textMaxNumLines value="2" />
+        <textUpperCase value="true" />
+        <textAlignment value="center" />
+        <textLayoutMode value="resize" />
+        <textSelectedOffset value="0px 15px" />
+    </Profile>
+    <Profile name="fs25_modHubListSection" extends="emptyPanel" with="anchorTopStretchingX">
+        <height value="19px" />
+    </Profile>
+    <Profile name="fs25_modHubListSectionTitle" extends="textDefault">
+        <size value="500px 30px" />
+        <position value="0px -1px" />
+        <textSize value="26px" />
+        <textColor value="1 0 0 1" />
+    </Profile>
+    <Profile name="fs25_modHubInfoBox" extends="emptyPanel" with="anchorBottomStretchingX">
+        <height value="50px" />
+        <position value="0px -20px" />
+    </Profile>
+    <Profile name="fs25_modHubAttributeBox" extends="emptyPanel" with="anchorBottomStretchingX">
+        <height value="60px" />
+        <alignmentX value="center" />
+        <alignmentY value="middle" />
+        <useFullVisibility value="false" />
+    </Profile>
+    <Profile name="fs25_modHubAttributeName" extends="fs25_textDefault">
+        <textBold value="true" />
+        <textAutoWidth value="true" />
+    </Profile>
+    <Profile name="fs25_modHubAttributeInfo" extends="fs25_textGrey">
+        <textAutoWidth value="true" />
+    </Profile>
+    <Profile name="fs25_modHubAttributeRatingBox" extends="emptyPanel">
+        <size value="85px 25px" />
+        <alignmentX value="left" />
+        <alignmentY value="middle" />
+    </Profile>
+    <Profile name="fs25_modHubAttributeRatingStar" extends="baseReference">
+        <size value="17px 17px" />
+        <imageColor value="$preset_fs25_colorGrey" />
+        <imageSliceId value="gui.starSmall" />
+    </Profile>
+    <Profile name="fs25_modHubAttributeRatingStarActive" extends="fs25_modHubAttributeRatingStar">
+        <imageColor value="$preset_colorWhite" />
+    </Profile>
+    <Profile name="fs25_modHubAttributeRatingStarHalf" extends="fs25_modHubAttributeRatingStar" with="anchorBottomLeft">
+        <imageSliceId value="gui.starSmallHalf" />
+        <imageColor value="$preset_colorWhite" />
+    </Profile>
+    <Profile name="fs25_modHubNoModsText" extends="fs25_textDefault" with="anchorMiddleCenter">
+        <textSize value="20px" />
+        <textAutoWidth value="true" />
+    </Profile>
+    <Profile name="fs25_modHubAbuseText" extends="fs25_textGrey">
+        <size value="100% 40px" />
+        <position value="20px 0px" />
+        <textMaxNumLines value="2" />
+        <textLayoutMode value="resize" />
+        <textLineHeightScale value="0.9" />
+    </Profile>
+    <Profile name="fs25_mapBackground" extends="baseReference" with="anchorStretchingYStretchingX">
+        <pictureContentMode value="scaleToFill" />
+        <imageUVs value="0 0 1 1" />
+        <imageSliceId value="noSlice" />
+        <imageFilename value="dataS/menu/black.png" />
+    </Profile>
+    <Profile name="fs25_saveContainer" extends="emptyPanel" with="anchorStretchingYStretchingX pivotTopCenter">
+        <absoluteSizeOffset value="0px 176px" />
+    </Profile>
+    <Profile name="fs25_saveLayout" extends="emptyPanel" with="anchorMiddleStretchingX">
+        <height value="335px" />
+        <wrapAround value="true" />
+        <alignmentX value="center" />
+    </Profile>
+    <Profile name="fs25_saveButton" extends="emptyPanel" with="anchorStretchingYLeft">
+        <width value="270px" />
+    </Profile>
+    <Profile name="fs25_saveButtonBg" extends="baseReference" with="anchorStretchingYStretchingX">
+        <imageSliceId value="gui.save_box" />
+        <imageHighlightedSliceId value="gui.save_box_hover" />
+        <imageFocusedSliceId value="gui.save_box_selected" />
+    </Profile>
+    <Profile name="fs25_saveButtonIcon" extends="baseReference" with="anchorTopCenter">
+        <size value="160px 160px" />
+        <position value="-3px -30px" />
+        <imageDisabledColor value="1 1 1 0.05" />
+    </Profile>
+    <Profile name="fs25_saveButtonText" extends="fs25_textDefault" with="anchorBottomCenter">
+        <size value="230px 40px" />
+        <position value="-3px 45px" />
+        <textSize value="18px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textMaxNumLines value="2" />
+        <textAlignment value="center" />
+        <textVerticalAlignment value="top" />
+        <textFocusedColor value="$preset_fs25_colorMainDark" />
+    </Profile>
+    <Profile name="fs25_mainScreenSidebar" extends="baseReference" with="anchorStretchingYLeft">
+        <size value="700px 100%" />
+        <imageColor value="$preset_fs25_colorMainDark_90" />
+        <imageSliceId value="gui.mainMenu_gradient" />
+        <Variant name="mobile" extends="mainScreenSidebar" />
+    </Profile>
+</GUIProfiles>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI name="wardrobeColors">
+    <GuiElement profile="wardrobeFrame">
+        <Text profile="wardrobeFrameTitle" id="title" />
+        <SmoothList profile="wardrobeColorList" id="primaryList" onClick="onClickSelect" onDoubleClick="onDoubleClickSelect" focusInit="onOpen" showHighlights="true">
+            <ListItem profile="wardrobeColorListItem">
+                <Bitmap profile="wardrobeColorIcon" name="icon" />
+                <Bitmap profile="fs25_wardrobeItemSelection" name="selected">
+                    <Bitmap profile="fs25_wardrobeItemSelectionTick" />
+                </Bitmap>
+            </ListItem>
+        </SmoothList>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="wardrobeColorList" extends="list" with="anchorTopCenter">
+            <size value="620px 347px" />
+            <position value="0 -200px" />
+            <numLateralItems value="12" />
+            <isHorizontalList value="false" />
+            <listItemLateralSpacing value="5px" />
+            <listItemSpacing value="5px" />
+        </Profile>
+        <Profile name="wardrobeColorListItem" extends="listItem">
+            <size value="48px 48px" />
+            <imageColor value="$preset_colorItemBgNormal" />
+            <imageFocusedColor value="$preset_fs25_colorMainHighlight" />
+            <imageSelectedColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="wardrobeColorIcon" extends="baseReference" with="anchorMiddleCenter">
+            <size value="38px 38px" />
+        </Profile>
+        <Profile name="fs25_wardrobeItemSelection" extends="baseReference" with="anchorBottomRight">
+            <position value="-5px 5px" />
+            <size value="30px 30px" />
+            <imageSliceId value="gui.gearBg" />
+            <imageColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_wardrobeItemSelectionTick" extends="baseReference" with="anchorMiddleCenter">
+            <size value="16px 16px" />
+            <imageSliceId value="gui.tick" />
+            <imageColor value="$preset_colorWhite" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

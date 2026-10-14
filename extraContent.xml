@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<extraContent>
+    <item id="CR11GOLD" code="CR1" isAutoUnlocked="false">
+        <title>$l10n_extraContent_cr11Gold_title</title>
+        <description>$l10n_extraContent_cr11Gold_description</description>
+        <imageFilename>dataS/menu/extraContent/cr11Gold.png</imageFilename>
+    </item>
+    <item id="WORLDSFASTESTTRACTOR" code="WFT" isAutoUnlocked="false">
+        <title>$l10n_extraContent_worldsFastestTractor_title</title>
+        <description>$l10n_extraContent_worldsFastestTractor_description</description>
+        <imageFilename>dataS/menu/extraContent/worldsFastestTractor.png</imageFilename>
+    </item>
+    <item id="CROWN" code="CRN" isAutoUnlocked="false">
+        <title>$l10n_extraContent_crown_title</title>
+        <description>$l10n_extraContent_crown_description</description>
+        <imageFilename>dataS/menu/extraContent/crown.png</imageFilename>
+    </item>
+    <item id="CSSCALE" code="CSS" isAutoUnlocked="false">
+        <title>$l10n_extraContent_csScale_title</title>
+        <description>$l10n_extraContent_csScale_description</description>
+        <imageFilename>dataS/menu/extraContent/csScale.png</imageFilename>
+    </item>
+    <item id="FARMCON26" code="FCS" isAutoUnlocked="false">
+        <title>$l10n_extraContent_farmcon26_title</title>
+        <description>$l10n_extraContent_farmcon26_description</description>
+        <imageFilename>dataS/menu/extraContent/farmcon26.png</imageFilename>
+    </item>
+</extraContent>

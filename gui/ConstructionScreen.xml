@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Button profile="buttonBack" text="" size="0 0" position="-1 -1" onClick="onButtonMenuBack" />
+    <ThreePartBitmap profile="fs25_constructionSubCategoryContainerBg" id="contentContainer">
+        <Bitmap profile="fs25_constructionSubCategoryContainerArrow" />
+        <Bitmap profile="fs25_constructionDetailsBoxBg" />
+        <Bitmap profile="fs25_subCategoryContainer" id="menuBox">
+            <GuiElement profile="fs25_subCategoryContainer" id="listBox">
+                <MultiTextOption profile="fs25_subCategorySelector" id="subCategorySelector" onClick="onSubCategoryChanged" />
+                <BoxLayout profile="fs25_subCategorySelectorBox" id="subCategoryDotBox" />
+                <RoundCorner profile="fs25_subCategorySelectorDot" id="subCategoryDotTemplate" />
+                <GuiElement profile="fs25_constructionListContainer">
+                    <SmoothList profile="fs25_constructionList" id="itemList" onClick="onClickItem" startClipperElementName="leftClipper" endClipperElementName="rightClipper">
+                        <ListItem profile="fs25_constructionListItem">
+                            <Bitmap profile="fs25_constructionListItemBackground" />
+                            <Bitmap profile="fs25_constructionListItemImage" name="icon" />
+                            <Text profile="fs25_constructionListItemPrice" name="price" />
+                            <TerrainLayer profile="fs25_constructionListItemTerrainIcon" name="terrainLayer" />
+                        </ListItem>
+                    </SmoothList>
+                    <ThreePartBitmap profile="fs25_listSliderBox" position="26px 0px" absoluteSizeOffset="0px 15px" pivot="1 1">
+                        <Slider profile="fs25_listSlider" dataElementId="itemList" />
+                    </ThreePartBitmap>
+                    <Bitmap profile="fs25_startClipperSmall" name="leftClipper" />
+                    <Bitmap profile="fs25_stopClipperSmall" name="rightClipper" />
+                </GuiElement>
+            </GuiElement>
+            <GuiElement profile="fs25_subCategoryContainer" id="configsBox" visible="false">
+                <Text profile="fs25_constructionConfigTitle" text="$l10n_shop_configurations" />
+                <GuiElement profile="fs25_constructionConfigContainer">
+                    <Bitmap profile="fs25_shopConfigStartClipper" id="startClipper" />
+                    <ScrollingLayout profile="fs25_shopConfigConfigurationLayout" id="configurationLayout">
+                        <GuiElement profile="fs25_shopConfigConfigurationItem" id="configurationItemTemplate">
+                            <MultiTextOption profile="fs25_multiTextOption" name="option" onFocus="onFocusConfigurationOption" onLeave="onLeaveConfigurationOption" visible="false" width="100%" />
+                            <BinaryOption profile="fs25_binaryOption" name="yesNoOption" onFocus="onFocusConfigurationOption" onLeave="onLeaveConfigurationOption" visible="false" width="100%" />
+                            <Button profile="fs25_colorButton" name="color" onFocus="onFocusConfigurationOption" onLeave="onLeaveConfigurationOption" visible="false">
+                                <ThreePartBitmap profile="fs25_colorButtonPicked" name="colorImage" />
+                                <Bitmap profile="fs25_colorButtonPickedMetallic" name="colorImageMetallic" />
+                                <Bitmap profile="fs25_colorButtonPickedGlossy" name="colorImageGlossy" />
+                                <Bitmap profile="fs25_colorButtonPickedMatte" name="colorImageMatte" />
+                                <Bitmap profile="fs25_colorButtonIconBox">
+                                    <Bitmap profile="fs25_colorButtonIcon" />
+                                </Bitmap>
+                                <Bitmap profile="fs25_colorButtonOverlay" />
+                            </Button>
+                            <Text profile="fs25_shopMultiTextOptionTitle" name="title" />
+                            <Text profile="fs25_shopMultiTextOptionPrice" name="price" />
+                        </GuiElement>
+                        <GuiElement profile="fs25_shopConfigConfigurationItemLarge" id="configurationItemTemplateLarge">
+                            <MultiTextOption profile="fs25_shopMultiTextOptionLarge" name="option" onFocus="onFocusConfigurationOption" onLeave="onLeaveConfigurationOption" visible="false">
+                                <Bitmap profile="fs25_shopMultiTextOptionLargeIcon" name="icon" />
+                            </MultiTextOption>
+                            <Text profile="fs25_shopMultiTextOptionTitle" name="title" />
+                            <Text profile="fs25_shopMultiTextOptionPrice" name="price" />
+                        </GuiElement>
+                    </ScrollingLayout>
+                    <ThreePartBitmap profile="fs25_listSliderBox" position="26px 0px" absoluteSizeOffset="0px 5px" pivot="1 1">
+                        <Slider profile="fs25_listSlider" dataElementId="configurationLayout" id="configSlider" />
+                    </ThreePartBitmap>
+                </GuiElement>
+            </GuiElement>
+            <GuiElement profile="fs25_constructionDetailsBox">
+                <Bitmap profile="fs25_constructionDetailsBrandImage" id="itemDetailsBrandImage" />
+                <Text profile="fs25_constructionDetailsName" id="itemDetailsName" />
+                <Text profile="fs25_constructionDetailsModName" id="itemDetailsModName" />
+                <BoxLayout profile="fs25_constructionDescriptionLayout" id="descriptionLayout">
+                    <Text profile="fs25_constructionDetailsDescription" id="itemDetailsDescription" />
+                    <Bitmap profile="fs25_itemDetailsFruitIcon" id="fruitIconTemplate" visible="false" />
+                    <BoxLayout profile="fs25_constructionDetailsLayout" id="attributesLayout">
+                        <GuiElement profile="fs25_itemDetailsTemplateBox" name="detailTemplate">
+                            <Bitmap profile="fs25_itemDetailsIcon" name="icon" />
+                            <Text profile="fs25_constructionDetailsText" name="text" />
+                        </GuiElement>
+                        <GuiElement profile="fs25_itemDetailsTemplateBox" name="fillTypesTemplate">
+                            <Bitmap profile="fs25_itemDetailsIcon" name="icon" />
+                            <GuiElement profile="fs25_itemDetailsIconsLayoutBox">
+                                <BoxLayout profile="fs25_itemDetailsIconsLayout" name="iconsLayout" />
+                            </GuiElement>
+                        </GuiElement>
+                    </BoxLayout>
+                </BoxLayout>
+            </GuiElement>
+        </Bitmap>
+    </ThreePartBitmap>
+    <Bitmap profile="fs25_tabListContainer" id="categoryContainer">
+        <SmoothList profile="fs25_tabList" id="categorySelector">
+            <ListItem profile="fs25_tabListItem">
+                <Button profile="fs25_tabListItemButton" name="tabButton" />
+                <Bitmap profile="fs25_tabListItemSeparator" />
+                <Bitmap profile="fs25_tabListItemSeparatorBottom" />
+            </ListItem>
+        </SmoothList>
+    </Bitmap>
+    <BoxLayout profile="fs25_buttonBox" id="buttonsPanel">
+        <Button profile="buttonBack" id="buttonBack" onClick="onButtonMenuBack" text="$l10n_button_back" />
+        <Button profile="buttonMenuPrev" id="buttonPagePrev" onClick="onMenuPagePrev" text="$l10n_ui_ingameMenuPrev">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonMenuNext" id="buttonPageNext" onClick="onMenuPageNext" text="$l10n_ui_ingameMenuNext">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonOK" id="configButton" text="$l10n_button_change" onClick="onClickConfigAction" visible="false">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+    </BoxLayout>
+    <GuiElement profile="fs25_helpDisplay" id="helpDisplay" />
+    <GUIProfiles>
+        <Profile name="fs25_helpDisplay" extends="emptyPanel" with="anchorTopLeft">
+            <position value="537px 0px" />
+        </Profile>
+        <Profile name="fs25_constructionSubCategoryContainerBg" extends="fs25_subCategoryContainerBg">
+            <position value="125px 0px" />
+            <imageSliceId value="gui.buildMode_left" />
+            <endImageSliceId value="gui.buildMode_down" />
+        </Profile>
+        <Profile name="fs25_constructionSubCategoryContainerArrow" extends="fs25_subCategoryContainerArrow">
+            <imageSliceId value="gui.buildMode_middle" />
+        </Profile>
+        <Profile name="fs25_constructionListContainer" extends="emptyPanel" with="anchorTopLeft">
+            <absoluteSizeOffset value="75px 565px" />
+            <position value="25px -145px" />
+        </Profile>
+        <Profile name="fs25_constructionConfigContainer" extends="emptyPanel" with="anchorTopLeft">
+            <absoluteSizeOffset value="75px 540px" />
+            <position value="25px -110px" />
+        </Profile>
+        <Profile name="fs25_constructionList" extends="emptyPanel" with="anchorStretchingYStretchingX">
+            <numLateralItems value="2" />
+            <showHighlights value="true" />
+            <listItemSpacing value="-22px" />
+            <listItemLateralSpacing value="5px" />
+        </Profile>
+        <Profile name="fs25_constructionListItem" extends="emptyPanel" with="anchorTopLeft">
+            <size value="182px 226px" />
+        </Profile>
+        <Profile name="fs25_constructionListItemBackground" extends="baseReference" with="anchorStretchingYStretchingX">
+            <imageSliceId value="gui.buildmenu_box" />
+            <imageSelectedSliceId value="gui.buildmenu_box_selected" />
+            <imageHighlightedSliceId value="gui.buildmenu_box_hover" />
+        </Profile>
+        <Profile name="fs25_constructionListItemImage" extends="baseReference" with="anchorTopCenter">
+            <size value="120px 120px" />
+            <position value="-5px -20px" />
+            <imageSize value="512 512" />
+            <imageSliceId value="noSlice" />
+        </Profile>
+        <Profile name="fs25_constructionListItemPrice" extends="fs25_textDarkHighlight" with="anchorBottomCenter">
+            <size value="130px 30px" />
+            <position value="-5px 32px" />
+            <textSize value="20px" />
+            <textBold value="true" />
+            <textAlignment value="center" />
+            <textLayoutMode value="scrolling" />
+            <textColor value="$preset_fs25_colorMainHighlight" />
+            <textHighlightedColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_constructionListItemTerrainIcon" extends="baseReference" with="anchorTopCenter">
+            <size value="100px 100px" />
+            <position value="-5px -30px" />
+        </Profile>
+        <Profile name="fs25_constructionConfigTitle" extends="fs25_textDefault" with="anchorTopCenter">
+            <width value="340px" />
+            <position value="0px -66px" />
+            <textSize value="28px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+            <textAutoWidth value="true" />
+        </Profile>
+        <Profile name="fs25_constructionDetailsBox" extends="baseReference" with="anchorBottomStretchingX pivotBottomLeft">
+            <height value="420px" />
+        </Profile>
+        <Profile name="fs25_constructionDetailsBoxBg" extends="baseReference" with="anchorBottomLeft">
+            <size value="410px 420px" />
+            <imageColor value="$preset_fs25_colorGrey" />
+        </Profile>
+        <Profile name="fs25_constructionDetailsBrandImage" extends="baseReference" with="anchorTopCenter">
+            <size value="160px 80px" />
+            <position value="0px -10px" />
+            <imageSliceId value="noSlice" />
+        </Profile>
+        <Profile name="fs25_constructionDetailsName" extends="fs25_textDefault" with="anchorTopCenter">
+            <size value="340px 20px" />
+            <position value="0px -95px" />
+            <textSize value="18px" />
+            <textBold value="true" />
+            <textAlignment value="center" />
+            <textLayoutMode value="scrolling" />
+            <textScrollOnFocusOnly value="false" />
+        </Profile>
+        <Profile name="fs25_constructionDetailsModName" extends="fs25_constructionDetailsName">
+            <position value="0px -115px" />
+            <textSize value="16px" />
+            <textUpperCase value="true" />
+            <textColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_constructionDescriptionLayout" extends="emptyPanel" with="anchorTopCenter">
+            <size value="350px 220px" />
+            <position value="0px -145px" />
+            <elementSpacing value="10px" />
+            <flowDirection value="vertical" />
+            <autoValidateLayout value="true" />
+        </Profile>
+        <Profile name="fs25_constructionDetailsDescription" extends="fs25_textDefault">
+            <size value="340px 160px" />
+            <margin value="5px 0 0 0" />
+            <textSize value="18px" />
+            <textMaxNumLines value="8" />
+            <textAutoHeight value="true" />
+        </Profile>
+        <Profile name="fs25_constructionDetailsLayout" extends="emptyPanel">
+            <size value="350px 76px" />
+            <elementSpacing value="10px" />
+            <flowDirection value="vertical" />
+            <fitFlowToElements value="true" />
+        </Profile>
+        <Profile name="fs25_constructionDetailsText" extends="fs25_itemDetailsText">
+            <textColor value="$preset_fs25_colorMainLight" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

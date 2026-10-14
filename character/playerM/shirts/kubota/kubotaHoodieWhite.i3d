@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="kubotaHoodieWhite.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.1"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/characterShader.xml"/>
+    <File fileId="7" filename="$dataS/character/textures/shirts/kubotaHatDecal_diffuse.png"/>
+    <File fileId="8" filename="$dataS/character/textures/shirts/kubotaHatDecal_normal.png"/>
+    <File fileId="9" filename="$dataS/character/textures/shirts/kubotaHatDecal_specular.png"/>
+    <File fileId="5" filename="$dataS/character/textures/shirts/kubotaHoodie_mask.png"/>
+    <File fileId="1" filename="$dataS/character/textures/shirts/topHoodie_diffuse.png"/>
+    <File fileId="2" filename="$dataS/character/textures/shirts/topHoodie_normal.png"/>
+    <File fileId="3" filename="$dataS/character/textures/shirts/topHoodie_specular.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="kubotaHatDecal_mat" materialId="6">
+      <Texture fileId="7"/>
+      <Normalmap fileId="8"/>
+      <Glossmap fileId="9"/>
+    </Material>
+    <Material name="topHoodie_03_mat" materialId="5" customShaderId="4">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="mMaskMap" fileId="5"/>
+      <CustomParameter name="sssColor" value="1 1 1 1"/>
+      <CustomParameter name="colorScaleR" value="0.08 0.08 0.08 1"/>
+      <CustomParameter name="colorScaleG" value="0.08 0.08 0.08 1"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="kubotaHoodieWhite.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="root" nodeId="13">
+      <TransformGroup name="Hips" translation="-9.2e-05 0.984618 -1e-06" rotation="-90 -14.1045 90" nodeId="14">
+        <TransformGroup name="Spine" translation="0.080482 0 0" rotation="0 0 -2.58376" nodeId="15">
+          <TransformGroup name="Spine1" translation="0.046216 0 0" rotation="0 0 21.9074" nodeId="16">
+            <TransformGroup name="Spine2" translation="0.149847 0 0" rotation="0 0 4.56861" nodeId="17">
+              <TransformGroup name="Neck" translation="0.285869 0 0" rotation="0 0 -18.5332" nodeId="18">
+                <TransformGroup name="Head" translation="0.079931 0 0" rotation="0 0 11.4573" nodeId="19">
+                  <TransformGroup name="LeftEye" translation="0.073541 -0.080013 -0.03234" rotation="-0.001115 1.99906 -92.7436" nodeId="20"/>
+                  <TransformGroup name="RightEye" translation="0.073538 -0.080013 0.03234" rotation="-0.001115 1.99906 87.2564" nodeId="21"/>
+                  <TransformGroup name="LeftUpEyelid" translation="0.073541 -0.080013 -0.03234" rotation="0 0 -75.5855" nodeId="22"/>
+                  <TransformGroup name="LeftLowEyelid" translation="0.073541 -0.080013 -0.03234" rotation="0 0 -118.471" nodeId="23"/>
+                  <TransformGroup name="RightLowEyelid" translation="0.073538 -0.080013 0.03234" rotation="0 0 61.5295" nodeId="24"/>
+                  <TransformGroup name="RightUpEyelid" translation="0.073538 -0.080013 0.03234" rotation="0 0 104.415" nodeId="25"/>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="LeftShoulder" translation="0.224547 -0.001367 -0.052041" rotation="178.218 75.713 78.3734" nodeId="26">
+                <TransformGroup name="LeftArm" translation="0.12559 -0.008255 0.002937" rotation="7.41913 -10.8305 -32.0097" nodeId="27">
+                  <TransformGroup name="LeftForeArm" translation="0.287583 4e-06 1.4e-05" rotation="-0.000242 -1.78965 0.000716" nodeId="28">
+                    <TransformGroup name="LeafLeftForeArmRoll1" translation="0.129877 1e-06 0" nodeId="29"/>
+                    <TransformGroup name="LeftHand" translation="0.257342 -2e-06 -1e-06" rotation="-9.1e-05 0.000128 -0.000328" nodeId="30">
+                      <TransformGroup name="LeftHandPinky1" translation="0.08456 0.00054 -0.026521" rotation="0.771958 -0.981536 2.10436" nodeId="31">
+                        <TransformGroup name="LeftHandPinky2" translation="0.029515 0 0" rotation="-2.18584 2.92269 -7.99033" nodeId="32">
+                          <TransformGroup name="LeftHandPinky3" translation="0.016046 0 0" nodeId="33"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="LeftHandRing1" translation="0.088183 0.006294 -0.008325" rotation="0.268592 -0.058945 0.876946" nodeId="34">
+                        <TransformGroup name="LeftHandRing2" translation="0.041185 0 0" rotation="-2.49787 3.53708 -5.20081" nodeId="35">
+                          <TransformGroup name="LeftHandRing3" translation="0.02828 0 0" nodeId="36"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="LeftHandMiddle1" translation="0.090429 0.011223 0.009697" rotation="0.84622 -1.02017 0.067017" nodeId="37">
+                        <TransformGroup name="LeftHandMiddle2" translation="0.044077 0 0" rotation="-0.695365 1.0454 -2.7697" nodeId="38">
+                          <TransformGroup name="LeftHandMiddle3" translation="0.029545 0 0" nodeId="39"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="LeftHandIndex1" translation="0.086814 0.00989 0.032968" rotation="0.337144 -0.160118 -0.719459" nodeId="40">
+                        <TransformGroup name="LeftHandIndex2" translation="0.038349 0 0" rotation="0.139838 -0.193556 -4.18814" nodeId="41">
+                          <TransformGroup name="LeftHandIndex3" translation="0.026943 0 0" nodeId="42"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="LeftHandThumb1" translation="0.01966 -0.005076 0.024908" rotation="-1.19309 -44.8962 0.752521" nodeId="43">
+                        <TransformGroup name="LeftHandThumb2" translation="0.048119 -0.000404 0.002278" rotation="0 19.0605 3.51569" nodeId="44">
+                          <TransformGroup name="LeftHandThumb3" translation="0.028952 0 0" nodeId="45"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="RightShoulder" translation="0.224551 -0.001368 0.052041" rotation="178.218 75.713 -101.627" nodeId="46">
+                <TransformGroup name="RightArm" translation="-0.12559 0.008263 -0.002937" rotation="7.41913 -10.8305 -32.0097" nodeId="47">
+                  <TransformGroup name="RightForeArm" translation="-0.287578 -1.1e-05 -1.3e-05" rotation="-0.000242 -1.78965 0.000716" nodeId="48">
+                    <TransformGroup name="LeafRightForeArmRoll1" translation="-0.12988 4e-06 0" nodeId="49"/>
+                    <TransformGroup name="RightHand" translation="-0.257187 0.000102 -1e-06" rotation="-9.1e-05 0.000128 -0.000328" nodeId="50">
+                      <TransformGroup name="RightHandPinky1" translation="-0.084561 -0.000537 0.026521" rotation="0.771958 -0.981536 2.10436" nodeId="51">
+                        <TransformGroup name="RightHandPinky2" translation="-0.029515 -1e-06 0" rotation="-2.18584 2.92269 -7.99033" nodeId="52">
+                          <TransformGroup name="RightHandPinky3" translation="-0.016044 -2e-06 0" nodeId="53"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="RightHandRing1" translation="-0.088183 -0.006294 0.008325" rotation="0.268592 -0.058945 0.876946" nodeId="54">
+                        <TransformGroup name="RightHandRing2" translation="-0.041184 -1e-06 0" rotation="-2.49787 3.53708 -5.20081" nodeId="55">
+                          <TransformGroup name="RightHandRing3" translation="-0.028282 3e-06 0" nodeId="56"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="RightHandMiddle1" translation="-0.090427 -0.011226 -0.009697" rotation="0.84622 -1.02017 0.067017" nodeId="57">
+                        <TransformGroup name="RightHandMiddle2" translation="-0.044076 -1e-06 0" rotation="-0.695365 1.0454 -2.7697" nodeId="58">
+                          <TransformGroup name="RightHandMiddle3" translation="-0.029544 -1e-06 0" nodeId="59"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="RightHandIndex1" translation="-0.086812 -0.009895 -0.032968" rotation="0.337144 -0.160118 -0.719459" nodeId="60">
+                        <TransformGroup name="RightHandIndex2" translation="-0.03835 2e-06 0" rotation="0.139838 -0.193556 -4.18814" nodeId="61">
+                          <TransformGroup name="RightHandIndex3" translation="-0.026944 1e-06 0" nodeId="62"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="RightHandThumb1" translation="-0.019658 0.005073 -0.024908" rotation="-1.19309 -44.8962 0.752521" nodeId="63">
+                        <TransformGroup name="RightHandThumb2" translation="-0.048119 0.000403 -0.002278" rotation="0 19.0605 3.51569" nodeId="64">
+                          <TransformGroup name="RightHandThumb3" translation="-0.028952 -2e-06 0" rotation="1e-06 0 0" nodeId="65"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="LeftUpLeg" translation="-0.018718 0.000967 -0.104027" rotation="0.003574 -0.855911 -166.135" nodeId="66">
+          <TransformGroup name="LeftLeg" translation="0.453707 0.000415 -1e-06" rotation="0.007698 -0.326849 -1.08514" nodeId="67">
+            <TransformGroup name="LeftFoot" translation="0.459284 -5e-06 1e-06" rotation="-0.000112 5.63495 76.161" nodeId="68">
+              <TransformGroup name="LeftToeBase" translation="0.144625 0 0" rotation="0 0 14.8596" nodeId="69"/>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="RightUpLeg" translation="-0.018718 0.000967 0.104027" rotation="0.003505 -0.855993 13.87" nodeId="70">
+          <TransformGroup name="RightLeg" translation="-0.453706 -0.000909 3e-06" rotation="0.007652 -0.326775 -1.09423" nodeId="71">
+            <TransformGroup name="RightFoot" translation="-0.459285 5e-06 -1e-06" rotation="-8.7e-05 5.63483 76.1655" nodeId="72">
+              <TransformGroup name="RightToeBase" translation="-0.144625 0 0" rotation="1e-06 0 14.8596" nodeId="73"/>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="GEO" nodeId="74">
+      <TransformGroup name="shirts" nodeId="75">
+        <TransformGroup name="kubota" nodeId="76">
+          <TransformGroup name="kubotaHoodieWhite" clipDistance="300" nodeId="77">
+            <Shape name="top" shapeId="1" clipDistance="300" nodeId="78" castsShadows="true" receiveShadows="true" skinBindNodeIds="13 14 15 16 17 18 19 26 27 28 29 30 46 47 48 49 50 66 70" materialIds="5"/>
+            <Shape name="hands" shapeId="2" clipDistance="300" nodeId="79" castsShadows="true" receiveShadows="true" skinBindNodeIds="27 28 29 30 31 43 44 47 48 49 50 51 63 64" materialIds="5"/>
+            <Shape name="under" shapeId="3" clipDistance="300" nodeId="80" castsShadows="true" receiveShadows="true" skinBindNodeIds="27 28 29 30 43 44 47 48 49 50 63" materialIds="5"/>
+            <Shape name="over" shapeId="4" clipDistance="300" nodeId="81" castsShadows="true" receiveShadows="true" skinBindNodeIds="27 28 29 30 31 43 44 47 48 49 50 51 63 64" materialIds="5"/>
+            <Shape name="kubotahoodieDecal" shapeId="5" clipDistance="50" nodeId="82" castsShadows="false" receiveShadows="true" decalLayer="1" skinBindNodeIds="16 17 18 26 27 46 47" materialIds="6"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="animationRootNode" nodeId="83"/>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="13">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="14">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="15">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="16">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="17">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="18">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="19">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="20">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="21">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="22">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="23">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="24">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="25">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="26">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="27">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="28">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="29">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="30">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="31">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="32">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="33">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="34">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="35">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="36">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="37">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="38">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="39">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="40">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="41">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="42">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="43">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="44">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="45">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="46">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="47">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="48">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="49">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="50">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="51">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="52">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="53">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="54">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="55">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="56">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="57">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="58">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="59">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="60">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="61">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="62">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="63">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="64">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="65">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="66">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="67">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="68">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="69">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="70">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="71">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="72">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="73">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="78">
+      <Attribute name="dr" type="float" value="4"/>
+      <Attribute name="smt" type="float" value="0"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

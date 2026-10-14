@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="animationsVehicleCharacter" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+  </Files>
+
+  <Materials>
+  </Materials>
+
+
+  <Scene>
+    <TransformGroup name="root" nodeId="1">
+      <TransformGroup name="HipsDummy" translation="0.035796 0.999972 -0.052124" rotation="-85.935234 -13.760968 89.620598" nodeId="2">
+        <TransformGroup name="SpineDummy" translation="0.080482 0 0" rotation="3.7151 1.877887 -5.466313" nodeId="3">
+          <TransformGroup name="Spine1Dummy" translation="0.046216 0 0" rotation="-5.934622 0.052708 22.387922" nodeId="4">
+            <TransformGroup name="Spine2Dummy" translation="0.149846 0 0" rotation="2.570113 0.559248 5.046999" nodeId="5">
+              <TransformGroup name="Neck" translation="0.285869 0 0" rotation="0 0 -18.533192" nodeId="6">
+                <TransformGroup name="Head" translation="0.079931 0 0" rotation="0 0 11.457336" nodeId="7">
+                  <TransformGroup name="LeftEye" translation="0.073541 -0.080013 -0.03234" rotation="-0.001115 1.999058 -92.743561" nodeId="8"/>
+                  <TransformGroup name="RightEye" translation="0.073538 -0.080013 0.03234" rotation="-0.001115 1.999058 87.256439" nodeId="9"/>
+                  <TransformGroup name="LeftUpEyelid" translation="0.073541 -0.080013 -0.03234" rotation="0 0 -75.585472" nodeId="10"/>
+                  <TransformGroup name="LeftLowEyelid" translation="0.073541 -0.080013 -0.03234" rotation="0 0 -118.470505" nodeId="11"/>
+                  <TransformGroup name="RightLowEyelid" translation="0.073538 -0.080013 0.03234" rotation="0 0 61.529499" nodeId="12"/>
+                  <TransformGroup name="RightUpEyelid" translation="0.073538 -0.080013 0.03234" rotation="0 0 104.414528" nodeId="13"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="player01" nodeId="14">
+    </TransformGroup>
+    <TransformGroup name="Update" nodeId="15">
+      <TransformGroup name="player01rev2" nodeId="16">
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+
+  <Animation externalAnimFile="animationsVehicleCharacter.i3d.anim" />
+</i3D>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="fowlRooster" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/tileAndMirrorShader.xml" />
+    <File fileId="5" filename="$dataS/character/animals/domesticated/chicken/rooster/fowlRoosterFeathersAlpha_diffuse.png" />
+    <File fileId="6" filename="$dataS/character/animals/domesticated/chicken/rooster/fowlRoosterFeathers_normal.png" />
+    <File fileId="7" filename="$dataS/character/animals/domesticated/chicken/rooster/fowlRoosterFeathers_specular.png" />
+    <File fileId="1" filename="$dataS/character/animals/domesticated/chicken/rooster/fowlRooster_diffuse.png" />
+    <File fileId="2" filename="$dataS/character/animals/domesticated/chicken/rooster/fowlRooster_normal.png" />
+    <File fileId="3" filename="$dataS/character/animals/domesticated/chicken/rooster/fowlRooster_specular.png" />
+  </Files>
+
+  <Materials>
+    <Material name="fowlRooster_mat1" materialId="1" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1.0 1.0 0 0"/>
+      <CustomParameter name="sssColor" value="0.938 0.567 0.567 1.0"/>
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="1 1 0 0"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="fowlRoosterFeathers_mat1" materialId="2" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1.0 1.0 0 0"/>
+      <CustomParameter name="sssColor" value="0.938 0.567 0.567 1.0"/>
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="1 1 0 0"/>
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="fowlRooster.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="hen_root_skin_jnt" visibility="false" nodeId="1">
+      <TransformGroup name="hen_spine_skin_jnt_01" translation="-2.64908e-25 0.300832 -0.1252" rotation="0 -90 0" nodeId="2">
+        <TransformGroup name="hen_spine_skin_jnt_02" translation="0.11493 1.71304e-09 1.71304e-09" rotation="1.1438e-14 3.81667e-14 3.80962e-30" nodeId="3">
+          <TransformGroup name="hen_spine_skin_jnt_03" translation="0.11493 1.71304e-09 1.71304e-09" nodeId="4">
+            <TransformGroup name="hen_neck_skin_jnt_01" translation="-0.0121712 0.0671822 -1.81413e-10" rotation="-8.38314e-07 4.7394e-23 79.0016" nodeId="5">
+              <TransformGroup name="hen_neck_skin_jnt_02" translation="0.100661 -2.66454e-17 2.86241e-10" rotation="-3.18055e-14 0 0" nodeId="6">
+                <TransformGroup name="hen_neck_skin_jnt_03" translation="0.100661 1.33227e-17 -2.86241e-10" nodeId="7">
+                  <TransformGroup name="hen_head_skin_jnt" translation="0.00449165 -0.00649147 5.85255e-10" rotation="79.0016 90 0" nodeId="8">
+                    <TransformGroup name="hen_jaw_skin_jnt" translation="-1.02174e-17 -0.00270181 0.0361881" rotation="90 -50.3029 -90" nodeId="9"/>
+                    <TransformGroup name="hen_eyeball_L_skin_jnt" translation="0.0165013 0.00612223 0.0285599" rotation="-1.37151 -35.2441 2.3758" nodeId="10"/>
+                    <TransformGroup name="hen_eyeball_R_skin_jnt" translation="-0.0165013 0.00612223 0.0285599" rotation="-178.628 -35.2441 177.624" nodeId="11"/>
+                    <TransformGroup name="hen_eyelid_up_L_skin_jnt" translation="0.0239383 0.0158698 0.0338193" rotation="-27.3253 -23.2174 52.6577" nodeId="12"/>
+                    <TransformGroup name="hen_eyelid_up_R_skin_jnt" translation="-0.0239383 0.0158698 0.0338193" rotation="-152.675 -23.2174 127.342" nodeId="13"/>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="hen_breast_skin_jnt" translation="0.0534706 -0.0806931 7.96986e-10" rotation="35.5011 90 0" nodeId="14"/>
+            <TransformGroup name="hen_shoulder_L_skin_jnt" translation="-0.0563489 0.0843006 -0.0380428" rotation="0 119.598 0" nodeId="15">
+              <TransformGroup name="hen_elbow_L_skin_jnt" translation="0.0924716 -2.13163e-16 -1.77636e-17" rotation="-4.88998 -67.8763 5.27652" nodeId="16">
+                <TransformGroup name="hen_wrist_L_skin_jnt" translation="0.0997772 -1.42109e-16 -4.44089e-17" rotation="1.21492 55.2836 -0.506828" nodeId="17">
+                  <TransformGroup name="hen_front_foot_L_skin_jnt" translation="0.0552525 -1.42109e-16 -1.77636e-17" rotation="0 14.029 0" nodeId="18">
+                    <TransformGroup name="hen_feather_L_skin_jnt_04" translation="-0.0128138 -0.00511175 -0.0147485" rotation="-1.52452 8.96283 0.0372574" nodeId="19"/>
+                    <TransformGroup name="hen_feather_L_skin_jnt_05" translation="-0.0161645 0.000556127 0.0241035" rotation="-1.50591 -0.205475 0.280224" nodeId="20"/>
+                  </TransformGroup>
+                  <TransformGroup name="hen_feather_L_skin_jnt_03" translation="0.0150511 -0.00333984 -0.033926" rotation="-6.44849 47.1101 -6.01179" nodeId="21"/>
+                </TransformGroup>
+                <TransformGroup name="hen_feather_L_skin_jnt_02" translation="0.0350281 0.00138572 -0.00179282" rotation="6.40059 115.706 9.01213" nodeId="22"/>
+              </TransformGroup>
+              <TransformGroup name="hen_feather_L_skin_jnt_01" translation="0.0628424 -0.00112561 0.00434242" rotation="0 51.7902 0" nodeId="23"/>
+            </TransformGroup>
+            <TransformGroup name="hen_shoulder_R_skin_jnt" translation="-0.0563489 0.0843002 0.0380428" rotation="-180 60.4016 -7.14921e-31" nodeId="24">
+              <TransformGroup name="hen_elbow_R_skin_jnt" translation="-0.0924719 0 -1.84141e-07" rotation="-4.88998 -67.8763 5.27652" nodeId="25">
+                <TransformGroup name="hen_wrist_R_skin_jnt" translation="-0.099777 -3.45843e-07 -1.48404e-07" rotation="1.21492 55.2836 -0.506828" nodeId="26">
+                  <TransformGroup name="hen_front_foot_R_skin_jnt" translation="-0.0552523 -4.04027e-07 5.07086e-08" rotation="0 14.029 0" nodeId="27">
+                    <TransformGroup name="hen_feather_R_skin_jnt_04" translation="0.0128139 0.00511243 0.0147487" rotation="-1.52452 8.96283 0.0372574" nodeId="28"/>
+                    <TransformGroup name="hen_feather_R_skin_jnt_05" translation="0.0161645 -0.000555589 -0.0241035" rotation="-1.50591 -0.205475 0.280224" nodeId="29"/>
+                  </TransformGroup>
+                  <TransformGroup name="hen_feather_R_skin_jnt_03" translation="-0.0150512 0.00333945 0.0339259" rotation="-6.44849 47.1101 -6.01179" nodeId="30"/>
+                </TransformGroup>
+                <TransformGroup name="hen_feather_R_skin_jnt_02" translation="-0.035028 -0.00138568 0.0017928" rotation="6.40059 115.706 9.01213" nodeId="31"/>
+              </TransformGroup>
+              <TransformGroup name="hen_feather_R_skin_jnt_01" translation="-0.0628424 0.001125 -0.00434246" rotation="0 51.7902 0" nodeId="32"/>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="hen_tail_skin_jnt_01" translation="-0.00257156 0.00765977 -3.83294e-11" rotation="180 4.7394e-23 123.615" nodeId="33">
+          <TransformGroup name="hen_tail_skin_jnt_02" translation="0.0896049 -7.10543e-17 7.39381e-10" rotation="-6.36111e-15 1.74931e-14 -3.81667e-14" nodeId="34">
+            <TransformGroup name="hen_tail_skin_jnt_03" translation="0.0896049 0 7.39381e-10" rotation="-1.04978e-22 4.7278e-07 -2.54444e-14" nodeId="35">
+              <TransformGroup name="hen_tail_skin_jnt_04" translation="0.0947825 -0.0961485 -2.36045e-10" rotation="0 0 -73.37" nodeId="36"/>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="hen_hip_L_skin_jnt" translation="0.0470627 -0.00254649 -0.0578143" rotation="0 0 -49.3662" nodeId="37">
+          <TransformGroup name="hen_knee_L_skin_jnt" translation="0.0902189 1.77636e-17 8.75712e-10" rotation="0 0 -56.8745" nodeId="38">
+            <TransformGroup name="hen_ankle_L_skin_jnt" translation="0.123066 7.10543e-17 -5.1301e-10" rotation="0 -0 33.3456" nodeId="39">
+              <TransformGroup name="hen_hind_foot_L_skin_jnt" translation="0.084516 6.43929e-17 3.70511e-10" rotation="0 -0 37.1911" nodeId="40">
+                <TransformGroup name="hen_hind_ball_L_skin_jnt" translation="0.0340961 0 4.12685e-10" nodeId="41"/>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="hen_hip_R_skin_jnt" translation="0.0470627 -0.00254649 0.0578143" rotation="0 -0 130.634" nodeId="42">
+          <TransformGroup name="hen_knee_R_skin_jnt" translation="-0.0902189 0 8.75712e-10" rotation="0 0 -56.8745" nodeId="43">
+            <TransformGroup name="hen_ankle_R_skin_jnt" translation="-0.123066 -1.77636e-17 -5.1301e-10" rotation="0 -0 33.3456" nodeId="44">
+              <TransformGroup name="hen_hind_foot_R_skin_jnt" translation="-0.084516 4.21885e-17 3.70511e-10" rotation="0 0 -142.809" nodeId="45">
+                <TransformGroup name="hen_hind_ball_R_skin_jnt" translation="0.0340961 1.77636e-17 4.12685e-10" nodeId="46"/>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="fowlRooster" collision="false" density="0" clipDistance="130" nodeId="47">
+      <Shape name="roosterBody" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" skinBindNodeIds="39 44 14 16 25 10 11 12 13 23 22 21 19 20 32 31 30 28 29 18 27 8 41 46 40 45 37 42 9 38 43 5 6 7 1 15 24 2 3 4 33 34 35 17 26" clipDistance="130" nodeId="48"/>
+      <Shape name="roosterAlpha" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="16 25 23 22 21 19 20 31 28 29 18 27 15 24 2 33 34 35 17 26 3 36 32 30" clipDistance="130" nodeId="49"/>
+      <Shape name="roosterAlpha_reverse" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="16 25 23 22 21 19 20 32 31 30 28 29 18 27 15 24 2 3 33 34 35 36 17 26" clipDistance="130" nodeId="50"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

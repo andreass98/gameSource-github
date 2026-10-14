@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="npcFishermanFacialAnimExpressions" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+  </Files>
+
+  <Materials>
+    <Material name="whiteMaterial_mat" materialId="1" diffuseColor="1 1 1 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="npcFishermanFacialAnimExpressions.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="guiSliders" translation="3 3 0" nodeId="1">
+      <TransformGroup name="sliders" nodeId="2">
+        <TransformGroup name="switch_bindPose_grp" translation="0 0.405 0" nodeId="3">
+          <Shape name="BIND_POSE" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="4"/>
+        </TransformGroup>
+        <TransformGroup name="switch_open_grp" nodeId="5">
+          <Shape name="OPEN" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="6"/>
+        </TransformGroup>
+        <TransformGroup name="switch_explosive_grp" translation="0 -0.405 0" nodeId="7">
+          <Shape name="EXPLOSIVE" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="8"/>
+        </TransformGroup>
+        <TransformGroup name="switch_dentalLip_grp" translation="0 -0.81 0" nodeId="9">
+          <Shape name="DENTAL_LIP" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="10"/>
+        </TransformGroup>
+        <TransformGroup name="switch_tightO_grp" translation="0 -1.215 0" nodeId="11">
+          <Shape name="TIGHT_O" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="12"/>
+        </TransformGroup>
+        <TransformGroup name="switch_narrow_grp" translation="0 -1.62 0" nodeId="13">
+          <Shape name="NARROW" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="14"/>
+        </TransformGroup>
+        <TransformGroup name="switch_wide_grp" translation="0 -2.025 0" nodeId="15">
+          <Shape name="WIDE" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="16"/>
+        </TransformGroup>
+        <TransformGroup name="switch_affricate_grp" translation="0 -2.43 0" nodeId="17">
+          <Shape name="AFFRICATE" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="18"/>
+        </TransformGroup>
+        <TransformGroup name="switch_lipOpen_grp" translation="0 -2.835 0" nodeId="19">
+          <Shape name="LIP_OPEN" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="20"/>
+        </TransformGroup>
+        <TransformGroup name="switch_browRaiseInnerL_grp" translation="0 -3.24 0" nodeId="21">
+          <Shape name="BROW_RAISE_INNER_L" shapeId="10" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="22"/>
+        </TransformGroup>
+        <TransformGroup name="switch_browRaiseInnerR_grp" translation="0 -3.645 0" nodeId="23">
+          <Shape name="BROW_RAISE_INNER_R" shapeId="11" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="24"/>
+        </TransformGroup>
+        <TransformGroup name="switch_browRaiseOuterL_grp" translation="0 -4.05 0" nodeId="25">
+          <Shape name="BROW_RAISE_OUTER_L" translation="0.90921 0 0" shapeId="12" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="26"/>
+        </TransformGroup>
+        <TransformGroup name="switch_browRaiseOuterR_grp" translation="0 -4.455 0" nodeId="27">
+          <Shape name="BROW_RAISE_OUTER_R" shapeId="13" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="28"/>
+        </TransformGroup>
+        <TransformGroup name="switch_browDropL_grp" translation="0 -4.86 0" nodeId="29">
+          <Shape name="BROW_DROP_L" shapeId="14" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="30"/>
+        </TransformGroup>
+        <TransformGroup name="switch_browDropR_grp" translation="0 -5.265 0" nodeId="31">
+          <Shape name="BROW_DROP_R" shapeId="15" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="32"/>
+        </TransformGroup>
+        <TransformGroup name="switch_browRaiseL_grp" translation="0 -5.67 0" nodeId="33">
+          <Shape name="BROW_RAISE_L" shapeId="16" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="34"/>
+        </TransformGroup>
+        <TransformGroup name="switch_browRaiseR_grp" translation="0 -6.075 0" nodeId="35">
+          <Shape name="BROW_RAISE_R" shapeId="17" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="36"/>
+        </TransformGroup>
+        <TransformGroup name="switch_eyeLookL_grp" translation="0 -6.48 0" nodeId="37">
+          <Shape name="EYE_LOOK_L" shapeId="18" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="38"/>
+        </TransformGroup>
+        <TransformGroup name="switch_eyeLookR_grp" translation="0 -6.885 0" nodeId="39">
+          <Shape name="EYE_LOOK_R" shapeId="19" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="40"/>
+        </TransformGroup>
+        <TransformGroup name="switch_eyeLookUp_grp" translation="0 -7.29 0" nodeId="41">
+          <Shape name="EYE_LOOK_UP" shapeId="20" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="42"/>
+        </TransformGroup>
+        <TransformGroup name="switch_eyeLookDown_grp" translation="0 -7.695 0" nodeId="43">
+          <Shape name="EYE_LOOK_DOWN" shapeId="21" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="44"/>
+        </TransformGroup>
+        <TransformGroup name="switch_eyeBlink_grp" translation="0 -8.1 0" nodeId="45">
+          <Shape name="EYE_BLINK" shapeId="22" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="46"/>
+        </TransformGroup>
+        <TransformGroup name="switch_eyeBlinkL_grp" translation="0 -8.505 0" nodeId="47">
+          <Shape name="EYE_BLINK_L" shapeId="23" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="48"/>
+        </TransformGroup>
+        <TransformGroup name="switch_eyeBlinkR_grp" translation="0 -8.91 0" nodeId="49">
+          <Shape name="EYE_BLINK_R" shapeId="24" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="50"/>
+        </TransformGroup>
+        <TransformGroup name="switch_eyeWideL_grp" translation="0 -9.315 0" nodeId="51">
+          <Shape name="EYE_WIDE_L" shapeId="25" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="52"/>
+        </TransformGroup>
+        <TransformGroup name="switch_eyeWideR_grp" translation="0 -9.72 0" nodeId="53">
+          <Shape name="EYE_WIDE_R" shapeId="26" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="54"/>
+        </TransformGroup>
+        <TransformGroup name="switch_eyeSquintL_grp" translation="0 -10.125 0" nodeId="55">
+          <Shape name="EYE_SQUINT_L" translation="0.46974 0 0" shapeId="27" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="56"/>
+        </TransformGroup>
+        <TransformGroup name="switch_eyeSquintR_grp" translation="0 -10.53 0" nodeId="57">
+          <Shape name="EYE_SQUINT_R" translation="0.13821 0 0" shapeId="28" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="58"/>
+        </TransformGroup>
+        <TransformGroup name="switch_noseScrunch_grp" translation="0 -10.935 0" nodeId="59">
+          <Shape name="NOSE_SCRUNCH" shapeId="29" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="60"/>
+        </TransformGroup>
+        <TransformGroup name="switch_noseFlanksRaise_grp" translation="0 -11.34 0" nodeId="61">
+          <Shape name="NOSE_FLANKS_RAISE" translation="1 0 0" shapeId="30" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="62"/>
+        </TransformGroup>
+        <TransformGroup name="switch_noseFlankRaiseL_grp" translation="0 -11.745 0" nodeId="63">
+          <Shape name="NOSE_FLANK_RAISE_L" shapeId="31" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="64"/>
+        </TransformGroup>
+        <TransformGroup name="switch_noseFlankRaiseR_grp" translation="0 -12.15 0" nodeId="65">
+          <Shape name="NOSE_FLANK_RAISE_R" shapeId="32" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="66"/>
+        </TransformGroup>
+        <TransformGroup name="switch_noseNostrilsFlare_grp" translation="0 -12.555 0" nodeId="67">
+          <Shape name="NOSE_NOSTRILS_FLARE" translation="0.24224 0 0" shapeId="33" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="68"/>
+        </TransformGroup>
+        <TransformGroup name="switch_cheekRaiseL_grp" translation="0 -12.96 0" nodeId="69">
+          <Shape name="CHEEK_RAISE_L" shapeId="34" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="70"/>
+        </TransformGroup>
+        <TransformGroup name="switch_cheekRaiseR_grp" translation="0 -13.365 0" nodeId="71">
+          <Shape name="CHEEK_RAISE_R" shapeId="35" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="72"/>
+        </TransformGroup>
+        <TransformGroup name="switch_cheekSuck_grp" translation="0 -13.77 0" nodeId="73">
+          <Shape name="CHEEK_SUCK" shapeId="36" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="74"/>
+        </TransformGroup>
+        <TransformGroup name="switch_cheekBlowL_grp" translation="0 -14.175 0" nodeId="75">
+          <Shape name="CHEEK_BLOW_L" shapeId="37" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="76"/>
+        </TransformGroup>
+        <TransformGroup name="switch_cheekBlowR_grp" translation="0 -14.58 0" nodeId="77">
+          <Shape name="CHEEK_BLOW_R" shapeId="38" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="78"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthSmile_grp" translation="0 -14.985 0" nodeId="79">
+          <Shape name="MOUTH_SMILE" shapeId="39" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="80"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthSmileL_grp" translation="0 -15.39 0" nodeId="81">
+          <Shape name="MOUTH_SMILE_L" shapeId="40" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="82"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthSmileR_grp" translation="0 -15.795 0" nodeId="83">
+          <Shape name="MOUTH_SMILE_R" shapeId="41" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="84"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthFrown_grp" translation="0 -16.200001 0" nodeId="85">
+          <Shape name="MOUTH_FROWN" shapeId="42" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="86"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthFrownL_grp" translation="0 -16.605 0" nodeId="87">
+          <Shape name="MOUTH_FROWN_L" shapeId="43" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="88"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthFrownR_grp" translation="0 -17.01 0" nodeId="89">
+          <Shape name="MOUTH_FROWN_R" shapeId="44" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="90"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthBlow_grp" translation="0 -17.415001 0" nodeId="91">
+          <Shape name="MOUTH_BLOW" shapeId="45" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="92"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthPucker_grp" translation="0 -17.82 0" nodeId="93">
+          <Shape name="MOUTH_PUCKER" shapeId="46" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="94"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthPuckerOpen_grp" translation="0 -18.225 0" nodeId="95">
+          <Shape name="MOUTH_PUCKER_OPEN" shapeId="47" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="96"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthWiden_grp" translation="0 -18.629999 0" nodeId="97">
+          <Shape name="MOUTH_WIDEN" shapeId="48" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="98"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthWidenSides_grp" translation="0 -19.035 0" nodeId="99">
+          <Shape name="MOUTH_WIDEN_SIDES" shapeId="49" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="100"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthDimpleL_grp" translation="0 -19.440001 0" nodeId="101">
+          <Shape name="MOUTH_DIMPLE_L" shapeId="50" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="102"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthDimpleR_grp" translation="0 -19.844999 0" nodeId="103">
+          <Shape name="MOUTH_DIMPLE_R" shapeId="51" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="104"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthPlosive_grp" translation="0 -20.25 0" nodeId="105">
+          <Shape name="MOUTH_PLOSIVE" shapeId="52" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="106"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthLipsTight_grp" translation="0 -20.655001 0" nodeId="107">
+          <Shape name="MOUTH_LIPS_TIGHT" translation="0.30542 0 0" shapeId="53" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="108"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthLipsTuck_grp" translation="0 -21.059999 0" nodeId="109">
+          <Shape name="MOUTH_LIPS_TUCK" shapeId="54" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="110"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthLipsOpen_grp" translation="0 -21.465 0" nodeId="111">
+          <Shape name="MOUTH_LIPS_OPEN" shapeId="55" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="112"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthLipsPart_grp" translation="0 -21.870001 0" nodeId="113">
+          <Shape name="MOUTH_LIPS_PART" translation="0.25009 0 0" shapeId="56" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="114"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthBottomLipDown_grp" translation="0 -22.275 0" nodeId="115">
+          <Shape name="MOUTH_BOTTOM_LIP_DOWN" shapeId="57" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="116"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthTopLipUp_grp" translation="0 -22.68 0" nodeId="117">
+          <Shape name="MOUTH_TOP_LIP_UP" shapeId="58" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="118"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthTopLipUnder_grp" translation="0 -23.084999 0" nodeId="119">
+          <Shape name="MOUTH_TOP_LIP_UNDER" shapeId="59" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="120"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthBottomLipUnder_grp" translation="0 -23.49 0" nodeId="121">
+          <Shape name="MOUTH_BOTTOM_LIP_UNDER" shapeId="60" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="122"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthSnarlUpperL_grp" translation="0 -23.895 0" nodeId="123">
+          <Shape name="MOUTH_SNARL_UPPER_L" translation="0.30597 0 0" shapeId="61" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="124"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthSnarlUpperR_grp" translation="0 -24.299999 0" nodeId="125">
+          <Shape name="MOUTH_SNARL_UPPER_R" shapeId="62" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="126"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthSnarlLowerL_grp" translation="0 -24.705 0" nodeId="127">
+          <Shape name="MOUTH_SNARL_LOWER_L" shapeId="63" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="128"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthSnarlLowerR_grp" translation="0 -25.110001 0" nodeId="129">
+          <Shape name="MOUTH_SNARL_LOWER_R" shapeId="64" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="130"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthBottomLipBite_grp" translation="0 -25.514999 0" nodeId="131">
+          <Shape name="MOUTH_BOTTOM_LIP_BITE" shapeId="65" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="132"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthDown_grp" translation="0 -25.92 0" nodeId="133">
+          <Shape name="MOUTH_DOWN" shapeId="66" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="134"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthUp_grp" translation="0 -26.325001 0" nodeId="135">
+          <Shape name="MOUTH_UP" shapeId="67" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="136"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthL_grp" translation="0 -26.73 0" nodeId="137">
+          <Shape name="MOUTH_L" shapeId="68" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="138"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthR_grp" translation="0 -27.135 0" nodeId="139">
+          <Shape name="MOUTH_R" shapeId="69" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="140"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthLipsJawAdjust_grp" translation="0 -27.540001 0" nodeId="141">
+          <Shape name="MOUTH_LIPS_JAW_ADJUST" shapeId="70" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="142"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthBottomLipTrans_grp" translation="0 -27.945 0" nodeId="143">
+          <Shape name="MOUTH_BOTTOM_LIP_TRANS" shapeId="71" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="144"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthSkewer_grp" translation="0 -28.35 0" nodeId="145">
+          <Shape name="MOUTH_SKEWER" shapeId="72" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="146"/>
+        </TransformGroup>
+        <TransformGroup name="switch_mouthOpen_grp" translation="0 -28.754999 0" nodeId="147">
+          <Shape name="MOUTH_OPEN" shapeId="73" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="148"/>
+        </TransformGroup>
+        <TransformGroup name="switch_tongueUp_grp" translation="0 -29.16 0" nodeId="149">
+          <Shape name="TONGUE_UP" shapeId="74" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="150"/>
+        </TransformGroup>
+        <TransformGroup name="switch_tongueRaise_grp" translation="0 -29.565001 0" nodeId="151">
+          <Shape name="TONGUE_RAISE" shapeId="75" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="152"/>
+        </TransformGroup>
+        <TransformGroup name="switch_tongueLower_grp" translation="0 -29.969999 0" nodeId="153">
+          <Shape name="TONGUE_LOWER" shapeId="76" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="154"/>
+        </TransformGroup>
+        <TransformGroup name="switch_tongueOut_grp" translation="0 -30.375 0" nodeId="155">
+          <Shape name="TONGUE_OUT" shapeId="77" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="156"/>
+        </TransformGroup>
+        <TransformGroup name="switch_tongueNarrow_grp" translation="0 -30.780001 0" nodeId="157">
+          <Shape name="TONGUE_NARROW" shapeId="78" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="158"/>
+        </TransformGroup>
+        <TransformGroup name="switch_tongueWide_grp" translation="0 -31.184999 0" nodeId="159">
+          <Shape name="TONGUE_WIDE" shapeId="79" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="160"/>
+        </TransformGroup>
+        <TransformGroup name="switch_tongueCurlU_grp" translation="0 -31.59 0" nodeId="161">
+          <Shape name="TONGUE_CURL_U" shapeId="80" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="162"/>
+        </TransformGroup>
+        <TransformGroup name="switch_tongueCurlD_grp" translation="0 -31.995001 0" nodeId="163">
+          <Shape name="TONGUE_CURL_D" shapeId="81" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="164"/>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="guiCamera_grp" translation="5.5 2.150907 21.568117" rotation="0 0.999998 0" visibility="false" nodeId="165">
+      <Camera name="guiCamera" translation="0 -14.945907 256.201813" fov="12.0049" nearClip="0.001" farClip="1000" nodeId="166"/>
+    </TransformGroup>
+  </Scene>
+
+
+  <Animation externalAnimFile="npcFishermanFacialAnimExpressions.i3d.anim" />
+</i3D>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" />
+    <GuiElement profile="fs25_riceFieldDialogBg" id="dialogElement">
+        <ThreePartBitmap profile="fs25_dialogBgMiddleSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgTopSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <Text profile="fs25_dialogHeaderText" id="headerTitle" position="-10px -50px" />
+        <Text profile="fs25_riceFieldDialogTitle" position="-105px -120px" text="$l10n_ui_fieldNo:" />
+        <Text profile="fs25_riceFieldDialogTitle" position="-105px -150px" text="$l10n_contract_details_fieldSize:" />
+        <Text profile="fs25_riceFieldDialogTitle" position="-105px -180px" text="$l10n_statistic_fillType:" />
+        <Text profile="fs25_riceFieldDialogTitle" position="-105px -210px" text="$l10n_ui_riceWaterLevel" />
+        <Text profile="fs25_riceFieldDialogValue" position="85px -120px" id="textFieldNr" />
+        <Text profile="fs25_riceFieldDialogValue" position="85px -150px" id="textFieldSize" />
+        <Text profile="fs25_riceFieldDialogValue" position="85px -180px" id="textCropType" />
+        <Text profile="fs25_riceFieldDialogValue" position="85px -210px" id="textWaterLevel" />
+        <Bitmap profile="fs25_riceFieldDialogTextBg" position="-10px -120px" />
+        <Bitmap profile="fs25_riceFieldDialogTextBgAlternate" position="-10px -150px" />
+        <Bitmap profile="fs25_riceFieldDialogTextBg" position="-10px -180px" />
+        <Bitmap profile="fs25_riceFieldDialogTextBgAlternate" position="-10px -210px" />
+        <Button profile="fs25_riceFieldButton" id="buttonEmpty" position="-110px -310px" onClick="onClickEmpty" text="$l10n_button_empty" focusInit="onOpen">
+            <ThreePartBitmap profile="fs25_settingsButtonBg" />
+        </Button>
+        <Button profile="fs25_riceFieldButton" id="buttonFill" position="90px -310px" onClick="onClickFill" text="$l10n_button_flood">
+            <ThreePartBitmap profile="fs25_settingsButtonBg" />
+        </Button>
+        <Text profile="fs25_dialogWarningText" id="warning" text="" visible="false">
+            <Bitmap profile="fs25_dialogWarningIcon" />
+        </Text>
+        <BoxLayout profile="fs25_dialogButtonBox" id="buttonsPC">
+            <Button profile="buttonBack" id="okButton" onClick="onClickBack" text="$l10n_button_back" />
+        </BoxLayout>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="fs25_riceFieldDialogBg" extends="fs25_dialogBg">
+            <size value="600px 450px" />
+        </Profile>
+        <Profile name="fs25_riceFieldDialogTitle" extends="fs25_textDefault" with="anchorTopCenter">
+            <size value="180px 30px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+        </Profile>
+        <Profile name="fs25_riceFieldDialogValue" extends="fs25_textDefault" with="anchorTopCenter">
+            <size value="180px 30px" />
+            <textAlignment value="right" />
+        </Profile>
+        <Profile name="fs25_riceFieldDialogTextBg" extends="baseReference" with="anchorTopCenter">
+            <size value="390px 30px" />
+            <imageColor value="$preset_fs25_colorGreyLight_20" />
+        </Profile>
+        <Profile name="fs25_riceFieldDialogTextBgAlternate" extends="baseReference" with="anchorTopCenter">
+            <size value="390px 30px" />
+            <imageColor value="$preset_fs25_colorGrey_20" />
+        </Profile>
+        <Profile name="fs25_riceFieldButton" extends="emptyPanel" with="anchorTopCenter">
+            <size value="160px 32px" />
+            <iconSliceId value="gui.pause" />
+            <textSize value="16px" />
+            <textBold value="true" />
+            <textMaxWidth value="130px" />
+            <textUpperCase value="true" />
+            <textAlignment value="center" />
+            <textColor value="$preset_fs25_colorMainLight" />
+            <textDisabledColor value="$preset_colorDisabled" />
+            <textFocusedColor value="$preset_fs25_colorMainDark" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

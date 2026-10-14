@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<storePacks>
+    <storePack name="STARTER_GRAINS" title="$l10n_shop_starterPackGrain" image="$dataS/menu/hud/fillTypes/hud_fill_wheat.png" />
+    <storePack name="STARTER_VEGETABLE" title="$l10n_shop_starterPackVegetables" image="$dataS/menu/hud/fillTypes/hud_fill_carrot.png" />
+    <storePack name="STARTER_POTATOES" title="$l10n_shop_starterPackPotatoes" image="$dataS/menu/hud/fillTypes/hud_fill_potato.png" />
+    <storePack name="STARTER_SUGARBEET" title="$l10n_shop_starterPackSugarBeet" image="$dataS/menu/hud/fillTypes/hud_fill_sugarBeet.png" />
+    <storePack name="STARTER_RICELONGGRAIN" title="$l10n_shop_starterPackRiceLongGrain" image="$dataS/menu/hud/fillTypes/hud_fill_riceLongGrain.png" />
+    <storePack name="STARTER_RICE" title="$l10n_shop_starterPackRice" image="$dataS/menu/hud/fillTypes/hud_fill_rice.png" />
+    <storePack name="STARTER_COTTON" title="$l10n_shop_starterPackCotton" image="$dataS/menu/hud/fillTypes/hud_fill_cotton.png" />
+    <storePack name="STARTER_SUGARCANE" title="$l10n_shop_starterPackSugarcane" image="$dataS/menu/hud/fillTypes/hud_fill_sugarCane.png" />
+    <storePack name="STARTER_GRAPE" title="$l10n_shop_starterPackGrape" image="$dataS/menu/hud/fillTypes/hud_fill_grape.png" />
+    <storePack name="STARTER_OLIVE" title="$l10n_shop_starterPackOlive" image="$dataS/menu/hud/fillTypes/hud_fill_olive.png" />
+    <storePack name="STARTER_GRASS" title="$l10n_shop_starterPackGrass" image="$dataS/menu/hud/fillTypes/hud_fill_grass.png" />
+    <storePack name="STARTER_HAY" title="$l10n_shop_starterPackHay" image="$dataS/menu/hud/fillTypes/hud_fill_roundBaleHay.png" />
+    <storePack name="STARTER_CHAFF" title="$l10n_shop_starterPackChaff" image="$dataS/menu/hud/fillTypes/hud_fill_chaff.png" />
+    <storePack name="STARTER_FORAGE" title="$l10n_shop_starterPackForage" image="$dataS/menu/hud/fillTypes/hud_fill_forage.png" />
+    <storePack name="STARTER_ANIMALS" title="$l10n_shop_starterPackAnimals" image="$dataS/menu/hud/fillTypes/hud_fill_cow.png" />
+    <storePack name="STARTER_WOOD" title="$l10n_shop_starterPackWood" image="$dataS/menu/hud/fillTypes/hud_fill_treeSaplings.png" />
+    <storePack name="STARTER_WOODCHIPS" title="$l10n_shop_starterPackWoodChips" image="$dataS/menu/hud/fillTypes/hud_fill_woodChips.png" />
+    <storePack name="STARTER_POPLAR" title="$l10n_shop_starterPackPoplar" image="$dataS/menu/hud/fillTypes/hud_fill_poplar.png" />
+    <storePack name="STARTER_TRANSPORT" title="$l10n_shop_starterPackTransport" image="$dataS/menu/hud/fillTypes/hud_fill_product.png" />
+    <storePack name="STARTER_SNOW" title="$l10n_shop_starterPackSnow" image="$dataS/menu/hud/fillTypes/hud_fill_snow.png" />
+    <storePack name="STARTER_ONION" title="$l10n_shop_starterPackOnion" image="$dataS/menu/hud/fillTypes/hud_fill_onion.png" requiredDLC="highlandsFishingPack" />
+</storePacks>

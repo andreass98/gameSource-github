@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="cattleCalfBabyHolstein_posed" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/tileAndMirrorShader.xml" />
+    <File fileId="5" filename="$dataS/character/animals/domesticated/cow/cattle_alpha.png" />
+    <File fileId="1" filename="$dataS/character/animals/domesticated/cow/calf/cattleCalfHolstein_diffuse.png" />
+    <File fileId="2" filename="$dataS/character/animals/domesticated/cow/calf/cattleCalf_normal.png" />
+    <File fileId="3" filename="$dataS/character/animals/domesticated/cow/calf/cattleCalf_specular.png" />
+  </Files>
+
+  <Materials>
+    <Material name="cattleCalfHolstein_mat" materialId="1" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.5 0.5 0 0.5"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1.0 1.0 0 0"/>
+      <CustomParameter name="sssColor" value="0.938 0.567 0.567 1.0"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="cattleCalfHolstein_mat1" materialId="2" customShaderId="4" customShaderVariation="sssSpecularDirt_alphaMapSecondUV">
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value="0.5 0.5 0 0.5"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1.0 1.0 0 0"/>
+      <CustomParameter name="sssColor" value="0.938 0.567 0.567 1.0"/>
+      <Custommap name="alphaMap" fileId="5"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="cattleCalfBabyHolstein_posed.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="cattleCalf" nodeId="1">
+      <Shape name="calf" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="2"/>
+      <Shape name="eyes" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="3"/>
+      <Shape name="teeth" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="4"/>
+      <Shape name="tongue" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="5"/>
+      <TransformGroup name="hair" nodeId="6">
+        <Shape name="tail" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="7"/>
+        <Shape name="tail_reverse" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="8"/>
+        <Shape name="ears" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="9"/>
+        <Shape name="ears_reverse" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="10"/>
+        <Shape name="ears2" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="11"/>
+        <Shape name="ears2_reverse" shapeId="10" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="12"/>
+        <Shape name="whiskers" shapeId="11" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="13"/>
+        <Shape name="whiskers_reverse" shapeId="12" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="14"/>
+        <Shape name="lash" shapeId="13" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="15"/>
+        <Shape name="lash_reverse" shapeId="14" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="16"/>
+        <Shape name="mainHair" shapeId="15" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="17"/>
+        <Shape name="mainHair_reverse" shapeId="16" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="18"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

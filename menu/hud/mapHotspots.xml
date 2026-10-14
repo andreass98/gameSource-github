@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<texture>
+    <meta>
+        <filename>mapHotspots.png</filename>
+        <size width="1024" height="1024" />
+    </meta>
+    <slices>
+        <slice id="animalsBee" uvs="760px 327px 100px 100px" />
+        <slice id="animalsChicken" uvs="112px 327px 100px 100px" />
+        <slice id="animalsCow" uvs="436px 327px 100px 100px" />
+        <slice id="animalsHorse" uvs="544px 327px 100px 100px" />
+        <slice id="animalsPig" uvs="220px 327px 100px 100px" />
+        <slice id="animalsSheep" uvs="328px 327px 100px 100px" />
+        <slice id="boat" uvs="436px 543px 100px 100px" />
+        <slice id="car" uvs="436px 4px 100px 100px" />
+        <slice id="castle" uvs="544px 543px 100px 100px" />
+        <slice id="circle" uvs="764px 547px 201px 201px" />
+        <slice id="contract" uvs="760px 219px 100px 100px" />
+        <slice id="contractConstruction" uvs="4px 435px 100px 100px" />
+        <slice id="contractDeadwood" uvs="328px 435px 100px 100px" />
+        <slice id="contractStone" uvs="112px 435px 100px 100px" />
+        <slice id="contractWoodTransport" uvs="220px 435px 100px 100px" />
+        <slice id="exclamationMark" uvs="544px 435px 100px 100px" />
+        <slice id="ferry" uvs="868px 111px 100px 100px" />
+        <slice id="fishBreeding" uvs="652px 651px 100px 100px" />
+        <slice id="fishPond" uvs="652px 543px 100px 100px" />
+        <slice id="harvester" uvs="328px 4px 100px 100px" />
+        <slice id="header" uvs="4px 111px 100px 100px" />
+        <slice id="horse" uvs="544px 111px 100px 100px" />
+        <slice id="loadingStation" uvs="868px 219px 100px 100px" />
+        <slice id="loadingStationElectricCharge" uvs="652px 219px 100px 100px" />
+        <slice id="loadingStationFuel" uvs="544px 219px 100px 100px" />
+        <slice id="miniMapField" uvs="652px 435px 100px 100px" />
+        <slice id="miniMapHotspot" uvs="868px 327px 100px 100px" />
+        <slice id="missionBorder" uvs="4px 543px 100px 100px" />
+        <slice id="motorbike" uvs="760px 111px 100px 100px" />
+        <slice id="npc" uvs="760px 435px 100px 100px" />
+        <slice id="other" uvs="652px 4px 100px 100px" />
+        <slice id="otherAnimalDealer" uvs="4px 327px 100px 100px" />
+        <slice id="otherHouse" uvs="436px 219px 100px 100px" />
+        <slice id="otherShop" uvs="328px 219px 100px 100px" />
+        <slice id="otherTrain" uvs="652px 327px 100px 100px" />
+        <slice id="pallet" uvs="868px 435px 100px 100px" />
+        <slice id="playerPosition" uvs="4px 4px 100px 100px" />
+        <slice id="production" uvs="220px 219px 100px 100px" />
+        <slice id="rollercoaster" uvs="112px 543px 100px 100px" />
+        <slice id="tipStation" uvs="4px 219px 100px 100px" />
+        <slice id="tipStationTrain" uvs="112px 219px 100px 100px" />
+        <slice id="tool" uvs="220px 111px 100px 100px" />
+        <slice id="toolTrailed" uvs="328px 111px 100px 100px" />
+        <slice id="tractor" uvs="220px 4px 100px 100px" />
+        <slice id="trailer" uvs="112px 111px 100px 100px" />
+        <slice id="train" uvs="652px 111px 100px 100px" />
+        <slice id="truck" uvs="112px 4px 100px 100px" />
+        <slice id="twister" uvs="436px 435px 100px 100px" />
+        <slice id="wheelLoader" uvs="544px 4px 100px 100px" />
+        <slice id="wildlife" uvs="544px 651px 100px 100px" />
+        <slice id="woodHarvester" uvs="220px 543px 100px 100px" />
+        <slice id="worker" uvs="436px 111px 100px 100px" />
+        <slice id="workerDirection" uvs="868px 4px 100px 100px" />
+        <slice id="workerDirectionArrow" uvs="328px 543px 100px 100px" />
+        <slice id="workerPosition" uvs="760px 4px 100px 100px" />
+    </slices>
+</texture>

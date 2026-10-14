@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI name="settingsConsole">
+    <GuiElement profile="fs25_menuContainer">
+        <GuiElement profile="fs25_menuHeaderPanel">
+            <Bitmap profile="fs25_menuHeaderIconBg">
+                <Bitmap profile="fs25_menuHeaderIcon" imageSliceId="gui.icon_options_gameSettings2" />
+            </Bitmap>
+            <Text profile="fs25_menuHeaderTitle" text="$l10n_ui_ingameMenuGameSettingsGame" />
+        </GuiElement>
+        <ScrollingLayout profile="fs25_settingsLayout" id="boxLayout" topClipperElementName="topClipper" bottomClipperElementName="bottomClipper">
+            <Bitmap profile="fs25_multiTextOptionContainer" id="languageElementBox">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickLanguage" onCreate="onCreateLanguage" id="languageElement" focusInit="onOpen">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_language" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_language" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <BinaryOption profile="fs25_settingsBinaryOption" onClick="onClickInvertYLook" id="invertYLookElement" focusInit="onOpen">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_invertYLook" />
+                </BinaryOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_invertYLook" />
+            </Bitmap>
+            <Text profile="fs25_settingsSectionHeader" name="sectionHeader" text="$l10n_ui_ingameMenuGameSettingsDisplay" />
+            <Bitmap profile="fs25_multiTextOptionContainer" id="performanceModeElementBox">
+                <BinaryOption profile="fs25_settingsBinaryOption" onClick="onClickPerformanceMode" id="performanceModeElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_performanceMode" />
+                </BinaryOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_performanceMode" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickFovy" onCreate="onCreateFovy" id="fovyElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_fovy" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_fovy" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickFovyPlayerFirstPerson" onCreate="onCreateFovyPlayerFirstPerson" id="fovyPlayerFirstPersonElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_fovyPlayerFirstPerson" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_fovyPlayerFirstPerson" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickFovyPlayerThirdPerson" onCreate="onCreateFovyPlayerThirdPerson" id="fovyPlayerThirdPersonElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_fovyPlayerThirdPerson" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_fovyPlayerThirdPerson" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickUIScale" onCreate="onCreateUIScale" id="uiScaleElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_uiScale" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_uiScale" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickBrightness" onCreate="onCreateBrightness" id="brightnessElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_brightness" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_brightness" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <BinaryOption profile="fs25_settingsBinaryOption" onClick="onClickRealBeaconLights" id="realBeaconLightsElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_realBeaconLights" />
+                </BinaryOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_realBeaconLights" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <Button profile="fs25_settingsHDRButtonConsole" id="hdrCalibrationButton" text="$l10n_setting_hdr" onClick="onHDRCalibration">
+                    <ThreePartBitmap profile="fs25_settingsButtonBg" />
+                </Button>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_hdr" />
+            </Bitmap>
+            <Text profile="fs25_settingsSectionHeader" name="sectionHeader" text="$l10n_ui_sound" />
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickMasterVolume" onCreate="onCreateVolume" id="masterVolumeElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_volumeMaster" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_volumeMaster" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickMusicVolume" onCreate="onCreateVolume" id="musicVolumeElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_volumeMusic" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_volumeMusic" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickVolumeVehicle" onCreate="onCreateVolume" id="volumeVehicleElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_volumeVehicle" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_volumeVehicles" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickVolumeEnvironment" onCreate="onCreateVolume" id="volumeEnvironmentElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_volumeEnvironment" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_volumeEnvironment" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickVolumeCharacter" onCreate="onCreateVolume" id="volumeCharacterElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_volumeCharacter" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_volumeCharacter" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickVolumeRadio" onCreate="onCreateVolume" id="volumeRadioElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_volumeRadio" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_volumeRadio" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickVolumeGUI" onCreate="onCreateVolume" id="volumeGUIElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_volumeGUI" textMaxNumLines="3" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_volumeGUI" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickVolumeNoFocus" onCreate="onCreateVolume" id="volumeNoFocusElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_volumeNoFocus" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_volumeNoFocus" />
+            </Bitmap>
+        </ScrollingLayout>
+        <Bitmap profile="fs25_settingsTooltipSeparator" />
+        <Bitmap profile="fs25_startClipper" name="topClipper" />
+        <Bitmap profile="fs25_stopClipper" name="bottomClipper" />
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="fs25_settingsHDRButtonConsole" extends="emptyPanel" with="anchorMiddleRight">
+            <size value="280px 32px" />
+            <position value="-10px 0px" />
+            <textResizeWidth value="200px" />
+            <textSize value="16px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+            <textAlignment value="center" />
+            <textColor value="$preset_fs25_colorMainLight" />
+            <textDisabledColor value="$preset_colorDisabled" />
+            <textFocusedColor value="$preset_fs25_colorMainDark" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

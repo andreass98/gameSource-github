@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Picture profile="fs25_mapBackground" id="mapBackground" />
+    <Bitmap profile="fs25_createGameBackground" />
+    <Bitmap profile="fs25_createGameGradient" />
+    <GuiElement profile="fs25_createGameContainer">
+        <GuiElement profile="fs25_menuHeaderPanel" position="-46px 120px">
+            <Bitmap profile="fs25_menuHeaderIconBg">
+                <Bitmap profile="fs25_menuHeaderIcon" imageSliceId="gui.modhub_categories" />
+            </Bitmap>
+            <Text profile="fs25_menuHeaderTitle" text="$l10n_ui_inGameMenuModeMultiplayer" />
+        </GuiElement>
+        <BoxLayout profile="fs25_createGameLayout" id="settingsBox">
+            <GuiElement profile="fs25_createGameItemContainer">
+                <TextInput profile="fs25_createGameTextInput" id="serverNameElement" maxCharacters="30" needExternalClick="true" onFocus="onFocus" onLeave="onLeave" onEnterPressed="onEnterPressed" imeTitle="$l10n_ui_serverName" imeDescription="$l10n_ui_serverName" imePlaceholder="$l10n_ui_serverName" focusInit="onOpen">
+                    <ThreePartBitmap profile="fs25_textInputBg" />
+                    <Bitmap profile="fs25_textInputIconBox">
+                        <Bitmap profile="fs25_textInputIcon" />
+                    </Bitmap>
+                </TextInput>
+                <Text profile="fs25_createGameItemTitle" text="$l10n_ui_serverName" />
+            </GuiElement>
+            <GuiElement profile="fs25_createGameItemContainer">
+                <TextInput profile="fs25_createGameTextInput" isPassword="true" id="passwordElement" maxCharacters="16" needExternalClick="true" onEnter="onEnter" onFocus="onFocus" onLeave="onLeave" onEscPressed="onEscPressed" onEnterPressed="onEnterPressed" imeKeyboardType="password" imeTitle="$l10n_ui_password" imeDescription="$l10n_ui_password" imePlaceholder="$l10n_ui_password">
+                    <ThreePartBitmap profile="fs25_textInputBg" />
+                    <Bitmap profile="fs25_textInputIconBox">
+                        <Bitmap profile="fs25_textInputIcon" />
+                    </Bitmap>
+                </TextInput>
+                <Text profile="fs25_createGameItemTitle" text="$l10n_ui_password" />
+            </GuiElement>
+            <GuiElement profile="fs25_createGameItemContainer" id="portElementBox">
+                <TextInput profile="fs25_createGameTextInput" id="portElement" onEnter="onEnter" needExternalClick="true" onFocus="onFocus" onLeave="onLeave" onIsUnicodeAllowed="onIsUnicodeAllowed" maxCharacters="5" onEscPressed="onEscPressed" onEnterPressed="onEnterPressed" imeKeyboardType="numeric" imeTitle="$l10n_ui_portNumber" imeDescription="$l10n_ui_portNumber" imePlaceholder="$l10n_ui_portNumber">
+                    <ThreePartBitmap profile="fs25_textInputBg" />
+                    <Bitmap profile="fs25_textInputIconBox">
+                        <Bitmap profile="fs25_textInputIcon" />
+                    </Bitmap>
+                </TextInput>
+                <Text profile="fs25_createGameItemTitle" text="$l10n_ui_portNumber" />
+            </GuiElement>
+            <GuiElement profile="fs25_createGameItemContainer" id="bandwidthElementBox">
+                <MultiTextOption profile="fs25_createGameMultiTextOption" onClick="onClickBandwidth" onCreate="onCreateBandwidth" />
+                <Text profile="fs25_createGameItemTitle" text="$l10n_ui_internetConnection" />
+            </GuiElement>
+            <GuiElement profile="fs25_createGameItemContainer">
+                <MultiTextOption profile="fs25_createGameMultiTextOption" onClick="onClickNumPlayer" onCreate="onCreateNumPlayer" />
+                <Text profile="fs25_createGameItemTitle" text="$l10n_ui_maxNumPlayers" />
+            </GuiElement>
+            <GuiElement profile="fs25_createGameItemContainer">
+                <MultiTextOption profile="fs25_createGameMultiTextOption" onClick="onClickMultiplayerLanguage" onCreate="onCreateMultiplayerLanguage" />
+                <Text profile="fs25_createGameItemTitle" text="$l10n_setting_multiplayerLanguage" />
+            </GuiElement>
+            <GuiElement profile="fs25_createGameItemContainer" id="allowCrossPlayElementBox">
+                <BinaryOption profile="fs25_createGameBinaryOption" id="allowCrossPlayElement" onClick="onClickAllowCrossPlay" />
+                <Text profile="fs25_createGameItemTitle" text="$l10n_ui_allowCrossPlay" />
+            </GuiElement>
+            <GuiElement profile="fs25_createGameItemContainer">
+                <BinaryOption profile="fs25_createGameBinaryOption" id="autoAcceptElement" onClick="onClickAutoAccept" />
+                <Text profile="fs25_createGameItemTitle" text="$l10n_ui_autoAccept" />
+            </GuiElement>
+            <GuiElement profile="fs25_createGameItemContainer" id="allowOnlyFriendsElementBox">
+                <BinaryOption profile="fs25_createGameBinaryOption" id="allowOnlyFriendsElement" onClick="onClickAllowOnlyFriends" />
+                <Text profile="fs25_createGameItemTitle" text="$l10n_ui_allowOnlyFriends" />
+            </GuiElement>
+        </BoxLayout>
+    </GuiElement>
+    <BoxLayout profile="fs25_buttonBox" id="buttonBox">
+        <Button profile="buttonOK" onClick="onClickOk" text="$l10n_button_start" clickSound="START" />
+        <Button profile="buttonBack" onClick="onClickBack" text="$l10n_button_back">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonActivate" onClick="onClickActivate" text="$l10n_button_change" id="changeButton" visible="false">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+    </BoxLayout>
+    <GUIProfiles>
+        <Profile name="fs25_createGameTextInput" extends="fs25_textInput" with="anchorBottomStretchingX pivotBottomLeft">
+            <width value="100%" />
+            <absoluteSizeOffset value="31px 0px" />
+            <maxInputTextWidth value="300px" />
+        </Profile>
+        <Profile name="fs25_createGameBackground" extends="baseReference" with="anchorStretchingYLeft">
+            <width value="550px" />
+            <imageColor value="$preset_fs25_colorMainGrey" />
+        </Profile>
+        <Profile name="fs25_createGameGradient" extends="baseReference" with="anchorStretchingYLeft">
+            <width value="400px" />
+            <position value="550px 0px" />
+            <imageColor value="$preset_fs25_colorMainGrey" />
+            <imageSliceId value="gui.savegame_gradient" />
+        </Profile>
+        <Profile name="fs25_createGameContainer" extends="emptyPanel" with="anchorStretchingYLeft pivotBottomLeft">
+            <width value="340px" />
+            <absoluteSizeOffset value="0px 240px" />
+            <position value="212px 42px" />
+        </Profile>
+        <Profile name="fs25_createGameLayout" extends="emptyPanel" with="anchorStretchingYStretchingX">
+            <flowDirection value="vertical" />
+        </Profile>
+        <Profile name="fs25_createGameSelector" extends="fs25_multiTextOption" with="anchorTopStretchingX">
+            <size value="100% 42px" />
+            <margin value="0px 10px 0px 10px" />
+            <defaultProfileButtonLeft value="fs25_buttonCircleArrowLeft" />
+            <defaultProfileButtonRight value="fs25_buttonCircleArrowRight" />
+            <defaultProfileText value="fs25_createGameSelectorText" />
+            <defaultProfileBgThreePart value="emptyPanel" />
+        </Profile>
+        <Profile name="fs25_createGameSelectorText" extends="fs25_multiTextOptionText">
+            <textSize value="28px" />
+            <textMaxWidth value="250px" />
+            <textUpperCase value="true" />
+            <textLayoutMode value="resize" />
+        </Profile>
+        <Profile name="fs25_createGameItemContainer" extends="emptyPanel" with="anchorTopStretchingX">
+            <height value="58px" />
+            <margin value="0px 25px 0px 0px" />
+        </Profile>
+        <Profile name="fs25_createGameItemTitle" extends="fs25_textDefault" with="anchorTopStretchingX">
+            <width value="100%" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+        </Profile>
+        <Profile name="fs25_createGameMultiTextOption" extends="fs25_multiTextOption" with="anchorBottomStretchingX">
+            <width value="100%" />
+        </Profile>
+        <Profile name="fs25_createGameBinaryOption" extends="fs25_binaryOption" with="anchorBottomStretchingX">
+            <width value="100%" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

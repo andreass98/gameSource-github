@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Bitmap profile="fs25_fullScreenBackground" />
+    <GuiElement profile="fs25_shopContainer">
+        <GuiElement profile="fs25_menuHeaderPanel" absoluteSizeOffset="0px 0px">
+            <Bitmap profile="fs25_menuHeaderIconBg">
+                <Bitmap profile="fs25_menuHeaderIcon" imageSliceId="gui.modhub_categories" />
+            </Bitmap>
+            <Text profile="fs25_menuHeaderTitle" text="$l10n_ui_serverDetails" />
+            <Text profile="fs25_serverDetailDownloadFromModhubText" id="notAllModsOnSystemLabel" text="$l10n_ui_notAllModsOnSystem" />
+        </GuiElement>
+        <GuiElement profile="fs25_savegameListItem">
+            <ThreePartBitmap profile="fs25_savegameListItemBg" />
+            <Bitmap profile="fs25_savegameListItemImage" id="mapIconElement" />
+            <Text profile="fs25_savegameListItemName" id="serverNameElement" />
+            <GuiElement profile="fs25_savegameListItemDataBox" name="dataBox" id="dataBoxStandard">
+                <ThreePartBitmap profile="fs25_savegameListSeparator" position="0px 40px" />
+                <ThreePartBitmap profile="fs25_savegameListSeparator" position="0px 80px" />
+                <Text profile="fs25_savegameListItemTitle" text="$l10n_ui_map" position="0px 80px" />
+                <Text profile="fs25_savegameListItemTitle" text="$l10n_setting_language" position="450px 80px" />
+                <Text profile="fs25_savegameListItemTitle" text="$l10n_ui_platform" position="0px 40px" />
+                <Text profile="fs25_savegameListItemTitle" text="$l10n_ui_password" position="450px 40px" />
+                <Text profile="fs25_savegameListItemTitle" text="$l10n_ui_allowsCrossPlay" />
+                <Text profile="fs25_savegameListItemTitle" text="$l10n_ui_mpPlayers" position="450px 0px" />
+                <Text profile="fs25_savegameListItemText" id="mapElement" position="165px 80px" />
+                <Text profile="fs25_savegameListItemText" id="languageElement" position="595px 80px" />
+                <PlatformIcon profile="fs25_serverDetailsPlatformIcon" id="platformElement" position="165px 45px" />
+                <Text profile="fs25_savegameListItemText" id="passwordElement" position="595px 40px" />
+                <Text profile="fs25_savegameListItemText" id="crossPlayElement" position="165px 0px" />
+                <Text profile="fs25_savegameListItemText" id="numPlayersElement" position="595px 0px" />
+            </GuiElement>
+        </GuiElement>
+        <SmoothList profile="fs25_serverDetailsModList" id="modList" startClipperElementName="startClipper">
+            <ListItem profile="fs25_serverDetailListItem">
+                <Bitmap profile="fs25_serverDetailListItemBackground" />
+                <GuiElement profile="fs25_serverDetailListItemContainer">
+                    <Bitmap profile="fs25_serverDetailListItemImage" name="icon" />
+                    <Bitmap profile="fs25_serverDetailListItemImageMissing" name="missingIconBg" />
+                    <ThreePartBitmap profile="fs25_serverDetailListItemMissingIconBg" name="missingIcon">
+                        <Bitmap profile="fs25_serverDetailListItemMissingIcon" />
+                    </ThreePartBitmap>
+                    <Text profile="fs25_serverDetailListItemTitle" name="title" />
+                    <Text profile="fs25_serverDetailListItemVersion" name="version" />
+                    <Text profile="fs25_serverDetailListItemHash" name="hash" />
+                    <Text profile="fs25_serverDetailListItemAuthor" name="author" />
+                    <Text profile="fs25_serverDetailListItemAvailable" name="zipFilename" />
+                </GuiElement>
+            </ListItem>
+            <ListItem profile="fs25_serverDetailListItem" name="empty">
+                <Bitmap profile="fs25_serverDetailListItemBackgroundEmpty" />
+            </ListItem>
+        </SmoothList>
+        <Bitmap profile="fs25_startClipper" name="startClipper" position="-2px -250px" />
+        <Text profile="fs25_serverDetailNoModsUsedText" text="$l10n_ui_noModsDLCsUsed" id="noModsDLCsElement" />
+    </GuiElement>
+    <ThreePartBitmap profile="fs25_sliderDockedBg">
+        <ThreePartBitmap profile="fs25_sliderDockedBox">
+            <Slider profile="fs25_sliderDocked" dataElementId="modList" handleFocus="true" focusInit="onOpen" />
+        </ThreePartBitmap>
+    </ThreePartBitmap>
+    <BoxLayout profile="fs25_buttonBox">
+        <Button profile="buttonOK" text="$l10n_button_start" onClick="onClickOk" id="startElement" />
+        <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" />
+        <Button profile="buttonActivate" text="$l10n_button_getModsDlc" onClick="onClickDownload" id="getModsButton" />
+        <Button profile="buttonCancel" text="$l10n_button_block" onClick="onClickBlockOrShowInfo" id="blockOrShowButton" />
+    </BoxLayout>
+    <GUIProfiles>
+        <Profile name="fs25_serverDetailDownloadFromModhubText" extends="fs25_textDefault" with="anchorStretchingYRight">
+            <size value="800px 100%" />
+            <textSize value="20px" />
+            <textBold value="true" />
+            <textOffset value="0px -7px" />
+            <textAlignment value="right" />
+        </Profile>
+        <Profile name="fs25_serverDetailsPlatformIcon" extends="baseReference" with="anchorBottomLeft">
+            <size value="30px 30px" />
+            <imageSelectedColor value="$preset_fs25_colorMainDark" />
+        </Profile>
+        <Profile name="fs25_serverDetailsModList" extends="fs25_shopList" with="anchorStretchingYStretchingX pivotBottomCenter">
+            <absoluteSizeOffset value="0px 250px" />
+            <soundDisabled value="true" />
+            <handleFocus value="false" />
+            <numLateralItems value="7" />
+            <showHighlights value="true" />
+        </Profile>
+        <Profile name="fs25_serverDetailListItem" extends="emptyPanel" with="anchorTopLeft">
+            <size value="245px 320px" />
+            <handleFocus value="true" />
+        </Profile>
+        <Profile name="fs25_serverDetailListItemContainer" extends="emptyPanel" with="anchorTopLeft">
+            <size value="196px 278px" />
+            <position value="14px -13px" />
+        </Profile>
+        <Profile name="fs25_serverDetailListItemBackground" extends="baseReference" with="anchorStretchingYStretchingX">
+            <imageSliceId value="gui.serverDetails" />
+        </Profile>
+        <Profile name="fs25_serverDetailListItemBackgroundEmpty" extends="fs25_serverDetailListItemBackground">
+            <imageColor value="$preset_colorWhite_50" />
+        </Profile>
+        <Profile name="fs25_serverDetailListItemImage" extends="baseReference" with="anchorTopLeft">
+            <size value="196px 196px" />
+            <imageSliceId value="noSlice" />
+            <imageFilename value="shared/splash.png" />
+            <imageMaskFilename value="dataS/menu/mask_serverDetails.png" />
+            <overlayMaskSize value="256px 256px" />
+            <overlayMaskPos value="-30px -30px" />
+        </Profile>
+        <Profile name="fs25_serverDetailListItemImageMissing" extends="baseReference" with="anchorTopCenter">
+            <size value="512px 256px" />
+            <position value="0px 60px" />
+            <imageSliceId value="noSlice" />
+            <imageFilename value="data/store/brands/brand_na.png" />
+        </Profile>
+        <Profile name="fs25_serverDetailListItemMissingIconBg" extends="baseReference" with="anchorTopRight">
+            <size value="30px 25px" />
+            <position value="-5px -5px" />
+            <imageSliceId value="gui.3dShop_button_middle" />
+            <imageColor value="$preset_fs25_colorMainDark_40" />
+            <startImageSize value="6px 0" />
+            <startImageSliceId value="gui.3dShop_button_left" />
+            <endImageSize value="6px 0" />
+            <endImageSliceId value="gui.3dShop_button_right" />
+        </Profile>
+        <Profile name="fs25_serverDetailListItemMissingIcon" extends="baseReference" with="anchorMiddleCenter">
+            <size value="32px 24px" />
+            <imageColor value="$preset_colorRed" />
+            <imageSliceId value="gui.contextAction_icon_alert" />
+        </Profile>
+        <Profile name="fs25_serverDetailListItemTitle" extends="fs25_textDefault" with="anchorBottomCenter">
+            <size value="180px 30px" />
+            <position value="0px 45px" />
+            <textBold value="true" />
+            <textMaxNumLines value="2" />
+            <textUpperCase value="true" />
+            <textAlignment value="center" />
+            <textLayoutMode value="resize" />
+        </Profile>
+        <Profile name="fs25_serverDetailListItemVersion" extends="fs25_textDefault" with="anchorBottomCenter">
+            <size value="180px 30px" />
+            <position value="0px 18px" />
+            <textSize value="10px" />
+            <textUpperCase value="true" />
+            <textAlignment value="center" />
+            <textLayoutMode value="resize" />
+        </Profile>
+        <Profile name="fs25_serverDetailListItemAvailable" extends="fs25_textDefault" with="anchorBottomCenter">
+            <size value="160px 30px" />
+            <textSize value="12px" />
+            <textLayoutMode value="scrolling" />
+            <textAlignment value="center" />
+        </Profile>
+        <Profile name="fs25_serverDetailListItemAuthor" extends="fs25_textDefault" with="anchorBottomCenter">
+            <size value="180px 40px" />
+            <position value="0px 130px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+            <textAlignment value="center" />
+            <textLayoutMode value="resize" />
+        </Profile>
+        <Profile name="fs25_serverDetailListItemHash" extends="fs25_textDefault" with="anchorBottomCenter">
+            <size value="180px 30px" />
+            <position value="0px 95px" />
+            <textUpperCase value="true" />
+            <textAlignment value="center" />
+            <textLayoutMode value="resize" />
+        </Profile>
+        <Profile name="fs25_serverDetailNoModsUsedText" extends="fs25_textDefault" with="anchorMiddleStretchingX">
+            <width value="80%" />
+            <textUpperCase value="true" />
+            <textAlignment value="center" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

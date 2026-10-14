@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <GuiElement profile="fs25_siloDialogBg" id="dialogElement">
+        <ThreePartBitmap profile="fs25_dialogBgMiddleSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgTopSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <GuiElement profile="fs25_dialogContentContainer">
+            <Text profile="fs25_siloDialogTitle" id="dialogTitleElement" />
+            <Text profile="fs25_siloDialogText" id="dialogTextElement" text="$l10n_ui_siloFillingDescription:" />
+            <MultiTextOption profile="fs25_siloDialogMultiTextOption" id="fillTypesElement" onClick="onClickFillTypes" focusInit="onOpen">
+                <Text profile="fs25_multiTextOptionText" id="siloText" name="text" absoluteSizeOffset="90px 0px" position="15px 0px" />
+                <Bitmap profile="fs25_multiTextOptionSiloIcon" id="siloIcon" name="ignore" />
+            </MultiTextOption>
+            <Text profile="fs25_dialogWarningText" id="messageBackground" text="$l10n_message_selectedSiloIsEmpty" position="12px -170px">
+                <Bitmap profile="fs25_dialogWarningIcon" />
+            </Text>
+        </GuiElement>
+        <BoxLayout profile="fs25_dialogButtonBox" id="buttonsPC">
+            <Button profile="buttonOK" text="$l10n_button_start" onClick="onClickOk" id="yesButton" />
+            <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" id="noButton" />
+        </BoxLayout>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="fs25_siloDialogBg" extends="fs25_dialogBg">
+            <size value="620px 300px" />
+        </Profile>
+        <Profile name="fs25_siloDialogTitle" extends="fs25_dialogTitle">
+            <width value="580px" />
+            <position value="0px -30px" />
+        </Profile>
+        <Profile name="fs25_siloDialogText" extends="fs25_dialogText">
+            <width value="580px" />
+            <position value="0px -80px" />
+            <textAutoWidth value="true" />
+        </Profile>
+        <Profile name="fs25_siloDialogMultiTextOption" extends="fs25_multiTextOption" with="anchorTopCenter">
+            <width value="400px" />
+            <position value="0px -140px" />
+        </Profile>
+        <Profile name="fs25_multiTextOptionSiloIcon" extends="baseReference" with="anchorMiddleCenter">
+            <size value="20px 20px" />
+            <margin value="0px 0px 20px 0px" />
+            <imageSliceId value="noSlice" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

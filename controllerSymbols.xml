@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<controllerSymbols>
+    <controllerSymbol sliceId="generic_PLUS" name="PLUS" />
+    <controllerSymbol sliceId="generic_OR" name="OR" />
+    <controllerSymbol sliceId="generic_button_1" name="1" />
+    <controllerSymbol sliceId="generic_button_2" name="2" />
+    <controllerSymbol sliceId="generic_button_3" name="3" />
+    <controllerSymbol sliceId="generic_button_4" name="4" />
+    <controllerSymbol sliceId="generic_button_5" name="5" />
+    <controllerSymbol sliceId="generic_button_6" name="6" />
+    <controllerSymbol sliceId="generic_button_7" name="7" />
+    <controllerSymbol sliceId="generic_button_8" name="8" />
+    <controllerSymbol sliceId="generic_button_9" name="9" />
+    <controllerSymbol sliceId="generic_button_10" name="10" />
+    <controllerSymbol sliceId="generic_button_11" name="11" />
+    <controllerSymbol sliceId="generic_button_12" name="12" />
+    <controllerSymbol sliceId="generic_button_13" name="13" />
+    <controllerSymbol sliceId="generic_button_14" name="14" />
+    <controllerSymbol sliceId="generic_button_15" name="15" />
+    <controllerSymbol sliceId="generic_button_16" name="16" />
+    <controllerSymbol sliceId="generic_button_17" name="17" />
+    <controllerSymbol sliceId="generic_button_18" name="18" />
+    <controllerSymbol sliceId="generic_button_19" name="19" />
+    <controllerSymbol sliceId="generic_button_20" name="20" />
+    <controllerSymbol sliceId="generic_button_21" name="21" />
+    <controllerSymbol sliceId="generic_button_22" name="22" />
+    <controllerSymbol sliceId="generic_button_23" name="23" />
+    <controllerSymbol sliceId="generic_button_24" name="24" />
+    <controllerSymbol sliceId="generic_button_25" name="25" />
+    <controllerSymbol sliceId="generic_button_26" name="26" />
+    <controllerSymbol sliceId="generic_button_27" name="27" />
+    <controllerSymbol sliceId="generic_button_28" name="28" />
+    <controllerSymbol sliceId="generic_button_29" name="29" />
+    <controllerSymbol sliceId="generic_button_30" name="30" />
+    <controllerSymbol sliceId="generic_button_31" name="31" />
+    <controllerSymbol sliceId="generic_button_32" name="32" />
+    <controllerSymbol sliceId="generic_button_33" name="33" />
+    <controllerSymbol sliceId="generic_button_34" name="34" />
+    <controllerSymbol sliceId="generic_button_35" name="35" />
+    <controllerSymbol sliceId="generic_button_36" name="36" />
+    <controllerSymbol sliceId="generic_button_37" name="37" />
+    <controllerSymbol sliceId="generic_button_38" name="38" />
+    <controllerSymbol sliceId="generic_button_39" name="39" />
+    <controllerSymbol sliceId="generic_button_40" name="40" />
+    <controllerSymbol sliceId="generic_button_41" name="41" />
+    <controllerSymbol sliceId="generic_button_42" name="42" />
+    <controllerSymbol sliceId="generic_button_43" name="43" />
+    <controllerSymbol sliceId="generic_button_44" name="44" />
+    <controllerSymbol sliceId="generic_button_45" name="45" />
+    <controllerSymbol sliceId="generic_button_46" name="46" />
+    <controllerSymbol sliceId="generic_button_47" name="47" />
+    <controllerSymbol sliceId="generic_button_48" name="48" />
+    <controllerSymbol sliceId="generic_button_49" name="49" />
+    <controllerSymbol sliceId="generic_button_50" name="50" />
+    <controllerSymbol sliceId="generic_button_51" name="51" />
+    <controllerSymbol sliceId="generic_button_52" name="52" />
+    <controllerSymbol sliceId="generic_button_53" name="53" />
+    <controllerSymbol sliceId="generic_button_54" name="54" />
+    <controllerSymbol sliceId="generic_button_55" name="55" />
+    <controllerSymbol sliceId="generic_button_56" name="56" />
+    <controllerSymbol sliceId="generic_button_57" name="57" />
+    <controllerSymbol sliceId="generic_button_58" name="58" />
+    <controllerSymbol sliceId="generic_button_59" name="59" />
+    <controllerSymbol sliceId="generic_button_60" name="60" />
+    <controllerSymbol sliceId="generic_button_61" name="61" />
+    <controllerSymbol sliceId="generic_button_62" name="62" />
+    <controllerSymbol sliceId="generic_button_63" name="63" />
+    <controllerSymbol sliceId="generic_button_64" name="64" />
+    <controllerSymbol sliceId="generic_button_65" name="65" />
+    <controllerSymbol sliceId="generic_button_66" name="66" />
+    <controllerSymbol sliceId="generic_button_67" name="67" />
+    <controllerSymbol sliceId="generic_button_68" name="68" />
+    <controllerSymbol sliceId="generic_button_69" name="69" />
+    <controllerSymbol sliceId="generic_button_70" name="70" />
+    <controllerSymbol sliceId="generic_button_71" name="71" />
+    <controllerSymbol sliceId="generic_button_72" name="72" />
+    <controllerSymbol sliceId="generic_button_73" name="73" />
+    <controllerSymbol sliceId="generic_button_74" name="74" />
+    <controllerSymbol sliceId="generic_button_75" name="75" />
+    <controllerSymbol sliceId="generic_button_76" name="76" />
+    <controllerSymbol sliceId="generic_axis_1_2" name="Axis1 Axis2" />
+    <controllerSymbol sliceId="generic_axis_1" name="Axis1" />
+    <controllerSymbol sliceId="generic_axis_2" name="Axis2" />
+    <controllerSymbol sliceId="generic_axis_3_4" name="Axis3 Axis4" />
+    <controllerSymbol sliceId="generic_axis_3" name="Axis3" />
+    <controllerSymbol sliceId="generic_axis_4" name="Axis4" />
+    <controllerSymbol sliceId="generic_axis_5_6" name="Axis5 Axis6" />
+    <controllerSymbol sliceId="generic_axis_5" name="Axis5" />
+    <controllerSymbol sliceId="generic_axis_6" name="Axis6" />
+    <controllerSymbol sliceId="generic_axis_7_8" name="Axis7 Axis8" />
+    <controllerSymbol sliceId="generic_axis_7" name="Axis7" />
+    <controllerSymbol sliceId="generic_axis_8" name="Axis8" />
+    <controllerSymbol sliceId="generic_stick_1" name="S1" />
+    <controllerSymbol sliceId="generic_stick_2" name="S2" />
+    <controllerSymbol sliceId="generic_stick_3" name="S3" />
+    <controllerSymbol sliceId="generic_stick_4" name="S4" />
+    <controllerSymbol sliceId="switch_button_A" name="S1-Z" />
+    <controllerSymbol sliceId="switch_button_B" name="S2-Z" />
+    <controllerSymbol sliceId="switch_button_X" name="S3-Z" />
+    <controllerSymbol sliceId="switch_button_Y" name="S4-Z" />
+    <controllerSymbol sliceId="generic_axis_1_2" name="S1-X S1-Y" />
+    <controllerSymbol sliceId="generic_axis_1" name="S1-X" />
+    <controllerSymbol sliceId="generic_axis_2" name="S1-Y" />
+    <controllerSymbol sliceId="generic_axis_3_4" name="S2-X S2-Y" />
+    <controllerSymbol sliceId="generic_axis_3" name="S2-X" />
+    <controllerSymbol sliceId="generic_axis_4" name="S2-Y" />
+    <controllerSymbol sliceId="generic_axis_5_6" name="S3-X S3-Y" />
+    <controllerSymbol sliceId="generic_axis_5" name="S3-X" />
+    <controllerSymbol sliceId="generic_axis_6" name="S3-Y" />
+    <controllerSymbol sliceId="generic_axis_7_8" name="S4-X S4-Y" />
+    <controllerSymbol sliceId="generic_axis_7" name="S4-X" />
+    <controllerSymbol sliceId="generic_axis_8" name="S4-Y" />
+    <controllerSymbol sliceId="generic_dpad_Up_Right_Down_Left" name="DP-Up DP-Right DP-Down DP-Left" />
+    <controllerSymbol sliceId="generic_dpad_Up" name="DP-Up" />
+    <controllerSymbol sliceId="generic_dpad_Right" name="DP-Right" />
+    <controllerSymbol sliceId="generic_dpad_Down" name="DP-Down" />
+    <controllerSymbol sliceId="generic_dpad_Left" name="DP-Left" />
+    <controllerSymbol sliceId="generic_dpad_Up_Down" name="DP-Up DP-Down" />
+    <controllerSymbol sliceId="generic_dpad_Right_Left" name="DP-Right DP-Left" />
+    <controllerSymbol sliceId="xbox_button_A" name="A" />
+    <controllerSymbol sliceId="xbox_button_B" name="B" />
+    <controllerSymbol sliceId="xbox_button_X" name="X" />
+    <controllerSymbol sliceId="xbox_button_Y" name="Y" />
+    <controllerSymbol sliceId="xbox_button_LB" name="LB" />
+    <controllerSymbol sliceId="xbox_button_LT" name="LT" />
+    <controllerSymbol sliceId="xbox_button_RB" name="RB" />
+    <controllerSymbol sliceId="xbox_button_RT" name="RT" />
+    <controllerSymbol sliceId="xbox_stick_Left" name="LS" />
+    <controllerSymbol sliceId="xbox_stick_Left_X_Y" name="LS-X LS-Y" />
+    <controllerSymbol sliceId="xbox_stick_Left_X" name="LS-X" />
+    <controllerSymbol sliceId="xbox_stick_Left_Y" name="LS-Y" />
+    <controllerSymbol sliceId="xbox_stick_Right" name="RS" />
+    <controllerSymbol sliceId="xbox_stick_Right_X_Y" name="RS-X RS-Y" />
+    <controllerSymbol sliceId="xbox_stick_Right_X" name="RS-X" />
+    <controllerSymbol sliceId="xbox_stick_Right_Y" name="RS-Y" />
+    <controllerSymbol sliceId="xbox_button_Back" name="Back" />
+    <controllerSymbol sliceId="xbox_button_Start" name="Start" />
+    <controllerSymbol sliceId="ps_button_Cross" name="Cross" />
+    <controllerSymbol sliceId="ps_button_Circle" name="Circle" />
+    <controllerSymbol sliceId="ps_button_Square" name="Square" />
+    <controllerSymbol sliceId="ps_button_Triangle" name="Triangle" />
+    <controllerSymbol sliceId="ps_button_L1" name="L1" />
+    <controllerSymbol sliceId="ps_button_L2" name="L2" />
+    <controllerSymbol sliceId="ps_button_R1" name="R1" />
+    <controllerSymbol sliceId="ps_button_R2" name="R2" />
+    <controllerSymbol sliceId="ps_button_L3" name="L3" />
+    <controllerSymbol sliceId="ps_button_R3" name="R3" />
+    <controllerSymbol sliceId="ps_button_Options" name="Options" />
+    <controllerSymbol sliceId="ps_button_Touch" name="Touch" />
+    <controllerSymbol sliceId="generic_axis_1" name="RX" />
+    <controllerSymbol sliceId="generic_axis_5" name="BRK" />
+    <controllerSymbol sliceId="generic_axis_6" name="ACC" />
+    <controllerSymbol sliceId="generic_wheel_CLT" name="CLT" />
+    <controllerSymbol sliceId="generic_wheel_LSB" name="LSB" />
+    <controllerSymbol sliceId="generic_wheel_RSB" name="RSB" />
+    <controllerSymbol sliceId="generic_button_25" name="PS" />
+    <controllerSymbol sliceId="generic_dpad_Up_Right_Down_Left" name="DP-Press" />
+    <controllerSymbol sliceId="generic_button_28" name="SET" />
+    <controllerSymbol sliceId="xbox_button_A" prefix="xbox_" name="A" />
+    <controllerSymbol sliceId="xbox_button_B" prefix="xbox_" name="B" />
+    <controllerSymbol sliceId="xbox_button_X" prefix="xbox_" name="X" />
+    <controllerSymbol sliceId="xbox_button_Y" prefix="xbox_" name="Y" />
+    <controllerSymbol sliceId="xbox_dpad_Up_Right_Down_Left" prefix="xbox_" name="DP-Up DP-Right DP-Down DP-Left" />
+    <controllerSymbol sliceId="xbox_dpad_Up" prefix="xbox_" name="DP-Up" />
+    <controllerSymbol sliceId="xbox_dpad_Right" prefix="xbox_" name="DP-Right" />
+    <controllerSymbol sliceId="xbox_dpad_Down" prefix="xbox_" name="DP-Down" />
+    <controllerSymbol sliceId="xbox_dpad_Left" prefix="xbox_" name="DP-Left" />
+    <controllerSymbol sliceId="xbox_dpad_Up_Down" prefix="xbox_" name="DP-Up DP-Down" />
+    <controllerSymbol sliceId="xbox_dpad_Right_Left" prefix="xbox_" name="DP-Right DP-Left" />
+    <controllerSymbol sliceId="xbox_button_LB" prefix="xbox_" name="LB" />
+    <controllerSymbol sliceId="xbox_button_LT" prefix="xbox_" name="LT" />
+    <controllerSymbol sliceId="xbox_button_RB" prefix="xbox_" name="RB" />
+    <controllerSymbol sliceId="xbox_button_RT" prefix="xbox_" name="RT" />
+    <controllerSymbol sliceId="xbox_button_Back" prefix="xbox_" name="Back" />
+    <controllerSymbol sliceId="xbox_button_Start" prefix="xbox_" name="Start" />
+    <controllerSymbol sliceId="xbox_stick_Left" prefix="xbox_" name="LS" />
+    <controllerSymbol sliceId="xbox_stick_Left_X_Y" prefix="xbox_" name="LS-X LS-Y" />
+    <controllerSymbol sliceId="xbox_stick_Left_X" prefix="xbox_" name="LS-X" />
+    <controllerSymbol sliceId="xbox_stick_Left_Y" prefix="xbox_" name="LS-Y" />
+    <controllerSymbol sliceId="xbox_stick_Right" prefix="xbox_" name="RS" />
+    <controllerSymbol sliceId="xbox_stick_Right_X_Y" prefix="xbox_" name="RS-X RS-Y" />
+    <controllerSymbol sliceId="xbox_stick_Right_X" prefix="xbox_" name="RS-X" />
+    <controllerSymbol sliceId="xbox_stick_Right_Y" prefix="xbox_" name="RS-Y" />
+    <controllerSymbol sliceId="generic_button_1" prefix="xbox_" name="1" />
+    <controllerSymbol sliceId="generic_button_2" prefix="xbox_" name="2" />
+    <controllerSymbol sliceId="generic_button_3" prefix="xbox_" name="3" />
+    <controllerSymbol sliceId="generic_button_4" prefix="xbox_" name="4" />
+    <controllerSymbol sliceId="generic_button_5" prefix="xbox_" name="5" />
+    <controllerSymbol sliceId="generic_button_6" prefix="xbox_" name="6" />
+    <controllerSymbol sliceId="generic_button_7" prefix="xbox_" name="7" />
+    <controllerSymbol sliceId="generic_button_8" prefix="xbox_" name="8" />
+    <controllerSymbol sliceId="generic_button_9" prefix="xbox_" name="9" />
+    <controllerSymbol sliceId="generic_button_10" prefix="xbox_" name="10" />
+    <controllerSymbol sliceId="generic_button_11" prefix="xbox_" name="11" />
+    <controllerSymbol sliceId="generic_button_12" prefix="xbox_" name="12" />
+    <controllerSymbol sliceId="generic_button_13" prefix="xbox_" name="13" />
+    <controllerSymbol sliceId="generic_button_14" prefix="xbox_" name="14" />
+    <controllerSymbol sliceId="generic_button_15" prefix="xbox_" name="15" />
+    <controllerSymbol sliceId="generic_button_16" prefix="xbox_" name="16" />
+    <controllerSymbol sliceId="generic_button_17" prefix="xbox_" name="17" />
+    <controllerSymbol sliceId="generic_button_18" prefix="xbox_" name="18" />
+    <controllerSymbol sliceId="generic_button_19" prefix="xbox_" name="19" />
+    <controllerSymbol sliceId="generic_button_20" prefix="xbox_" name="20" />
+    <controllerSymbol sliceId="generic_button_21" prefix="xbox_" name="21" />
+    <controllerSymbol sliceId="generic_button_22" prefix="xbox_" name="22" />
+    <controllerSymbol sliceId="generic_button_23" prefix="xbox_" name="23" />
+    <controllerSymbol sliceId="generic_button_24" prefix="xbox_" name="24" />
+    <controllerSymbol sliceId="generic_button_25" prefix="xbox_" name="25" />
+    <controllerSymbol sliceId="generic_button_26" prefix="xbox_" name="26" />
+    <controllerSymbol sliceId="generic_button_27" prefix="xbox_" name="27" />
+    <controllerSymbol sliceId="generic_button_28" prefix="xbox_" name="28" />
+    <controllerSymbol sliceId="generic_button_29" prefix="xbox_" name="29" />
+    <controllerSymbol sliceId="generic_button_30" prefix="xbox_" name="30" />
+    <controllerSymbol sliceId="generic_button_31" prefix="xbox_" name="31" />
+    <controllerSymbol sliceId="generic_button_32" prefix="xbox_" name="32" />
+    <controllerSymbol sliceId="generic_button_33" prefix="xbox_" name="33" />
+    <controllerSymbol sliceId="generic_button_34" prefix="xbox_" name="34" />
+    <controllerSymbol sliceId="generic_button_35" prefix="xbox_" name="35" />
+    <controllerSymbol sliceId="generic_button_36" prefix="xbox_" name="36" />
+    <controllerSymbol sliceId="generic_button_37" prefix="xbox_" name="37" />
+    <controllerSymbol sliceId="generic_button_38" prefix="xbox_" name="38" />
+    <controllerSymbol sliceId="generic_button_39" prefix="xbox_" name="39" />
+    <controllerSymbol sliceId="ps_button_Cross" prefix="ps4_" name="Cross" />
+    <controllerSymbol sliceId="ps_button_Circle" prefix="ps4_" name="Circle" />
+    <controllerSymbol sliceId="ps_button_Square" prefix="ps4_" name="Square" />
+    <controllerSymbol sliceId="ps_button_Triangle" prefix="ps4_" name="Triangle" />
+    <controllerSymbol sliceId="ps_dpad_Up_Right_Down_Left" prefix="ps4_" name="DP-Up DP-Right DP-Down DP-Left" />
+    <controllerSymbol sliceId="ps_dpad_Up" prefix="ps4_" name="DP-Up" />
+    <controllerSymbol sliceId="ps_dpad_Right" prefix="ps4_" name="DP-Right" />
+    <controllerSymbol sliceId="ps_dpad_Down" prefix="ps4_" name="DP-Down" />
+    <controllerSymbol sliceId="ps_dpad_Left" prefix="ps4_" name="DP-Left" />
+    <controllerSymbol sliceId="ps_dpad_Up_Down" prefix="ps4_" name="DP-Up DP-Down" />
+    <controllerSymbol sliceId="ps_dpad_Right_Left" prefix="ps4_" name="DP-Right DP-Left" />
+    <controllerSymbol sliceId="ps_button_L1" prefix="ps4_" name="L1" />
+    <controllerSymbol sliceId="ps_button_L2" prefix="ps4_" name="L2" />
+    <controllerSymbol sliceId="ps_button_L2" prefix="ps4_" name="LT" />
+    <controllerSymbol sliceId="ps_button_R1" prefix="ps4_" name="R1" />
+    <controllerSymbol sliceId="ps_button_R2" prefix="ps4_" name="R2" />
+    <controllerSymbol sliceId="ps_button_R2" prefix="ps4_" name="RT" />
+    <controllerSymbol sliceId="ps_button_PS" prefix="ps4_" name="PS" />
+    <controllerSymbol sliceId="ps_button_SET" prefix="ps4_" name="SET" />
+    <controllerSymbol sliceId="ps_button_Options" prefix="ps4_" name="Options" />
+    <controllerSymbol sliceId="ps_button_Touch" prefix="ps4_" name="Touch" />
+    <controllerSymbol sliceId="ps_button_L3" prefix="ps4_" name="L3" />
+    <controllerSymbol sliceId="ps_button_L3" prefix="ps4_" name="LS" />
+    <controllerSymbol sliceId="ps_stick_Left_X_Y" prefix="ps4_" name="LS-X LS-Y" />
+    <controllerSymbol sliceId="ps_stick_Left_X" prefix="ps4_" name="LS-X" />
+    <controllerSymbol sliceId="ps_stick_Left_Y" prefix="ps4_" name="LS-Y" />
+    <controllerSymbol sliceId="ps_button_R3" prefix="ps4_" name="R3" />
+    <controllerSymbol sliceId="ps_button_R3" prefix="ps4_" name="RS" />
+    <controllerSymbol sliceId="ps_stick_Right_X_Y" prefix="ps4_" name="RS-X RS-Y" />
+    <controllerSymbol sliceId="ps_stick_Right_X" prefix="ps4_" name="RS-X" />
+    <controllerSymbol sliceId="ps_stick_Right_Y" prefix="ps4_" name="RS-Y" />
+    <controllerSymbol sliceId="ps_button_Cross" prefix="ps5_" name="Cross" />
+    <controllerSymbol sliceId="ps_button_Circle" prefix="ps5_" name="Circle" />
+    <controllerSymbol sliceId="ps_button_Square" prefix="ps5_" name="Square" />
+    <controllerSymbol sliceId="ps_button_Triangle" prefix="ps5_" name="Triangle" />
+    <controllerSymbol sliceId="ps_dpad_Up_Right_Down_Left" prefix="ps5_" name="DP-Up DP-Right DP-Down DP-Left" />
+    <controllerSymbol sliceId="ps_dpad_Up" prefix="ps5_" name="DP-Up" />
+    <controllerSymbol sliceId="ps_dpad_Right" prefix="ps5_" name="DP-Right" />
+    <controllerSymbol sliceId="ps_dpad_Down" prefix="ps5_" name="DP-Down" />
+    <controllerSymbol sliceId="ps_dpad_Left" prefix="ps5_" name="DP-Left" />
+    <controllerSymbol sliceId="ps_dpad_Up_Down" prefix="ps5_" name="DP-Up DP-Down" />
+    <controllerSymbol sliceId="ps_dpad_Right_Left" prefix="ps5_" name="DP-Right DP-Left" />
+    <controllerSymbol sliceId="ps_button_L1" prefix="ps5_" name="L1" />
+    <controllerSymbol sliceId="ps_button_L2" prefix="ps5_" name="L2" />
+    <controllerSymbol sliceId="ps_button_L2" prefix="ps5_" name="LT" />
+    <controllerSymbol sliceId="ps_button_R1" prefix="ps5_" name="R1" />
+    <controllerSymbol sliceId="ps_button_R2" prefix="ps5_" name="R2" />
+    <controllerSymbol sliceId="ps_button_R2" prefix="ps5_" name="RT" />
+    <controllerSymbol sliceId="ps_button_PS" prefix="ps5_" name="PS" />
+    <controllerSymbol sliceId="ps_button_SET" prefix="ps5_" name="SET" />
+    <controllerSymbol sliceId="ps_button_Options" prefix="ps5_" name="Options" />
+    <controllerSymbol sliceId="ps_button_Touch" prefix="ps5_" name="Touch" />
+    <controllerSymbol sliceId="ps_button_L3" prefix="ps5_" name="L3" />
+    <controllerSymbol sliceId="ps_button_L3" prefix="ps5_" name="LS" />
+    <controllerSymbol sliceId="ps_stick_Left_X_Y" prefix="ps5_" name="LS-X LS-Y" />
+    <controllerSymbol sliceId="ps_stick_Left_X" prefix="ps5_" name="LS-X" />
+    <controllerSymbol sliceId="ps_stick_Left_Y" prefix="ps5_" name="LS-Y" />
+    <controllerSymbol sliceId="ps_button_R3" prefix="ps5_" name="R3" />
+    <controllerSymbol sliceId="ps_button_R3" prefix="ps5_" name="RS" />
+    <controllerSymbol sliceId="ps_stick_Right_X_Y" prefix="ps5_" name="RS-X RS-Y" />
+    <controllerSymbol sliceId="ps_stick_Right_X" prefix="ps5_" name="RS-X" />
+    <controllerSymbol sliceId="ps_stick_Right_Y" prefix="ps5_" name="RS-Y" />
+    <controllerSymbol sliceId="generic_button_1" prefix="ps5_" name="1" />
+    <controllerSymbol sliceId="generic_button_2" prefix="ps5_" name="2" />
+    <controllerSymbol sliceId="generic_button_3" prefix="ps5_" name="3" />
+    <controllerSymbol sliceId="generic_button_4" prefix="ps5_" name="4" />
+    <controllerSymbol sliceId="generic_button_5" prefix="ps5_" name="5" />
+    <controllerSymbol sliceId="generic_button_6" prefix="ps5_" name="6" />
+    <controllerSymbol sliceId="generic_button_7" prefix="ps5_" name="7" />
+    <controllerSymbol sliceId="generic_button_8" prefix="ps5_" name="8" />
+    <controllerSymbol sliceId="generic_button_9" prefix="ps5_" name="9" />
+    <controllerSymbol sliceId="generic_button_10" prefix="ps5_" name="10" />
+    <controllerSymbol sliceId="generic_button_11" prefix="ps5_" name="11" />
+    <controllerSymbol sliceId="generic_button_12" prefix="ps5_" name="12" />
+    <controllerSymbol sliceId="generic_button_13" prefix="ps5_" name="13" />
+    <controllerSymbol sliceId="generic_button_14" prefix="ps5_" name="14" />
+    <controllerSymbol sliceId="generic_button_15" prefix="ps5_" name="15" />
+    <controllerSymbol sliceId="generic_button_16" prefix="ps5_" name="16" />
+    <controllerSymbol sliceId="generic_button_17" prefix="ps5_" name="17" />
+    <controllerSymbol sliceId="generic_button_18" prefix="ps5_" name="18" />
+    <controllerSymbol sliceId="generic_button_19" prefix="ps5_" name="19" />
+    <controllerSymbol sliceId="generic_button_20" prefix="ps5_" name="20" />
+    <controllerSymbol sliceId="generic_button_21" prefix="ps5_" name="21" />
+    <controllerSymbol sliceId="generic_button_22" prefix="ps5_" name="22" />
+    <controllerSymbol sliceId="generic_button_23" prefix="ps5_" name="23" />
+    <controllerSymbol sliceId="generic_button_24" prefix="ps5_" name="24" />
+    <controllerSymbol sliceId="generic_button_25" prefix="ps5_" name="25" />
+    <controllerSymbol sliceId="generic_button_26" prefix="ps5_" name="26" />
+    <controllerSymbol sliceId="generic_button_27" prefix="ps5_" name="27" />
+    <controllerSymbol sliceId="generic_button_28" prefix="ps5_" name="28" />
+    <controllerSymbol sliceId="generic_button_29" prefix="ps5_" name="29" />
+    <controllerSymbol sliceId="generic_button_30" prefix="ps5_" name="30" />
+    <controllerSymbol sliceId="generic_button_31" prefix="ps5_" name="31" />
+    <controllerSymbol sliceId="generic_button_32" prefix="ps5_" name="32" />
+    <controllerSymbol sliceId="generic_button_33" prefix="ps5_" name="33" />
+    <controllerSymbol sliceId="generic_button_34" prefix="ps5_" name="34" />
+    <controllerSymbol sliceId="generic_button_35" prefix="ps5_" name="35" />
+    <controllerSymbol sliceId="generic_button_36" prefix="ps5_" name="36" />
+    <controllerSymbol sliceId="generic_button_37" prefix="ps5_" name="37" />
+    <controllerSymbol sliceId="generic_button_38" prefix="ps5_" name="38" />
+    <controllerSymbol sliceId="generic_button_39" prefix="ps5_" name="39" />
+    <controllerSymbol sliceId="mouse_axis_Y" prefix="mouse_" name="MOUSE_BUTTON_NONE AxisY" />
+    <controllerSymbol sliceId="mouse_axis_X" prefix="mouse_" name="MOUSE_BUTTON_NONE AxisX" />
+    <controllerSymbol sliceId="mouse_button_None" prefix="mouse_" name="MOUSE_BUTTON_NONE" />
+    <controllerSymbol sliceId="mouse_axis_Y" prefix="mouse_" name="AxisY" />
+    <controllerSymbol sliceId="mouse_axis_X" prefix="mouse_" name="AxisX" />
+    <controllerSymbol sliceId="mouse_button_Left_axis_Y" prefix="mouse_" name="MOUSE_BUTTON_LEFT AxisY" />
+    <controllerSymbol sliceId="mouse_button_Left_axis_X" prefix="mouse_" name="MOUSE_BUTTON_LEFT AxisX" />
+    <controllerSymbol sliceId="mouse_button_Left" prefix="mouse_" name="MOUSE_BUTTON_LEFT" />
+    <controllerSymbol sliceId="mouse_button_Left_Right_Middle_axis_Y" prefix="mouse_" name="MOUSE_BUTTON_LEFT MOUSE_BUTTON_RIGHT MOUSE_BUTTON_MIDDLE AxisY" />
+    <controllerSymbol sliceId="mouse_button_Left_Right_Middle_axis_X" prefix="mouse_" name="MOUSE_BUTTON_LEFT MOUSE_BUTTON_RIGHT MOUSE_BUTTON_MIDDLE AxisX" />
+    <controllerSymbol sliceId="mouse_button_Left_Right_Middle" prefix="mouse_" name="MOUSE_BUTTON_LEFT MOUSE_BUTTON_RIGHT MOUSE_BUTTON_MIDDLE" />
+    <controllerSymbol sliceId="mouse_button_Left_Right_axis_Y" prefix="mouse_" name="MOUSE_BUTTON_LEFT MOUSE_BUTTON_RIGHT AxisY" />
+    <controllerSymbol sliceId="mouse_button_Left_Right_axis_X" prefix="mouse_" name="MOUSE_BUTTON_LEFT MOUSE_BUTTON_RIGHT AxisX" />
+    <controllerSymbol sliceId="mouse_button_Left_Right" prefix="mouse_" name="MOUSE_BUTTON_LEFT MOUSE_BUTTON_RIGHT" />
+    <controllerSymbol sliceId="mouse_button_Middle_axis_Y" prefix="mouse_" name="MOUSE_BUTTON_MIDDLE AxisY" />
+    <controllerSymbol sliceId="mouse_button_Middle_axis_X" prefix="mouse_" name="MOUSE_BUTTON_MIDDLE AxisX" />
+    <controllerSymbol sliceId="mouse_button_Middle" prefix="mouse_" name="MOUSE_BUTTON_MIDDLE" />
+    <controllerSymbol sliceId="mouse_button_Right_axis_Y" prefix="mouse_" name="MOUSE_BUTTON_RIGHT AxisY" />
+    <controllerSymbol sliceId="mouse_button_Right_axis_X" prefix="mouse_" name="MOUSE_BUTTON_RIGHT AxisX" />
+    <controllerSymbol sliceId="mouse_button_Right" prefix="mouse_" name="MOUSE_BUTTON_RIGHT" />
+    <controllerSymbol sliceId="mouse_button_Left_axis_X_Y" prefix="mouse_" name="MOUSE_BUTTON_LEFT AxisX MOUSE_BUTTON_LEFT AxisY" />
+    <controllerSymbol sliceId="mouse_button_Middle_axis_X_Y" prefix="mouse_" name="MOUSE_BUTTON_MIDDLE AxisX MOUSE_BUTTON_MIDDLE AxisY" />
+    <controllerSymbol sliceId="mouse_button_Right_axis_X_Y" prefix="mouse_" name="MOUSE_BUTTON_RIGHT AxisX MOUSE_BUTTON_RIGHT AxisY" />
+    <controllerSymbol sliceId="mouse_button_Left_Right_axis_X_Y" prefix="mouse_" name="MOUSE_BUTTON_LEFT MOUSE_BUTTON_RIGHT AxisX MOUSE_BUTTON_LEFT MOUSE_BUTTON_RIGHT AxisY" />
+    <controllerSymbol sliceId="mouse_button_Left_Right_Middle_axis_X_Y" prefix="mouse_" name="MOUSE_BUTTON_LEFT MOUSE_BUTTON_RIGHT MOUSE_BUTTON_MIDDLE AxisX MOUSE_BUTTON_LEFT MOUSE_BUTTON_RIGHT MOUSE_BUTTON_MIDDLE AxisY" />
+    <controllerSymbol sliceId="mouse_axis_X_Y" prefix="mouse_" name="AxisX AxisY" />
+    <controllerSymbol sliceId="mouse_wheel_Up_Down" prefix="mouse_" name="MOUSE_BUTTON_WHEEL_UP MOUSE_BUTTON_WHEEL_DOWN" />
+    <controllerSymbol sliceId="mouse_wheel_Down" prefix="mouse_" name="MOUSE_BUTTON_WHEEL_DOWN" />
+    <controllerSymbol sliceId="mouse_wheel_Up" prefix="mouse_" name="MOUSE_BUTTON_WHEEL_UP" />
+    <controllerSymbol sliceId="switch_button_A" prefix="switch_" name="A" />
+    <controllerSymbol sliceId="switch_button_B" prefix="switch_" name="B" />
+    <controllerSymbol sliceId="switch_button_X" prefix="switch_" name="X" />
+    <controllerSymbol sliceId="switch_button_Y" prefix="switch_" name="Y" />
+    <controllerSymbol sliceId="switch_dpad_Up_Right_Down_Left" prefix="switch_" name="DP-Up DP-Right DP-Down DP-Left" />
+    <controllerSymbol sliceId="switch_dpad_Up" prefix="switch_" name="DP-Up" />
+    <controllerSymbol sliceId="switch_dpad_Right" prefix="switch_" name="DP-Right" />
+    <controllerSymbol sliceId="switch_dpad_Down" prefix="switch_" name="DP-Down" />
+    <controllerSymbol sliceId="switch_dpad_Left" prefix="switch_" name="DP-Left" />
+    <controllerSymbol sliceId="switch_dpad_Up_Down" prefix="switch_" name="DP-Up DP-Down" />
+    <controllerSymbol sliceId="switch_dpad_Right_Left" prefix="switch_" name="DP-Right DP-Left" />
+    <controllerSymbol sliceId="switch_button_LB" prefix="switch_" name="LB" />
+    <controllerSymbol sliceId="switch_button_LB" prefix="switch_" name="L" />
+    <controllerSymbol sliceId="switch_button_ZL" prefix="switch_" name="LT" />
+    <controllerSymbol sliceId="switch_button_ZL" prefix="switch_" name="ZL" />
+    <controllerSymbol sliceId="switch_button_RB" prefix="switch_" name="RB" />
+    <controllerSymbol sliceId="switch_button_RB" prefix="switch_" name="R" />
+    <controllerSymbol sliceId="switch_button_ZR" prefix="switch_" name="RT" />
+    <controllerSymbol sliceId="switch_button_ZR" prefix="switch_" name="ZR" />
+    <controllerSymbol sliceId="switch_button_+" prefix="switch_" name="Start" />
+    <controllerSymbol sliceId="switch_button_+" prefix="switch_" name="+" />
+    <controllerSymbol sliceId="switch_button_-" prefix="switch_" name="Back" />
+    <controllerSymbol sliceId="switch_button_-" prefix="switch_" name="-" />
+    <controllerSymbol sliceId="switch_stick_Left" prefix="switch_" name="LS" />
+    <controllerSymbol sliceId="switch_stick_Left_X_Y" prefix="switch_" name="LS-X LS-Y" />
+    <controllerSymbol sliceId="switch_stick_Left_X" prefix="switch_" name="LS-X" />
+    <controllerSymbol sliceId="switch_stick_Left_Y" prefix="switch_" name="LS-Y" />
+    <controllerSymbol sliceId="switch_stick_Right" prefix="switch_" name="RS" />
+    <controllerSymbol sliceId="switch_stick_Right_X_Y" prefix="switch_" name="RS-X RS-Y" />
+    <controllerSymbol sliceId="switch_stick_Right_X" prefix="switch_" name="RS-X" />
+    <controllerSymbol sliceId="switch_stick_Right_Y" prefix="switch_" name="RS-Y" />
+    <controllerSymbol sliceId="switch_button_SL" prefix="switch_" name="SL" />
+    <controllerSymbol sliceId="switch_button_SR" prefix="switch_" name="SR" />
+    <controllerSymbol sliceId="switch_dpad_Up_Right_Down_Left" prefix="switch_" name="DP-Up1 DP-Right1 DP-Down1 DP-Left1" />
+    <controllerSymbol sliceId="switch_dpad_Up" prefix="switch_" name="DP-Up1" />
+    <controllerSymbol sliceId="switch_dpad_Right" prefix="switch_" name="DP-Right1" />
+    <controllerSymbol sliceId="switch_dpad_Down" prefix="switch_" name="DP-Down1" />
+    <controllerSymbol sliceId="switch_dpad_Left" prefix="switch_" name="DP-Left1" />
+    <controllerSymbol sliceId="switch_dpad_Up_Down" prefix="switch_" name="DP-Up1 DP-Down1" />
+    <controllerSymbol sliceId="switch_dpad_Right_Left" prefix="switch_" name="DP-Right1 DP-Left1" />
+    <controllerSymbol sliceId="switch_dpad_Up_Right_Down_Left" prefix="switch_" name="DP-Up2 DP-Right2 DP-Down2 DP-Left2" />
+    <controllerSymbol sliceId="switch_dpad_Up" prefix="switch_" name="DP-Up2" />
+    <controllerSymbol sliceId="switch_dpad_Right" prefix="switch_" name="DP-Right2" />
+    <controllerSymbol sliceId="switch_dpad_Down" prefix="switch_" name="DP-Down2" />
+    <controllerSymbol sliceId="switch_dpad_Left" prefix="switch_" name="DP-Left2" />
+    <controllerSymbol sliceId="switch_dpad_Up_Down" prefix="switch_" name="DP-Up2 DP-Down2" />
+    <controllerSymbol sliceId="switch_dpad_Right_Left" prefix="switch_" name="DP-Right2 DP-Left2" />
+    <controllerSymbol sliceId="mobile_button_A" prefix="mobile_" name="A" />
+    <controllerSymbol sliceId="mobile_button_B" prefix="mobile_" name="B" />
+    <controllerSymbol sliceId="mobile_button_X" prefix="mobile_" name="X" />
+    <controllerSymbol sliceId="mobile_button_Y" prefix="mobile_" name="Y" />
+    <controllerSymbol sliceId="xbox_dpad_Up_Right_Down_Left" prefix="mobile_" name="DP-Up DP-Right DP-Down DP-Left" />
+    <controllerSymbol sliceId="xbox_dpad_Up" prefix="mobile_" name="DP-Up" />
+    <controllerSymbol sliceId="xbox_dpad_Right" prefix="mobile_" name="DP-Right" />
+    <controllerSymbol sliceId="xbox_dpad_Down" prefix="mobile_" name="DP-Down" />
+    <controllerSymbol sliceId="xbox_dpad_Left" prefix="mobile_" name="DP-Left" />
+    <controllerSymbol sliceId="xbox_dpad_Up_Down" prefix="mobile_" name="DP-Up DP-Down" />
+    <controllerSymbol sliceId="xbox_dpad_Right_Left" prefix="mobile_" name="DP-Right DP-Left" />
+    <controllerSymbol sliceId="xbox_button_LB" prefix="mobile_" name="LB" />
+    <controllerSymbol sliceId="xbox_button_LT" prefix="mobile_" name="LT" />
+    <controllerSymbol sliceId="xbox_button_RB" prefix="mobile_" name="RB" />
+    <controllerSymbol sliceId="xbox_button_RT" prefix="mobile_" name="RT" />
+    <controllerSymbol sliceId="xbox_button_Back" prefix="mobile_" name="Back" />
+    <controllerSymbol sliceId="xbox_button_Start" prefix="mobile_" name="Start" />
+    <controllerSymbol sliceId="xbox_stick_Left" prefix="mobile_" name="LS" />
+    <controllerSymbol sliceId="xbox_stick_Left_X_Y" prefix="mobile_" name="LS-X LS-Y" />
+    <controllerSymbol sliceId="xbox_stick_Left_X" prefix="mobile_" name="LS-X" />
+    <controllerSymbol sliceId="xbox_stick_Left_Y" prefix="mobile_" name="LS-Y" />
+    <controllerSymbol sliceId="xbox_stick_Right" prefix="mobile_" name="RS" />
+    <controllerSymbol sliceId="xbox_stick_Right_X_Y" prefix="mobile_" name="RS-X RS-Y" />
+    <controllerSymbol sliceId="xbox_stick_Right_X" prefix="mobile_" name="RS-X" />
+    <controllerSymbol sliceId="xbox_stick_Right_Y" prefix="mobile_" name="RS-Y" />
+</controllerSymbols>

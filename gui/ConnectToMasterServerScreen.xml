@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Bitmap profile="fs25_fullScreenBackground" />
+    <GuiElement profile="connectDialogBg" id="mainBox">
+        <ThreePartBitmap profile="fs25_dialogBgMiddleSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgTopSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <GuiElement profile="fs25_dialogContentContainer">
+            <Animation profile="fs25_dialogLoading" />
+            <Text profile="connectDialogText" text="$l10n_ui_connectingToMasterServer" />
+        </GuiElement>
+        <BoxLayout profile="fs25_dialogButtonBox">
+            <Button profile="buttonCancel" text="$l10n_button_cancel" onClick="onClickCancel" />
+        </BoxLayout>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="connectDialogBg" extends="fs25_dialogBg">
+            <height value="295px" />
+            <Variant name="mobile">
+                <size value="1100px 380px" />
+            </Variant>
+        </Profile>
+        <Profile name="connectDialogText" extends="fs25_dialogText">
+            <Variant name="mobile">
+                <position value="0px -250px" />
+            </Variant>
+        </Profile>
+    </GUIProfiles>
+</GUI>

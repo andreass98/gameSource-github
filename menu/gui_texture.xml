@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<texture>
+    <meta>
+        <filename>gui_texture.png</filename>
+        <size width="1024" height="1024" />
+    </meta>
+    <slices>
+        <slice id="platform_xbox" uvs="723px 51px 42px 42px" />
+        <slice id="platform_stadia" uvs="771px 51px 42px 42px" />
+        <slice id="mainScreen_button_hover" uvs="8px 8px 512px 32px" />
+        <slice id="platform_playstation" uvs="867px 51px 42px 42px" />
+    </slices>
+</texture>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Bitmap profile="fs25_wardrobeBrandIcon" id="brandIcon" />
+    <Animation profile="wardrobeScreenLoadingAnimation" id="loadingAnimation" />
+    <ThreePartBitmap profile="fs25_subCategoryContainerBg" id="background" width="910px" clipping="true">
+        <Bitmap profile="fs25_subCategoryContainerArrow" />
+        <Paging profile="wardrobePaging" onPageChange="onPageChange" onPageUpdate="onPageUpdate" id="pagingElement">
+            <FrameReference ref="wardrobeCharacters" name="character" id="pageCharacter" />
+            <FrameReference ref="wardrobeItems" name="hair" id="pageHair" />
+            <FrameReference ref="wardrobeItems" name="beard" id="pageBeard" />
+            <FrameReference ref="wardrobeOutfits" name="outfit" id="pageOutfit" />
+            <FrameReference ref="wardrobeItems" name="top" id="pageTop" />
+            <FrameReference ref="wardrobeItems" name="bottom" id="pageBottom" />
+            <FrameReference ref="wardrobeItems" name="footwear" id="pageFootwear" />
+            <FrameReference ref="wardrobeItems" name="headgear" id="pageHeadgear" />
+            <FrameReference ref="wardrobeItems" name="gloves" id="pageGloves" />
+            <FrameReference ref="wardrobeItems" name="glasses" id="pageGlasses" />
+            <FrameReference ref="wardrobeColors" name="colors" id="pageColors" />
+        </Paging>
+    </ThreePartBitmap>
+    <Bitmap profile="fs25_tabListContainer" id="header">
+        <MultiTextOption profile="uiInGameMenuHeaderSelector" onClick="onClickPageSelection" id="pageSelector" soundDisabled="true" />
+        <SmoothList profile="fs25_tabList" id="pagingTabList" onSelectionChanged="onTabMenuSelectionChanged" onScroll="onTabMenuScroll">
+            <ListItem profile="fs25_wardrobeTabListItem">
+                <Button profile="fs25_tabListItemButton" name="tabButton" />
+                <Bitmap profile="fs25_tabListItemSeparator" />
+                <Bitmap profile="fs25_tabListItemSeparatorBottom" />
+            </ListItem>
+        </SmoothList>
+    </Bitmap>
+    <BoxLayout profile="fs25_buttonBox" id="buttonsPanel">
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[1]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[2]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[3]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[4]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[5]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[6]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Text profile="fs25_inputGlyphText" textAutoWidth="true" text="$l10n_action_rotateCamera">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" position="17px 0px" />
+        </Text>
+        <InputGlyph profile="fs25_inputGlyph" id="rotateCameraGlyph" />
+    </BoxLayout>
+    <GuiElement profile="baseReference" newLayer="true" />
+    <Bitmap profile="baseReference" size="1920px 1080px" anchors="0 1 0 1" imageColor="0 0 0 0" id="fadeElement" />
+    <GUIProfiles>
+        <Profile name="fs25_wardrobeTabListItem" extends="fs25_tabListItem" with="anchorTopLeft">
+            <size value="140px 104px" />
+            <handleFocus value="false" />
+        </Profile>
+        <Profile name="fs25_wardrobeBrandIcon" extends="baseReference" with="anchorTopRight">
+            <size value="200px 100px" />
+            <position value="-50px -50px" />
+            <imageSliceId value="noSlice" />
+        </Profile>
+        <Profile name="wardrobePaging" extends="uiInGameMenuPaging" with="anchorStretchingYStretchingX pivotBottomLeft">
+            <absoluteSizeOffset value="175px 40px" />
+            <position value="125px 40px" />
+        </Profile>
+        <Profile name="wardrobeScreenLoadingAnimation" extends="baseReference" with="anchorBottomRight">
+            <animationRotationPivot value="0.5 0.5" />
+            <size value="127px 127px" />
+            <position value="-50px 70px" />
+            <imageSliceId value="gui.loadingAnimation" />
+            <imageColor value="$preset_fs25_colorMainHighlight" />
+            <animationMode value="rotate" />
+            <animationSpeed value="1000" />
+            <Variant name="mobile">
+                <size value="180px 180px" />
+            </Variant>
+        </Profile>
+    </GUIProfiles>
+</GUI>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="headGearHair" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+  </Files>
+
+  <Materials>
+    <Material name="lambert1" materialId="1" diffuseColor="0.5 0.5 0.5 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="headGearHair.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="animationRootNode" nodeId="1"/>
+    <TransformGroup name="headGearHair" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="2">
+      <Shape name="headgearHair" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="3"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

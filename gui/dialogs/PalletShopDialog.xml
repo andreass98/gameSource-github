@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <GuiElement profile="fs25_palletShopBg" id="dialogElement">
+        <ThreePartBitmap profile="fs25_dialogBgMiddleSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgTopSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <GuiElement profile="fs25_dialogContentContainer">
+            <Text profile="fs25_dialogTitle" id="dialogTitleElement" position="0px -35px" />
+            <Text profile="fs25_palletShopText" text="$l10n_ui_palletShopDescription:" />
+            <Bitmap profile="fs25_palletShopIcon" id="palletIconElement" />
+            <Text profile="fs25_palletShopPriceText" text="$l10n_shop_configurationPriceBase:" position="-155px 60px" />
+            <Text profile="fs25_palletShopPriceValue" id="basePriceText" position="-75px 60px" />
+            <ThreePartBitmap profile="fs25_palletShopPriceBg" position="-60px 30px" />
+            <Text profile="fs25_palletShopPriceText" text="$l10n_shop_configurationPriceTotal:" position="-155px 30px" />
+            <Text profile="fs25_palletShopPriceValue" id="totalPriceText" position="-75px 30px" />
+            <MultiTextOption profile="fs25_dialogMultiTextOption" id="itemsElement" position="140px 180px" onClick="onClickItems" />
+            <OptionSlider profile="fs25_optionSlider" id="quantityElement" position="140px 130px" onClick="onClickQuantity" />
+        </GuiElement>
+        <BoxLayout profile="fs25_dialogButtonBox">
+            <Button profile="buttonYes" text="$l10n_button_buy" onClick="onYes" id="yesButton" />
+            <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            <Button profile="buttonNo" text="$l10n_button_back" onClick="onNo" id="noButton" />
+        </BoxLayout>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="fs25_palletShopBg" extends="fs25_dialogBg">
+            <size value="700px 430px" />
+        </Profile>
+        <Profile name="fs25_palletShopText" extends="fs25_dialogText" with="anchorBottomRight">
+            <width value="250px" />
+            <position value="-85px 240px" />
+            <textAlignment value="left" />
+        </Profile>
+        <Profile name="fs25_palletShopIcon" extends="baseReference">
+            <size value="300px 300px" />
+            <position value="20px 40px" />
+            <imageSliceId value="noSlice" />
+        </Profile>
+        <Profile name="fs25_palletShopPriceBg" extends="baseReference" with="anchorBottomRight">
+            <size value="280px 30px" />
+            <imageColor value="$preset_fs25_colorGrey" />
+            <imageSliceId value="gui.rectangle_center" />
+            <startImageSize value="10px 0" />
+            <startImageSliceId value="gui.rectangle_left" />
+            <endImageSize value="10px 0" />
+            <endImageSliceId value="gui.rectangle_right" />
+        </Profile>
+        <Profile name="fs25_palletShopPriceText" extends="fs25_textDefault" with="anchorBottomRight">
+            <size value="170px 30px" />
+            <textSize value="14px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+        </Profile>
+        <Profile name="fs25_palletShopPriceValue" extends="fs25_textDefault" with="anchorBottomRight">
+            <size value="70px 30px" />
+            <textSize value="14px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+            <textAlignment value="right" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

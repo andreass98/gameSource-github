@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <RoundCorner profile="debugDisplacementDialogBg" id="dialogElement">
+        <Bitmap profile="dialogHeaderDocked">
+            <Text profile="dialogHeaderText" text="Debug Displacement" id="headerText" />
+        </Bitmap>
+        <BoxLayout profile="debugDisplacementBoxLayout" id="boxLayout">
+            <GuiElement profile="debugDisplacementMultiTextOptionSettings">
+                <MultiTextOption profile="debugDisplacementMultiTextOption" id="overlayLayers" onClick="onClickOverlayLayer" />
+                <Text profile="debugDisplacementMultiTextTitle" text="Overlay-Layer" />
+            </GuiElement>
+            <GuiElement profile="debugDisplacementMultiTextOptionSettings">
+                <MultiTextOption profile="debugDisplacementMultiTextOption" id="firmness" onClick="onClickFirmness" />
+                <Text profile="debugDisplacementMultiTextTitle" text="Firmness" />
+            </GuiElement>
+            <GuiElement profile="debugDisplacementMultiTextOptionSettings">
+                <MultiTextOption profile="debugDisplacementMultiTextOption" id="firmnessWet" onClick="onClickFirmnessWet" />
+                <Text profile="debugDisplacementMultiTextTitle" text="Firmness (wet)" />
+            </GuiElement>
+            <GuiElement profile="debugDisplacementMultiTextOptionSettings">
+                <MultiTextOption profile="debugDisplacementMultiTextOption" id="viscosity" onClick="onClickViscosity" />
+                <Text profile="debugDisplacementMultiTextTitle" text="Viscosity" />
+            </GuiElement>
+            <GuiElement profile="debugDisplacementMultiTextOptionSettings">
+                <Text profile="debugDisplacementMultiTextText" text="1.0" id="viscosityWet" />
+                <Text profile="debugDisplacementMultiTextTitle" text="Viscosity (wet)" />
+            </GuiElement>
+        </BoxLayout>
+        <BoxLayout profile="fs25_dialogButtonBox">
+            <Button profile="buttonOK" text="$l10n_button_apply" onClick="onClickOk" />
+            <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" />
+        </BoxLayout>
+    </RoundCorner>
+    <GUIProfiles>
+        <Profile name="debugDisplacementDialogBg" extends="baseReference" with="anchorMiddleRight">
+            <size value="510px 400px" />
+            <color value="$preset_fs25_colorMainGrey" />
+        </Profile>
+        <Profile name="debugDisplacementBoxLayout" extends="emptyPanel" with="anchorTopCenter">
+            <size value="480px 350px" />
+            <position value="0px -20px" />
+            <flowMargin value="0 0 0 0" />
+            <numFlows value="1" />
+            <lateralFlowSize value="305px" />
+            <flowDirection value="vertical" />
+            <fitFlowToElements value="true" />
+            <alignmentX value="left" />
+            <alignmentY value="top" />
+            <imageColor value="$preset_colorTransparent" />
+            <useFullVisibility value="false" />
+            <autoValidateLayout value="true" />
+            <Variant name="mobile" with="anchorMiddleCenter">
+                <size value="850px 680px" />
+                <position value="0px 0px" />
+            </Variant>
+        </Profile>
+        <Profile name="debugDisplacementTextInputWrapper" extends="baseReference">
+            <size value="480px 48px" />
+            <margin value="0 12px 0 12px" />
+            <focusFallthrough value="true" />
+            <Variant name="mobile">
+                <size value="1400px 105px" />
+            </Variant>
+        </Profile>
+        <Profile name="debugDisplacementTextInput" extends="textInput" with="anchorMiddleRight">
+            <size value="250px 48px" />
+            <margin value="30px 28px 49px 16px" />
+            <maxInputTextWidth value="245px" />
+            <Variant name="mobile">
+                <textSize value="35px" />
+                <cursorSize value="2px 35px" />
+                <size value="420px 105px" />
+            </Variant>
+        </Profile>
+        <Profile name="debugDisplacementMultiTextTitle" extends="fs25_textDefault" with="anchorMiddleLeft">
+            <size value="200px 48px" />
+            <textSize value="20px" />
+            <textMaxNumLines value="2" />
+            <textAlignment value="left" />
+            <textLayoutMode value="scrolling" />
+            <Variant name="mobile">
+                <textSize value="35px" />
+            </Variant>
+        </Profile>
+        <Profile name="debugDisplacementMultiTextOptionSettings" extends="baseReference">
+            <margin value="0 5px 0 5px" />
+            <size value="480px 48px" />
+            <Variant name="mobile">
+                <size value="820px 105px" />
+                <margin value="0px 15px 0px 15px" />
+            </Variant>
+        </Profile>
+        <Profile name="debugDisplacementMultiTextOption" extends="fs25_multiTextOption" with="anchorMiddleRight">
+            <Variant name="mobile">
+                <size value="420px 105px" />
+            </Variant>
+        </Profile>
+        <Profile name="debugDisplacementMultiTextText" extends="fs25_textDefault" with="anchorMiddleRight">
+            <size value="280px 36px" />
+            <Variant name="mobile">
+                <size value="420px 105px" />
+            </Variant>
+        </Profile>
+    </GUIProfiles>
+</GUI>

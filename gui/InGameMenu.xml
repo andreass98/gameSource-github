@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Bitmap profile="fs25_fullScreenBackground" id="background" />
+    <Paging profile="uiInGameMenuPaging" onPageChange="onPageChange" onPageUpdate="onPageUpdate" id="pagingElement">
+        <FrameReference ref="ingameMenuMain" name="ingameMenuMain" id="pageMain" />
+        <FrameReference ref="ingameMenuTour" name="ingameMenuTour" id="pageTour" />
+        <FrameReference ref="ingameMenuHint" name="ingameMenuHint" id="pageHint" />
+        <FrameReference ref="ingameMenuMapOverview" name="ingameMenuMapOverview" id="pageMapOverview" />
+        <FrameReference ref="inGameMenuMobileMap" name="inGameMenuMobileMap" id="pageMapMobile" />
+        <FrameReference ref="ingameMenuCalendar" name="ingameMenuCalendar" id="pageCalendar" />
+        <FrameReference ref="ingameMenuAnimals" name="ingameMenuAnimals" id="pageAnimals" />
+        <FrameReference ref="ingameMenuContracts" name="ingameMenuContracts" id="pageContracts" />
+        <FrameReference ref="ingameMenuProduction" name="ingameMenuProduction" id="pageProduction" />
+        <FrameReference ref="ingameMenuGameStats" name="ingameMenuGameStats" id="pageStatistics" />
+        <FrameReference ref="ingameMenuMultiplayer" name="ingameMenuMultiplayer" id="pageMultiplayer" />
+        <FrameReference ref="ingameMenuHelpLine" name="ingameMenuHelpLine" id="pageHelpLine" />
+        <FrameReference ref="ingameMenuSettings" name="ingameMenuSettings" id="pageSettings" />
+        <FrameReference ref="ingameMenuGameSettingsMobile" name="ingameMenuGameSettingsMobile" id="pageSettingsMobile" />
+        <FrameReference ref="ingameMenuSave" name="ingameMenuSave" id="pageSave" />
+    </Paging>
+    <Bitmap profile="fs25_tabListContainer" id="header">
+        <MultiTextOption profile="uiInGameMenuHeaderSelector" onClick="onClickPageSelection" id="pageSelector" soundDisabled="true" />
+        <SmoothList profile="fs25_tabList" id="pagingTabList" onSelectionChanged="onTabMenuSelectionChanged" onScroll="onTabMenuScroll">
+            <ListItem profile="fs25_tabListItem">
+                <Button profile="fs25_tabListItemButton" name="tabButton" soundDisabled="true" />
+                <Bitmap profile="fs25_tabListItemSeparator" />
+                <Bitmap profile="fs25_tabListItemSeparatorBottom" />
+            </ListItem>
+        </SmoothList>
+    </Bitmap>
+    <BoxLayout profile="fs25_buttonBox" id="buttonsPanel">
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[1]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[2]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[3]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[4]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[5]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[6]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+    </BoxLayout>
+    <GUIProfiles>
+        <Profile name="uiInGameMenuHeaderDark" extends="uiInGameMenuHeader">
+            <imageColor value="$preset_colorGlass" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

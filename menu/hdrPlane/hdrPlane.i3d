@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="hdrPlane.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="3" filename="$dataS/menu/hdrPlane/hdrPlaneShader.xml"/>
+    <File fileId="1" filename="$dataS/menu/hdrPlane/imageDay.dds"/>
+    <File fileId="4" filename="$dataS/menu/hdrPlane/imageNight.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="hdrPlane_mat" materialId="5" specularColor="0.494118 1 0.494118" customShaderId="3">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="hdrPlane_mat" materialId="6" specularColor="0.494118 1 0.494118" customShaderId="3">
+      <Texture fileId="4"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="hdrPlane.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Camera name="hdrPlaneCamera" translation="0 1.45885 1.0541e-08" rotation="-90 0 0" nodeId="9" fov="60" nearClip="0.01" farClip="100" orthographic="true" orthographicHeight="1"/>
+    <Shape name="hdrPlaneDay" scale="1.2 1.2 1.2" shapeId="1" clipDistance="10000" nodeId="10" castsShadows="true" receiveShadows="true" materialIds="5"/>
+    <Shape name="hdrPlaneNight" scale="1.2 1.2 1.2" shapeId="1" clipDistance="10000" nodeId="11" castsShadows="true" receiveShadows="true" materialIds="6"/>
+    <Light name="light" nodeId="12" type="directional" color="0 0 0" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.0012" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.0005" depthMapResolution="1024" shadowFarDistance="1000" shadowExtrusionDistance="200" softShadowsLightSize="0.5" softShadowsLightDistance="15" softShadowsDepthBiasFactor="1" softShadowsMaxPenumbraSize="0.5" numShadowMapSplits="5" shadowMapSplitDistancesParameter="0.9" range="500"/>
+  </Scene>
+
+</i3D>

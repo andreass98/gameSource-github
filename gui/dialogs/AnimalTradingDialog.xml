@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <Bitmap profile="bgVignette" />
+    <RoundCorner profile="animalTradingDialogBg" id="dialogElement">
+        <Animation profile="dialogLoading" id="iconLoadingElement" visible="false" />
+        <MultiTextOption profile="multiTextOptionAnimalDealerNumAnimals" id="numAnimalsElement" onClick="onClickNumAnimals" focusInit="onOpen">
+            <Text profile="multiTextOptionTextAnimalDealer" id="numAnimalsText" name="text" />
+        </MultiTextOption>
+        <GuiElement profile="animalDealerInfoBox" id="infoBox">
+            <Text profile="animalDealerMoneyTitle" position="0 350px" text="$l10n_ui_prices:" />
+            <Text profile="animalDealerMoneyValue" position="0 350px" text="0" id="infoPrice" />
+            <Text profile="animalDealerMoneyTitle" position="0 300px" text="$l10n_shop_fee:" />
+            <Text profile="animalDealerMoneyValue" position="0 300px" text="0" id="infoFee" />
+            <GuiElement profile="singleLineSeparator" position="0 285px" size="700px 2dp" />
+            <GuiElement profile="singleLineSeparator" position="0 281px" size="700px 2dp" />
+            <Text profile="animalDealerMoneyTitle" position="0 240px" text="$l10n_ui_total:" />
+            <Text profile="animalDealerMoneyValue" position="0 240px" text="0" id="infoTotal" />
+            <Bitmap profile="animalDealerInfoIcon" />
+            <Text profile="animalDealerInfo" text="$l10n_shop_transportationFee" />
+        </GuiElement>
+        <Bitmap profile="animalTradingDialogIcon" id="infoIcon" />
+        <BoxLayout profile="buttonBoxDialog">
+            <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" id="backButton" />
+            <Button profile="buttonBuy" text="$l10n_button_buy" onClick="onBuy" id="buyButton" />
+            <Button profile="buttonSell" text="$l10n_button_sell" onClick="onSell" id="sellButton" />
+        </BoxLayout>
+    </RoundCorner>
+    <GUIProfiles>
+        <Profile name="animalTradingDialogBg" extends="dialogBg">
+            <size value="630px 500px" />
+            <Variant name="mobile">
+                <size value="1400px 600px" />
+            </Variant>
+        </Profile>
+        <Profile name="multiTextOptionTextAnimalDealer" extends="multiTextOptionText">
+            <Variant name="mobile">
+                <textSize value="40px" />
+            </Variant>
+        </Profile>
+        <Profile name="animalTradingDialogIcon" extends="baseReference" with="anchorTopCenter">
+            <position value="0px 10px" />
+            <size value="250px 250px" />
+            <imageUVs value="0 0 1 1" />
+            <Variant name="mobile">
+                <size value="440px 440px" />
+                <position value="-400px 10px" />
+            </Variant>
+        </Profile>
+    </GUIProfiles>
+</GUI>

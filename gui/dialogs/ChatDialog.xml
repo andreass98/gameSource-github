@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose">
+    <TextInput profile="fs25_chatTextInput" id="textElement" onEnterPressed="onEnterPressed" onEscPressed="onEscPressed" imeTitle="$l10n_ui_chat" imeDescription="$l10n_ui_chat" imePlaceholder="$l10n_ui_chat" focusId="1" applyProfanityFilter="false">
+        <ThreePartBitmap profile="fs25_chatTextInputBg" />
+    </TextInput>
+    <GUIProfiles>
+        <Profile name="fs25_chatTextInput" extends="fs25_dialogTextInput" with="anchorBottomLeft">
+            <size value="300px 40px" />
+            <maxInputTextWidth value="280px" />
+            <maxCharacters value="150" />
+            <position value="30px 270px" />
+            <textAlignment value="left" />
+            <textSize value="12px" />
+            <textBold value="false" />
+        </Profile>
+        <Profile name="fs25_chatTextInputBg" extends="fs25_textInputBg">
+            <size value="300px 40px" />
+            <imageColor value="$preset_fs25_colorChatTextInput" />
+            <startImageColor value="$preset_fs25_colorChatTextInput" />
+            <endImageColor value="$preset_fs25_colorChatTextInput" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

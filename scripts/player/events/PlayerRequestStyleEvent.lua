@@ -1,0 +1,30 @@
+PlayerRequestStyleEvent = {}
+local PlayerRequestStyleEvent_mt = Class(PlayerRequestStyleEvent, Event)
+InitStaticEventClass(PlayerRequestStyleEvent, "PlayerRequestStyleEvent")
+function PlayerRequestStyleEvent.emptyNew()
+    -- upvalues: (copy) PlayerRequestStyleEvent_mt
+    return Event.new(PlayerRequestStyleEvent_mt)
+end
+function PlayerRequestStyleEvent.new(playerObjectId)
+    local self = PlayerRequestStyleEvent.emptyNew()
+    self.playerObjectId = playerObjectId
+    return self
+end
+function PlayerRequestStyleEvent:writeStream(streamId, _)
+    NetworkUtil.writeNodeObjectId(streamId, self.playerObjectId)
+end
+function PlayerRequestStyleEvent:readStream(streamId, connection)
+    self.playerObjectId = NetworkUtil.readNodeObjectId(streamId)
+    self.player = NetworkUtil.getObject(self.playerObjectId)
+    self:run(connection)
+end
+function PlayerRequestStyleEvent:run(connection)
+    if not connection:getIsServer() then
+        if self.player ~= nil then
+            local style = self.player.graphicsComponent:getStyle()
+            connection:sendEvent(PlayerSetStyleEvent.new(self.player, style))
+            return
+        end
+        Logging.info("PlayerRequestStyleEvent - Player not found or already left the game")
+    end
+end

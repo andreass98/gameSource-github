@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Picture profile="fs25_mapBackground" id="mapBackground" />
+    <Bitmap profile="fs25_newGameBackground" />
+    <Bitmap profile="fs25_newGameGradient" />
+    <GuiElement profile="fs25_newGameContainer">
+        <GuiElement profile="fs25_menuHeaderPanel" position="-46px 120px">
+            <Bitmap profile="fs25_menuHeaderIconBg">
+                <Bitmap profile="fs25_menuHeaderIcon" imageSliceId="gui.icon_saveGame" />
+            </Bitmap>
+            <Text profile="fs25_menuHeaderTitle" text="$l10n_ui_savegameOptions" />
+        </GuiElement>
+        <BoxLayout profile="fs25_newGameLayout">
+            <MultiTextOption profile="fs25_newGameSelector" id="mapSelector" onClick="onClickMap" focusInit="onOpen" />
+            <BoxLayout profile="fs25_subCategorySelectorBox" id="mapDotBox" />
+            <RoundCorner profile="fs25_subCategorySelectorDot" id="mapDotTemplate" />
+            <Text profile="fs25_subCategorySelectorBoxText" id="mapNumberText" visible="false" />
+            <GuiElement profile="fs25_newGameItemContainer">
+                <MultiTextOption profile="fs25_newGameMultiTextOption" id="presetSelector" onClick="onClickPreset" />
+                <Text profile="fs25_newGameItemTitle" text="$l10n_ui_preset" />
+            </GuiElement>
+            <GuiElement profile="fs25_newGameItemContainer">
+                <MultiTextOption profile="fs25_newGameMultiTextOption" id="initialMoneySelector" />
+                <Text profile="fs25_newGameItemTitle" text="$l10n_ui_initialMoney" />
+            </GuiElement>
+            <GuiElement profile="fs25_newGameItemContainer">
+                <MultiTextOption profile="fs25_newGameMultiTextOption" id="initialLoanSelector" />
+                <Text profile="fs25_newGameItemTitle" text="$l10n_ui_initialLoan" />
+            </GuiElement>
+            <GuiElement profile="fs25_newGameItemContainer">
+                <MultiTextOption profile="fs25_newGameMultiTextOption" id="economicDifficultySelector" />
+                <Text profile="fs25_newGameItemTitle" text="$l10n_setting_economicDifficulty" />
+            </GuiElement>
+            <GuiElement profile="fs25_newGameItemContainer" id="startWithFarmBox">
+                <BinaryOption profile="fs25_newGameBinaryOption" id="startWithFarmSelector" onClick="onClickStartWithFarm" />
+                <Text profile="fs25_newGameItemTitle" text="$l10n_ui_startFarm" />
+            </GuiElement>
+            <GuiElement profile="fs25_newGameItemContainer" id="startWithGuidedTourBox">
+                <BinaryOption profile="fs25_newGameBinaryOption" id="startWithGuidedTourSelector" />
+                <Text profile="fs25_newGameItemTitle" text="$l10n_ui_guidedTour" />
+            </GuiElement>
+        </BoxLayout>
+    </GuiElement>
+    <BoxLayout profile="fs25_buttonBox" id="buttonsPanel">
+        <Button profile="buttonOK" onClick="onClickOk" text="$l10n_button_continue" />
+        <Button profile="buttonBack" onClick="onClickBack" text="$l10n_button_back">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+    </BoxLayout>
+    <GUIProfiles>
+        <Profile name="fs25_newGameBackground" extends="baseReference" with="anchorStretchingYLeft">
+            <width value="700px" />
+            <imageColor value="$preset_fs25_colorMainGrey_99" />
+        </Profile>
+        <Profile name="fs25_newGameGradient" extends="baseReference" with="anchorStretchingYLeft">
+            <width value="400px" />
+            <position value="700px 0px" />
+            <imageColor value="$preset_fs25_colorMainGrey_99" />
+            <imageSliceId value="gui.savegame_gradient" />
+        </Profile>
+        <Profile name="fs25_newGameContainer" extends="emptyPanel" with="anchorStretchingYLeft pivotBottomLeft">
+            <width value="340px" />
+            <absoluteSizeOffset value="0px 240px" />
+            <position value="212px 42px" />
+        </Profile>
+        <Profile name="fs25_newGameLayout" extends="emptyPanel" with="anchorStretchingYStretchingX">
+            <flowDirection value="vertical" />
+        </Profile>
+        <Profile name="fs25_newGameSelector" extends="fs25_multiTextOption" with="anchorTopStretchingX">
+            <size value="100% 42px" />
+            <margin value="0px 10px 0px 10px" />
+            <defaultProfileButtonLeft value="fs25_buttonCircleArrowLeft" />
+            <defaultProfileButtonRight value="fs25_buttonCircleArrowRight" />
+            <defaultProfileText value="fs25_newGameSelectorText" />
+            <defaultProfileBgThreePart value="emptyPanel" />
+        </Profile>
+        <Profile name="fs25_newGameSelectorText" extends="fs25_multiTextOptionText">
+            <width value="240px" />
+            <textSize value="28px" />
+            <textMaxWidth value="240px" />
+            <textLayoutMode value="resize" />
+        </Profile>
+        <Profile name="fs25_newGameItemContainer" extends="emptyPanel" with="anchorTopStretchingX">
+            <height value="58px" />
+            <margin value="0px 25px 0px 0px" />
+        </Profile>
+        <Profile name="fs25_newGameItemTitle" extends="fs25_textDefault" with="anchorTopStretchingX">
+            <width value="100%" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+        </Profile>
+        <Profile name="fs25_newGameMultiTextOption" extends="fs25_multiTextOption" with="anchorBottomStretchingX">
+            <width value="100%" />
+        </Profile>
+        <Profile name="fs25_newGameBinaryOption" extends="fs25_binaryOption" with="anchorBottomStretchingX">
+            <width value="100%" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

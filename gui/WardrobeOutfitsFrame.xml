@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI name="wardrobeOutfits">
+    <GuiElement profile="fs25_wardrobeContainer">
+        <GuiElement profile="fs25_wardrobeHeaderPanel">
+            <Bitmap profile="fs25_menuHeaderIconBg">
+                <Bitmap profile="fs25_menuHeaderIcon" id="headerIcon" />
+            </Bitmap>
+            <Text profile="fs25_menuHeaderTitle" id="title" />
+        </GuiElement>
+        <Text profile="fs25_wardrobeFrameInfoText" id="infoText" />
+        <SmoothList profile="fs25_wardrobeList" id="itemList" onClick="onClickSelect" focusInit="onOpen" listSectionHeader="section" startClipperElementName="topClipper" endClipperElementName="bottomClipper">
+            <ListItem profile="fs25_wardrobeListItem">
+                <Bitmap profile="fs25_wardrobeListItemBackground" name="background" />
+                <Bitmap profile="fs25_wardrobeListItemImage" name="icon" />
+                <Bitmap profile="fs25_wardrobeListItemMoreIcon" name="hasColors" />
+            </ListItem>
+            <ListItem profile="fs25_wardrobeListItem" name="empty">
+                <Bitmap profile="fs25_wardrobeListItemBackgroundEmpty" />
+            </ListItem>
+            <ListItem profile="fs25_wardrobeListSection" name="section">
+                <Text profile="fs25_wardrobeListSectionTitle" name="title" />
+            </ListItem>
+        </SmoothList>
+        <ThreePartBitmap profile="fs25_subCategoryListSliderBox">
+            <Slider profile="fs25_listSlider" dataElementId="itemList" />
+        </ThreePartBitmap>
+        <Bitmap profile="fs25_wardrobeListStartClipper" name="topClipper" />
+        <Bitmap profile="fs25_wardrobeListStopClipper" name="bottomClipper" />
+    </GuiElement>
+</GUI>

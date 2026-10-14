@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<placeable type="placeable">
+    <storeData>
+        <name>Highland Cattle Kid</name>
+        <image>$dataS/character/animals/domesticated/cow/store_highlandCattleKid.dds</image>
+        <price>0</price>
+        <dailyUpkeep>0</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>NONE</brand>
+        <species>PLACEABLE</species>
+        <category>fences</category>
+        <canBeSold>false</canBeSold>
+        <showInStore>false</showInStore>
+        <vertexBufferMemoryUsage>994816</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>221696</indexBufferMemoryUsage>
+        <textureMemoryUsage>262144</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <storeIconRendering>
+            <settings centerIcon="true" cameraXRot="-15" cameraYRot="50" advancedBoundingBox="true" lightIntensity="2.5" />
+            <shaderParameter name="dirt" values="0 - - -" />
+            <shaderParameter name="atlasInvSizeAndOffsetUV" values="1 1 1 0" />
+        </storeIconRendering>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+    <base>
+        <filename>$dataS/character/animals/domesticated/cow/calf/cattleCalfHighland_posed.i3d</filename>
+    </base>
+</placeable>

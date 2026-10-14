@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <GuiElement profile="fs25_editFarmDialogBg" id="dialogElement">
+        <ThreePartBitmap profile="fs25_dialogBgMiddleSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgTopSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <GuiElement profile="fs25_dialogContentContainer">
+            <Text profile="fs25_dialogTitle" id="titleText" text="$l10n_ui_createNewFarm" position="0px -40px" />
+            <Bitmap profile="fs25_editFarmDialogFarmIcon" id="farmIconPreview" />
+            <BoxLayout profile="fs25_editFarmDialogLayout">
+                <TextInput profile="fs25_editFarmDialogTextInput" id="farmNameInput" imeTitle="$l10n_ui_farmName" imeDescription="$l10n_ui_farmName" imePlaceholder="$l10n_ui_farmName" focusInit="onOpen">
+                    <Text profile="fs25_editFarmDialogTitle" text="$l10n_ui_farmName:" />
+                    <ThreePartBitmap profile="fs25_textInputBg" />
+                    <Bitmap profile="fs25_dialogTextInputIconBox">
+                        <Bitmap profile="fs25_dialogTextInputIcon" />
+                    </Bitmap>
+                </TextInput>
+                <TextInput profile="fs25_editFarmDialogPasswordTextInput" id="farmPasswordInput" imeKeyboardType="password" imeTitle="$l10n_ui_password" imeDescription="$l10n_ui_password" imePlaceholder="$l10n_ui_password">
+                    <Text profile="fs25_editFarmDialogTitle" text="$l10n_ui_password:" />
+                    <ThreePartBitmap profile="fs25_textInputBg" />
+                    <Bitmap profile="fs25_dialogTextInputIconBox">
+                        <Bitmap profile="fs25_dialogTextInputIcon" />
+                    </Bitmap>
+                </TextInput>
+                <GuiElement profile="fs25_editFarmDialogColorsContainer">
+                    <Text profile="fs25_editFarmDialogTitle" text="$l10n_ui_farmColor:" position="-10px 0px" />
+                    <BoxLayout profile="fs25_editFarmDialogColorsLayout" id="colorButtonLayout" />
+                </GuiElement>
+                <ColorPickButton profile="fs25_editFarmDialogColorButton" id="buttonTemplate" visible="false" onClick="onClickColorButton" onFocus="onFocusColorButton" onLeave="onLeaveColorButton" onHighlight="onFocusColorButton" onHighlightRemove="onLeaveColorButton" />
+            </BoxLayout>
+        </GuiElement>
+        <BoxLayout profile="fs25_dialogButtonBox" id="dialogButtonLayout">
+            <Button profile="buttonActivate" text="$l10n_button_change" onClick="onClickEdit" id="editButton" />
+            <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" id="backButton" />
+            <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            <Button profile="buttonOK" text="$l10n_button_mp_createFarm" onClick="onClickDone" id="okButton" />
+        </BoxLayout>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="fs25_editFarmDialogBg" extends="fs25_dialogBg">
+            <size value="950px 480px" />
+        </Profile>
+        <Profile name="fs25_editFarmDialogFarmIcon" extends="baseReference" with="anchorMiddleLeft">
+            <size value="280px 280px" />
+            <position value="15px 0" />
+            <imageSliceId value="gui.multiplayer_chicken" />
+        </Profile>
+        <Profile name="fs25_editFarmDialogLayout" extends="emptyPanel" with="anchorMiddleRight">
+            <size value="600px 260px" />
+            <position value="0px -20px" />
+            <flowDirection value="vertical" />
+            <alignmentX value="left" />
+            <alignmentY value="center" />
+            <useFullVisibility value="false" />
+            <autoValidateLayout value="true" />
+        </Profile>
+        <Profile name="fs25_editFarmDialogTextInput" extends="fs25_dialogTextInput">
+            <margin value="150px 28px 40px 16px" />
+            <maxCharacters value="24" />
+            <textAlignment value="left" />
+        </Profile>
+        <Profile name="fs25_editFarmDialogTitle" extends="fs25_textDefault" with="anchorMiddleLeft">
+            <width value="150px" />
+            <position value="-160px 0px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+            <textAlignment value="right" />
+        </Profile>
+        <Profile name="fs25_editFarmDialogPasswordTextInput" extends="fs25_editFarmDialogTextInput">
+            <isPassword value="true" />
+            <maxCharacters value="16" />
+        </Profile>
+        <Profile name="fs25_editFarmDialogColorsContainer" extends="emptyPanel" with="anchorTopStretchingX">
+            <height value="50px" />
+            <margin value="0px 28px 40px 16px" />
+        </Profile>
+        <Profile name="fs25_editFarmDialogColorsTitle" extends="fs25_editFarmDialogTitle">
+            <position value="-10px 0px" />
+        </Profile>
+        <Profile name="fs25_editFarmDialogColorsLayout" extends="emptyPanel">
+            <size value="418px 52px" />
+            <position value="150px 0px" />
+            <fitFlowToElements value="true" />
+        </Profile>
+        <Profile name="fs25_editFarmDialogColorButton" extends="fs25_wideButton" with="anchorTopLeft">
+            <fitToContent value="false" />
+            <handleFocus value="true" />
+            <size value="48px 48px" />
+            <iconSize value="0 0" />
+            <margin value="2px 2px 2px 2px" />
+            <imageSliceId value="gui.colorPreset" />
+            <selectionFrameThickness value="3px 3px" />
+            <selectionFrameColor value="$preset_colorWhite" />
+            <metallicImageSliceId value="gui.metallic" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

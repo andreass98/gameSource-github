@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<constructionCategories defaultIconFilename="dataS/menu/construction/ui_construction_icons.png" refSize="256 256">
+    <category name="buildings" title="$l10n_construction_category_buildings" iconSliceId="gui.icon_construction_buildings">
+        <tab name="sheds" title="$l10n_construction_tab_sheds" />
+        <tab name="silos" title="$l10n_construction_tab_silos" />
+        <tab name="siloExtensions" title="$l10n_construction_tab_siloExtensions" />
+        <tab name="constructibles" title="$l10n_construction_tab_constructibles" />
+        <tab name="containers" title="$l10n_construction_tab_containers" />
+        <tab name="tools" title="$l10n_construction_tab_tools" />
+        <tab name="farmhouses" title="$l10n_construction_tab_farmhouses" />
+    </category>
+    <category name="production" title="$l10n_construction_category_production" iconSliceId="gui.icon_ingameMenu_productionChains">
+        <tab name="factories" title="$l10n_construction_tab_factories" />
+        <tab name="sellingPoints" title="$l10n_construction_tab_sellingPoints" />
+        <tab name="greenhouses" title="$l10n_construction_tab_greenhouses" />
+        <tab name="cultivation" title="$l10n_construction_tab_cultivation" />
+        <tab name="generators" title="$l10n_construction_tab_generators" />
+    </category>
+    <category name="animals" title="$l10n_construction_category_animals" iconSliceId="gui.icon_ingameMenu_animals">
+        <tab name="cows" title="$l10n_construction_tab_cows" />
+        <tab name="horses" title="$l10n_construction_tab_horses" />
+        <tab name="pigs" title="$l10n_construction_tab_pigs" />
+        <tab name="sheeps" title="$l10n_construction_tab_sheeps" />
+        <tab name="chickens" title="$l10n_construction_tab_chickens" />
+        <tab name="bees" title="$l10n_construction_tab_bees" />
+        <tab name="others" title="$l10n_construction_tab_others" />
+    </category>
+    <category name="decoration" title="$l10n_construction_category_decoration" iconSliceId="gui.icon_construction_decoration">
+        <tab name="newFences" title="$l10n_construction_tab_fences" />
+        <tab name="lights" title="$l10n_construction_tab_lights" />
+        <tab name="uncategorized" title="$l10n_construction_tab_others" />
+        <tab name="decoration" title="$l10n_category_decoration" />
+    </category>
+    <category name="landscaping" title="$l10n_construction_category_landscaping" iconSliceId="gui.icon_construction_terraforming">
+        <tab name="sculpting" title="$l10n_construction_tab_sculpting" />
+        <tab name="painting" title="$l10n_construction_tab_painting" />
+        <tab name="trees" title="$l10n_construction_tab_trees" />
+        <tab name="plants" title="$l10n_construction_tab_plants" />
+    </category>
+</constructionCategories>

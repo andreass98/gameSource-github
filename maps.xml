@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<maps>
+    <map id="MapUS" configFilename="$data/maps/mapUS/mapUS.xml" className="Mission00" filename="$dataS/scripts/mission00.lua" defaultVehiclesXMLFilename="$data/maps/mapUS/config/vehicles.xml" defaultHandToolsXMLFilename="$data/maps/mapUS/config/handTools.xml" defaultPlaceablesXMLFilename="$data/maps/mapUS/config/placeables.xml" defaultItemsXMLFilename="$data/maps/mapUS/config/items.xml">
+        <title>$l10n_mapUS_title</title>
+        <description>$l10n_mapUS_description</description>
+        <iconFilename>$data/maps/mapUS/textures/ui/preview.png</iconFilename>
+    </map>
+    <map id="MapAS" configFilename="$data/maps/mapAS/mapAS.xml" className="Mission00" filename="$dataS/scripts/mission00.lua" defaultVehiclesXMLFilename="$data/maps/mapAS/config/vehicles.xml" defaultHandToolsXMLFilename="$data/maps/mapAS/config/handTools.xml" defaultPlaceablesXMLFilename="$data/maps/mapAS/config/placeables.xml" defaultItemsXMLFilename="$data/maps/mapAS/config/items.xml">
+        <title>$l10n_mapAS_title</title>
+        <description>$l10n_mapAS_description</description>
+        <iconFilename>$data/maps/mapAS/textures/ui/preview.png</iconFilename>
+    </map>
+    <map id="MapEU" configFilename="$data/maps/mapEU/mapEU.xml" className="Mission00" filename="$dataS/scripts/mission00.lua" defaultVehiclesXMLFilename="$data/maps/mapEU/config/vehicles.xml" defaultHandToolsXMLFilename="$data/maps/mapEU/config/handTools.xml" defaultPlaceablesXMLFilename="$data/maps/mapEU/config/placeables.xml" defaultItemsXMLFilename="$data/maps/mapEU/config/items.xml">
+        <title>$l10n_mapEU_title</title>
+        <description>$l10n_mapEU_description</description>
+        <iconFilename>$data/maps/mapEU/textures/ui/preview.png</iconFilename>
+    </map>
+</maps>

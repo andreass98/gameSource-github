@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="construction" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/characterShader.xml" />
+    <File fileId="1" filename="$dataS/character/textures/jacket/construction_diffuse.png" />
+    <File fileId="5" filename="$dataS/character/textures/jacket/construction_mask.png" />
+    <File fileId="2" filename="$dataS/character/textures/jacket/construction_normal.png" />
+    <File fileId="3" filename="$dataS/character/textures/jacket/construction_specular.png" />
+    <File fileId="6" filename="$dataS/character/textures/shirts/topPlaidShirtFem_diffuse.png" />
+    <File fileId="9" filename="$dataS/character/textures/shirts/topPlaidShirtFem_mask.png" />
+    <File fileId="7" filename="$dataS/character/textures/shirts/topPlaidShirt_normal.png" />
+    <File fileId="8" filename="$dataS/character/textures/shirts/topPlaidShirt_specular.png" />
+  </Files>
+
+  <Materials>
+    <Material name="construction_mat" materialId="1" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.75 0.4 0.05 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.6 0.5 0.05 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="5"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="topPlaidShirtFem_mat" materialId="2" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.220 0.250 0.440 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.500 0.500 0.500 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="9"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="construction.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="GEO" nodeId="1">
+      <TransformGroup name="constructionVest" nodeId="2">
+        <Shape name="toolbag01" translation="0.192778 0.935739 0.06141" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="3"/>
+        <Shape name="toolbag02" translation="-0.170199 0.965709 0.112021" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="4"/>
+        <Shape name="toolbag03" translation="-0.205822 1.04379 0.017" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="5"/>
+        <Shape name="vest" translation="0.001181 1.215245 -0.032733" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="6"/>
+        <Shape name="belt" translation="0.002641 1.042716 -0.031336" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="7"/>
+        <Shape name="helmetRing" translation="0.000022 1.70409 -0.077669" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="8"/>
+        <Shape name="helmet" translation="0.000389 1.800541 -0.061929" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="9"/>
+      </TransformGroup>
+      <TransformGroup name="topPlaidShirt_Fem" nodeId="10">
+        <Shape name="topPlaidShirt_Fem" translation="0.000504 1.219809 -0.030689" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="11"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

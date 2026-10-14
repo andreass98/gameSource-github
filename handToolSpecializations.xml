@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<specializations>
+    <specialization name="hands" className="HandToolHands" filename="dataS/scripts/handTools/specializations/HandToolHands.lua" />
+    <specialization name="storable" className="HandToolStorable" filename="dataS/scripts/handTools/specializations/HandToolStorable.lua" />
+    <specialization name="motorized" className="HandToolMotorized" filename="dataS/scripts/handTools/specializations/HandToolMotorized.lua" />
+    <specialization name="flashlight" className="HandToolFlashlight" filename="dataS/scripts/handTools/specializations/HandToolFlashlight.lua" />
+    <specialization name="chainsaw" className="HandToolChainsaw" filename="dataS/scripts/handTools/specializations/HandToolChainsaw.lua" />
+    <specialization name="tethered" className="HandToolTethered" filename="dataS/scripts/handTools/specializations/HandToolTethered.lua" />
+    <specialization name="highPressureWasherLance" className="HandToolHPWLance" filename="dataS/scripts/handTools/specializations/HandToolHPWLance.lua" />
+    <specialization name="sprayCan" className="HandToolSprayCan" filename="dataS/scripts/handTools/specializations/HandToolSprayCan.lua" />
+    <specialization name="horseBrush" className="HandToolHorseBrush" filename="dataS/scripts/handTools/specializations/HandToolHorseBrush.lua" />
+</specializations>

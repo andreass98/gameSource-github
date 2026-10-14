@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<placeable type="placeable">
+    <storeData>
+        <name>Cow Angus Baby</name>
+        <image>$dataS/character/animals/domesticated/cow/store_cowAngusBaby.dds</image>
+        <price>0</price>
+        <dailyUpkeep>0</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>NONE</brand>
+        <species>PLACEABLE</species>
+        <category>fences</category>
+        <canBeSold>false</canBeSold>
+        <showInStore>false</showInStore>
+        <vertexBufferMemoryUsage>268800</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>97792</indexBufferMemoryUsage>
+        <textureMemoryUsage>262144</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <storeIconRendering>
+            <settings centerIcon="true" cameraXRot="-15" cameraYRot="-60" advancedBoundingBox="true" lightIntensity="2.5" />
+            <shaderParameter name="dirt" values="0 - - -" />
+            <shaderParameter name="atlasInvSizeAndOffsetUV" values="- - 0 0.5" />
+        </storeIconRendering>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+    <base>
+        <filename>$dataS/character/animals/domesticated/cow/calf/cattleCalfBaby_posed02.i3d</filename>
+    </base>
+</placeable>

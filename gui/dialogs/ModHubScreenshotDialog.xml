@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <GuiElement profile="fs25_modHubScreenshotBg" id="dialogElement">
+        <ThreePartBitmap profile="fs25_dialogBgMiddleSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgTopSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <GuiElement profile="fs25_dialogContentContainer">
+            <SmoothList profile="fs25_modHubScreenshotDialogList" id="list" handleFocus="false">
+                <ListItem profile="fs25_modHubScreenshotDialogItem">
+                    <Bitmap profile="fs25_modHubScreenshotDialogImage" name="image" />
+                </ListItem>
+            </SmoothList>
+            <Slider profile="sliderInvisible" id="listSlider" dataElementId="list" handleFocus="false">
+                <Button profile="fs25_buttonCircleArrowRight" position="-10px 0" id="circleRight" />
+                <Button profile="fs25_buttonCircleArrowLeft" position="10px 0" id="circleLeft" />
+                <Button profile="fs25_largeSelectorRightGamepad" id="selectorRightGamepad" position="5000px 0" />
+                <Button profile="fs25_largeSelectorLeftGamepad" id="selectorLeftGamepad" position="-5000px 0" />
+            </Slider>
+            <IndexState profile="fs25_modHubScreenshotIndex" id="indexState" stateElementTemplateId="stateIconTemplate" indexableElementId="list">
+                <RoundCorner profile="fs25_modHubScreenshotIndexDot" id="stateIconTemplate" />
+            </IndexState>
+        </GuiElement>
+        <BoxLayout profile="fs25_dialogButtonBox">
+            <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" />
+        </BoxLayout>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="fs25_modHubScreenshotBg" extends="emptyPanel" with="anchorMiddleCenter">
+            <size value="1478px 899px" />
+            <position value="0px -20px" />
+        </Profile>
+        <Profile name="fs25_modHubScreenshotDialogList" extends="baseReference" with="anchorStretchingYStretchingX pivotTopCenter">
+            <isHorizontalList value="true" />
+            <selectOnScroll value="true" />
+            <itemizedScrollDelta value="1" />
+            <listSmoothingDisabled value="true" />
+        </Profile>
+        <Profile name="fs25_modHubScreenshotDialogItem" extends="emptyPanel" with="anchorStretchingYStretchingX" />
+        <Profile name="fs25_modHubScreenshotDialogImage" extends="baseReference" with="anchorStretchingYStretchingX">
+            <imageSliceId value="noSlice" />
+            <imageIsWebOverlay value="true" />
+            <imageMaskFilename value="dataS/menu/mask_modhubDetail2.png" />
+            <imagePreviewFilename value="dataS/menu/modHubPreview_default.png" />
+            <overlayMaskSize value="2048px 1024px" />
+            <overlayMaskPos value="-296px -102px" />
+        </Profile>
+        <Profile name="fs25_modHubScreenshotIndex" extends="emptyPanel" with="anchorBottomStretchingX">
+            <height value="20px" />
+            <position value="0px 10px" />
+            <handleFocus value="false" />
+            <alignmentX value="center" />
+            <elementSpacing value="10px" />
+        </Profile>
+        <Profile name="fs25_modHubScreenshotIndexDot" extends="baseReference">
+            <size value="20px 20px" />
+            <cornerSize value="0.5" />
+            <color value="$preset_fs25_colorGreyLight" />
+            <colorSelected value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

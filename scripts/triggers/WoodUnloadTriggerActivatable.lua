@@ -1,0 +1,22 @@
+WoodUnloadTriggerActivatable = {}
+local WoodUnloadTriggerActivatable_mt = Class(WoodUnloadTriggerActivatable)
+function WoodUnloadTriggerActivatable.new(woodUnloadTrigger)
+    -- upvalues: (copy) WoodUnloadTriggerActivatable_mt
+    local self = setmetatable({}, WoodUnloadTriggerActivatable_mt)
+    self.woodUnloadTrigger = woodUnloadTrigger
+    self.activateText = g_i18n:getText("action_sellWood")
+    return self
+end
+function WoodUnloadTriggerActivatable:getIsActivatable()
+    return not g_localPlayer:getIsInVehicle() and g_currentMission:getFarmId() ~= FarmManager.SPECTATOR_FARM_ID
+end
+function WoodUnloadTriggerActivatable:run()
+    self.woodUnloadTrigger:processWood(g_currentMission:getFarmId())
+end
+function WoodUnloadTriggerActivatable:getDistance(x, y, z)
+    if self.woodUnloadTrigger.activationTrigger == nil then
+        return math.huge
+    end
+    local tx, ty, tz = getWorldTranslation(self.woodUnloadTrigger.activationTrigger)
+    return MathUtil.vector3Length(x - tx, y - ty, z - tz)
+end

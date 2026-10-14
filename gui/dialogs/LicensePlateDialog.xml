@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" />
+    <GuiElement profile="fs25_licensePlateDialogContainer" id="dialogElement">
+        <ThreePartBitmap profile="fs25_dialogBgMiddle" />
+        <ThreePartBitmap profile="fs25_dialogBgTop" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <GuiElement profile="fs25_dialogContentContainer" id="contentContainer">
+            <Bitmap profile="fs25_dialogLine" id="topLineLeft" position="0px 145px" />
+            <Bitmap profile="fs25_dialogLineRight" id="topLineRight" />
+            <Text profile="fs25_dialogHeaderText" id="headerText" text="$l10n_ui_licensePlate" position="0px 160px" />
+            <GuiElement profile="fs25_licensePlateRenderBox">
+                <Render profile="fs25_licensePlateRender" filename="dataS/menu/licensePlate/creationBox.i3d" cameraNode="0|1" superSamplingFactor="2" id="sceneRender" onRenderLoad="onRenderLoad" />
+                <Button profile="fs25_buttonCircleArrowLeft" onClick="onClickCursorLeft" id="buttonCursorLeft" />
+                <Button profile="fs25_buttonCircleArrowRight" onClick="onClickCursorRight" id="buttonCursorRight" />
+            </GuiElement>
+            <Bitmap profile="fs25_licensePlateCursor" id="cursorElement" />
+            <Button profile="fs25_licensePlateKeyboardButton" id="keyboardButtonTemplate" onClick="onClickKeyboardButton">
+                <Bitmap profile="fs25_licensePlateKeyboardButtonBg" />
+            </Button>
+            <BoxLayout profile="fs25_licensePlateKeyboardAlpha" id="keyboardAlpha" />
+            <BoxLayout profile="fs25_licensePlateKeyboardNumeric" id="keyboardNumeric" />
+            <BoxLayout profile="fs25_licensePlateKeyboardSpecial" id="keyboardSpecial" />
+            <Bitmap profile="fs25_licensePlateSeparator" />
+            <GuiElement profile="fs25_licensePlateMTOContainer" position="-60px 130px">
+                <MultiTextOption profile="fs25_multiTextOption" id="typeOption" onClick="onClickTypeOptionChanged" pivot="1 0.5" />
+                <Text profile="fs25_multiTextOptionTitle" text="$l10n_ui_licensePlate:" />
+            </GuiElement>
+            <GuiElement profile="fs25_licensePlateMTOContainer" position="-60px 80px">
+                <MultiTextOption profile="fs25_multiTextOption" id="placementOption" onClick="onClickPlacementOptionChanged" onCreate="onCreatePlacementOption" pivot="1 0.5" />
+                <Text profile="fs25_multiTextOptionTitle" text="$l10n_ui_licensePlatePlacement:" />
+            </GuiElement>
+            <GuiElement profile="fs25_licensePlateMTOContainer" position="-60px 30px">
+                <Text profile="fs25_multiTextOptionTitle" text="$l10n_configuration_baseColor:" />
+                <Button profile="fs25_colorButton" onClick="onClickChangeColor" id="changeColorButton" size="280px 31px" pivot="1 0.5">
+                    <ThreePartBitmap profile="fs25_colorButtonPicked" id="changeColorButtonImage" />
+                    <Bitmap profile="fs25_colorButtonIconBox">
+                        <Bitmap profile="fs25_colorButtonIcon" />
+                    </Bitmap>
+                    <Bitmap profile="fs25_colorButtonOverlay" />
+                </Button>
+            </GuiElement>
+        </GuiElement>
+        <BoxLayout profile="fs25_dialogButtonBox" id="buttonsPC">
+            <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" id="backButton" />
+            <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            <Button profile="buttonActivate" text="$l10n_button_ok" onClick="onClickOk" id="okButton" />
+        </BoxLayout>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="fs25_licensePlateDialogContainer" extends="emptyPanel" with="anchorMiddleCenter">
+            <size value="730px 670px" />
+            <position value="0px -60px" />
+            <Variant name="mobile" with="anchorTopCenter">
+                <size value="1500px 900px" />
+                <position value="0px -20px" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_licensePlateRenderBox" extends="emptyPanel" with="anchorTopCenter">
+            <size value="700px 200px" />
+            <position value="0px 120px" />
+        </Profile>
+        <Profile name="fs25_licensePlateRender" extends="baseReference" with="anchorMiddleCenter">
+            <size value="600px 200px" />
+            <Variant name="mobile">
+                <position value="0px -15px" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_licensePlateCursor" extends="baseReference" with="anchorTopLeft">
+            <imageColor value="$preset_fs25_colorDarkBeige_50" />
+        </Profile>
+        <Profile name="fs25_licensePlateKeyboardButton" extends="fs25_wideButton">
+            <size value="47px 48px" />
+            <margin value="3px 0 3px 6px" />
+            <handleFocus value="true" />
+            <fitToContent value="false" />
+            <iconSize value="0 0" />
+            <iconTextOffset value="0 0" />
+            <textSeparator value="" />
+            <textAutoWidth value="false" />
+            <textAlignment value="center" />
+            <textFocusedColor value="$preset_fs25_colorMainLight" />
+            <textHighlightedColor value="$preset_fs25_colorMainLight" />
+            <imageColor value="$preset_colorTransparent" />
+            <imageDisabledColor value="$preset_colorTransparent" />
+            <imageFocusedColor value="$preset_colorTransparent" />
+            <imageHighlightedColor value="$preset_colorTransparent" />
+            <Variant name="mobile">
+                <size value="72px 72px" />
+                <margin value="0 0 8px 8px" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_licensePlateKeyboardButtonBg" extends="baseReference" with="anchorStretchingYStretchingX">
+            <imageSliceId value="gui.licencePlate_button" />
+            <imageFocusedSliceId value="gui.licencePlate_button_selected" />
+            <imageDisabledColor value="$preset_colorTransparent" />
+        </Profile>
+        <Profile name="fs25_licensePlateKeyboardAlpha" extends="emptyPanel" with="anchorTopCenter">
+            <size value="530px 176px" />
+            <position value="0px -80px" />
+            <numFlows value="3" />
+            <rememberLastFocus value="true" />
+            <Variant name="mobile">
+                <position value="4px -140px" />
+                <size value="1040px 160px" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_licensePlateKeyboardNumeric" extends="fs25_licensePlateKeyboardAlpha" with="anchorTopCenter">
+            <height value="55px" />
+            <position value="0px -242px" />
+            <Variant name="mobile">
+                <position value="4px -300px" />
+                <size value="1040px 80px" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_licensePlateKeyboardSpecial" extends="fs25_licensePlateKeyboardAlpha" with="anchorTopCenter">
+            <height value="55px" />
+            <position value="0px -296px" />
+            <Variant name="mobile">
+                <position value="4px -380px" />
+                <size value="1040px 80px" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_licensePlateSeparator" extends="baseReference" with="anchorBottomCenter">
+            <size value="530px 2dp" />
+            <position value="0px 200px" />
+            <imageColor value="$preset_fs25_colorGreyDark" />
+        </Profile>
+        <Profile name="fs25_licensePlateMTOContainer" extends="emptyPanel" with="anchorBottomCenter">
+            <size value="500px 48px" />
+            <Variant name="mobile">
+                <size value="565px 105px" />
+                <position value="180px 300px" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_licensePlateColorButton" extends="baseReference" with="anchorMiddleRight">
+            <size value="260px 40px" />
+            <imageColor value="$preset_colorMainUI_30" />
+            <imageFocusedColor value="$preset_colorMainUI" />
+            <imageHighlightedColor value="$preset_colorMainUI" />
+            <imageDisabledColor value="$preset_colorGlass" />
+            <Variant name="mobile">
+                <size value="565px 105px" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_licensePlateColorButtonPicked" extends="baseReference" with="anchorStretchingYStretchingX">
+            <absoluteSizeOffset value="10px 10px" />
+            <Variant name="mobile">
+                <size value="535px 75px" />
+            </Variant>
+        </Profile>
+    </GUIProfiles>
+</GUI>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Bitmap profile="fs25_fullScreenBackground" />
+    <GuiElement profile="fs25_shopContainer">
+        <GuiElement profile="fs25_menuHeaderPanel" absoluteSizeOffset="0px 0px">
+            <Bitmap profile="fs25_menuHeaderIconBg">
+                <Bitmap profile="fs25_menuHeaderIcon" imageSliceId="gui.icon_vehicleDealer_machines" />
+            </Bitmap>
+            <Text profile="fs25_menuHeaderTitle" id="headerText" text="$l10n_ui_sellItem" />
+            <RoundCorner profile="fs25_shopMoneyBoxBg" id="moneyBoxBg" />
+            <BoxLayout profile="fs25_shopMoneyBox" id="moneyBox">
+                <Text profile="fs25_shopBalance" text="$l10n_ui_balance" />
+                <Text profile="fs25_shopMoney" id="balanceElement" />
+            </BoxLayout>
+        </GuiElement>
+        <SmoothList profile="fs25_savegameList" id="list" focusInit="onOpen" startClipperElementName="startClipper" onDoubleClick="onClickConfigure">
+            <ListItem profile="fs25_savegameListItem" name="listItem">
+                <ThreePartBitmap profile="fs25_savegameListItemBg" />
+                <Bitmap profile="fs25_workshopListItemImageBg" />
+                <Bitmap profile="fs25_workshopListItemImage" name="icon" />
+                <Text profile="fs25_savegameListItemName" name="name" />
+                <GuiElement profile="fs25_savegameListItemDataBox" name="dataBox" id="dataBoxStandard">
+                    <ThreePartBitmap profile="fs25_savegameListSeparator" position="0px 40px" />
+                    <ThreePartBitmap profile="fs25_savegameListSeparator" position="0px 80px" />
+                    <Text profile="fs25_savegameListItemTitle" text="$l10n_ui_sellValue" position="0px 80px" />
+                    <Text profile="fs25_savegameListItemTitle" text="$l10n_ui_operatingHours" />
+                    <Text profile="fs25_savegameListItemTitle" text="$l10n_ui_age" position="0px 40px" />
+                    <Text profile="fs25_savegameListItemTitle" text="$l10n_ui_condition" position="450px 40px" />
+                    <Text profile="fs25_savegameListItemTitle" text="$l10n_ui_paintCondition" position="450px 80px" />
+                    <Text profile="fs25_savegameListItemText" name="priceText" position="165px 80px" />
+                    <Text profile="fs25_savegameListItemText" name="ageText" position="165px 40px" />
+                    <Text profile="fs25_savegameListItemText" name="operatingHoursText" position="165px 0px" />
+                    <ThreePartBitmap profile="fs25_workshopListStatusBarBackground" name="timePlayed" position="595px 57px">
+                        <ThreePartBitmap profile="fs25_workshopListStatusBar" name="conditionBar" />
+                    </ThreePartBitmap>
+                    <ThreePartBitmap profile="fs25_workshopListStatusBarBackground" name="timePlayed" position="595px 97px">
+                        <ThreePartBitmap profile="fs25_workshopListStatusBar" name="paintConditionBar" />
+                    </ThreePartBitmap>
+                </GuiElement>
+                <Text profile="fs25_savegameListItemUnused" name="infoText" visible="false" />
+            </ListItem>
+        </SmoothList>
+        <Bitmap profile="fs25_startClipper" name="startClipper" position="-3px 1px" />
+        <Text profile="fs25_workshopListEmptyText" text="$l10n_shop_noVehicles" id="dialogInfo" />
+    </GuiElement>
+    <BoxLayout profile="fs25_buttonBox" id="buttonsBox">
+        <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" />
+        <Button profile="buttonSell" text="$l10n_button_sell" onClick="onClickSell" id="sellButton">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonActivate" text="$l10n_button_configurate" onClick="onClickConfigure" id="configButton">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonRepairWorkshop" text="$l10n_button_repair" onClick="onClickRepair" id="repairButton">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonRepaint" text="$l10n_button_repaint" onClick="onClickRepaint" id="repaintButton">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+    </BoxLayout>
+    <ThreePartBitmap profile="fs25_sliderDockedBg">
+        <ThreePartBitmap profile="fs25_sliderDockedBox">
+            <Slider profile="fs25_sliderDocked" dataElementId="list" />
+        </ThreePartBitmap>
+    </ThreePartBitmap>
+    <GUIProfiles>
+        <Profile name="fs25_workshopListItemImageBg" extends="fs25_savegameListItemImage">
+            <imageSliceId value="gui.grey_gradient" />
+            <imageColor value="0.6 0.6 0.6 1" />
+        </Profile>
+        <Profile name="fs25_workshopListItemImage" extends="baseReference">
+            <size value="200px 200px" />
+            <position value="80px 40px" />
+            <imageSliceId value="noSlice" />
+        </Profile>
+        <Profile name="buttonRepaint" extends="fs25_wideButton" with="touchButton">
+            <inputAction value="MENU_EXTRA_1" />
+        </Profile>
+        <Profile name="buttonRepairWorkshop" extends="fs25_wideButton" with="touchButton">
+            <inputAction value="MENU_EXTRA_2" />
+        </Profile>
+        <Profile name="fs25_workshopListStatusBarBackground" extends="emptyPanel" with="anchorBottomLeft">
+            <size value="410px 6px" />
+            <imageSliceId value="gui.progressbar_middle" />
+            <imageColor value="$preset_fs25_colorGreyLight" />
+            <imageSelectedColor value="$preset_fs25_colorMainDark" />
+            <startImageSize value="5px 0" />
+            <startImageSliceId value="gui.progressbar_left" />
+            <startImageSelectedColor value="$preset_fs25_colorMainDark" />
+            <endImageSize value="5px 0" />
+            <endImageSliceId value="gui.progressbar_right" />
+            <endImageSelectedColor value="$preset_fs25_colorMainDark" />
+        </Profile>
+        <Profile name="fs25_workshopListStatusBar" extends="emptyPanel" with="anchorStretchingYStretchingX pivotMiddleLeft">
+            <position value="-0.5px 0px" />
+            <imageSliceId value="gui.progressbar_middle" />
+            <imageColor value="$preset_fs25_colorMainHighlight" />
+            <imageSelectedColor value="$preset_fs25_colorMainLight" />
+            <startImageSize value="5px 0" />
+            <startImageSliceId value="gui.progressbar_left" />
+            <startImageSelectedColor value="$preset_fs25_colorMainLight" />
+            <endImageSize value="5px 0" />
+            <endImageSliceId value="gui.progressbar_right" />
+            <endImageSelectedColor value="$preset_fs25_colorMainLight" />
+        </Profile>
+        <Profile name="fs25_workshopListEmptyText" extends="fs25_textDefault" with="anchorMiddleCenter">
+            <size value="500px 100px" />
+            <textSize value="18px" />
+            <textAlignment value="center" />
+            <textMaxNumLines value="3" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

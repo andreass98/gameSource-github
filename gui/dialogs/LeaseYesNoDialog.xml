@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <GuiElement profile="leaseDialogBg" id="dialogElement">
+        <ThreePartBitmap profile="fs25_dialogBgMiddle" />
+        <ThreePartBitmap profile="fs25_dialogBgTop" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <GuiElement profile="fs25_dialogContentContainer">
+            <Animation profile="fs25_dialogLoading" id="iconLoadingElement" />
+            <Bitmap profile="leaseDialogCircle" id="dialogCircle">
+                <Bitmap profile="fs25_dialogQuestion" id="iconQuestionElement" />
+            </Bitmap>
+            <Bitmap profile="fs25_leaseDialogTextBg" position="0px -135px" />
+            <Text profile="leaseDialogKey" position="-50px -140px" text="$l10n_shop_costsBase:" />
+            <Text profile="leaseDialogValue" position="125px -140px" id="costsBaseValue" format="accounting" />
+            <Bitmap profile="fs25_leaseDialogTextBgAlternate" position="0px -165px" />
+            <Text profile="leaseDialogKey" position="-50px -170px" text="$l10n_shop_costsPerDay:" />
+            <Text profile="leaseDialogValue" position="125px -170px" id="costsPerDayValue" format="accounting" />
+            <Bitmap profile="fs25_leaseDialogTextBg" position="0px -195px" />
+            <Text profile="leaseDialogKey" position="-50px -200px" text="$l10n_shop_costsPerOperatingHour:" />
+            <Text profile="leaseDialogValue" position="125px -200px" id="costsPerOperatingHourValue" format="accounting" />
+            <Text profile="fs25_dialogTitle" text="" id="dialogTitleElement" />
+            <Text profile="fs25_dialogTextWithTitle" text="" id="dialogTextElement" position="0px -245px" />
+        </GuiElement>
+        <BoxLayout profile="fs25_dialogButtonBox">
+            <Button profile="buttonYes" text="$l10n_button_yes" onClick="onYes" id="yesButton" />
+            <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            <Button profile="buttonNo" text="$l10n_button_no" onClick="onNo" id="noButton" />
+        </BoxLayout>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="leaseDialogBg" extends="fs25_dialogBg">
+            <height value="370px" />
+            <Variant name="mobile">
+                <size value="1000px 380px" />
+            </Variant>
+        </Profile>
+        <Profile name="leaseDialogCircle" extends="fs25_dialogCircle">
+            <Variant name="mobile">
+                <position value="0px -20px" />
+            </Variant>
+        </Profile>
+        <Profile name="leaseDialogKey" extends="fs25_dialogText" with="anchorTopCenter">
+            <size value="240px 20px" />
+            <position value="0 0" />
+            <textSize value="14px" />
+            <textUpperCase value="true" />
+            <textAlignment value="left" />
+            <textVerticalAlignment value="middle" />
+            <Variant name="mobile">
+                <textSize value="24px" />
+            </Variant>
+        </Profile>
+        <Profile name="leaseDialogValue" extends="fs25_dialogText" with="anchorTopCenter">
+            <size value="90px 20px" />
+            <position value="0 0" />
+            <textSize value="14px" />
+            <textAlignment value="right" />
+            <textVerticalAlignment value="middle" />
+            <Variant name="mobile">
+                <textSize value="24px" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_leaseDialogTextBg" extends="baseReference" with="anchorTopCenter">
+            <size value="390px 30px" />
+            <imageColor value="$preset_fs25_colorGreyLight_20" />
+        </Profile>
+        <Profile name="fs25_leaseDialogTextBgAlternate" extends="baseReference" with="anchorTopCenter">
+            <size value="390px 30px" />
+            <imageColor value="$preset_fs25_colorGrey_20" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

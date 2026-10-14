@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <GuiElement profile="fs25_dialogBg" id="dialogElement" size="1200px 600px">
+        <ThreePartBitmap profile="fs25_dialogBgMiddleSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgTopSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <GuiElement profile="fs25_dialogContentContainer">
+            <Text profile="fs25_dialogTitle" id="titleText" text="$l10n_ui_aiSettingsTitle" position="0px -40px" />
+            <BoxLayout profile="fs25_aiSettingsModeBox">
+                <Text profile="fs25_aiSettingsModeText" text="$l10n_ui_aiSettingsMode" />
+                <BinaryOption profile="fs25_aiSettingsHeaderBinaryOption" id="modeElement" focusInit="onOpen" onClick="onClickMode" />
+            </BoxLayout>
+            <GuiElement profile="fs25_aiSettingsBoxContainer">
+                <Bitmap profile="fs25_aiSettingsContainer" id="templateBinarySetting">
+                    <Text profile="fs25_aiSettingsTemplateText" text="$l10n_ui_aiSettingsMode" name="name" />
+                    <BinaryOption profile="fs25_aiSettingsBinaryOption" name="option" onClick="onClickBinary" />
+                </Bitmap>
+                <Bitmap profile="fs25_aiSettingsContainer" id="templateMTOSetting">
+                    <Text profile="fs25_aiSettingsTemplateText" text="$l10n_ui_aiSettingsMode" name="name" />
+                    <MultiTextOption profile="fs25_aiSettingsMultiTextOption" name="option" onClick="onClickOption" />
+                </Bitmap>
+                <Bitmap profile="fs25_aiSettingsSliderContainer" id="templateSliderSetting">
+                    <Text profile="fs25_aiSettingsTemplateText" text="$l10n_ui_aiSettingsMode" name="name" />
+                    <OptionSlider profile="fs25_aiSettingsOptionSlider" name="option" onClick="onClickOption">
+                        <Text profile="fs25_optionSliderText" id="itemTextAmount" name="name" />
+                    </OptionSlider>
+                </Bitmap>
+                <ScrollingLayout profile="fs25_aiSettingsBox" id="settingsBox" />
+            </GuiElement>
+            <GuiElement profile="fs25_aiSettingsMapContainer" id="mapBox">
+                <InGameMapPreview profile="fs25_aiSettingsIngameMap" id="ingameMapElement" onDrawPostIngameMapHotspots="onDrawPostIngameMapHotspots" />
+                <Text profile="fs25_aiSettingsNoFieldFound" id="noFieldFoundText" text="$l10n_ui_aiSettingsFieldNotFound" />
+                <Text profile="fs25_aiSettingsNoFieldFound" id="fieldNotSupportedText" text="$l10n_ui_aiSettingsFieldNotSupported" />
+                <Animation profile="fs25_aiSettingsLoadingAnimation" id="loadingAnimation" visible="false" />
+                <Bitmap profile="fs25_aiSettingsWorkDirection" id="workDirectionArrow" />
+            </GuiElement>
+            <ThreePartBitmap profile="fs25_lineSeparatorTop" absoluteSizeOffset="100px 0px" position="0px -120px" />
+        </GuiElement>
+        <BoxLayout profile="fs25_dialogButtonBox">
+            <Button profile="buttonDelete" text="$l10n_button_reset" onClick="onClickReset" id="resetButton" />
+            <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            <Button profile="buttonBack" id="okButton" onClick="onClickBack" text="$l10n_button_back" />
+            <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            <Button profile="buttonOK" text="$l10n_button_ok" onClick="onClickOk" />
+        </BoxLayout>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="fs25_aiSettingsMapContainer" extends="emptyPanel" with="anchorBottomRight">
+            <size value="440px 350px" />
+            <position value="-40px 25px" />
+        </Profile>
+        <Profile name="fs25_aiSettingsIngameMap" extends="baseReference" with="anchorStretchingYStretchingX" />
+        <Profile name="fs25_aiSettingsModeBox" extends="emptyPanel" with="anchorTopCenter">
+            <size value="80% 50px" />
+            <position value="0px -70px" />
+            <alignmentY value="middle" />
+            <alignmentX value="center" />
+            <elementSpacing value="20px" />
+        </Profile>
+        <Profile name="fs25_aiSettingsModeText" extends="fs25_textDefault">
+            <textSize value="18px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+            <textAutoWidth value="true" />
+        </Profile>
+        <Profile name="fs25_aiSettingsHeaderBinaryOption" extends="fs25_binaryOption" with="anchorMiddleRight">
+            <width value="400px" />
+            <position value="-12px 0px" />
+            <focusOnHighlight value="true" />
+        </Profile>
+        <Profile name="fs25_aiSettingsBoxContainer" extends="emptyPanel">
+            <size value="580px 350px" />
+            <position value="40px 25px" />
+        </Profile>
+        <Profile name="fs25_aiSettingsBox" extends="emptyPanel" with="anchorStretchingYStretchingX">
+            <flowDirection value="vertical" />
+        </Profile>
+        <Profile name="fs25_aiSettingsContainer" extends="baseReference" with="anchorTopStretchingX">
+            <height value="50px" />
+        </Profile>
+        <Profile name="fs25_aiSettingsTemplateText" extends="fs25_textDefault" with="anchorMiddleLeft">
+            <position value="20px 0px" />
+            <textSize value="18px" />
+            <textLayoutMode value="scrolling" />
+        </Profile>
+        <Profile name="fs25_aiSettingsNoFieldFound" extends="fs25_textDefault" with="anchorMiddleCenter">
+            <textSize value="15px" />
+            <textAlignment value="center" />
+            <textMaxNumLines value="2" />
+        </Profile>
+        <Profile name="fs25_aiSettingsLoadingAnimation" extends="baseReference" with="anchorMiddleCenter pivotMiddleCenter">
+            <size value="127px 127px" />
+            <imageSliceId value="gui.loadingAnimation" />
+            <imageColor value="$preset_fs25_colorMainHighlight" />
+            <animationMode value="rotate" />
+            <animationSpeed value="1000" />
+        </Profile>
+        <Profile name="fs25_aiSettingsWorkDirection" extends="baseReference" with="anchorMiddleCenter pivotBottomRight">
+            <position value="-20px 13px" />
+            <size value="16px 31px" />
+            <imageSliceId value="gui.HelperDirection" />
+            <imageColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_aiSettingsBinaryOption" extends="fs25_binaryOption" with="anchorMiddleRight">
+            <position value="-10px 0px" />
+            <useYesNoTexts value="nil" />
+        </Profile>
+        <Profile name="fs25_aiSettingsMultiTextOption" extends="fs25_multiTextOption" with="anchorMiddleRight">
+            <position value="-10px 0px" />
+        </Profile>
+        <Profile name="fs25_aiSettingsSliderContainer" extends="baseReference" with="anchorTopStretchingX">
+            <height value="70px" />
+        </Profile>
+        <Profile name="fs25_aiSettingsOptionSlider" extends="fs25_optionSlider" with="anchorTopRight">
+            <position value="-15px -0px" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

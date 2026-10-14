@@ -1,0 +1,40 @@
+AIParameterLooping = {}
+local AIParameterLooping_mt = Class(AIParameterLooping, AIParameter)
+function AIParameterLooping.new(customMt)
+    -- upvalues: (copy) AIParameterLooping_mt
+    local self = AIParameter.new(customMt or AIParameterLooping_mt)
+    self.type = AIParameterType.SELECTOR
+    self.isLooping = false
+    return self
+end
+function AIParameterLooping:saveToXMLFile(xmlFile, key, _)
+    xmlFile:setBool(key .. "#isLooping", self.isLooping)
+end
+function AIParameterLooping:loadFromXMLFile(xmlFile, key)
+    self.isLooping = xmlFile:getBool(key .. "#isLooping", self.isLooping)
+end
+function AIParameterLooping:readStream(streamId, _)
+    self:setIsLooping(streamReadBool(streamId))
+end
+function AIParameterLooping:writeStream(streamId, _)
+    streamWriteBool(streamId, self.isLooping)
+end
+function AIParameterLooping:setIsLooping(isLooping)
+    self.isLooping = isLooping
+end
+function AIParameterLooping:getIsLooping()
+    return self.isLooping
+end
+function AIParameterLooping:getString()
+    if self.isLooping then
+        return g_i18n:getText("ai_parameterValueLooping")
+    else
+        return g_i18n:getText("ai_parameterValueNoLooping")
+    end
+end
+function AIParameterLooping:setNextItem()
+    self.isLooping = not self.isLooping
+end
+function AIParameterLooping:setPreviousItem()
+    self.isLooping = not self.isLooping
+end

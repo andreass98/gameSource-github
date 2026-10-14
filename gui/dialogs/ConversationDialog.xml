@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <GuiElement profile="conversationDialogBg" id="box">
+        <RoundCorner profile="converationTextBox" id="textBox">
+            <Text profile="conversationDialogNpcName" text="" id="npcNameElement" />
+            <Text profile="conversationDialogText" text="" id="textElement" />
+        </RoundCorner>
+        <RoundCorner profile="conversationOptionsBackground" id="optionBoxBackground">
+            <BoxLayout profile="conversationDialogOptions" id="optionsBox">
+                <RoundCorner profile="conversationOptionButtonBackground" id="optionButtonTemplate">
+                    <Button profile="conversationOptionButton" text="$l10n_button_rate" onClick="onClickOption" name="text">
+                        <Bitmap profile="conversationOptionButtonIcon" />
+                    </Button>
+                </RoundCorner>
+            </BoxLayout>
+        </RoundCorner>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="conversationDialogBg" extends="baseReference" with="anchorBottomCenter">
+            <position value="0px 30px" />
+            <size value="850px 107px" />
+        </Profile>
+        <Profile name="converationTextBox" extends="baseReference" with="anchorTopLeft">
+            <size value="850px 42px" />
+            <position value="0px 0px" />
+            <margin value="20px 11px 20px 11px" />
+            <color value="$preset_fs25_colorMainDark_90" />
+        </Profile>
+        <Profile name="conversationDialogNpcName" extends="dialogText" with="anchorTopLeft">
+            <position value="20px -10px" />
+            <size value="810px 25px" />
+            <margin value="0px 0px 0px 0px" />
+            <textColor value="$preset_fs25_colorMainLight" />
+            <textSize value="22px" />
+            <textAlignment value="left" />
+            <textAutoHeight value="true" />
+            <textBold value="true" />
+        </Profile>
+        <Profile name="conversationDialogText" extends="dialogText" with="anchorTopLeft">
+            <position value="20px -10px" />
+            <size value="810px 25px" />
+            <margin value="0px 0px 0px 0px" />
+            <textColor value="$preset_fs25_colorMainLight" />
+            <textLineHeightScale value="1.25" />
+            <textSize value="22px" />
+            <textAlignment value="left" />
+            <textAutoHeight value="true" />
+            <textMaxWidth value="810px" />
+        </Profile>
+        <Profile name="conversationOptionsBackground" extends="baseReference" with="anchorBottomLeft">
+            <position value="0px 0px" />
+            <size value="850px 60px" />
+            <margin value="5px 5px 5px 5px" />
+            <color value="$preset_fs25_colorMainDark_90" />
+        </Profile>
+        <Profile name="conversationDialogOptions" with="anchorMiddleCenter">
+            <size value="840px 50px" />
+            <position value="0px 0px" />
+            <handleFocus value="true" />
+            <fillDirectionY value="topToBottom" />
+            <flowDirection value="vertical" />
+        </Profile>
+        <Profile name="conversationOptionButtonBackground" extends="baseReference" with="anchorMiddleLeft">
+            <size value="840px 40px" />
+            <color value="0 0 0 0" />
+            <colorHighlighted value="$preset_fs25_colorGreen_40" />
+            <colorSelected value="$preset_fs25_colorGreen" />
+            <colorFocused value="$preset_fs25_colorGreen" />
+        </Profile>
+        <Profile name="conversationOptionButton" extends="wideButton" with="anchorMiddleLeft">
+            <size value="810px 10px" />
+            <margin value="0px 0px 0px 0px" />
+            <handleFocus value="true" />
+            <iconSize value="0px 0px" />
+            <fitToContent value="false" />
+            <textOffset value="30px 2px" />
+            <textAutoWidth value="false" />
+            <textAutoHeight value="true" />
+            <textSize value="22px" />
+            <textBold value="false" />
+            <textFocusedBold value="true" />
+            <textHighlightedBold value="true" />
+            <textIconOffset value="0px 0px" />
+            <textMaxNumLines value="15" />
+            <textMaxWidth value="810px" />
+            <textUpperCase value="false" />
+            <textColor value="$preset_fs25_colorMainLight" />
+            <textFocusedColor value="$preset_fs25_colorMainDark" />
+            <textHighlightedColor value="$preset_fs25_colorMainDark" />
+            <textSelectedColor value="$preset_fs25_colorMainDark" />
+        </Profile>
+        <Profile name="conversationOptionButtonIcon" extends="baseReference" with="anchorTopLeft">
+            <size value="15px 16px" />
+            <position value="15px -2px" />
+            <imageTextOffset value="-10px -1px" />
+            <imageSliceId value="gui.dialogue_arrow" />
+            <imageColor value="1 1 1 0" />
+            <imageSelectedColor value="$preset_fs25_colorMainDark" />
+            <imageHighlightedColor value="$preset_fs25_colorMainDark" />
+            <imageFocusedColor value="$preset_fs25_colorMainDark" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <GuiElement profile="fs25_transferMoneyBg" id="dialogElement">
+        <ThreePartBitmap profile="fs25_dialogBgMiddleSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgTopSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <GuiElement profile="fs25_dialogContentContainer">
+            <Text profile="fs25_dialogTitle" id="headerText" text="$l10n_button_transfer" position="0px -40px" />
+            <Text profile="fs25_transferMoneyAmount" id="amountText" />
+            <BoxLayout profile="fs25_transferMoneyOptionBox">
+                <GuiElement profile="fs25_transferMoneyMultiTextOption" onCreate="onCreateScroller" onCreateArgs="100">
+                    <Button profile="fs25_transferMoneyMultiTextOptionLeft" name="left" text="-" onClick="onClickLeft" focusId="100_left" focusChangeTop="100000_left" focusChangeBottom="1000_left" />
+                    <Button profile="fs25_transferMoneyMultiTextOptionRight" name="right" text="+" onClick="onClickRight" focusId="100_right" focusChangeTop="100000_right" focusChangeBottom="1000_right" focusInit="onOpen" />
+                    <Text profile="fs25_multiTextOptionText" name="text" text="100" />
+                    <ThreePartBitmap profile="fs25_multiTextOptionBg" />
+                </GuiElement>
+                <GuiElement profile="fs25_transferMoneyMultiTextOption" onCreate="onCreateScroller" onCreateArgs="1000">
+                    <Button profile="fs25_transferMoneyMultiTextOptionLeft" name="left" text="-" onClick="onClickLeft" focusId="1000_left" focusChangeTop="100_left" focusChangeBottom="10000_left" />
+                    <Button profile="fs25_transferMoneyMultiTextOptionRight" name="right" text="+" onClick="onClickRight" focusId="1000_right" focusChangeTop="100_right" focusChangeBottom="10000_right" />
+                    <Text profile="fs25_multiTextOptionText" name="text" text="1000" />
+                    <ThreePartBitmap profile="fs25_multiTextOptionBg" />
+                </GuiElement>
+                <GuiElement profile="fs25_transferMoneyMultiTextOption" onCreate="onCreateScroller" onCreateArgs="10000">
+                    <Button profile="fs25_transferMoneyMultiTextOptionLeft" name="left" text="-" onClick="onClickLeft" focusId="10000_left" focusChangeTop="1000_left" focusChangeBottom="100000_left" />
+                    <Button profile="fs25_transferMoneyMultiTextOptionRight" name="right" text="+" onClick="onClickRight" focusId="10000_right" focusChangeTop="1000_right" focusChangeBottom="100000_right" />
+                    <Text profile="fs25_multiTextOptionText" name="text" text="10000" />
+                    <ThreePartBitmap profile="fs25_multiTextOptionBg" />
+                </GuiElement>
+                <GuiElement profile="fs25_transferMoneyMultiTextOption" onCreate="onCreateScroller" onCreateArgs="100000">
+                    <Button profile="fs25_transferMoneyMultiTextOptionLeft" name="left" text="-" onClick="onClickLeft" focusId="100000_left" focusChangeTop="10000_left" focusChangeBottom="100_left" />
+                    <Button profile="fs25_transferMoneyMultiTextOptionRight" name="right" text="+" onClick="onClickRight" focusId="100000_right" focusChangeTop="10000_right" focusChangeBottom="100_right" />
+                    <Text profile="fs25_multiTextOptionText" name="text" text="100000" />
+                    <ThreePartBitmap profile="fs25_multiTextOptionBg" />
+                </GuiElement>
+            </BoxLayout>
+        </GuiElement>
+        <BoxLayout profile="fs25_dialogButtonBox">
+            <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" />
+            <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            <Button profile="buttonActivate" text="$l10n_button_transfer" onClick="onClickActivate" id="transferButton" />
+        </BoxLayout>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="fs25_transferMoneyBg" extends="fs25_dialogBg">
+            <size value="560px 420px" />
+            <Variant name="mobile">
+                <size value="1100px 550px" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_transferMoneyAmount" extends="fs25_textDefault" with="anchorTopCenter">
+            <position value="0px -80px" />
+            <textSize value="22px" />
+            <textAlignment value="center" />
+            <textColor value="$preset_fs25_colorMainHighlight" />
+            <Variant name="mobile" with="anchorTopCenter">
+                <textSize value="40px" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_transferMoneyOptionBox" extends="emptyPanel" with="anchorBottomCenter">
+            <size value="300px 240px" />
+            <position value="0px 30px" />
+            <flowDirection value="vertical" />
+            <alignmentX value="center" />
+            <alignmentY value="bottom" />
+            <Variant name="mobile">
+                <size value="500px 500px" />
+                <position value="-150px 0px" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_transferMoneyMultiTextOption" extends="fs25_multiTextOption">
+            <margin value="0px 15px 0px 0px" />
+        </Profile>
+        <Profile name="fs25_transferMoneyMultiTextOptionLeft" extends="fs25_multiTextOptionLeft" with="anchorMiddleLeft">
+            <size value="28px 28px" />
+            <position value="3px 0px" />
+            <iconSliceId value="noSlice" />
+            <imageInvertX value="true" />
+            <imageFocusedInvertX value="true" />
+            <imageSliceId value="gui.3dShop_button" />
+            <imageFocusedSliceId value="gui.3dShop_button_selected" />
+            <imageColor value="$preset_colorWhite" />
+            <imageFocusedColor value="$preset_colorWhite" />
+            <textSize value="30px" />
+            <textOffset value="-7px 3px" />
+            <textFocusedColor value="$preset_fs25_colorMainDark" />
+            <clickSound value="CLICK" />
+            <Variant name="mobile">
+                <textSize value="50px" />
+                <textOffset value="-5px 5px" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_transferMoneyMultiTextOptionRight" extends="fs25_transferMoneyMultiTextOptionLeft" with="anchorMiddleRight">
+            <position value="-3px 0px" />
+            <imageInvertX value="false" />
+            <imageFocusedInvertX value="false" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

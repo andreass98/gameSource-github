@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="poettingerCap" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/characterShader.xml" />
+    <File fileId="1" filename="$dataS/character/textures/accessory/head/hats/capPoettinger_Diffuse.png" />
+    <File fileId="2" filename="$dataS/character/textures/accessory/head/hats/capPoettinger_Normal.png" />
+    <File fileId="3" filename="$dataS/character/textures/accessory/head/hats/capPoettinger_Specular.png" />
+    <File fileId="7" filename="$dataS/character/textures/default_specular.png" />
+    <File fileId="8" filename="$dataS/character/textures/logo/logoPoettingerEnbroidery_diffuse.png" />
+    <File fileId="9" filename="$dataS/character/textures/logo/logoPoettingerEnbroidery_normal.png" />
+    <File fileId="5" filename="$dataS/character/textures/logo/logoPoettingerFull_diffuse.png" />
+    <File fileId="6" filename="$dataS/character/textures/logo/logoPoettingerFull_normal.png" />
+  </Files>
+
+  <Materials>
+    <Material name="capPoettinger_mat" materialId="1" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="logoPoettingerFull_02_mat" materialId="2" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
+    </Material>
+    <Material name="logoPoettingerEnbroidery_mat" materialId="3" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Texture fileId="8"/>
+      <Normalmap fileId="9"/>
+      <Glossmap fileId="7"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="poettingerCap.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="animationRootNode" nodeId="1"/>
+    <TransformGroup name="poettingerCap" translation="0.000092 0 0" clipDistance="300" nodeId="2">
+      <Shape name="poettingerCap" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="3"/>
+      <Shape name="poettingerCapDecal02" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="4"/>
+      <Shape name="poettingerCapDecal01" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="5"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

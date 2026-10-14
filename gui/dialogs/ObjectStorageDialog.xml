@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <GuiElement profile="fs25_objectStorageDialogBg" id="dialogElement">
+        <ThreePartBitmap profile="fs25_dialogBgMiddleSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgTopSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <GuiElement profile="fs25_dialogContentContainer">
+            <Text profile="fs25_dialogTitle" id="dialogTitleElement" position="0px -35px" />
+            <Text profile="fs25_dialogText" text="$l10n_ui_objectStorageDescription:" id="dialogTextElement" position="0px -85px" />
+            <MultiTextOption profile="fs25_dialogMultiTextOption" id="itemsElement" position="0px 95px" onClick="onClickItems" focusInit="onOpen">
+                <Text profile="fs25_multiTextOptionText" id="itemText" name="text" />
+            </MultiTextOption>
+            <OptionSlider profile="fs25_optionSlider" onClick="onClickAmount" id="amountElement" position="0px 35px">
+                <Text profile="fs25_optionSliderText" id="itemTextAmount" name="text" />
+            </OptionSlider>
+        </GuiElement>
+        <BoxLayout profile="fs25_dialogButtonBox" id="buttonsPC">
+            <Button profile="buttonOK" text="$l10n_button_start" onClick="onClickOk" id="yesButton" />
+            <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" id="noButton" />
+        </BoxLayout>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="fs25_objectStorageDialogBg" extends="fs25_dialogBg">
+            <size value="700px 340px" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomShader version="5">
+    <Parameters>
+        <Parameter name="screenAspect" target="screenAspect" type="float2" group="base" defaultValue="16 9" minValue="1 1" maxValue="8196 8196" />
+    </Parameters>
+    <UvUsages />
+    <Textures />
+    <LodLevel startDistance="0" subsequentPassForceMode="ignore">
+        <CodeInjections>
+            <CodeInjection position="OBJECT_PARAMETERS"><![CDATA[
+    float2 screenAspect;
+]]></CodeInjection>
+            <CodeInjection position="FINAL_POS_FS"><![CDATA[
+#if defined(LIGHTING)
+    float2 uv = In.vs.defaultTexCoords;
+    uv.y = 0.5 + (uv.y - 0.5) * (object.screenAspect.x/object.screenAspect.y);
+    oColor = tex2DSampleLod(baseMap, samplerBilinearClamp, uv, 0);
+#else
+    oColor = float4(0,0,0,0);
+#endif
+]]></CodeInjection>
+            <CodeInjection position="SCREEN_SPACE_REFLECTIONS_BASE_LAYER_EXPORT"><![CDATA[
+        exportedMaterialSpecular = 0;
+        exportedBRDF = 0;
+]]></CodeInjection>
+        </CodeInjections>
+    </LodLevel>
+</CustomShader>

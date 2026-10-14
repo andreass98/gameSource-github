@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <GuiElement profile="fs25_placeableInfoBg" id="dialogElement">
+        <ThreePartBitmap profile="fs25_dialogBgMiddleSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgTopSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <Bitmap profile="fs25_placeableInfoImage" id="icon" />
+        <Text profile="fs25_placeableInfoName" id="titleText" />
+        <BoxLayout profile="fs25_placeableInfoDetailsLayout">
+            <GuiElement profile="fs25_placeableInfoDetailRow">
+                <Text profile="fs25_placeableInfoDetailRowLabel" text="$l10n_ui_sellValue" />
+                <Text profile="fs25_placeableInfoDetailRowValue" id="priceText" />
+            </GuiElement>
+            <GuiElement profile="fs25_placeableInfoDetailRow">
+                <Text profile="fs25_placeableInfoDetailRowLabel" text="$l10n_ui_age" />
+                <Text profile="fs25_placeableInfoDetailRowValue" id="ageText" />
+            </GuiElement>
+        </BoxLayout>
+        <BoxLayout profile="fs25_dialogButtonBox" id="buttonsPC">
+            <Button profile="buttonActivate" text="$l10n_button_rename" onClick="onClickRename" id="renameButton">
+                <Bitmap profile="fs25_dialogButtonBoxSeparator" id="renameSeparator" />
+            </Button>
+            <Button profile="buttonCancel" text="$l10n_button_sell" onClick="onClickSell" id="sellButton">
+                <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            </Button>
+            <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" id="okButton" />
+        </BoxLayout>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="fs25_placeableInfoBg" extends="fs25_dialogBg">
+            <height value="470px" />
+        </Profile>
+        <Profile name="fs25_placeableInfoImage" extends="baseReference" with="anchorTopCenter">
+            <size value="220px 220px" />
+            <position value="0px -30px" />
+            <imageSliceId value="noSlice" />
+            <Variant name="mobile">
+                <size value="250px 250px" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_placeableInfoName" extends="fs25_textDefault" with="anchorTopCenter">
+            <position value="0 -270px" />
+            <textAutoWidth value="true" />
+            <textAlignment value="center" />
+            <textSize value="22px" />
+            <Variant name="mobile">
+                <textSize value="30px" />
+                <position value="0px -60px" />
+                <hasFrame value="false" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_placeableInfoDetailsLayout" extends="emptyPanel" with="anchorTopCenter">
+            <size value="300px 100px" />
+            <position value="0 -310px" />
+            <alignmentY value="top" />
+            <flowDirection value="vertical" />
+        </Profile>
+        <Profile name="fs25_placeableInfoDetailRow" extends="emptyPanel" with="anchorMiddleStretchingX">
+            <height value="35px" />
+            <Variant name="mobile">
+                <size value="540px 40px" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_placeableInfoDetailRowLabel" extends="fs25_textDefault" with="anchorTopLeft">
+            <textAlignment value="right" />
+            <textAutoWidth value="true" />
+            <textMaxWidth value="280px" />
+            <textResizeWidth value="280px" />
+            <Variant name="mobile">
+                <size value="450px 30px" />
+                <textSize value="30px" />
+                <textAlignment value="left" />
+                <textMaxWidth value="400px" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_placeableInfoDetailRowValue" extends="fs25_textDefault" with="anchorTopRight">
+            <format value="percentage" />
+            <formatDecimalPlaces value="0" />
+            <textAlignment value="right" />
+            <textAutoWidth value="true" />
+            <textMaxWidth value="280px" />
+            <textResizeWidth value="280px" />
+            <Variant name="mobile" with="anchorTopRight">
+                <size value="450px 30px" />
+                <textSize value="30px" />
+                <textAlignment value="right" />
+            </Variant>
+        </Profile>
+    </GUIProfiles>
+</GUI>

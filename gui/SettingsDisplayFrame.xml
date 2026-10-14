@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI name="settingsDisplay">
+    <GuiElement profile="fs25_menuContainer">
+        <GuiElement profile="fs25_menuHeaderPanel">
+            <Bitmap profile="fs25_menuHeaderIconBg">
+                <Bitmap profile="fs25_menuHeaderIcon" imageSliceId="gui.icon_options_displaySettings" />
+            </Bitmap>
+            <Text profile="fs25_menuHeaderTitle" text="$l10n_ui_ingameMenuGameSettingsDisplay" />
+        </GuiElement>
+        <ScrollingLayout profile="fs25_settingsLayout" id="boxLayout" topClipperElementName="topClipper" bottomClipperElementName="bottomClipper">
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickPerformanceClass" onCreate="onCreatePerformanceClass" id="performanceClassElement" focusInit="onOpen">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_hardwareProfile" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_hardwareProfile" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickResolution" onCreate="onCreateResolution" id="resolutionElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_resolution" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_resolution" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <BinaryOption profile="fs25_settingsBinaryOption" onClick="onClickVSync" id="vSyncElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_vSync" />
+                </BinaryOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_vSync" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickFrameLimit" onCreate="onCreateFrameLimit" id="frameLimitElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_frameLimit" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_frameLimit" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickFullscreenMode" onCreate="onCreateFullscreenMode" id="fullscreenModeElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_windowMode" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_windowMode" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer" id="resolutionScaleContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickResolutionScale" onCreate="onCreateResolutionScale" id="resolutionScaleElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_resolutionScaling" />
+                </MultiTextOption>
+                <Button profile="fs25_settingsMultiTextOptionLocked" name="iconDisabled" onClick="onClickLockedIcon" onFocus="onFocusLockedIcon">
+                    <Text profile="fs25_multiTextOptionTooltip" text="$l10n_toolTip_resolutionScalingDisabled" position="940px 0px" textMaxNumLines="3" />
+                </Button>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_resolutionScaling" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickBrightness" onCreate="onCreateBrightness" id="brightnessElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_brightness" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_brightness" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickUIScale" onCreate="onCreateUIScale" id="uiScaleElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_uiScale" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_uiScale" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <BinaryOption profile="fs25_settingsBinaryOption" onClick="onClickHDREnabled" id="hdrEnabledElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_enableHDR" textMaxNumLines="3" />
+                </BinaryOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_enableHDR" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <Button profile="fs25_settingsHDRButton" id="hdrCalibrationButton" text="$l10n_setting_hdr" onClick="onHDRCalibration">
+                    <ThreePartBitmap profile="fs25_settingsButtonBg" />
+                </Button>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_hdr" />
+            </Bitmap>
+        </ScrollingLayout>
+        <Bitmap profile="fs25_settingsTooltipSeparator" />
+        <Bitmap profile="fs25_startClipper" name="topClipper" />
+        <Bitmap profile="fs25_stopClipper" name="bottomClipper" />
+    </GuiElement>
+    <ThreePartBitmap profile="fs25_sliderDockedBg">
+        <ThreePartBitmap profile="fs25_sliderDockedBox">
+            <Slider profile="fs25_sliderDocked" dataElementId="boxLayout" />
+        </ThreePartBitmap>
+    </ThreePartBitmap>
+    <GUIProfiles>
+        <Profile name="fs25_settingsHDRButton" extends="emptyPanel" with="anchorMiddleRight">
+            <size value="280px 32px" />
+            <position value="-10px 0px" />
+            <focusOnHighlight value="true" />
+            <textSize value="16px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+            <textAlignment value="center" />
+            <textColor value="$preset_fs25_colorMainLight" />
+            <textDisabledColor value="$preset_colorDisabled" />
+            <textFocusedColor value="$preset_fs25_colorMainDark" />
+            <textResizeWidth value="200px" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

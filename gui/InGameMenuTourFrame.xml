@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI name="ingameMenuTour">
+    <GuiElement profile="fs25_menuContainer">
+        <GuiElement profile="fs25_menuHeaderPanel">
+            <Bitmap profile="fs25_menuHeaderIconBg">
+                <Bitmap profile="fs25_menuHeaderIcon" sliceId="gui.icon_tour" />
+            </Bitmap>
+            <Text profile="fs25_menuHeaderTitle" text="$l10n_ui_tour" />
+        </GuiElement>
+        <GuiElement profile="fs25_tourControlsItemContainer" id="controlItem">
+            <InputGlyph profile="fs25_tourControlsItemGlyph" name="glyph" />
+            <Text profile="fs25_tourControlsItemText" name="text" />
+        </GuiElement>
+        <ScrollingLayout profile="fs25_tourLayout" id="layout">
+            <ThreePartBitmap profile="fs25_tourLayoutItem" id="contentItem">
+                <Text profile="fs25_tourLayoutText" name="text" />
+                <BoxLayout profile="fs25_tourLayoutControlsLayout" name="controls" />
+            </ThreePartBitmap>
+        </ScrollingLayout>
+    </GuiElement>
+    <ThreePartBitmap profile="fs25_sliderDockedBg">
+        <ThreePartBitmap profile="fs25_sliderDockedBox">
+            <Slider profile="fs25_sliderDocked" dataElementId="layout" handleFocus="true" focusInit="onOpen" />
+        </ThreePartBitmap>
+    </ThreePartBitmap>
+    <GUIProfiles>
+        <Profile name="fs25_tourControlsItemContainer" extends="emptyPanel" with="anchorTopRight">
+            <size value="550px 50px" />
+            <position value="-40px -20px" />
+            <hasFrame value="true" />
+            <frameThickness value="0 1dp 0 0" />
+            <frameTopColor value="$preset_fs25_colorGreyLight_50" />
+        </Profile>
+        <Profile name="fs25_tourControlsItemGlyph" extends="baseReference" with="anchorMiddleRight">
+            <size value="30px 30px" />
+            <glyphColor value="$preset_fs25_colorMainHighlight" />
+            <glyphBackgroundColor value="$preset_fs25_colorGreenDark" />
+            <isLeftAligned value="true" />
+        </Profile>
+        <Profile name="fs25_tourControlsItemText" extends="fs25_textDefault" with="anchorMiddleLeft">
+            <width value="350px" />
+            <textSize value="18px" />
+            <textMaxNumLines value="2" />
+        </Profile>
+        <Profile name="fs25_tourLayout" extends="emptyPanel" with="anchorStretchingYCenter">
+            <width value="1535px" />
+            <flowDirection value="vertical" />
+        </Profile>
+        <Profile name="fs25_tourLayoutItem" extends="baseReference" with="anchorTopStretchingX">
+            <height value="40px" />
+            <isHorizontal value="false" />
+            <imageSliceId value="gui.tour_middle" />
+            <startImageSize value="0px 12px" />
+            <startImageSliceId value="gui.tour_top" />
+            <endImageSize value="0px 20px" />
+            <endImageSliceId value="gui.tour_bottom" />
+        </Profile>
+        <Profile name="fs25_tourLayoutText" extends="fs25_textDefault" with="anchorMiddleLeft">
+            <size value="825px 50px" />
+            <position value="40px 4px" />
+            <textAutoHeight value="true" />
+            <textSize value="18px" />
+            <textMaxNumLines value="20" />
+        </Profile>
+        <Profile name="fs25_tourLayoutControlsLayout" extends="emptyPanel" with="anchorMiddleRight">
+            <size value="550px 50px" />
+            <position value="-50px 4px" />
+            <flowDirection value="vertical" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

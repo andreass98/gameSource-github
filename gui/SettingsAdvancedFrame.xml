@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI name="settingsAdvanced">
+    <GuiElement profile="fs25_menuContainer">
+        <GuiElement profile="fs25_menuHeaderPanel">
+            <Bitmap profile="fs25_menuHeaderIconBg">
+                <Bitmap profile="fs25_menuHeaderIcon" imageSliceId="gui.icon_options_displaySettings" />
+            </Bitmap>
+            <Text profile="fs25_menuHeaderTitle" text="$l10n_setting_advanced" />
+        </GuiElement>
+        <ScrollingLayout profile="fs25_settingsLayout" id="boxLayout" topClipperElementName="topClipper" bottomClipperElementName="bottomClipper" wrapAround="true">
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickPerformanceClass" onCreate="onCreatePerformanceClass" id="performanceClassElement" focusInit="onOpen">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_hardwareProfile" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_hardwareProfile" />
+            </Bitmap>
+            <Text profile="fs25_settingsSectionHeader" name="sectionHeader" text="$l10n_setting_objectDrawDistance" />
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickObjectDrawDistance" onCreate="onCreateObjectDrawDistance" id="objectDrawDistanceElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_objectDrawDistance" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_objectDrawDistance" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickFoliageDrawDistance" onCreate="onCreateFoliageDrawDistance" id="foliageDrawDistanceElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_foliageDrawDistance" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_foliageDrawDistance" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickLODDistance" onCreate="onCreateLODDistance" id="lodDistanceElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_LODDistance" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_LODDistance" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickTerrainLODDistance" onCreate="onCreateTerrainLODDistance" id="terrainLODDistanceElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_terrainLODDistance" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_terrainLODDistance" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickFoliageLODDistance" onCreate="onCreateFoliageLODDistance" id="foliageLODDistanceElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_foliageLODDistance" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_foliageLODDistance" />
+            </Bitmap>
+            <Text profile="fs25_settingsSectionHeader" name="sectionHeader" text="$l10n_setting_renderQuality" />
+            <Bitmap profile="fs25_multiTextOptionContainer" id="resolutionScale3dContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickResolutionScale3d" onCreate="onCreateResolutionScale3d" id="resolutionScale3dElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_resolutionScaling3d" />
+                </MultiTextOption>
+                <Button profile="fs25_settingsMultiTextOptionLocked" name="iconDisabled" onClick="onClickLockedIcon" onFocus="onFocusLockedIcon">
+                    <Text profile="fs25_multiTextOptionTooltip" text="$l10n_toolTip_resolutionScalingDisabled" position="940px 0px" textMaxNumLines="3" />
+                </Button>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_resolutionScaling3d" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickShaderQuality" onCreate="onCreateShaderQuality" id="shaderQualityElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_shaderQuality" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_shaderQuality" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickShadingRateQuality" onCreate="onCreateShadingRateQuality" id="shadingRateQualityElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_shadingRateQuality" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_shadingRateQuality" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClick" id="valarElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_valar" />
+                </MultiTextOption>
+                <Button profile="fs25_settingsMultiTextOptionLocked" name="iconDisabled" onClick="onClickLockedIcon" onFocus="onFocusLockedIcon">
+                    <Text profile="fs25_multiTextOptionTooltip" text="$l10n_toolTip_disabled" position="940px 0px" />
+                </Button>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_valar" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClick" id="screenSpaceReflectionsElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_screenSpaceReflections" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_screenSpaceReflections" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <BinaryOption profile="fs25_settingsBinaryOption" onClick="onClick" id="screenSpaceShadowsQualityElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_screenSpaceShadowsQuality" />
+                </BinaryOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_screenSpaceShadowsQuality" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickSSAOQuality" onCreate="onCreateSSAOQuality" id="ssaoQualityElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_ssaoQuality" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_ssaoQuality" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClick" id="atmosphereQualityElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_atmosphereQuality" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_atmosphereQuality" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClick" id="volumetricFogQualityElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_volumetricFogQuality" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_volumetricFogQuality" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <BinaryOption profile="fs25_settingsBinaryOption" onClick="onClickCloudShadowsQuality" id="cloudShadowsQualityElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_cloudShadowsQuality" />
+                </BinaryOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_cloudShadowsQuality" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickTerrainQuality" onCreate="onCreateTerrainQuality" id="terrainQualityElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_terrainQuality" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_terrainQuality" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickTextureResolution" onCreate="onCreateTextureResolution" id="textureResolutionElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_textureResolution" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_textureResolution" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClick" id="textureFilteringElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_textureFiltering" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_textureFiltering" />
+            </Bitmap>
+            <Text profile="fs25_settingsSectionHeader" name="sectionHeader" text="$l10n_setting_lightQuality" />
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickLightsProfile" onCreate="onCreateLightsProfile" id="lightsProfileElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_lightQuality" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_lightQuality" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClick" id="lensFlareQualityElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_lensFlareQuality" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_lensFlareQuality" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickShadowQuality" onCreate="onCreateShadowQuality" id="shadowQualityElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_shadowQuality" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_shadowQuality" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickShadowDistanceQuality" onCreate="onCreateShadowDistanceQuality" id="shadowDistanceQualityElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_shadowDistanceQuality" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_shadowDistanceQuality" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickSoftShadows" onCreate="onCreateSoftShadows" id="softShadowsElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_softShadows" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_softShadows" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickShadowMapFiltering" onCreate="onCreateShadowMapFiltering" id="shadowMapFilteringElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_shadowMapFiltering" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_shadowMapFiltering" />
+            </Bitmap>
+            <Text profile="fs25_settingsSectionHeader" name="sectionHeader" text="$l10n_ui_inGameMenuModeSettings" />
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <BinaryOption profile="fs25_settingsBinaryOption" onClick="onClickFoliageShadows" id="foliageShadowsElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_foliageShadows" />
+                </BinaryOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_foliageShadows" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer" id="realBeaconLightsElementBox">
+                <BinaryOption profile="fs25_settingsBinaryOption" onClick="onClickRealBeaconLights" id="realBeaconLightsElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_realBeaconLights" />
+                </BinaryOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_realBeaconLights" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickFovY" onCreate="onCreateFovY" id="fovYElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_fovy" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_fovy" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickFovYPlayerFirstPerson" onCreate="onCreateFovYPlayerFirstPerson" id="fovYPlayerFirstPersonElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_fovyPlayerFirstPerson" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_fovyPlayerFirstPerson" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickFovYPlayerThirdPerson" onCreate="onCreateFovYPlayerThirdPerson" id="fovYPlayerThirdPersonElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_fovyPlayerThirdPerson" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_fovyPlayerThirdPerson" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickShadowMaxLights" onCreate="onCreateShadowMaxLights" id="maxLightsElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_shadowMaxNumLights" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_shadowMaxNumLights" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickMaxMirrors" onCreate="onCreateMaxMirrors" id="maxMirrorsElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_maxNumMirrors" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_maxNumMirrors" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickMaxTireTracks" onCreate="onCreateMaxTireTracks" id="maxTireTracksElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_maxNumTireTracks" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_maxNumTireTracks" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickVolumeMeshTessellation" onCreate="onCreateVolumeMeshTessellation" id="volumeMeshTessellationElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_volumeMeshTessallation" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_volumeMeshTessellation" />
+            </Bitmap>
+            <Text profile="fs25_settingsSectionHeader" name="sectionHeader" text="$l10n_setting_AA" />
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickPPAA" id="ppaaElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_ppaa" onCreate="onCreatePPAAToolTip" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_PPAA" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer" id="msaaContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickMSAA" id="msaaElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_msaa" />
+                </MultiTextOption>
+                <Button profile="fs25_settingsMultiTextOptionLocked" name="iconDisabled" onClick="onClickLockedIcon" onFocus="onFocusLockedIcon">
+                    <Text profile="fs25_multiTextOptionTooltip" text="$l10n_toolTip_msaaDisabled" position="940px 0px" />
+                </Button>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_MSAA" />
+            </Bitmap>
+            <Text profile="fs25_settingsSectionHeader" name="sectionHeader" text="$l10n_setting_sharpness" />
+            <Bitmap profile="fs25_multiTextOptionContainer" id="sharpnessContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickSharpness" onCreate="onCreateSharpness" id="sharpnessElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_sharpness" />
+                </MultiTextOption>
+                <Button profile="fs25_settingsMultiTextOptionLocked" name="iconDisabled" onClick="onClickLockedIcon" onFocus="onFocusLockedIcon">
+                    <Text profile="fs25_multiTextOptionTooltip" text="$l10n_toolTip_ppaaSharpnessDisabled" position="940px 0px" />
+                </Button>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_sharpness" />
+            </Bitmap>
+            <Text profile="fs25_settingsSectionHeader" name="sectionHeader" text="$l10n_setting_upscaling" />
+            <Bitmap profile="fs25_multiTextOptionContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" id="scalingModeElement" onClick="onClickScalingMode" onCreate="onCreateScalingMode">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_scalingMode" />
+                </MultiTextOption>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_scalingMode" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer" id="drsQualityContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClick" id="drsQualityElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_drsQuality" />
+                </MultiTextOption>
+                <Button profile="fs25_settingsMultiTextOptionLocked" name="iconDisabled" onClick="onClickLockedIcon" onFocus="onFocusLockedIcon">
+                    <Text profile="fs25_multiTextOptionTooltip" text="$l10n_toolTip_drsDisabled" position="940px 0px" />
+                </Button>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_drsQuality" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer" id="drsTargetFPSContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" onClick="onClickDRSTargetFPS" onCreate="onCreateDRSTargetFPS" id="drsTargetFPSElement">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_drsTargetFPS" />
+                </MultiTextOption>
+                <Button profile="fs25_settingsMultiTextOptionLocked" name="iconDisabled" onClick="onClickLockedIcon" onFocus="onFocusLockedIcon">
+                    <Text profile="fs25_multiTextOptionTooltip" text="$l10n_toolTip_drsDisabled" position="940px 0px" />
+                </Button>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_drsTargetFPS" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer" id="scalingModeQualityContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" id="scalingModeQualityElement" onClick="onClickScalingModeQuality" onCreate="onCreateScalingModeQuality">
+                    <Text profile="fs25_multiTextOptionTooltip" name="ignore" text="$l10n_toolTip_scalingModeQuality" />
+                </MultiTextOption>
+                <Button profile="fs25_settingsMultiTextOptionLocked" name="iconDisabled" onClick="onClickLockedIcon" onFocus="onFocusLockedIcon">
+                    <Text profile="fs25_multiTextOptionTooltip" text="$l10n_toolTip_scalingModeDisabled" position="940px 0px" />
+                </Button>
+                <Text profile="fs25_settingsMultiTextOptionTitle" text="$l10n_setting_scalingModeQuality" />
+            </Bitmap>
+            <Bitmap profile="fs25_multiTextOptionContainer" id="frameGenerationContainer">
+                <MultiTextOption profile="fs25_settingsMultiTextOption" id="frameGenerationElement" onClick="onClickFrameGeneration">
+                    <Text profile="fs25_multiTextOptionTooltip" id="frameGenerationTooltip" name="ignore" text="$l10n_toolTip_fidelityFxSR30FrameInterpolation" />
+                </MultiTextOption>
+                <Button profile="fs25_settingsMultiTextOptionLocked" name="iconDisabled" onClick="onClickLockedIcon" onFocus="onFocusLockedIcon">
+                    <Text profile="fs25_multiTextOptionTooltip" text="$l10n_toolTip_frameGenerationDisabled" position="940px 0px" textMaxNumLines="3" onCreate="onCreateFrameGenerationTooltip" />
+                </Button>
+                <Text profile="fs25_settingsMultiTextOptionTitle" id="frameGenerationTitle" text="$l10n_setting_frameGeneration" />
+            </Bitmap>
+        </ScrollingLayout>
+        <Bitmap profile="fs25_settingsTooltipSeparator" />
+        <Bitmap profile="fs25_startClipper" name="topClipper" />
+        <Bitmap profile="fs25_stopClipper" name="bottomClipper" />
+    </GuiElement>
+    <ThreePartBitmap profile="fs25_sliderDockedBg">
+        <ThreePartBitmap profile="fs25_sliderDockedBox">
+            <Slider profile="fs25_sliderDocked" dataElementId="boxLayout" />
+        </ThreePartBitmap>
+    </ThreePartBitmap>
+</GUI>

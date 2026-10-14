@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Bitmap profile="fs25_fullScreenBackground" />
+    <GuiElement profile="baseReference" id="contentBox">
+        <GuiElement profile="fs25_shopContainer" id="mainContainer">
+            <GuiElement profile="fs25_menuHeaderPanel" absoluteSizeOffset="0px 0px">
+                <Bitmap profile="fs25_menuHeaderIconBg">
+                    <Bitmap profile="fs25_menuHeaderIcon" imageSliceId="gui.icon_achievements" />
+                </Bitmap>
+                <Text profile="fs25_menuHeaderTitle" text="$l10n_button_achievements" />
+                <RoundCorner profile="fs25_shopMoneyBoxBg" id="statsBoxBg" />
+                <BoxLayout profile="fs25_shopMoneyBox" id="statsBox">
+                    <Text profile="fs25_shopBalance" text="$l10n_achievement_stats" />
+                    <Text profile="fs25_shopMoney" id="statsValue" />
+                </BoxLayout>
+            </GuiElement>
+            <SmoothList profile="fs25_achievementsList" id="achievementList" startClipperElementName="startClipper">
+                <ListItem profile="fs25_achievementsListItem">
+                    <GuiElement profile="fs25_achievementsListItemContainer">
+                        <Bitmap profile="fs25_achievementsListItemIcon" name="icon" />
+                        <Text profile="fs25_achievementsListItemTitle" name="title" />
+                        <Text profile="fs25_achievementsListItemText" name="description" />
+                    </GuiElement>
+                </ListItem>
+            </SmoothList>
+            <Bitmap profile="fs25_startClipper" name="startClipper" position="-2px -0px" />
+        </GuiElement>
+    </GuiElement>
+    <ThreePartBitmap profile="fs25_sliderDockedBg">
+        <ThreePartBitmap profile="fs25_sliderDockedBox">
+            <Slider profile="fs25_sliderDocked" dataElementId="achievementList" handleFocus="true" focusInit="onOpen" />
+        </ThreePartBitmap>
+    </ThreePartBitmap>
+    <BoxLayout profile="fs25_buttonBox" id="buttonsPC">
+        <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" />
+    </BoxLayout>
+    <GUIProfiles>
+        <Profile name="fs25_achievementsList" extends="emptyPanel" with="anchorStretchingYStretchingX">
+            <soundDisabled value="true" />
+            <numLateralItems value="6" />
+            <itemizedScrollDelta value="1" />
+            <listItemSpacing value="-10px" />
+            <listItemLateralSpacing value="-16px" />
+        </Profile>
+        <Profile name="fs25_achievementsListItem" extends="baseReference" with="anchorTopLeft">
+            <size value="265px 365px" />
+            <imageSliceId value="gui.achievements" />
+        </Profile>
+        <Profile name="fs25_achievementsListItemContainer" extends="emptyPanel">
+            <size value="228px 325px" />
+            <position value="12px 29px" />
+        </Profile>
+        <Profile name="fs25_achievementsListItemIcon" extends="baseReference" with="anchorTopCenter">
+            <size value="200px 200px" />
+            <position value="0 -20px" />
+            <imageSliceId value="noSlice" />
+            <imageFilename value="dataS/menu/hud/achievements.png" />
+            <imageUVs value="0px 0px 256px 256px" />
+            <imageSize value="2048 2048" />
+            <imageColor value="$preset_colorWhite" />
+            <imageDisabledColor value="$preset_fs25_colorMainDark" />
+        </Profile>
+        <Profile name="fs25_achievementsListItemTitle" extends="fs25_textDefault" with="anchorBottomStretchingX">
+            <size value="100% 40px" />
+            <absoluteSizeOffset value="20px 0px" />
+            <position value="0px 60px" />
+            <textBold value="true" />
+            <textMaxNumLines value="2" />
+            <textUpperCase value="true" />
+            <textAlignment value="center" />
+            <textVerticalAlignment value="top" />
+            <textDisabledColor value="$preset_fs25_colorMainLight" />
+        </Profile>
+        <Profile name="fs25_achievementsListItemText" extends="fs25_textDefault" with="anchorBottomStretchingX">
+            <size value="100% 48px" />
+            <absoluteSizeOffset value="20px 0px" />
+            <position value="0px 4px" />
+            <textSize value="12px" />
+            <textMaxNumLines value="3" />
+            <textAlignment value="center" />
+            <textDisabledColor value="$preset_fs25_colorMainLight" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

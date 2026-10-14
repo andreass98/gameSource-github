@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Bitmap profile="fs25_fullScreenBackground" id="background" />
+    <Picture profile="fs25_mpLoadingMapPreview" id="mapSelectionPreview" />
+    <Bitmap profile="fs25_mpLoadingContainer">
+        <Bitmap profile="fs25_mpLoadingBarBg">
+            <Bitmap profile="fs25_mpLoadingBar" id="loadingBar" />
+        </Bitmap>
+        <Text profile="fs25_mpLoadingSavegameTitle" id="savegameTitle" />
+        <BoxLayout profile="fs25_mpLoadingInfoLayout" id="infoLayout">
+            <Text profile="fs25_mpLoadingInfoText" id="mapNameText" />
+            <Bitmap profile="fs25_mpLoadingInfoSeparator" id="balanceSeparator" />
+            <Text profile="fs25_mpLoadingInfoText" id="balanceText" />
+            <Bitmap profile="fs25_mpLoadingInfoSeparator" id="playTimeSeparator" />
+            <Text profile="fs25_mpLoadingInfoText" id="playTimeText" />
+        </BoxLayout>
+        <Text profile="fs25_mpLoadingHintText" id="gameplayHintText" position="0px 90px" visible="false" />
+        <IndexState profile="fs25_hintSelectorBox" id="hintStateBox" position="0px 75px" stateElementTemplateId="hintTemplate">
+            <RoundCorner profile="fs25_subCategorySelectorDot" id="hintTemplate" />
+        </IndexState>
+        <GuiElement profile="fs25_mpLoadingAnimationContainer">
+            <Animation profile="fs25_mpLoadingAnimation" id="mpLoadingAnimation" />
+            <Bitmap profile="fs25_mpLoadingAnimationDone" id="mpLoadingAnimationDone" />
+            <Text profile="fs25_mpLoadingBarPercentage" id="loadingBarPercentage" text="0%" />
+            <Text profile="fs25_mpLoadingInfo" id="loadingInfo" text="l10n_ui_loading_map" />
+        </GuiElement>
+    </Bitmap>
+    <BoxLayout profile="fs25_buttonBox">
+        <Button profile="buttonOK" text="$l10n_button_start" id="buttonOkPC" onClick="onClickOk" />
+        <Button profile="buttonBack" text="$l10n_button_cancel" id="buttonDeletePC" onClick="onClickCancel" visible="false" />
+    </BoxLayout>
+    <GUIProfiles>
+        <Profile name="fs25_mpLoadingMapPreview" extends="baseReference" with="anchorStretchingYStretchingX pivotTopCenter">
+            <position value="0px 280px" />
+            <pictureContentMode value="scaleToFill" />
+            <imageSliceId value="noSlice" />
+            <imageFilename value="dataS/menu/black.png" />
+        </Profile>
+        <Profile name="fs25_mpLoadingContainer" extends="baseReference" with="anchorBottomStretchingX">
+            <height value="280px" />
+            <imageColor value="$preset_fs25_colorMainGrey_90" />
+        </Profile>
+        <Profile name="fs25_mpLoadingSavegameTitle" extends="fs25_textDefault" with="anchorTopStretchingX">
+            <size value="80% 40px" />
+            <position value="0px -40px" />
+            <textSize value="34px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+            <textAlignment value="center" />
+        </Profile>
+        <Profile name="fs25_mpLoadingInfoLayout" extends="emptyPanel" with="anchorTopStretchingX">
+            <height value="40px" />
+            <position value="0px -95px" />
+            <alignmentX value="center" />
+        </Profile>
+        <Profile name="fs25_mpLoadingInfoText" extends="fs25_textDefault">
+            <textAutoWidth value="true" />
+            <textColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_mpLoadingInfoSeparator" extends="baseReference" with="anchorMiddleLeft">
+            <size value="2dp 20px" />
+            <margin value="25px 0px 25px 0px" />
+            <imageColor value="$preset_fs25_colorGrey" />
+        </Profile>
+        <Profile name="fs25_mpLoadingBarBg" extends="baseReference" with="anchorTopStretchingX">
+            <height value="6px" />
+            <imageColor value="$preset_colorBlack" />
+        </Profile>
+        <Profile name="fs25_mpLoadingBar" extends="baseReference" with="anchorStretchingYStretchingX">
+            <imageColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_mpLoadingHintText" extends="fs25_textDefault" with="pivotBottomCenter">
+            <size value="1200px 40px" />
+            <textSize value="16px" />
+            <textMaxNumLines value="2" />
+            <textUpperCase value="false" />
+            <textAlignment value="center" />
+            <textLayoutMode value="resize" />
+        </Profile>
+        <Profile name="fs25_mpLoadingAnimationContainer" extends="baseReference" with="anchorMiddleRight">
+            <size value="127px 127px" />
+            <position value="-80px 20px" />
+        </Profile>
+        <Profile name="fs25_mpLoadingAnimation" extends="baseReference" with="anchorBottomRight pivotMiddleCenter">
+            <size value="127px 127px" />
+            <imageSliceId value="gui.loadingAnimation" />
+            <imageColor value="$preset_fs25_colorMainHighlight" />
+            <animationMode value="rotate" />
+            <animationSpeed value="1000" />
+        </Profile>
+        <Profile name="fs25_mpLoadingAnimationDone" extends="baseReference" with="anchorBottomRight pivotMiddleCenter">
+            <size value="127px 127.5px" />
+            <imageSliceId value="gui.loadingAnimationFull" />
+            <imageColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_mpLoadingBarPercentage" extends="fs25_textDefault" with="anchorBottomRight pivotMiddleCenter">
+            <textSize value="18px" />
+            <textBold value="true" />
+            <textAutoWidth value="true" />
+            <textAlignment value="center" />
+            <textVerticalAlignment value="middle" />
+            <textColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_mpLoadingInfo" extends="fs25_textDefault" with="anchorBottomCenter">
+            <size value="210px 20px" />
+            <position value="0px -38px" />
+            <textWrapWidth value="210px" />
+            <textMaxNumLines value="3" />
+            <textSize value="14px" />
+            <textBold value="true" />
+            <textAlignment value="center" />
+            <textVerticalAlignment value="middle" />
+            <textColor value="1 1 1 0.5" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

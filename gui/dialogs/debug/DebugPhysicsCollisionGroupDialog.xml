@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <RoundCorner profile="fs25_debugPhysicsDialogBg">
+        <ScrollingLayout profile="fs25_debugPhysicsDialogContainer" id="elementsBox" />
+        <Text profile="fs25_debugPhysicsDialogTitle" id="titleCollisions" text="Collision Groups" />
+        <Text profile="fs25_debugPhysicsDialogTitle" id="titlePhysics" text="Physics Debug" />
+        <Text profile="fs25_debugPhysicsDialogSubtitle" id="subtitlePhysics" text="Hide   |   Show   |   No Depth" />
+        <GuiElement profile="fs25_debugPhysicsDialogTemplate" id="binaryTemplate">
+            <Text profile="fs25_debugPhysicsDialogTemplateText" name="title" />
+            <BinaryOption profile="fs25_debugPhysicsDialogBinaryOptionTemplate" name="option" onClick="applyChanges" />
+        </GuiElement>
+        <GuiElement profile="fs25_debugPhysicsDialogTemplate" id="sliderTemplate">
+            <Text profile="fs25_debugPhysicsDialogTemplateText" name="title" />
+            <OptionSlider profile="fs25_debugPhysicsDialogOptionSliderTemplate" name="option" onClick="applyChanges" />
+        </GuiElement>
+        <Button profile="fs25_debugPhysicsDialogButtonUnselectAll" text="Hide All Groups" onClick="unselectAll" />
+        <Button profile="fs25_debugPhysicsDialogButtonSelectAll" text="Show All Groups" onClick="selectAll" />
+        <RoundCorner profile="fs25_debugPhysicsDialogTemplateSliderBox" id="aaa_slider">
+            <Slider profile="fs25_listSlider" dataElementId="elementsBox">
+                <RoundCorner profile="fs25_listSliderBackground" />
+            </Slider>
+        </RoundCorner>
+        <BoxLayout profile="fs25_dialogButtonBox" id="buttonsPC">
+            <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" id="backButton" />
+            <Button profile="buttonOK" text="Close" onClick="onClickOk" id="okButton" />
+        </BoxLayout>
+    </RoundCorner>
+    <GUIProfiles>
+        <Profile name="fs25_debugPhysicsDialogBg" extends="baseReference" with="anchorMiddleRight">
+            <size value="600px 960px" />
+            <color value="$preset_fs25_colorMainGrey" />
+        </Profile>
+        <Profile name="fs25_debugPhysicsDialogTitle" extends="fs25_textDefault">
+            <size value="400px 60px" />
+            <textSize value="24px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+            <textOffset value="0px 15px" />
+            <textVerticalAlignment value="bottom" />
+        </Profile>
+        <Profile name="fs25_debugPhysicsDialogSubtitle" extends="fs25_textDefault">
+            <size value="540px 20px" />
+            <textSize value="18px" />
+            <textOffset value="305px 0px" />
+        </Profile>
+        <Profile name="fs25_debugPhysicsDialogContainer" extends="emptyPanel" with="anchorTopCenter">
+            <size value="570px 820px" />
+            <numFlows value="1" />
+            <flowDirection value="vertical" />
+        </Profile>
+        <Profile name="fs25_debugPhysicsDialogTemplate" extends="emptyPanel">
+            <size value="570px 40px" />
+        </Profile>
+        <Profile name="fs25_debugPhysicsDialogTemplateText" extends="fs25_textDefault" with="anchorMiddleLeft">
+            <size value="220px 30px" />
+            <textSize value="20px" />
+            <textAlignment value="right" />
+            <textLayoutMode value="resize" />
+        </Profile>
+        <Profile name="fs25_debugPhysicsDialogBinaryOptionTemplate" extends="fs25_binaryOption" with="anchorMiddleRight">
+            <position value="-30px 0px" />
+        </Profile>
+        <Profile name="fs25_debugPhysicsDialogOptionSliderTemplate" extends="fs25_optionSlider" with="anchorMiddleRight">
+            <position value="-30px 0px" />
+            <defaultProfileText value="fs25_debugPhysicsDialogOptionSliderTeext" />
+        </Profile>
+        <Profile name="fs25_debugPhysicsDialogOptionSliderTeext" extends="fs25_optionSliderText">
+            <visible value="false" />
+        </Profile>
+        <Profile name="fs25_debugPhysicsDialogTemplateSliderBox" extends="baseReference" with="anchorTopRight">
+            <size value="12px 760px" />
+            <position value="-10px -20px" />
+            <cornerSize value="0.25" />
+            <color value="$preset_fs25_colorBeige" />
+        </Profile>
+        <Profile name="fs25_debugPhysicsDialogButtonSelectAll" extends="wideButton" with="anchorBottomRight">
+            <size value="200px 50px" />
+            <position value="-30px 80px" />
+            <fitToContent value="false" />
+            <textColor value="$preset_fs25_colorMainLight" />
+        </Profile>
+        <Profile name="fs25_debugPhysicsDialogButtonUnselectAll" extends="wideButton" with="anchorBottomLeft">
+            <size value="200px 50px" />
+            <position value="30px 80px" />
+            <fitToContent value="false" />
+            <textColor value="$preset_fs25_colorMainLight" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

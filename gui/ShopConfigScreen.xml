@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Bitmap profile="fs25_shopConfigContainerLeft" id="configurationsBox">
+        <Text profile="fs25_shopConfigConfigurationTitle" text="$l10n_shop_configurations" id="configurationsTitle" />
+        <GuiElement profile="fs25_shopConfigConfigurationLayoutBox">
+            <Bitmap profile="fs25_shopConfigStartClipper" id="startClipper" />
+            <Bitmap profile="fs25_shopConfigStopClipper" id="endClipper" />
+            <ScrollingLayout profile="fs25_shopConfigConfigurationLayout" id="configurationLayout">
+                <GuiElement profile="fs25_shopConfigConfigurationItem" id="configurationItemTemplate">
+                    <MultiTextOption profile="fs25_multiTextOption" name="option" onFocus="onFocusConfigurationOption" onLeave="onLeaveConfigurationOption" visible="false" width="100%" />
+                    <BinaryOption profile="fs25_binaryOption" name="yesNoOption" onFocus="onFocusConfigurationOption" onLeave="onLeaveConfigurationOption" visible="false" width="100%" />
+                    <Button profile="fs25_colorButton" name="color" onFocus="onFocusConfigurationOption" onLeave="onLeaveConfigurationOption" visible="false">
+                        <ThreePartBitmap profile="fs25_colorButtonPicked" name="colorImage" />
+                        <Bitmap profile="fs25_colorButtonPickedMetallic" name="colorImageMetallic" />
+                        <Bitmap profile="fs25_colorButtonPickedGlossy" name="colorImageGlossy" />
+                        <Bitmap profile="fs25_colorButtonPickedMatte" name="colorImageMatte" />
+                        <Bitmap profile="fs25_colorButtonIconBox">
+                            <Bitmap profile="fs25_colorButtonIcon" />
+                        </Bitmap>
+                        <Bitmap profile="fs25_colorButtonOverlay" />
+                    </Button>
+                    <Text profile="fs25_shopMultiTextOptionTitle" name="title" />
+                    <Text profile="fs25_shopMultiTextOptionPrice" name="price" />
+                </GuiElement>
+                <GuiElement profile="fs25_shopConfigConfigurationItemPlate" id="configurationItemPlate">
+                    <Button profile="fs25_shopConfigConfigurationButton" name="button" onFocus="onFocusConfigurationOption" onLeave="onLeaveConfigurationOption" onClick="onClickLicensePlate">
+                        <Render profile="fs25_shopConfigLicensePlateRender" filename="dataS/menu/licensePlate/creationBox.i3d" cameraNode="0|1" superSamplingFactor="2" id="licensePlateRender" onRenderLoad="onRenderLoad" />
+                    </Button>
+                    <Text profile="fs25_shopMultiTextOptionTitle" name="title" text="$l10n_ui_licensePlate" />
+                    <Text profile="fs25_shopMultiTextOptionPrice" name="price" />
+                </GuiElement>
+                <GuiElement profile="fs25_shopConfigConfigurationItemLarge" id="configurationItemTemplateLarge">
+                    <MultiTextOption profile="fs25_shopMultiTextOptionLarge" name="option" onFocus="onFocusConfigurationOption" onLeave="onLeaveConfigurationOption" visible="false">
+                        <Bitmap profile="fs25_shopMultiTextOptionLargeIcon" name="icon" />
+                    </MultiTextOption>
+                    <Text profile="fs25_shopMultiTextOptionTitle" name="title" />
+                    <Text profile="fs25_shopMultiTextOptionPrice" name="price" />
+                </GuiElement>
+            </ScrollingLayout>
+            <ThreePartBitmap profile="fs25_listSliderBox">
+                <Slider profile="fs25_listSlider" dataElementId="configurationLayout" id="configSlider" />
+            </ThreePartBitmap>
+        </GuiElement>
+        <Text profile="fs25_shopConfigPriceCost" position="45px 210px" text="$l10n_shop_costsCalculation" />
+        <Text profile="fs25_shopConfigPriceTitle" position="45px 175px" text="$l10n_shop_configurationPriceBase:" />
+        <Text profile="fs25_shopConfigPriceValue" position="-65px 175px" id="basePriceText" />
+        <Text profile="fs25_shopConfigPriceTitle" position="45px 140px" text="$l10n_shop_configurationPriceOptions:" />
+        <Text profile="fs25_shopConfigPriceValue" position="-65px 140px" id="upgradesPriceText" />
+        <Text profile="fs25_shopConfigPriceTitle" position="45px 105px" text="$l10n_shop_configurationPriceTotal:" />
+        <Text profile="fs25_shopConfigPriceValueTotal" position="-65px 105px" id="totalPriceText" />
+    </Bitmap>
+    <Bitmap profile="fs25_shopConfigContainerMiddle">
+        <Bitmap profile="fs25_shopConfigBrandIcon" id="shopConfigBrandIcon" />
+        <Text profile="fs25_shopConfigItemName" id="shopConfigItemName" />
+        <BoxLayout profile="fs25_shopConfigAttributesLayout" id="attributesLayout">
+            <GuiElement profile="fs25_shopConfigAttributesItem" id="attributeItem">
+                <Bitmap profile="shopConfigAttributesIcon" name="icon" />
+                <Text profile="fs25_shopConfigAttributesValue" name="text" />
+            </GuiElement>
+        </BoxLayout>
+    </Bitmap>
+    <GuiElement profile="fs25_shopConfigContainer" id="shopConfigContent">
+        <Animation profile="fs25_shopConfigLoadingAnimation" id="loadingAnimation" visible="false" />
+    </GuiElement>
+    <GuiElement profile="fs25_shopConfigMoneyContainer" debugEabled="true">
+        <RoundCorner profile="fs25_shopConfigMoneyBoxBg" id="shopMoneyBoxBg" />
+        <BoxLayout profile="fs25_shopMoneyBox" id="shopMoneyBox">
+            <Bitmap profile="fs25_shopSlotsIcon" id="shopSlotsIcon" />
+            <Text profile="fs25_shopSlots" text="0 / 0" id="shopSlotsText" />
+            <Text profile="fs25_shopBalance" text="$l10n_ui_balance:" />
+            <Text profile="fs25_shopMoney" id="currentBalanceText" />
+        </BoxLayout>
+    </GuiElement>
+    <BoxLayout profile="fs25_buttonBox" id="buttonsPanel">
+        <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" />
+        <Button profile="buttonCancel" id="configButton" text="$l10n_button_change" onClick="onClickConfigAction" visible="false">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonActivate" id="leaseButton" text="$l10n_button_lease" onClick="onClickLease">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBuy" id="buyButton" text="$l10n_ui_purchase" onClick="onClickBuy">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Text profile="fs25_inputGlyphText" textAutoWidth="true" text="$l10n_action_cameraZoom">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" position="17px 0px" />
+        </Text>
+        <InputGlyph profile="fs25_inputGlyph" id="zoomGlyph" isLeftAligned="true" />
+        <Text profile="fs25_inputGlyphText" textAutoWidth="true" text="$l10n_action_rotateCamera">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" position="17px 0px" />
+        </Text>
+        <InputGlyph profile="fs25_inputGlyph" id="lookGlyph" isLeftAligned="true" />
+    </BoxLayout>
+    <GUIProfiles>
+        <Profile name="fs25_shopConfigContainerLeft" extends="baseReference" with="anchorStretchingYLeft">
+            <width value="410px" />
+            <imageColor value="$preset_fs25_colorMainDark_90" />
+        </Profile>
+        <Profile name="fs25_shopConfigConfigurationButton" extends="buttonBase" with="anchorBottomStretchingX">
+            <size value="100% 40px" />
+            <textSize value="16px" />
+            <textMaxNumLines value="2" />
+            <textMaxWidth value="260px" />
+            <textUpperCase value="true" />
+            <textLayoutMode value="resize" />
+            <imageColor value="0 0 0 0" />
+            <imageFocusedColor value="0 0 0 0" />
+            <imageHighlightedColor value="0 0 0 0" />
+            <imageDisabledColor value="0 0 0 0" />
+        </Profile>
+        <Profile name="fs25_shopConfigLicensePlateRender" extends="baseReference" with="anchorMiddleCenter">
+            <size value="200px 40px" />
+        </Profile>
+        <Profile name="fs25_shopConfigPriceCost" extends="fs25_textDefault" with="anchorBottomLeft">
+            <size value="200px 16px" />
+            <textSize value="12px" />
+            <textBold value="true" />
+            <textAutoWidth value="true" />
+            <textUpperCase value="true" />
+            <textMaxWidth value="200px" />
+            <textLayoutMode value="resize" />
+            <textColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_shopConfigPriceTitle" extends="fs25_textDefault" with="anchorBottomLeft">
+            <size value="150px 16px" />
+            <textSize value="16px" />
+            <textBold value="true" />
+            <textAutoWidth value="true" />
+            <textUpperCase value="true" />
+            <textMaxWidth value="170px" />
+            <textLayoutMode value="resize" />
+        </Profile>
+        <Profile name="fs25_shopConfigPriceValue" extends="fs25_textDefault" with="anchorBottomRight">
+            <size value="150px 22px" />
+            <textSize value="22px" />
+            <textAlignment value="right" />
+            <textAutoWidth value="true" />
+            <textMaxWidth value="125px" />
+            <textLayoutMode value="resize" />
+        </Profile>
+        <Profile name="fs25_shopConfigPriceValueTotal" extends="fs25_shopConfigPriceValue">
+            <textSize value="26px" />
+        </Profile>
+        <Profile name="fs25_shopConfigContainerMiddle" extends="baseReference" with="anchorStretchingYLeft">
+            <size value="250px 100%" />
+            <position value="410px 0px" />
+            <imageColor value="$preset_fs25_colorMainDark_40" />
+        </Profile>
+        <Profile name="fs25_shopConfigBrandIcon" extends="baseReference" with="anchorTopCenter">
+            <size value="220px 110px" />
+            <position value="0px -70px" />
+            <imageSliceId value="noSlice" />
+        </Profile>
+        <Profile name="fs25_shopConfigItemName" extends="fs25_textDefault" with="anchorTopCenter">
+            <size value="200px 50px" />
+            <position value="0px -190px" />
+            <textSize value="18px" />
+            <textBold value="true" />
+            <textMaxNumLines value="2" />
+            <textUpperCase value="true" />
+            <textAlignment value="center" />
+            <textVerticalAlignment value="top" />
+        </Profile>
+        <Profile name="fs25_shopConfigSummaryTitle" extends="fs25_textDefault" with="anchorTopLeft">
+            <size value="325px 28px" />
+            <position value="0 -240px" />
+            <textSize value="18px" />
+            <textBold value="true" />
+        </Profile>
+        <Profile name="fs25_shopConfigAttributesLayout" extends="emptyPanel" with="anchorBottomLeft">
+            <absoluteSizeOffset value="0px 350px" />
+            <position value="0px 100px" />
+            <elementSpacing value="10px" />
+            <fitFlowToElements value="true" />
+            <flowDirection value="vertical" />
+        </Profile>
+        <Profile name="fs25_shopConfigAttributesItem" extends="emptyPanel" with="anchorTopStretchingX">
+            <size value="100% 86px" />
+            <margin value="0 2px 0 2px" />
+        </Profile>
+        <Profile name="shopConfigAttributesIcon" extends="baseReference" with="anchorTopCenter">
+            <size value="36px 36px" />
+            <imageColor value="$preset_fs25_colorBeige" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconMaintenanceCosts" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_maintenanceCost" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconPower" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_power" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconPowerReq" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_requiredPower" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconTransmission" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_gears" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconWorkingWidth" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_workingWidth" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconCapacity" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_capacity" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconWeight" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_maxLoadCapacity" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconAdditionalWeight" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_tareWeight" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconFuel" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_fuel" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconElectricCharge" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_electricCharge" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconMethane" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_CNG" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconLifeTime" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_time" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconMaxSpeed" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_maxSpeed" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconWorkSpeed" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_workSpeed" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconBaleSizeRound" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_roundBaleDiameter" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconBaleSizeSquare" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_squareBaleLength" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconBaleWrapperBaleSizeRound" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_wrappedRoundBaleDiameter" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconBaleWrapperBaleSizeSquare" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_wrappedSquareBaleLength" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconMaxTreeSize" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_treeCutDiameter" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconMaxTreeMass" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_maxTreeWeight" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconYarderMaxLength" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_maxRopeLength" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconIncomePerHour" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_hourlyIncome" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconOperatingHours" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_operatingHours" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconSlots" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_consoleSlots" />
+        </Profile>
+        <Profile name="shopConfigAttributeIconWheels" extends="shopConfigAttributesIcon">
+            <imageSliceId value="gui.storeAttribute_tireName" />
+        </Profile>
+        <Profile name="fs25_shopConfigAttributesValue" extends="fs25_textDefault" with="anchorTopStretchingX">
+            <size value="100% 20px" />
+            <position value="0px -46px" />
+            <textSize value="16px" />
+            <textMaxNumLines value="2" />
+            <textUpperCase value="true" />
+            <textAlignment value="center" />
+            <textVerticalAlignment value="top" />
+            <textAutoHeight value="true" />
+        </Profile>
+        <Profile name="fs25_shopConfigContainer" extends="emptyPanel" with="anchorStretchingYStretchingX pivotTopRight">
+            <absoluteSizeOffset value="660px 40px" />
+        </Profile>
+        <Profile name="fs25_shopConfigLoadingAnimation" extends="baseReference" with="anchorBottomRight pivotMiddleCenter">
+            <size value="127px 127px" />
+            <imageSliceId value="gui.loadingAnimation" />
+            <imageColor value="$preset_fs25_colorMainHighlight" />
+            <animationMode value="rotate" />
+            <animationSpeed value="1000" />
+            <Variant name="mobile">
+                <size value="180px 180px" />
+            </Variant>
+        </Profile>
+        <Profile name="fs25_shopConfigMoneyContainer" extends="emptyPanel" with="anchorTopRight">
+            <size value="900px 80px" />
+            <position value="-160px -78px" />
+        </Profile>
+        <Profile name="fs25_shopConfigMoneyBoxBg" extends="fs25_shopMoneyBoxBg">
+            <color value="$preset_fs25_colorMainDark_40" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

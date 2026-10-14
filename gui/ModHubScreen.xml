@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Bitmap profile="fs25_fullScreenBackground" />
+    <Bitmap profile="fs25_tabListContainer" id="header">
+        <MultiTextOption profile="uiInGameMenuHeaderSelector" id="pageSelector" onClick="onClickPageSelection" soundDisabled="true" focusInit="onOpen" />
+        <SmoothList profile="fs25_tabList" id="pagingTabList" onSelectionChanged="onTabMenuSelectionChanged" onScroll="onTabMenuScroll">
+            <ListItem profile="fs25_tabListItem">
+                <Button profile="fs25_tabListItemButton" name="tabButton" />
+                <Bitmap profile="fs25_tabListItemSeparator" />
+                <Bitmap profile="fs25_tabListItemSeparatorBottom" />
+                <Bitmap profile="fs25_modHubIconModHubUpdate" name="iconHasUpdates" />
+            </ListItem>
+        </SmoothList>
+    </Bitmap>
+    <Bitmap profile="uiElementContainerFullScreenSpanning">
+        <Paging profile="uiInGameMenuPaging" onPageChange="onPageChange" onPageUpdate="onPageUpdate" id="pagingElement">
+            <FrameReference ref="modHubLoading" id="pageLoading" />
+            <FrameReference ref="modHubCategories" id="pageCategories" />
+            <FrameReference ref="modHubItems" id="pageInstalled" />
+            <FrameReference ref="modHubItems" id="pageUpdates" />
+            <FrameReference ref="modHubItems" id="pageDLCs" />
+            <FrameReference ref="modHubExtraContent" id="pageExtraContent" />
+            <FrameReference ref="modHubItems" id="pageContest" />
+            <FrameReference ref="modHubItems" id="pageTesting" />
+            <FrameReference ref="modHubItems" id="pageItems" />
+            <FrameReference ref="modHubDetails" id="pageDetails" />
+            <FrameReference ref="modHubItems" id="pageSearch" />
+        </Paging>
+    </Bitmap>
+    <Button profile="fs25_modHubButtonDownload" id="buttonDownload" text="$l10n_modHub_download" onClick="onDownloadButton">
+        <ThreePartBitmap profile="fs25_modHubDownloadStatusBarBackground" id="downloadStatusBarBg">
+            <ThreePartBitmap profile="fs25_modHubDownloadStatusBar" id="downloadStatusBar" />
+        </ThreePartBitmap>
+        <Text profile="fs25_modHubDownloadTextFailed" id="downloadTextFailed" text="$l10n_modHub_failed" />
+    </Button>
+    <BoxLayout profile="fs25_buttonBox" id="buttonsPanel">
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[1]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[2]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[3]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[4]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[5]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[6]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+    </BoxLayout>
+    <GUIProfiles>
+        <Profile name="fs25_modHubButtonDownload" extends="baseReference" with="anchorBottomRight">
+            <size value="275px 90px" />
+            <position value="50px 75px" />
+            <imageSliceId value="gui.modhub_downloadBox" />
+            <inputAction value="MENU_ACTIVATE" />
+            <drawChildrenLast value="true" />
+            <iconSize value="30px 30px" />
+            <iconTextOffset value="-6px -1px" />
+            <iconColor value="$preset_fs25_colorMainHighlight" />
+            <iconFocusedColor value="$preset_colorWhite" />
+            <iconHighlightedColor value="$preset_colorWhite" />
+            <iconSelectedColor value="$preset_colorWhite" />
+            <iconDisabledColor value="$preset_fs25_colorMainHighlight_40" />
+            <iconBgColor value="$preset_fs25_colorGreenDark" />
+            <iconBgFocusedColor value="$preset_fs25_colorMainHighlight" />
+            <iconBgHighlightedColor value="$preset_fs25_colorMainHighlight" />
+            <iconBgSelectedColor value="$preset_fs25_colorMainHighlight" />
+            <iconBgDisabledColor value="$preset_fs25_colorGreenDark_40" />
+            <textSize value="14px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+            <textMaxWidth value="100px" />
+            <textAlignment value="center" />
+            <textOffset value="-21px 15px" />
+            <textColor value="$preset_fs25_colorMainLight" />
+            <textDisabledColor value="$preset_colorDisabled" />
+            <textFocusedColor value="$preset_fs25_colorMainHighlight" />
+            <textHighlightedColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_modHubDownloadStatusBarBackground" extends="emptyPanel">
+            <size value="188px 6px" />
+            <position value="31px 30px" />
+            <imageSliceId value="gui.progressbar_middle" />
+            <imageColor value="$preset_fs25_colorMainDark" />
+            <imageHighlightedColor value="$preset_fs25_colorMainDark" />
+            <imageSelectedColor value="$preset_fs25_colorMainDark" />
+            <startImageSize value="5px 0" />
+            <startImageSliceId value="gui.progressbar_left" />
+            <endImageSize value="5px 0" />
+            <endImageSliceId value="gui.progressbar_right" />
+        </Profile>
+        <Profile name="fs25_modHubDownloadStatusBar" extends="emptyPanel" with="anchorStretchingYStretchingX pivotMiddleLeft">
+            <position value="-0.5px 0px" />
+            <imageSliceId value="gui.progressbar_middle" />
+            <imageColor value="$preset_fs25_colorMainHighlight" />
+            <imageHighlightedColor value="$preset_fs25_colorMainHighlight" />
+            <imageSelectedColor value="$preset_fs25_colorMainHighlight" />
+            <startImageSize value="5px 0" />
+            <startImageSliceId value="gui.progressbar_left" />
+            <endImageSize value="5px 0" />
+            <endImageSliceId value="gui.progressbar_right" />
+        </Profile>
+        <Profile name="fs25_modHubDownloadTextFailed" extends="fs25_textDefault" with="anchorBottomLeft">
+            <width value="138px" />
+            <position value="21px 22px" />
+            <textColor value="$preset_colorRed" />
+            <textUpperCase value="true" />
+        </Profile>
+        <Profile name="fs25_modHubIconModHubUpdate" extends="baseReference" with="anchorMiddleRight">
+            <visible value="false" />
+            <size value="24px 24px" />
+            <position value="-24px 34px" />
+            <imageSliceId value="gui.updateNotification" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

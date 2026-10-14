@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<humanSounds>
+    <footsteps>
+        <left nodeOffset="0.035" liftedDistanceThreshold="0.1" playDistance="0.02" />
+        <right nodeOffset="0.035" liftedDistanceThreshold="0.1" playDistance="0.02" />
+    </footsteps>
+    <water>
+        <swim file="$data/sounds/player/swim/plyrSwim_01.wav" linkNode="0&gt;" innerRadius="3.0" outerRadius="10.0" loops="0" fadeIn="0.2" fadeOut="0.3" supportsReverb="false">
+            <volume indoor="0" outdoor="1.0" />
+            <pitch indoor="0" outdoor="1.0" />
+            <lowpassGain indoor="0.50" outdoor="1.00" />
+        </swim>
+        <swimFast file="$data/sounds/player/swim/plyrSwimCrawl_01.wav" volumeScale="4" pitchScale="-2.0" linkNode="0&gt;" innerRadius="3.0" outerRadius="10.0" loops="0" fadeIn="0.2" fadeOut="0.3" supportsReverb="false">
+            <volume indoor="0" outdoor="1.0" />
+            <pitch indoor="0" outdoor="0" />
+            <lowpassGain indoor="0.50" outdoor="1.00" />
+        </swimFast>
+        <swimIdle file="$data/sounds/player/swim/plyrSwimNoMovement_01.wav" linkNode="0&gt;" innerRadius="3.0" outerRadius="10.0" loops="0" fadeIn="0.1" fadeOut="0.2" supportsReverb="false">
+            <volume indoor="0" outdoor="1.0" />
+            <pitch indoor="0" outdoor="1.0" />
+            <lowpassGain indoor="0.50" outdoor="1.00" />
+        </swimIdle>
+        <plunge file="$data/sounds/player/swim/plyrWaterSplash_01.wav" linkNode="0&gt;" innerRadius="3.0" outerRadius="10.0" loops="1" supportsReverb="false">
+            <volume indoor="0" outdoor="1.0" />
+            <pitch indoor="0" outdoor="1.0" />
+            <lowpassGain indoor="0.50" outdoor="1.00" />
+        </plunge>
+    </water>
+    <jump />
+</humanSounds>

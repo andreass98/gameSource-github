@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="goatBaby_posed02" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/tileAndMirrorShader.xml" />
+    <File fileId="5" filename="$dataS/character/animals/domesticated/goat/goatHairs_diffuse.png" />
+    <File fileId="1" filename="$dataS/character/animals/domesticated/goat/goatKid/goatKid_diffuse.png" />
+    <File fileId="2" filename="$dataS/character/animals/domesticated/goat/goatKid/goatKid_normal.png" />
+    <File fileId="3" filename="$dataS/character/animals/domesticated/goat/goatKid/goatKid_specular.png" />
+  </Files>
+
+  <Materials>
+    <Material name="Goatkid_mat" materialId="1" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="goatKid_mat" materialId="2" customShaderId="4" customShaderVariation="sssSpecularDirt_alphaMapSecondUV">
+      <Custommap name="alphaMap" fileId="5"/>
+      <Texture fileId="1"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="goatBaby_posed02.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="Goatkid" nodeId="1">
+      <Shape name="goatkid_body" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="2"/>
+      <Shape name="tongue" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="3"/>
+      <Shape name="mouth_top" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="4"/>
+      <Shape name="mouth_bottom" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="5"/>
+      <Shape name="eye_l" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="6"/>
+      <Shape name="eye_r" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="7"/>
+      <TransformGroup name="Hair" nodeId="8">
+        <Shape name="ear" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="9"/>
+        <Shape name="tail" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="10"/>
+        <Shape name="mainHair" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="11"/>
+        <Shape name="lashes" shapeId="10" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="12"/>
+        <Shape name="whiskers" shapeId="11" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="13"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

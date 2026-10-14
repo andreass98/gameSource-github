@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="topConstruction" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/characterShader.xml" />
+    <File fileId="154" filename="$dataS/character/textures/accessory/head/glasses/glassesAlpha_diffuse.png" />
+    <File fileId="150" filename="$dataS/character/textures/accessory/head/glasses/glasses_diffuse.png" />
+    <File fileId="153" filename="$dataS/character/textures/accessory/head/glasses/glasses_mask.png" />
+    <File fileId="151" filename="$dataS/character/textures/accessory/head/glasses/glasses_normal.png" />
+    <File fileId="152" filename="$dataS/character/textures/accessory/head/glasses/glasses_specular.png" />
+    <File fileId="73" filename="$dataS/character/textures/accessory/head/hats/ballCapTweed_diffuse.png" />
+    <File fileId="76" filename="$dataS/character/textures/accessory/head/hats/ballCapTweed_mask.png" />
+    <File fileId="74" filename="$dataS/character/textures/accessory/head/hats/ballCapTweed_normal.png" />
+    <File fileId="75" filename="$dataS/character/textures/accessory/head/hats/ballCapTweed_specular.png" />
+    <File fileId="132" filename="$dataS/character/textures/accessory/head/hats/caseIHFemHat_diffuse.png" />
+    <File fileId="135" filename="$dataS/character/textures/accessory/head/hats/caseIHFemHat_mask.png" />
+    <File fileId="134" filename="$dataS/character/textures/accessory/head/hats/caseIHFemHat_specular.png" />
+    <File fileId="131" filename="$dataS/character/textures/accessory/head/hats/cortevaLogo_diffuse.png" />
+    <File fileId="69" filename="$dataS/character/textures/accessory/head/hats/derbyTweedHat_diffuse.png" />
+    <File fileId="72" filename="$dataS/character/textures/accessory/head/hats/derbyTweedHat_mask.png" />
+    <File fileId="70" filename="$dataS/character/textures/accessory/head/hats/derbyTweedHat_normal.png" />
+    <File fileId="71" filename="$dataS/character/textures/accessory/head/hats/derbyTweedHat_specular.png" />
+    <File fileId="136" filename="$dataS/character/textures/accessory/head/hats/engelbertStraussCapConcrete_diffuse.png" />
+    <File fileId="139" filename="$dataS/character/textures/accessory/head/hats/engelbertStraussCapConcrete_mask.png" />
+    <File fileId="137" filename="$dataS/character/textures/accessory/head/hats/engelbertStraussCapConcrete_normal.png" />
+    <File fileId="138" filename="$dataS/character/textures/accessory/head/hats/engelbertStraussCapConcrete_specular.png" />
+    <File fileId="130" filename="$dataS/character/textures/accessory/head/hats/eroLogo_decal.png" />
+    <File fileId="127" filename="$dataS/character/textures/accessory/head/hats/farmSimCapDecal_diffuse.png" />
+    <File fileId="128" filename="$dataS/character/textures/accessory/head/hats/farmSimCapDecal_normal.png" />
+    <File fileId="129" filename="$dataS/character/textures/accessory/head/hats/farmSimCapDecal_specular.png" />
+    <File fileId="126" filename="$dataS/character/textures/accessory/head/hats/farmSimCap_mask.png" />
+    <File fileId="146" filename="$dataS/character/textures/accessory/head/hats/hatWoolen_diffuse.png" />
+    <File fileId="149" filename="$dataS/character/textures/accessory/head/hats/hatWoolen_mask.png" />
+    <File fileId="147" filename="$dataS/character/textures/accessory/head/hats/hatWoolen_normal.png" />
+    <File fileId="148" filename="$dataS/character/textures/accessory/head/hats/hatWoolen_specular.png" />
+    <File fileId="6" filename="$dataS/character/textures/accessory/head/hats/headgearBallcap_diffuse.png" />
+    <File fileId="9" filename="$dataS/character/textures/accessory/head/hats/headgearBallcap_mask.png" />
+    <File fileId="7" filename="$dataS/character/textures/accessory/head/hats/headgearBallcap_normal.png" />
+    <File fileId="8" filename="$dataS/character/textures/accessory/head/hats/headgearBallcap_specular.png" />
+    <File fileId="10" filename="$dataS/character/textures/accessory/head/hats/headgearBeanie_diffuse.png" />
+    <File fileId="13" filename="$dataS/character/textures/accessory/head/hats/headgearBeanie_mask.png" />
+    <File fileId="11" filename="$dataS/character/textures/accessory/head/hats/headgearBeanie_normal.png" />
+    <File fileId="12" filename="$dataS/character/textures/accessory/head/hats/headgearBeanie_specular.png" />
+    <File fileId="14" filename="$dataS/character/textures/accessory/head/hats/headgearBeret_diffuse.png" />
+    <File fileId="17" filename="$dataS/character/textures/accessory/head/hats/headgearBeret_mask.png" />
+    <File fileId="15" filename="$dataS/character/textures/accessory/head/hats/headgearBeret_normal.png" />
+    <File fileId="16" filename="$dataS/character/textures/accessory/head/hats/headgearBeret_specular.png" />
+    <File fileId="18" filename="$dataS/character/textures/accessory/head/hats/headgearCowboy_diffuse.png" />
+    <File fileId="21" filename="$dataS/character/textures/accessory/head/hats/headgearCowboy_mask.png" />
+    <File fileId="19" filename="$dataS/character/textures/accessory/head/hats/headgearCowboy_normal.png" />
+    <File fileId="20" filename="$dataS/character/textures/accessory/head/hats/headgearCowboy_specular.png" />
+    <File fileId="22" filename="$dataS/character/textures/accessory/head/hats/headgearFisherman_diffuse.png" />
+    <File fileId="25" filename="$dataS/character/textures/accessory/head/hats/headgearFisherman_mask.png" />
+    <File fileId="23" filename="$dataS/character/textures/accessory/head/hats/headgearFisherman_normal.png" />
+    <File fileId="24" filename="$dataS/character/textures/accessory/head/hats/headgearFisherman_specular.png" />
+    <File fileId="57" filename="$dataS/character/textures/accessory/head/hats/headgearForestryAlpha_diffuse.png" />
+    <File fileId="64" filename="$dataS/character/textures/accessory/head/hats/headgearForestryGeneric_specular.png" />
+    <File fileId="59" filename="$dataS/character/textures/accessory/head/hats/headgearForestryHusq_diffuse.png" />
+    <File fileId="60" filename="$dataS/character/textures/accessory/head/hats/headgearForestryHusq_specular.png" />
+    <File fileId="61" filename="$dataS/character/textures/accessory/head/hats/headgearForestryJonsered_diffuse.png" />
+    <File fileId="62" filename="$dataS/character/textures/accessory/head/hats/headgearForestryJonsered_specular.png" />
+    <File fileId="53" filename="$dataS/character/textures/accessory/head/hats/headgearForestryMcCull_diffuse.png" />
+    <File fileId="55" filename="$dataS/character/textures/accessory/head/hats/headgearForestryMcCull_specular.png" />
+    <File fileId="63" filename="$dataS/character/textures/accessory/head/hats/headgearForestryStihl_diffuse.png" />
+    <File fileId="58" filename="$dataS/character/textures/accessory/head/hats/headgearForestryVisor_normal.png" />
+    <File fileId="56" filename="$dataS/character/textures/accessory/head/hats/headgearForestry_mask.png" />
+    <File fileId="54" filename="$dataS/character/textures/accessory/head/hats/headgearForestry_normal.png" />
+    <File fileId="26" filename="$dataS/character/textures/accessory/head/hats/headgearMilitia_diffuse.png" />
+    <File fileId="29" filename="$dataS/character/textures/accessory/head/hats/headgearMilitia_mask.png" />
+    <File fileId="27" filename="$dataS/character/textures/accessory/head/hats/headgearMilitia_normal.png" />
+    <File fileId="28" filename="$dataS/character/textures/accessory/head/hats/headgearMilitia_specular.png" />
+    <File fileId="35" filename="$dataS/character/textures/accessory/head/hats/headgearMotorBikeGlass_mask.png" />
+    <File fileId="34" filename="$dataS/character/textures/accessory/head/hats/headgearMotorBikeGlass_normal.png" />
+    <File fileId="30" filename="$dataS/character/textures/accessory/head/hats/headgearMotorBike_diffuse.png" />
+    <File fileId="33" filename="$dataS/character/textures/accessory/head/hats/headgearMotorBike_mask.png" />
+    <File fileId="31" filename="$dataS/character/textures/accessory/head/hats/headgearMotorBike_normal.png" />
+    <File fileId="32" filename="$dataS/character/textures/accessory/head/hats/headgearMotorBike_specular.png" />
+    <File fileId="36" filename="$dataS/character/textures/accessory/head/hats/headgearOutback_diffuse.png" />
+    <File fileId="39" filename="$dataS/character/textures/accessory/head/hats/headgearOutback_mask.png" />
+    <File fileId="37" filename="$dataS/character/textures/accessory/head/hats/headgearOutback_normal.png" />
+    <File fileId="38" filename="$dataS/character/textures/accessory/head/hats/headgearOutback_specular.png" />
+    <File fileId="44" filename="$dataS/character/textures/accessory/head/hats/headgearRacingGlass_normal.png" />
+    <File fileId="40" filename="$dataS/character/textures/accessory/head/hats/headgearRacing_diffuse.png" />
+    <File fileId="43" filename="$dataS/character/textures/accessory/head/hats/headgearRacing_mask.png" />
+    <File fileId="41" filename="$dataS/character/textures/accessory/head/hats/headgearRacing_normal.png" />
+    <File fileId="42" filename="$dataS/character/textures/accessory/head/hats/headgearRacing_specular.png" />
+    <File fileId="155" filename="$dataS/character/textures/accessory/head/hats/headgearRespirator01_diffuse.png" />
+    <File fileId="158" filename="$dataS/character/textures/accessory/head/hats/headgearRespirator01_mask.png" />
+    <File fileId="156" filename="$dataS/character/textures/accessory/head/hats/headgearRespirator01_normal.png" />
+    <File fileId="157" filename="$dataS/character/textures/accessory/head/hats/headgearRespirator01_specular.png" />
+    <File fileId="45" filename="$dataS/character/textures/accessory/head/hats/headgearRiding_diffuse.png" />
+    <File fileId="48" filename="$dataS/character/textures/accessory/head/hats/headgearRiding_mask.png" />
+    <File fileId="46" filename="$dataS/character/textures/accessory/head/hats/headgearRiding_normal.png" />
+    <File fileId="47" filename="$dataS/character/textures/accessory/head/hats/headgearRiding_specular.png" />
+    <File fileId="85" filename="$dataS/character/textures/accessory/head/hats/headgearRoundBrim_diffuse.png" />
+    <File fileId="88" filename="$dataS/character/textures/accessory/head/hats/headgearRoundBrim_mask.png" />
+    <File fileId="86" filename="$dataS/character/textures/accessory/head/hats/headgearRoundBrim_normal.png" />
+    <File fileId="87" filename="$dataS/character/textures/accessory/head/hats/headgearRoundBrim_specular.png" />
+    <File fileId="81" filename="$dataS/character/textures/accessory/head/hats/headgearStrawHat_diffuse.png" />
+    <File fileId="84" filename="$dataS/character/textures/accessory/head/hats/headgearStrawHat_mask.png" />
+    <File fileId="82" filename="$dataS/character/textures/accessory/head/hats/headgearStrawHat_normal.png" />
+    <File fileId="83" filename="$dataS/character/textures/accessory/head/hats/headgearStrawHat_specular.png" />
+    <File fileId="77" filename="$dataS/character/textures/accessory/head/hats/headgearSunHat_diffuse.png" />
+    <File fileId="80" filename="$dataS/character/textures/accessory/head/hats/headgearSunHat_mask.png" />
+    <File fileId="78" filename="$dataS/character/textures/accessory/head/hats/headgearSunHat_normal.png" />
+    <File fileId="79" filename="$dataS/character/textures/accessory/head/hats/headgearSunHat_specular.png" />
+    <File fileId="49" filename="$dataS/character/textures/accessory/head/hats/headgearVintage_diffuse.png" />
+    <File fileId="52" filename="$dataS/character/textures/accessory/head/hats/headgearVintage_mask.png" />
+    <File fileId="50" filename="$dataS/character/textures/accessory/head/hats/headgearVintage_normal.png" />
+    <File fileId="51" filename="$dataS/character/textures/accessory/head/hats/headgearVintage_specular.png" />
+    <File fileId="89" filename="$dataS/character/textures/accessory/head/hats/johnDeereHatBlack_diffuse.png" />
+    <File fileId="92" filename="$dataS/character/textures/accessory/head/hats/johnDeereHatBlack_mask.png" />
+    <File fileId="90" filename="$dataS/character/textures/accessory/head/hats/johnDeereHatBlack_normal.png" />
+    <File fileId="91" filename="$dataS/character/textures/accessory/head/hats/johnDeereHatBlack_specular.png" />
+    <File fileId="93" filename="$dataS/character/textures/accessory/head/hats/johnDeereHatGreen_diffuse.png" />
+    <File fileId="96" filename="$dataS/character/textures/accessory/head/hats/johnDeereHatGreen_mask.png" />
+    <File fileId="94" filename="$dataS/character/textures/accessory/head/hats/johnDeereHatGreen_normal.png" />
+    <File fileId="95" filename="$dataS/character/textures/accessory/head/hats/johnDeereHatGreen_specular.png" />
+    <File fileId="125" filename="$dataS/character/textures/accessory/head/hats/kroneLogo_diffuse.png" />
+    <File fileId="121" filename="$dataS/character/textures/accessory/head/hats/kubotaHatDecal_diffuse.png" />
+    <File fileId="122" filename="$dataS/character/textures/accessory/head/hats/kubotaHatDecal_normal.png" />
+    <File fileId="123" filename="$dataS/character/textures/accessory/head/hats/kubotaHatDecal_specular.png" />
+    <File fileId="119" filename="$dataS/character/textures/accessory/head/hats/kubotaHatone_diffuse.png" />
+    <File fileId="124" filename="$dataS/character/textures/accessory/head/hats/kubotaHattwo_diffuse.png" />
+    <File fileId="120" filename="$dataS/character/textures/accessory/head/hats/kubotaHattwo_mask.png" />
+    <File fileId="115" filename="$dataS/character/textures/accessory/head/hats/masseyFergusonHat_diffuse.png" />
+    <File fileId="118" filename="$dataS/character/textures/accessory/head/hats/masseyFergusonHat_mask.png" />
+    <File fileId="116" filename="$dataS/character/textures/accessory/head/hats/masseyFergusonHat_normal.png" />
+    <File fileId="117" filename="$dataS/character/textures/accessory/head/hats/masseyFergusonHat_specular.png" />
+    <File fileId="111" filename="$dataS/character/textures/accessory/head/hats/newHollandFemLogo_diffuse.png" />
+    <File fileId="114" filename="$dataS/character/textures/accessory/head/hats/newHollandFemLogo_mask.png" />
+    <File fileId="112" filename="$dataS/character/textures/accessory/head/hats/newHollandFemLogo_normal.png" />
+    <File fileId="113" filename="$dataS/character/textures/accessory/head/hats/newHollandFemLogo_specular.png" />
+    <File fileId="143" filename="$dataS/character/textures/accessory/head/hats/planETLogoDecal_diffuse.png" />
+    <File fileId="144" filename="$dataS/character/textures/accessory/head/hats/planETLogoDecal_normal.png" />
+    <File fileId="145" filename="$dataS/character/textures/accessory/head/hats/planETLogoDecal_specular.png" />
+    <File fileId="65" filename="$dataS/character/textures/accessory/head/hats/strawHat_diffuse.png" />
+    <File fileId="68" filename="$dataS/character/textures/accessory/head/hats/strawHat_mask.png" />
+    <File fileId="66" filename="$dataS/character/textures/accessory/head/hats/strawHat_normal.png" />
+    <File fileId="67" filename="$dataS/character/textures/accessory/head/hats/strawHat_specular.png" />
+    <File fileId="107" filename="$dataS/character/textures/accessory/head/hats/valtraHat_diffuse.png" />
+    <File fileId="110" filename="$dataS/character/textures/accessory/head/hats/valtraHat_mask.png" />
+    <File fileId="108" filename="$dataS/character/textures/accessory/head/hats/valtraHat_normal.png" />
+    <File fileId="109" filename="$dataS/character/textures/accessory/head/hats/valtraHat_specular.png" />
+    <File fileId="97" filename="$dataS/character/textures/accessory/head/hats/vermeerHat_diffuse.png" />
+    <File fileId="100" filename="$dataS/character/textures/accessory/head/hats/vermeerHat_mask.png" />
+    <File fileId="98" filename="$dataS/character/textures/accessory/head/hats/vermeerHat_normal.png" />
+    <File fileId="99" filename="$dataS/character/textures/accessory/head/hats/vermeerHat_specular.png" />
+    <File fileId="104" filename="$dataS/character/textures/accessory/head/hats/vermeerLogoGreen_diffuse.png" />
+    <File fileId="101" filename="$dataS/character/textures/accessory/head/hats/volvoDecal_diffuse.png" />
+    <File fileId="102" filename="$dataS/character/textures/accessory/head/hats/volvoDecal_normal.png" />
+    <File fileId="103" filename="$dataS/character/textures/accessory/head/hats/volvoDecal_specular.png" />
+    <File fileId="105" filename="$dataS/character/textures/default_normal.png" />
+    <File fileId="106" filename="$dataS/character/textures/default_specular.png" />
+    <File fileId="1" filename="$dataS/character/textures/jacket/construction_diffuse.png" />
+    <File fileId="5" filename="$dataS/character/textures/jacket/construction_mask.png" />
+    <File fileId="2" filename="$dataS/character/textures/jacket/construction_normal.png" />
+    <File fileId="3" filename="$dataS/character/textures/jacket/construction_specular.png" />
+    <File fileId="133" filename="$dataS/character/textures/pants/claasBottom_normal.png" />
+    <File fileId="140" filename="$dataS/character/textures/shirts/engelbertStraussLogo_diffuse.png" />
+    <File fileId="142" filename="$dataS/character/textures/shirts/engelbertStraussLogo_mask.png" />
+    <File fileId="141" filename="$dataS/character/textures/shirts/engelbertStraussLogo_specular.png" />
+    <File fileId="159" filename="$dataS/character/textures/shirts/topTeeShirt_diffuse.png" />
+    <File fileId="162" filename="$dataS/character/textures/shirts/topTeeShirt_mask.png" />
+    <File fileId="160" filename="$dataS/character/textures/shirts/topTeeShirt_normal.png" />
+    <File fileId="161" filename="$dataS/character/textures/shirts/topTeeShirt_specular.png" />
+  </Files>
+
+  <Materials>
+    <Material name="lambert1" materialId="14" diffuseColor="0.5 0.5 0.5 1">
+    </Material>
+    <Material name="construction_mat" materialId="58" customShaderId="4">
+      <Custommap name="mMaskMap" fileId="5"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="headgearBallcap_01_mat" materialId="1" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.220 0.250 0.440 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.500 0.500 0.500 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="9"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="headgearBeanie_mat" materialId="2" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.1 0.1 0.1 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.1 0.1 0.1 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="13"/>
+      <Texture fileId="10"/>
+      <Normalmap fileId="11"/>
+      <Glossmap fileId="12"/>
+    </Material>
+    <Material name="headgearBeret_mat" materialId="3" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="17"/>
+      <Texture fileId="14"/>
+      <Normalmap fileId="15"/>
+      <Glossmap fileId="16"/>
+    </Material>
+    <Material name="headgearCowboy_mat" materialId="4" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="21"/>
+      <Texture fileId="18"/>
+      <Normalmap fileId="19"/>
+      <Glossmap fileId="20"/>
+    </Material>
+    <Material name="headgearFisherman_mat" materialId="5" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="25"/>
+      <Texture fileId="22"/>
+      <Normalmap fileId="23"/>
+      <Glossmap fileId="24"/>
+    </Material>
+    <Material name="headgearMilitia_mat" materialId="6" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="29"/>
+      <Texture fileId="26"/>
+      <Normalmap fileId="27"/>
+      <Glossmap fileId="28"/>
+    </Material>
+    <Material name="headgearMotorBike_mat" materialId="7" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="33"/>
+      <Texture fileId="30"/>
+      <Normalmap fileId="31"/>
+      <Glossmap fileId="32"/>
+    </Material>
+    <Material name="headgearMotorBikeGlass_mat" materialId="8" diffuseColor="0.15 0.15 0.15 1" specularColor="0.9 0.9 0.9" alphaBlending="true" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.220 0.250 0.440 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.500 0.500 0.500 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="0.8 0.8 0.8 1.0"/>
+      <Custommap name="mMaskMap" fileId="35"/>
+      <Normalmap fileId="34"/>
+    </Material>
+    <Material name="headgearOutback_mat" materialId="9" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="39"/>
+      <Texture fileId="36"/>
+      <Normalmap fileId="37"/>
+      <Glossmap fileId="38"/>
+    </Material>
+    <Material name="headgearRacing_mat" materialId="10" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="43"/>
+      <Texture fileId="40"/>
+      <Normalmap fileId="41"/>
+      <Glossmap fileId="42"/>
+    </Material>
+    <Material name="headgearRacingGlass_mat" materialId="11" diffuseColor="0.15 0.15 0.15 1" specularColor="0.88 0.88 0.88">
+      <Normalmap fileId="44"/>
+    </Material>
+    <Material name="headgearRiding_mat" materialId="12" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="48"/>
+      <Texture fileId="45"/>
+      <Normalmap fileId="46"/>
+      <Glossmap fileId="47"/>
+    </Material>
+    <Material name="headgearVintage_mat" materialId="13" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="52"/>
+      <Texture fileId="49"/>
+      <Normalmap fileId="50"/>
+      <Glossmap fileId="51"/>
+    </Material>
+    <Material name="headgearForestryMcCull_mat" materialId="15" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="56"/>
+      <Texture fileId="53"/>
+      <Normalmap fileId="54"/>
+      <Glossmap fileId="55"/>
+    </Material>
+    <Material name="headgearForestryAlpha_mat" materialId="16" specularColor="0.1 0.1 0.1" alphaBlending="true" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.220 0.250 0.440 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.500 0.500 0.500 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="56"/>
+      <Texture fileId="57"/>
+      <Normalmap fileId="58"/>
+    </Material>
+    <Material name="headgearForestryHusq_mat" materialId="17" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="56"/>
+      <Texture fileId="59"/>
+      <Normalmap fileId="54"/>
+      <Glossmap fileId="60"/>
+    </Material>
+    <Material name="headgearForestryJonsered_mat" materialId="18" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="56"/>
+      <Texture fileId="61"/>
+      <Normalmap fileId="54"/>
+      <Glossmap fileId="62"/>
+    </Material>
+    <Material name="headgearForestryStihl_mat" materialId="19" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="56"/>
+      <Texture fileId="63"/>
+      <Normalmap fileId="54"/>
+      <Glossmap fileId="64"/>
+    </Material>
+    <Material name="strawHat_mat" materialId="20" customShaderId="4">
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="68"/>
+      <Texture fileId="65"/>
+      <Normalmap fileId="66"/>
+      <Glossmap fileId="67"/>
+    </Material>
+    <Material name="derbyTweedHat_mat" materialId="21" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.220 0.250 0.440 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.500 0.500 0.500 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="72"/>
+      <Texture fileId="69"/>
+      <Normalmap fileId="70"/>
+      <Glossmap fileId="71"/>
+    </Material>
+    <Material name="ballCapTweed_mat" materialId="22" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.220 0.250 0.440 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.500 0.500 0.500 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="76"/>
+      <Texture fileId="73"/>
+      <Normalmap fileId="74"/>
+      <Glossmap fileId="75"/>
+    </Material>
+    <Material name="headgearSunHat_mat" materialId="23" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.75 0.65 0.6 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="80"/>
+      <Texture fileId="77"/>
+      <Normalmap fileId="78"/>
+      <Glossmap fileId="79"/>
+    </Material>
+    <Material name="headgearStrawHat_mat" materialId="24" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.220 0.250 0.440 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.500 0.500 0.500 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="84"/>
+      <Texture fileId="81"/>
+      <Normalmap fileId="82"/>
+      <Glossmap fileId="83"/>
+    </Material>
+    <Material name="headgearRoundBrim_mat" materialId="25" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.220 0.250 0.440 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.500 0.500 0.500 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="88"/>
+      <Texture fileId="85"/>
+      <Normalmap fileId="86"/>
+      <Glossmap fileId="87"/>
+    </Material>
+    <Material name="johnDeereHatBlack_mat" materialId="26" customShaderId="4">
+      <CustomParameter name="colorScaleG" value=".03 .03 .03 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.938 0.938 0.938 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="92"/>
+      <Texture fileId="89"/>
+      <Normalmap fileId="90"/>
+      <Glossmap fileId="91"/>
+    </Material>
+    <Material name="johnDeereHatGreen_mat" materialId="27" customShaderId="4">
+      <CustomParameter name="colorScaleG" value=".03 .03 .03 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.938 0.938 0.938 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="96"/>
+      <Texture fileId="93"/>
+      <Normalmap fileId="94"/>
+      <Glossmap fileId="95"/>
+    </Material>
+    <Material name="vermeerHat_03_mat" materialId="28" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.05 0.05 0.05 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.05 0.05 0.05 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="100"/>
+      <Texture fileId="97"/>
+      <Normalmap fileId="98"/>
+      <Glossmap fileId="99"/>
+    </Material>
+    <Material name="volvoDecal_mat" materialId="29">
+      <Texture fileId="101"/>
+      <Normalmap fileId="102"/>
+      <Glossmap fileId="103"/>
+    </Material>
+    <Material name="vermeerHat_01_mat" materialId="30" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.225 0.225 0.225 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.570 0.880 0.050 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="100"/>
+      <Texture fileId="97"/>
+      <Normalmap fileId="98"/>
+      <Glossmap fileId="99"/>
+    </Material>
+    <Material name="vermeerLogoGreen_mat" materialId="31">
+      <Texture fileId="104"/>
+      <Normalmap fileId="105"/>
+      <Glossmap fileId="106"/>
+    </Material>
+    <Material name="valtraHat_mat" materialId="32" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.220 0.250 0.440 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.500 0.500 0.500 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="110"/>
+      <Texture fileId="107"/>
+      <Normalmap fileId="108"/>
+      <Glossmap fileId="109"/>
+    </Material>
+    <Material name="headgearBallcap_08_mat" materialId="33" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1 1 1 1.0"/>
+      <CustomParameter name="colorScaleR" value="1 1 1 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="9"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="newHollandFemLogo_mat" materialId="34" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.220 0.250 0.440 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.500 0.500 0.500 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.567 0.567 1.0"/>
+      <Custommap name="mMaskMap" fileId="114"/>
+      <Texture fileId="111"/>
+      <Normalmap fileId="112"/>
+      <Glossmap fileId="113"/>
+    </Material>
+    <Material name="masseyFergusonHat_mat" materialId="35" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.220 0.250 0.440 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.500 0.500 0.500 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="118"/>
+      <Texture fileId="115"/>
+      <Normalmap fileId="116"/>
+      <Glossmap fileId="117"/>
+    </Material>
+    <Material name="kubotaHatone_mat" materialId="36" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.938 0.938 0.938 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.938 0.938 0.938 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="120"/>
+      <Texture fileId="119"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="kubotaHatDecal_mat" materialId="37">
+      <Texture fileId="121"/>
+      <Normalmap fileId="122"/>
+      <Glossmap fileId="123"/>
+    </Material>
+    <Material name="kubotaHattwo_mat" materialId="38" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.938 0.938 0.938 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.938 0.938 0.938 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="120"/>
+      <Texture fileId="124"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="headgearBallcap_05_mat" materialId="39" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.08 0.08 0.08 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.51 0.51 0.51 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="9"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="kroneLogo_mat" materialId="40">
+      <Texture fileId="125"/>
+      <Normalmap fileId="105"/>
+      <Glossmap fileId="106"/>
+    </Material>
+    <Material name="headgearBallcap_07_mat" materialId="41" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.98 0.98 0.98 1"/>
+      <CustomParameter name="colorScaleR" value="0.07 0.16 0.36 1"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="126"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="farmSimCapDecal_mat" materialId="42">
+      <Texture fileId="127"/>
+      <Normalmap fileId="128"/>
+      <Glossmap fileId="129"/>
+    </Material>
+    <Material name="headgearBallcap_02_mat" materialId="43" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.0091 0.1746 0.5972 1"/>
+      <CustomParameter name="colorScaleR" value="0.0091 0.1746 0.5972 1"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="9"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="headgearBallcap_04_mat" materialId="44" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.05 0.05 0.05 0.64"/>
+      <CustomParameter name="colorScaleR" value="0.05 0.05 0.05 0.64"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="9"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="eroLogo_mat" materialId="45">
+      <Texture fileId="130"/>
+      <Normalmap fileId="105"/>
+      <Glossmap fileId="106"/>
+    </Material>
+    <Material name="headgearBallcap_03_mat" materialId="46" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.0091 0.1746 0.5972 1"/>
+      <CustomParameter name="colorScaleR" value="0.0091 0.1746 0.5972 1"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="9"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="cortevaLogo_mat" materialId="47">
+      <Texture fileId="131"/>
+      <Normalmap fileId="105"/>
+      <Glossmap fileId="106"/>
+    </Material>
+    <Material name="caseIHFemHat_mat" materialId="48" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.220 0.250 0.440 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.500 0.500 0.500 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="135"/>
+      <Texture fileId="132"/>
+      <Normalmap fileId="133"/>
+      <Glossmap fileId="134"/>
+    </Material>
+    <Material name="engelbertStraussCapConcrete_mat" materialId="49" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.220 0.250 0.440 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.500 0.500 0.500 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="139"/>
+      <Texture fileId="136"/>
+      <Normalmap fileId="137"/>
+      <Glossmap fileId="138"/>
+    </Material>
+    <Material name="engelbertStraussLogo_mat" materialId="50" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.220 0.250 0.440 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.500 0.500 0.500 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="142"/>
+      <Texture fileId="140"/>
+      <Glossmap fileId="141"/>
+    </Material>
+    <Material name="vermeerHat_02_mat" materialId="51" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.12 0.12 0.12 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.12 0.12 0.12 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="100"/>
+      <Texture fileId="97"/>
+      <Normalmap fileId="98"/>
+      <Glossmap fileId="99"/>
+    </Material>
+    <Material name="planETLogoDecal_mat" materialId="52">
+      <Texture fileId="143"/>
+      <Normalmap fileId="144"/>
+      <Glossmap fileId="145"/>
+    </Material>
+    <Material name="hatWoolen_mat" materialId="53" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.63 0.417 0.16 1.0"/>
+      <CustomParameter name="colorScaleR" value="0.213 0.103 0.092 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="149"/>
+      <Texture fileId="146"/>
+      <Normalmap fileId="147"/>
+      <Glossmap fileId="148"/>
+    </Material>
+    <Material name="headgearBallcap_06_mat" materialId="54" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorScaleR" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="sssColor" value="0.938 0.938 0.938 1.0"/>
+      <Custommap name="mMaskMap" fileId="9"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="glasses_mat" materialId="55" alphaBlending="true" customShaderId="4">
+      <Custommap name="mMaskMap" fileId="153"/>
+      <Texture fileId="150"/>
+      <Normalmap fileId="151"/>
+      <Glossmap fileId="152"/>
+    </Material>
+    <Material name="glassesAlpha_mat" materialId="56" alphaBlending="true" customShaderId="4">
+      <Custommap name="mMaskMap" fileId="153"/>
+      <Texture fileId="154"/>
+      <Normalmap fileId="151"/>
+      <Glossmap fileId="152"/>
+    </Material>
+    <Material name="headgearRespirator01_mat" materialId="57" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="158"/>
+      <Texture fileId="155"/>
+      <Normalmap fileId="156"/>
+      <Glossmap fileId="157"/>
+    </Material>
+    <Material name="topTeeShirt_mat" materialId="59" customShaderId="4">
+      <CustomParameter name="colorScaleG" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="sssColor" value="1.0 1.0 1.0 1.0"/>
+      <Custommap name="mMaskMap" fileId="162"/>
+      <Texture fileId="159"/>
+      <Normalmap fileId="160"/>
+      <Glossmap fileId="161"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="topConstruction.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="root" visibility="false" nodeId="1">
+      <TransformGroup name="Hips" translation="-0.000092 0.984618 -0.000001" rotation="-90 -14.104545 90" nodeId="2">
+        <TransformGroup name="Spine" translation="0.080482 0 0" rotation="0 0 -2.583755" nodeId="3">
+          <TransformGroup name="Spine1" translation="0.046216 0 0" rotation="0 0 21.907372" nodeId="4">
+            <TransformGroup name="Spine2" translation="0.149847 0 0" rotation="0 0 4.568611" nodeId="5">
+              <TransformGroup name="Neck" translation="0.285869 0 0" rotation="0 0 -18.533192" nodeId="6">
+                <TransformGroup name="Head" translation="0.079931 0 0" rotation="0 0 11.457336" nodeId="7">
+                  <TransformGroup name="LeftEye" translation="0.073541 -0.080013 -0.03234" rotation="-0.001115 1.999058 -92.743561" nodeId="8"/>
+                  <TransformGroup name="RightEye" translation="0.073538 -0.080013 0.03234" rotation="-0.001115 1.999058 87.256439" nodeId="9"/>
+                  <TransformGroup name="LeftUpEyelid" translation="0.073541 -0.080013 -0.03234" rotation="0 0 -75.585472" nodeId="10"/>
+                  <TransformGroup name="LeftLowEyelid" translation="0.073541 -0.080013 -0.03234" rotation="0 0 -118.470505" nodeId="11"/>
+                  <TransformGroup name="RightLowEyelid" translation="0.073538 -0.080013 0.03234" rotation="0 0 61.529499" nodeId="12"/>
+                  <TransformGroup name="RightUpEyelid" translation="0.073538 -0.080013 0.03234" rotation="0 0 104.414528" nodeId="13"/>
+                  <TransformGroup name="attachments" rotation="92.71183 90 0" nodeId="14">
+                    <TransformGroup name="headgear" collision="false" clipDistance="300" nodeId="15">
+                      <Shape name="headgearBallcap" visibility="false" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="16"/>
+                      <Shape name="headgearBeanie" visibility="false" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="17"/>
+                      <Shape name="headgearBeret" visibility="false" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="18"/>
+                      <Shape name="headgearCowboy" visibility="false" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="19"/>
+                      <Shape name="headgearFisherman" visibility="false" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="5" clipDistance="300" nodeId="20"/>
+                      <Shape name="headgearMilitia" visibility="false" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="6" clipDistance="300" nodeId="21"/>
+                      <TransformGroup name="headgearMotorbike" visibility="false" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="22">
+                        <Shape name="headgearMotorbike" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="7" clipDistance="300" nodeId="23"/>
+                        <Shape name="headgearMotorbikeGoggles" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="7" clipDistance="300" nodeId="24">
+                          <Shape name="headgearMotorbikeGlass" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="8" clipDistance="300" nodeId="25"/>
+                        </Shape>
+                      </TransformGroup>
+                      <Shape name="headgearOutback" visibility="false" shapeId="10" castsShadows="true" receiveShadows="true" materialIds="9" clipDistance="300" nodeId="26"/>
+                      <TransformGroup name="headgearRacing" visibility="false" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="27">
+                        <Shape name="headgearRacing" shapeId="11" castsShadows="true" receiveShadows="true" materialIds="10" clipDistance="300" nodeId="28"/>
+                        <Shape name="headgearRacingGlass" shapeId="12" castsShadows="true" receiveShadows="true" materialIds="11" clipDistance="300" nodeId="29"/>
+                      </TransformGroup>
+                      <TransformGroup name="headgearRiding" visibility="false" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="30">
+                        <Shape name="ridingHelmet" shapeId="13" castsShadows="true" receiveShadows="true" materialIds="12" clipDistance="300" nodeId="31"/>
+                        <Shape name="ridingStrap" shapeId="14" castsShadows="true" receiveShadows="true" materialIds="12" clipDistance="300" nodeId="32"/>
+                      </TransformGroup>
+                      <Shape name="headgearVintage" visibility="false" shapeId="15" castsShadows="true" receiveShadows="true" materialIds="13" clipDistance="300" nodeId="33"/>
+                      <TransformGroup name="headGearHair" visibility="false" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="34">
+                        <Shape name="headgearHair" shapeId="16" castsShadows="true" receiveShadows="true" materialIds="14" clipDistance="300" nodeId="35"/>
+                      </TransformGroup>
+                      <TransformGroup name="mcCulloch" nodeId="36">
+                        <TransformGroup name="headgearMcCulloch" visibility="false" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="37">
+                          <Shape name="ForestryVisor" shapeId="17" castsShadows="true" receiveShadows="true" materialIds="15" clipDistance="300" nodeId="38">
+                            <Shape name="VisorMesh" shapeId="18" castsShadows="true" receiveShadows="true" materialIds="16" clipDistance="300" nodeId="39"/>
+                          </Shape>
+                          <Shape name="Helmet" shapeId="19" castsShadows="true" receiveShadows="true" materialIds="15" clipDistance="300" nodeId="40"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="husqvarna" nodeId="41">
+                        <TransformGroup name="headgearHusqvarna" visibility="false" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="42">
+                          <Shape name="ForestryVisor" shapeId="20" castsShadows="true" receiveShadows="true" materialIds="17" clipDistance="300" nodeId="43">
+                            <Shape name="VisorMesh" shapeId="21" castsShadows="true" receiveShadows="true" materialIds="16" clipDistance="300" nodeId="44"/>
+                          </Shape>
+                          <Shape name="Helmet" shapeId="22" castsShadows="true" receiveShadows="true" materialIds="17" clipDistance="300" nodeId="45"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="jonsered" nodeId="46">
+                        <TransformGroup name="headgearJonsered" visibility="false" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="47">
+                          <Shape name="ForestryVisor" shapeId="23" castsShadows="true" receiveShadows="true" materialIds="18" clipDistance="300" nodeId="48">
+                            <Shape name="VisorMesh" shapeId="24" castsShadows="true" receiveShadows="true" materialIds="16" clipDistance="300" nodeId="49"/>
+                          </Shape>
+                          <Shape name="Helmet" shapeId="25" castsShadows="true" receiveShadows="true" materialIds="18" clipDistance="300" nodeId="50"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="stihl" nodeId="51">
+                        <TransformGroup name="headgearStihl" visibility="false" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="52">
+                          <Shape name="ForestryVisor" shapeId="26" castsShadows="true" receiveShadows="true" materialIds="19" clipDistance="300" nodeId="53">
+                            <Shape name="VisorMesh" shapeId="27" castsShadows="true" receiveShadows="true" materialIds="16" clipDistance="300" nodeId="54"/>
+                          </Shape>
+                          <Shape name="Helmet" shapeId="28" castsShadows="true" receiveShadows="true" materialIds="19" clipDistance="300" nodeId="55"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <Shape name="strawHat" visibility="false" shapeId="29" castsShadows="true" receiveShadows="true" materialIds="20" clipDistance="300" nodeId="56"/>
+                      <Shape name="derbyTweedHat" visibility="false" shapeId="30" castsShadows="true" receiveShadows="true" materialIds="21" clipDistance="300" nodeId="57"/>
+                      <Shape name="ballCapTweed" visibility="false" shapeId="31" castsShadows="true" receiveShadows="true" materialIds="22" clipDistance="300" nodeId="58"/>
+                      <Shape name="headgearSunHat" visibility="false" shapeId="32" castsShadows="true" receiveShadows="true" materialIds="23" clipDistance="300" nodeId="59"/>
+                      <Shape name="headgearStrawHat" visibility="false" shapeId="33" castsShadows="true" receiveShadows="true" materialIds="24" clipDistance="300" nodeId="60"/>
+                      <Shape name="headgearRoundBrim" visibility="false" shapeId="34" castsShadows="true" receiveShadows="true" materialIds="25" clipDistance="300" nodeId="61"/>
+                      <TransformGroup name="johnDeere" nodeId="62">
+                        <Shape name="johnDeereHatBlack" visibility="false" shapeId="35" castsShadows="true" receiveShadows="true" materialIds="26" clipDistance="300" nodeId="63"/>
+                        <Shape name="johnDeereHatGreen" visibility="false" shapeId="36" castsShadows="true" receiveShadows="true" materialIds="27" clipDistance="300" nodeId="64"/>
+                      </TransformGroup>
+                      <TransformGroup name="volvo" nodeId="65">
+                        <TransformGroup name="volvoHat" visibility="false" nodeId="66">
+                          <Shape name="volvoHat" shapeId="37" castsShadows="true" receiveShadows="true" materialIds="28" clipDistance="300" nodeId="67"/>
+                          <Shape name="volvoDecal" shapeId="38" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="29" clipDistance="30" nodeId="68"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="vermeer" nodeId="69">
+                        <TransformGroup name="vermeerHat" visibility="false" nodeId="70">
+                          <Shape name="vermeerHat" shapeId="39" castsShadows="true" receiveShadows="true" materialIds="30" clipDistance="300" nodeId="71"/>
+                          <Shape name="vermeerLogoDecal" shapeId="40" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31" clipDistance="30" nodeId="72"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="valtra" nodeId="73">
+                        <Shape name="valtraHat" visibility="false" shapeId="41" castsShadows="true" receiveShadows="true" materialIds="32" clipDistance="300" nodeId="74"/>
+                      </TransformGroup>
+                      <TransformGroup name="newHolland" nodeId="75">
+                        <TransformGroup name="newHollandCap" visibility="false" nodeId="76">
+                          <Shape name="newHollandBallcap" shapeId="42" castsShadows="true" receiveShadows="true" materialIds="33" clipDistance="300" nodeId="77"/>
+                          <Shape name="logoDecal" shapeId="43" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="34" clipDistance="30" nodeId="78"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="masseyFerguson" nodeId="79">
+                        <Shape name="masseyFergusonHat" visibility="false" shapeId="44" castsShadows="true" receiveShadows="true" materialIds="35" clipDistance="300" nodeId="80"/>
+                      </TransformGroup>
+                      <TransformGroup name="kubota" nodeId="81">
+                        <TransformGroup name="kubotaHat" visibility="false" nodeId="82">
+                          <Shape name="kubotaHat" shapeId="45" castsShadows="true" receiveShadows="true" materialIds="36" clipDistance="300" nodeId="83"/>
+                          <Shape name="kubotaHatDecal" shapeId="46" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="37" clipDistance="30" nodeId="84"/>
+                        </TransformGroup>
+                        <TransformGroup name="kubotaHat2" visibility="false" nodeId="85">
+                          <Shape name="kubotaHat2" shapeId="47" castsShadows="true" receiveShadows="true" materialIds="38" clipDistance="300" nodeId="86"/>
+                          <Shape name="kubotaHatDecal" shapeId="48" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="37" clipDistance="30" nodeId="87"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="krone" nodeId="88">
+                        <TransformGroup name="kroneHat" visibility="false" nodeId="89">
+                          <Shape name="kroneHat" shapeId="49" castsShadows="true" receiveShadows="true" materialIds="39" clipDistance="300" nodeId="90"/>
+                          <Shape name="kroneDecal" shapeId="50" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="40" clipDistance="30" nodeId="91"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="farmingSimulator" nodeId="92">
+                        <TransformGroup name="fSHat" visibility="false" nodeId="93">
+                          <Shape name="farmSimHat" shapeId="51" castsShadows="true" receiveShadows="true" materialIds="41" clipDistance="300" nodeId="94"/>
+                          <Shape name="farmSimHatDecal" shapeId="52" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="42" clipDistance="30" nodeId="95"/>
+                          <Shape name="farmSimHatParts" shapeId="53" castsShadows="true" receiveShadows="true" materialIds="43" clipDistance="300" nodeId="96"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="ero" nodeId="97">
+                        <TransformGroup name="eroHat" visibility="false" nodeId="98">
+                          <Shape name="eroHat" shapeId="54" castsShadows="true" receiveShadows="true" materialIds="44" clipDistance="300" nodeId="99"/>
+                          <Shape name="eroLogoDecal" shapeId="55" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="45" clipDistance="30" nodeId="100"/>
+                          <Shape name="eroHatParts" shapeId="56" castsShadows="true" receiveShadows="true" materialIds="44" clipDistance="300" nodeId="101"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="corteva" nodeId="102">
+                        <TransformGroup name="cortevaHat" visibility="false" nodeId="103">
+                          <Shape name="cortevaHat" shapeId="57" castsShadows="true" receiveShadows="true" materialIds="46" clipDistance="300" nodeId="104"/>
+                          <Shape name="cortevaDecal" shapeId="58" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="47" clipDistance="30" nodeId="105"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="caseIH" nodeId="106">
+                        <Shape name="caseIHhat" visibility="false" shapeId="59" castsShadows="true" receiveShadows="true" materialIds="48" clipDistance="300" nodeId="107"/>
+                      </TransformGroup>
+                      <TransformGroup name="strauss" nodeId="108">
+                        <TransformGroup name="straussConcreteCap" visibility="false" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="109">
+                          <Shape name="top" shapeId="60" castsShadows="true" receiveShadows="true" materialIds="49" clipDistance="300" nodeId="110"/>
+                          <Shape name="logo" shapeId="61" castsShadows="true" receiveShadows="true" materialIds="50" clipDistance="300" nodeId="111"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="planETHat" visibility="false" nodeId="112">
+                        <Shape name="planETHat" shapeId="62" castsShadows="true" receiveShadows="true" materialIds="51" clipDistance="300" nodeId="113"/>
+                        <Shape name="planETLogoDecal" shapeId="63" castsShadows="false" receiveShadows="true" materialIds="52" clipDistance="30" nodeId="114"/>
+                        <Shape name="planETLogoDecal2" shapeId="64" castsShadows="false" receiveShadows="true" materialIds="52" clipDistance="30" nodeId="115"/>
+                      </TransformGroup>
+                      <Shape name="hatWoolen" visibility="false" shapeId="65" castsShadows="true" receiveShadows="true" materialIds="53" clipDistance="300" nodeId="116"/>
+                      <TransformGroup name="GIANTSCap" visibility="false" nodeId="117">
+                        <Shape name="headgearBallcap" shapeId="66" castsShadows="true" receiveShadows="true" materialIds="54" clipDistance="300" nodeId="118"/>
+                        <Shape name="giantsLogoDecal" shapeId="67" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="54" clipDistance="30" nodeId="119"/>
+                      </TransformGroup>
+                    </TransformGroup>
+                    <TransformGroup name="glasses" collision="false" clipDistance="300" nodeId="120">
+                      <TransformGroup name="glassesAviators" visibility="false" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="121">
+                        <Shape name="frame" shapeId="68" castsShadows="true" receiveShadows="true" materialIds="55" clipDistance="300" nodeId="122"/>
+                        <Shape name="glass_l" shapeId="69" castsShadows="true" receiveShadows="true" materialIds="56" clipDistance="300" nodeId="123"/>
+                        <Shape name="glass_r" shapeId="70" castsShadows="true" receiveShadows="true" materialIds="56" clipDistance="300" nodeId="124"/>
+                      </TransformGroup>
+                      <TransformGroup name="glassesClassic" visibility="false" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="125">
+                        <Shape name="frame" shapeId="71" castsShadows="true" receiveShadows="true" materialIds="55" clipDistance="300" nodeId="126"/>
+                        <Shape name="glass_l" shapeId="72" castsShadows="true" receiveShadows="true" materialIds="56" clipDistance="300" nodeId="127"/>
+                        <Shape name="glass_r" shapeId="73" castsShadows="true" receiveShadows="true" materialIds="56" clipDistance="300" nodeId="128"/>
+                      </TransformGroup>
+                      <TransformGroup name="glassesReading" visibility="false" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="129">
+                        <Shape name="frame" shapeId="74" castsShadows="true" receiveShadows="true" materialIds="55" clipDistance="300" nodeId="130"/>
+                        <Shape name="glass_l" shapeId="75" castsShadows="true" receiveShadows="true" materialIds="56" clipDistance="300" nodeId="131"/>
+                        <Shape name="glass_r" shapeId="76" castsShadows="true" receiveShadows="true" materialIds="56" clipDistance="300" nodeId="132"/>
+                      </TransformGroup>
+                      <TransformGroup name="glassesSafety" visibility="false" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="133">
+                        <Shape name="left" shapeId="77" castsShadows="true" receiveShadows="true" materialIds="56" clipDistance="300" nodeId="134"/>
+                        <Shape name="right" shapeId="78" castsShadows="true" receiveShadows="true" materialIds="56" clipDistance="300" nodeId="135"/>
+                        <Shape name="left_reverse" shapeId="79" castsShadows="true" receiveShadows="true" materialIds="56" clipDistance="300" nodeId="136"/>
+                        <Shape name="right_reverse" shapeId="80" castsShadows="true" receiveShadows="true" materialIds="56" clipDistance="300" nodeId="137"/>
+                        <Shape name="front_l" shapeId="81" castsShadows="true" receiveShadows="true" materialIds="56" clipDistance="300" nodeId="138"/>
+                        <Shape name="front_r" shapeId="82" castsShadows="true" receiveShadows="true" materialIds="56" clipDistance="300" nodeId="139"/>
+                        <Shape name="front_r_reverse" shapeId="83" castsShadows="true" receiveShadows="true" materialIds="56" clipDistance="300" nodeId="140"/>
+                        <Shape name="front_l_reverse" shapeId="84" castsShadows="true" receiveShadows="true" materialIds="56" clipDistance="300" nodeId="141"/>
+                      </TransformGroup>
+                      <TransformGroup name="glassesSports02" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="142">
+                        <Shape name="frame" shapeId="85" castsShadows="true" receiveShadows="true" materialIds="55" clipDistance="300" nodeId="143"/>
+                        <Shape name="glass_l" shapeId="86" castsShadows="true" receiveShadows="true" materialIds="55" clipDistance="300" nodeId="144"/>
+                        <Shape name="glass_r" shapeId="87" castsShadows="true" receiveShadows="true" materialIds="55" clipDistance="300" nodeId="145"/>
+                      </TransformGroup>
+                      <TransformGroup name="glassesVintage" visibility="false" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="146">
+                        <Shape name="frame" shapeId="88" castsShadows="true" receiveShadows="true" materialIds="55" clipDistance="300" nodeId="147"/>
+                        <Shape name="glass_l" shapeId="89" castsShadows="true" receiveShadows="true" materialIds="56" clipDistance="300" nodeId="148"/>
+                        <Shape name="glass_r" shapeId="90" castsShadows="true" receiveShadows="true" materialIds="56" clipDistance="300" nodeId="149"/>
+                      </TransformGroup>
+                      <TransformGroup name="glassesSports01" nodeId="150">
+                        <Shape name="glass_r" shapeId="91" castsShadows="true" receiveShadows="true" materialIds="55" clipDistance="300" nodeId="151"/>
+                        <Shape name="glass_l" shapeId="92" castsShadows="true" receiveShadows="true" materialIds="55" clipDistance="300" nodeId="152"/>
+                        <Shape name="frame" shapeId="93" castsShadows="true" receiveShadows="true" materialIds="55" clipDistance="300" nodeId="153"/>
+                      </TransformGroup>
+                    </TransformGroup>
+                    <TransformGroup name="facegear" visibility="false" nodeId="154">
+                      <Shape name="headgearRespirator01" visibility="false" shapeId="94" castsShadows="true" receiveShadows="true" materialIds="57" clipDistance="300" nodeId="155"/>
+                      <Shape name="headgearRespirator01Male05" visibility="false" shapeId="95" castsShadows="true" receiveShadows="true" materialIds="57" clipDistance="300" nodeId="156"/>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="LeftShoulder" translation="0.224547 -0.001367 -0.052041" rotation="178.217957 75.71302 78.373428" nodeId="157">
+                <TransformGroup name="LeftArm" translation="0.12559 -0.008255 0.002937" rotation="7.419127 -10.830487 -32.009663" nodeId="158">
+                  <TransformGroup name="LeftForeArm" translation="0.287583 0.000004 0.000014" rotation="-0.000242 -1.789648 0.000716" nodeId="159">
+                    <TransformGroup name="LeafLeftForeArmRoll1" translation="0.129877 0.000001 0" nodeId="160"/>
+                    <TransformGroup name="LeftHand" translation="0.257342 -0.000002 -0.000001" rotation="-0.000091 0.000128 -0.000328" nodeId="161">
+                      <TransformGroup name="LeftHandPinky1" translation="0.08456 0.00054 -0.026521" rotation="0.771958 -0.981536 2.104362" nodeId="162">
+                        <TransformGroup name="LeftHandPinky2" translation="0.029515 0 0" rotation="-2.185843 2.922693 -7.990325" nodeId="163">
+                          <TransformGroup name="LeftHandPinky3" translation="0.016046 0 0" nodeId="164"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="LeftHandRing1" translation="0.088183 0.006294 -0.008325" rotation="0.268592 -0.058945 0.876946" nodeId="165">
+                        <TransformGroup name="LeftHandRing2" translation="0.041185 0 0" rotation="-2.497869 3.53708 -5.200811" nodeId="166">
+                          <TransformGroup name="LeftHandRing3" translation="0.02828 0 0" nodeId="167"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="LeftHandMiddle1" translation="0.090429 0.011223 0.009697" rotation="0.84622 -1.020173 0.067017" nodeId="168">
+                        <TransformGroup name="LeftHandMiddle2" translation="0.044077 0 0" rotation="-0.695365 1.045401 -2.7697" nodeId="169">
+                          <TransformGroup name="LeftHandMiddle3" translation="0.029545 0 0" nodeId="170"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="LeftHandIndex1" translation="0.086814 0.00989 0.032968" rotation="0.337144 -0.160118 -0.719459" nodeId="171">
+                        <TransformGroup name="LeftHandIndex2" translation="0.038349 0 0" rotation="0.139838 -0.193556 -4.188144" nodeId="172">
+                          <TransformGroup name="LeftHandIndex3" translation="0.026943 0 0" nodeId="173"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="LeftHandThumb1" translation="0.01966 -0.005076 0.024908" rotation="-1.193094 -44.896248 0.752521" nodeId="174">
+                        <TransformGroup name="LeftHandThumb2" translation="0.048119 -0.000404 0.002278" rotation="0 19.060478 3.515693" nodeId="175">
+                          <TransformGroup name="LeftHandThumb3" translation="0.028952 0 0" nodeId="176"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="RightShoulder" translation="0.224551 -0.001368 0.052041" rotation="178.217957 75.71302 -101.626572" nodeId="177">
+                <TransformGroup name="RightArm" translation="-0.12559 0.008263 -0.002937" rotation="7.419127 -10.830487 -32.009663" nodeId="178">
+                  <TransformGroup name="RightForeArm" translation="-0.287578 -0.000011 -0.000013" rotation="-0.000242 -1.789648 0.000716" nodeId="179">
+                    <TransformGroup name="LeafRightForeArmRoll1" translation="-0.12988 0.000004 0" nodeId="180"/>
+                    <TransformGroup name="RightHand" translation="-0.257187 0.000102 -0.000001" rotation="-0.000091 0.000128 -0.000328" nodeId="181">
+                      <TransformGroup name="RightHandPinky1" translation="-0.084561 -0.000537 0.026521" rotation="0.771958 -0.981536 2.104362" nodeId="182">
+                        <TransformGroup name="RightHandPinky2" translation="-0.029515 -0.000001 0" rotation="-2.185843 2.922693 -7.990325" nodeId="183">
+                          <TransformGroup name="RightHandPinky3" translation="-0.016044 -0.000002 0" nodeId="184"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="RightHandRing1" translation="-0.088183 -0.006294 0.008325" rotation="0.268592 -0.058945 0.876946" nodeId="185">
+                        <TransformGroup name="RightHandRing2" translation="-0.041184 -0.000001 0" rotation="-2.497869 3.53708 -5.200811" nodeId="186">
+                          <TransformGroup name="RightHandRing3" translation="-0.028282 0.000003 0" nodeId="187"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="RightHandMiddle1" translation="-0.090427 -0.011226 -0.009697" rotation="0.84622 -1.020173 0.067017" nodeId="188">
+                        <TransformGroup name="RightHandMiddle2" translation="-0.044076 -0.000001 0" rotation="-0.695365 1.045401 -2.7697" nodeId="189">
+                          <TransformGroup name="RightHandMiddle3" translation="-0.029544 -0.000001 0" nodeId="190"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="RightHandIndex1" translation="-0.086812 -0.009895 -0.032968" rotation="0.337144 -0.160118 -0.719459" nodeId="191">
+                        <TransformGroup name="RightHandIndex2" translation="-0.03835 0.000002 0" rotation="0.139838 -0.193556 -4.188144" nodeId="192">
+                          <TransformGroup name="RightHandIndex3" translation="-0.026944 0.000001 0" nodeId="193"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="RightHandThumb1" translation="-0.019658 0.005073 -0.024908" rotation="-1.193094 -44.896248 0.752521" nodeId="194">
+                        <TransformGroup name="RightHandThumb2" translation="-0.048119 0.000403 -0.002278" rotation="0 19.060478 3.515693" nodeId="195">
+                          <TransformGroup name="RightHandThumb3" translation="-0.028952 -0.000002 0" rotation="0.000001 0 0" nodeId="196"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="LeftUpLeg" translation="-0.018718 0.000967 -0.104027" rotation="0.003574 -0.855911 -166.134674" nodeId="197">
+          <TransformGroup name="LeftLeg" translation="0.453707 0.000415 -0.000001" rotation="0.007698 -0.326849 -1.08514" nodeId="198">
+            <TransformGroup name="LeftFoot" translation="0.459284 -0.000005 0.000001" rotation="-0.000112 5.634953 76.161041" nodeId="199">
+              <TransformGroup name="LeftToeBase" translation="0.144625 0 0" rotation="0 0 14.859614" nodeId="200"/>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="RightUpLeg" translation="-0.018718 0.000967 0.104027" rotation="0.003505 -0.855993 13.869959" nodeId="201">
+          <TransformGroup name="RightLeg" translation="-0.453706 -0.000909 0.000003" rotation="0.007652 -0.326775 -1.094229" nodeId="202">
+            <TransformGroup name="RightFoot" translation="-0.459285 0.000005 -0.000001" rotation="-0.000087 5.634833 76.165504" nodeId="203">
+              <TransformGroup name="RightToeBase" translation="-0.144625 0 0" rotation="0.000001 0 14.859614" nodeId="204"/>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="GEO" nodeId="205">
+      <TransformGroup name="jacket" nodeId="206">
+        <TransformGroup name="topConstruction" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="207">
+          <Shape name="vest" shapeId="96" castsShadows="true" receiveShadows="true" materialIds="58" skinBindNodeIds="1 2 3 4 5 6 7 157 158 177 178 197 201" clipDistance="300" nodeId="208"/>
+          <Shape name="topTeeShirt" shapeId="97" castsShadows="true" receiveShadows="true" materialIds="59" skinBindNodeIds="1 2 3 4 5 6 7 157 158 159 160 177 178 179 180 197 201" clipDistance="300" nodeId="209"/>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

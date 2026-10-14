@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<texture>
+    <meta>
+        <filename>helplineAtlasSmall.png</filename>
+        <size width="1024" height="512" />
+    </meta>
+    <slices>
+        <slice id="academy" uvs="720px 400px 75px 75px" />
+        <slice id="animals_bees" uvs="160px 320px 75px 75px" />
+        <slice id="animals_chicken" uvs="800px 240px 75px 75px" />
+        <slice id="animals_cows" uvs="560px 240px 75px 75px" />
+        <slice id="animals_dog" uvs="240px 320px 75px 75px" />
+        <slice id="animals_general" uvs="480px 240px 75px 75px" />
+        <slice id="animals_goat" uvs="0px 320px 75px 75px" />
+        <slice id="animals_horses" uvs="720px 240px 75px 75px" />
+        <slice id="animals_howToCareForAnimals" uvs="320px 320px 75px 75px" />
+        <slice id="animals_pigs" uvs="640px 240px 75px 75px" />
+        <slice id="animals_sheep" uvs="880px 240px 75px 75px" />
+        <slice id="animals_tmr" uvs="400px 320px 75px 75px" />
+        <slice id="animals_waterBuffalo" uvs="80px 320px 75px 75px" />
+        <slice id="basicEconomy_makingMoney" uvs="320px 400px 75px 75px" />
+        <slice id="basicEconomy_productionChains" uvs="240px 400px 75px 75px" />
+        <slice id="basicEconomy_spendingMoney" uvs="400px 400px 75px 75px" />
+        <slice id="crops_catchCrops" uvs="800px 80px 75px 75px" />
+        <slice id="crops_chaff" uvs="560px 160px 75px 75px" />
+        <slice id="crops_corn" uvs="240px 160px 75px 75px" />
+        <slice id="crops_cotton" uvs="320px 160px 75px 75px" />
+        <slice id="crops_grainCrops" uvs="720px 80px 75px 75px" />
+        <slice id="crops_grapesOlives" uvs="480px 160px 75px 75px" />
+        <slice id="crops_grass" uvs="880px 80px 75px 75px" />
+        <slice id="crops_longGrainRice" uvs="800px 160px 75px 75px" />
+        <slice id="crops_poplar" uvs="640px 160px 75px 75px" />
+        <slice id="crops_rice" uvs="880px 160px 75px 75px" />
+        <slice id="crops_riceVarieties" uvs="720px 160px 75px 75px" />
+        <slice id="crops_rootCrops" uvs="0px 160px 75px 75px" />
+        <slice id="crops_rootVegetables" uvs="160px 160px 75px 75px" />
+        <slice id="crops_sugarcane" uvs="400px 160px 75px 75px" />
+        <slice id="crops_vegetables" uvs="80px 160px 75px 75px" />
+        <slice id="farmingBasics_arableFarming" uvs="240px 80px 75px 75px" />
+        <slice id="farmingBasics_cultivating" uvs="400px 80px 75px 75px" />
+        <slice id="farmingBasics_harvesting" uvs="640px 80px 75px 75px" />
+        <slice id="farmingBasics_map" uvs="320px 80px 75px 75px" />
+        <slice id="farmingBasics_plowing" uvs="480px 80px 75px 75px" />
+        <slice id="farmingBasics_sowing" uvs="560px 80px 75px 75px" />
+        <slice id="firstSteps_aiWorker" uvs="560px 0px 75px 75px" />
+        <slice id="firstSteps_buildMode" uvs="400px 0px 75px 75px" />
+        <slice id="firstSteps_contracts" uvs="320px 0px 75px 75px" />
+        <slice id="firstSteps_howToStart" uvs="80px 0px 75px 75px" />
+        <slice id="firstSteps_seasonalFarming" uvs="480px 0px 75px 75px" />
+        <slice id="firstSteps_shop" uvs="160px 0px 75px 75px" />
+        <slice id="firstSteps_startingEquipment" uvs="240px 0px 75px 75px" />
+        <slice id="firstSteps_whatFarmer" uvs="0px 0px 75px 75px" />
+        <slice id="forestry_fellingTrees" uvs="640px 320px 75px 75px" />
+        <slice id="forestry_howToPlantTrees" uvs="560px 320px 75px 75px" />
+        <slice id="forestry_logsWoodchips" uvs="720px 320px 75px 75px" />
+        <slice id="forestry_markingspray" uvs="880px 320px 75px 75px" />
+        <slice id="forestry_removeStumps" uvs="800px 320px 75px 75px" />
+        <slice id="forestry_shippingContainer" uvs="160px 400px 75px 75px" />
+        <slice id="forestry_treeTypes" uvs="480px 320px 75px 75px" />
+        <slice id="forestry_winch" uvs="80px 400px 75px 75px" />
+        <slice id="forestry_yarder" uvs="0px 400px 75px 75px" />
+        <slice id="icon_animals" uvs="800px 0px 75px 75px" />
+        <slice id="icon_crops" uvs="640px 0px 75px 75px" />
+        <slice id="icon_greenery" uvs="720px 0px 75px 75px" />
+        <slice id="icon_others" uvs="80px 80px 75px 75px" />
+        <slice id="icon_products" uvs="880px 0px 75px 75px" />
+        <slice id="icon_shop" uvs="160px 80px 75px 75px" />
+        <slice id="icon_yieldBoost" uvs="0px 80px 75px 75px" />
+        <slice id="improvingYield_fertilizing" uvs="80px 240px 75px 75px" />
+        <slice id="improvingYield_liming" uvs="0px 240px 75px 75px" />
+        <slice id="improvingYield_mulching" uvs="400px 240px 75px 75px" />
+        <slice id="improvingYield_removingWeeds" uvs="160px 240px 75px 75px" />
+        <slice id="improvingYield_rolling" uvs="320px 240px 75px 75px" />
+        <slice id="improvingYield_stonePicking" uvs="240px 240px 75px 75px" />
+        <slice id="misc_characterCreation" uvs="480px 400px 75px 75px" />
+        <slice id="misc_loadingMachines" uvs="640px 400px 75px 75px" />
+        <slice id="misc_transport" uvs="560px 400px 75px 75px" />
+    </slices>
+</texture>

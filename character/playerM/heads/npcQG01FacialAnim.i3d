@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="npcQG01FacialAnim" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="8" filename="$data/shaders/characterShader.xml" />
+    <File fileId="21" filename="$data/shaders/hairShader.xml" />
+    <File fileId="3" filename="$dataS/character/textures/default_normal.png" />
+    <File fileId="4" filename="$dataS/character/textures/default_specular.png" />
+    <File fileId="18" filename="$dataS/character/textures/hairs/hairCards_diffuse.png" />
+    <File fileId="19" filename="$dataS/character/textures/hairs/hairCards_normal.png" />
+    <File fileId="20" filename="$dataS/character/textures/hairs/hairCards_specular.png" />
+    <File fileId="23" filename="$dataS/character/textures/hairs/stubble_diffuse.png" />
+    <File fileId="24" filename="$dataS/character/textures/hairs/stubble_normal.png" />
+    <File fileId="25" filename="$dataS/character/textures/hairs/stubble_specular.png" />
+    <File fileId="2" filename="$dataS/character/textures/head/bodyEyelashes_diffuse.png" />
+    <File fileId="12" filename="$dataS/character/textures/head/bodyEyes_diffuse.png" />
+    <File fileId="13" filename="$dataS/character/textures/head/bodyEyes_normal.png" />
+    <File fileId="14" filename="$dataS/character/textures/head/bodyEyes_specular.png" />
+    <File fileId="15" filename="$dataS/character/textures/head/bodyTeeths_diffuse.png" />
+    <File fileId="16" filename="$dataS/character/textures/head/bodyTeeths_normal.png" />
+    <File fileId="17" filename="$dataS/character/textures/head/bodyTeeths_specular.png" />
+    <File fileId="1" filename="$dataS/character/textures/head/bodyTongue_diffuse.png" />
+    <File fileId="10" filename="$dataS/character/textures/head/eyeOcclusion_diffuse.png" />
+    <File fileId="7" filename="$dataS/character/textures/head/mHead_specular.png" />
+    <File fileId="22" filename="$dataS/character/textures/head/npcQG01FacialAnim_mask.png" />
+    <File fileId="5" filename="$dataS/character/textures/head/npcQG01_diffuse.png" />
+    <File fileId="9" filename="$dataS/character/textures/head/npcQG01_mask.png" />
+    <File fileId="6" filename="$dataS/character/textures/head/npcQG01_normal.png" />
+    <File fileId="11" filename="$dataS/character/textures/head/tearline_diffuse.png" />
+  </Files>
+
+  <Materials>
+    <Material name="bodyTongue_mat" materialId="1" specularColor="0.9 0.9 0.9">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="bodyEyelashes_mat" materialId="6" alphaBlending="true">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="npcQG01_mat" materialId="2" customShaderId="8">
+      <CustomParameter name="colorScaleG" value="0.220 0.250 0.440 1.0"/>
+      <CustomParameter name="colorScaleR" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="sssColor" value="0.938 0.567 0.567 1.0"/>
+      <Custommap name="mMaskMap" fileId="9"/>
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
+    </Material>
+    <Material name="eyeOcclusion_mat" materialId="3" alphaBlending="true">
+      <Texture fileId="10"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="tearline_mat" materialId="4">
+      <Texture fileId="11"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="bodyEyes_mat" materialId="5">
+      <Texture fileId="12"/>
+      <Normalmap fileId="13"/>
+      <Glossmap fileId="14"/>
+    </Material>
+    <Material name="bodyTeeths_mat" materialId="7">
+      <Texture fileId="15"/>
+      <Normalmap fileId="16"/>
+      <Glossmap fileId="17"/>
+    </Material>
+    <Material name="hairCards_mat" materialId="8" customShaderId="21" customShaderVariation="hairStyleMask">
+      <CustomParameter name="primaryColor" value="0.700 0.700 0.700 1.0"/>
+      <CustomParameter name="secondaryColor" value="0.700 0.700 0.700 1.0"/>
+      <Custommap name="hairStyleMaskMap" fileId="22"/>
+      <Texture fileId="18"/>
+      <Normalmap fileId="19"/>
+      <Glossmap fileId="20"/>
+    </Material>
+    <Material name="stubble_mat" materialId="9" alphaBlending="true" customShaderId="21" customShaderVariation="stubbles_vertexColor">
+      <CustomParameter name="fakeSpecularColor" value="0.500 0.500 0.500 1.0"/>
+      <CustomParameter name="primaryColor" value="0.400 0.400 0.400 1.0"/>
+      <Texture fileId="23"/>
+      <Normalmap fileId="24"/>
+      <Glossmap fileId="25"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="npcQG01FacialAnim.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="GEO" nodeId="1">
+      <TransformGroup name="heads" nodeId="2">
+        <TransformGroup name="npcQG01" nodeId="3">
+          <Shape name="tongue" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" skinBindNodeIds="38 39 40 41 42 43 44" clipDistance="300" nodeId="4"/>
+          <Shape name="head" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="25 26 27 29 30 31 32 34 35 36 37 38 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64" clipDistance="300" nodeId="5"/>
+          <Shape name="eyeOcclusionL" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="3" skinBindNodeIds="25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64" clipDistance="300" nodeId="6"/>
+          <Shape name="eyeOcclusionR" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="3" skinBindNodeIds="25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64" clipDistance="300" nodeId="7"/>
+          <Shape name="tearLineL" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="4" skinBindNodeIds="25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64" clipDistance="300" nodeId="8"/>
+          <Shape name="tearLineR" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="4" skinBindNodeIds="33 34 35 36 37" clipDistance="300" nodeId="9"/>
+          <Shape name="eyeL" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="5" skinBindNodeIds="28" clipDistance="300" nodeId="10"/>
+          <Shape name="eyeR" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="5" skinBindNodeIds="33" clipDistance="300" nodeId="11"/>
+          <Shape name="eyelashUpperL" shapeId="9" castsShadows="true" receiveShadows="true" doubleSided="true" materialIds="6" skinBindNodeIds="27 29 30 31 32 45 46" clipDistance="5" nodeId="12"/>
+          <Shape name="eyelashUpperR" shapeId="10" castsShadows="true" receiveShadows="true" doubleSided="true" materialIds="6" skinBindNodeIds="25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64" clipDistance="5" nodeId="13"/>
+          <Shape name="eyelashLowerL" shapeId="11" castsShadows="true" receiveShadows="true" doubleSided="true" materialIds="6" skinBindNodeIds="25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64" clipDistance="5" nodeId="14"/>
+          <Shape name="eyelashLowerR" shapeId="12" castsShadows="true" receiveShadows="true" doubleSided="true" materialIds="6" skinBindNodeIds="25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64" clipDistance="5" nodeId="15"/>
+          <Shape name="teeth" shapeId="13" castsShadows="true" receiveShadows="true" materialIds="7" skinBindNodeIds="27 38" clipDistance="300" nodeId="16"/>
+          <Shape name="hairBase" shapeId="14" castsShadows="true" receiveShadows="true" materialIds="8" skinBindNodeIds="25 26 27 28 30 32 33 35 36 38 39 45 46 47 48 53 56" clipDistance="300" nodeId="17"/>
+          <Shape name="hairSecond" shapeId="15" castsShadows="true" receiveShadows="true" materialIds="8" skinBindNodeIds="25 26 27 28 30 32 33 35 36 38 39 45 46 47 48 53 56" clipDistance="10" nodeId="18"/>
+          <Shape name="hairThird" shapeId="16" castsShadows="true" receiveShadows="true" materialIds="8" skinBindNodeIds="25 26 27 28 30 32 33 35 36 38 45 46 47 48 52 53 55 56" clipDistance="10" nodeId="19"/>
+          <Shape name="beard" shapeId="17" castsShadows="true" receiveShadows="true" materialIds="9" skinBindNodeIds="25 26 27 32 33 36 38 39 40 41 42 43 44 52 53 55 56 57 58 59 60 61 62 63 64" clipDistance="300" nodeId="20"/>
+          <Shape name="beardBase" shapeId="18" castsShadows="true" receiveShadows="true" materialIds="8" skinBindNodeIds="26 27 28 32 33 36 38 39 40 41 42 43 44 49 50 52 53 55 56 57 58 59 60 61 62 63 64" clipDistance="300" nodeId="21"/>
+          <Shape name="beardSecond" shapeId="19" castsShadows="true" receiveShadows="true" materialIds="8" skinBindNodeIds="26 27 28 32 33 36 38 39 40 41 42 43 44 49 50 52 53 55 56 57 58 59 60 61 62 63 64" clipDistance="10" nodeId="22"/>
+          <Shape name="beardThird" shapeId="20" castsShadows="true" receiveShadows="true" materialIds="8" skinBindNodeIds="25 26 27 28 30 32 33 35 36 38 39 40 41 42 43 44 49 50 52 53 55 56 57 58 59 60 61 62 63 64" clipDistance="10" nodeId="23"/>
+          <Shape name="beardFlyaway" shapeId="21" castsShadows="true" receiveShadows="true" doubleSided="true" materialIds="8" skinBindNodeIds="26 27 28 32 33 36 38 39 40 43 44 52 53 55 56 57 58 60 61 62 63 64" clipDistance="10" nodeId="24"/>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="Spine2" translation="-0.000092 1.256169 0.019253" rotation="-90 9.787683 90" visibility="false" nodeId="25">
+      <TransformGroup name="Neck" translation="0.285869 0 0" rotation="0 0 -18.533192" nodeId="26">
+        <TransformGroup name="Head" translation="0.079931 0 0" rotation="0 0 11.457336" nodeId="27">
+          <TransformGroup name="eyeball_L_skin_jnt" translation="0.073266 -0.079796 -0.0311" rotation="4.472175 -2.668658 -2.998079" nodeId="28"/>
+          <TransformGroup name="eyelid_L_low_skin_jnt" translation="0.071152 -0.085563 -0.0311" rotation="5.100338 1.781171 -21.923927" nodeId="29"/>
+          <TransformGroup name="eyelid_L_up_skin_jnt" translation="0.071632 -0.082354 -0.0311" rotation="3.735066 -0.872719 10.375444" nodeId="30"/>
+          <TransformGroup name="eye_L_in_skin_jnt" translation="0.062061 -0.093173 -0.025416" rotation="3.236846 16.441887 11.248718" nodeId="31"/>
+          <TransformGroup name="eye_L_out_skin_jnt" translation="0.068119 -0.074927 -0.057115" rotation="39.290916 13.141902 20.828615" nodeId="32"/>
+          <TransformGroup name="eyeball_R_skin_jnt" translation="0.073267 -0.079796 0.030371" rotation="-4.472175 2.668658 -2.998078" nodeId="33"/>
+          <TransformGroup name="eyelid_R_low_skin_jnt" translation="0.071152 -0.085563 0.030371" rotation="-5.100338 -1.781172 -21.923935" nodeId="34"/>
+          <TransformGroup name="eyelid_R_up_skin_jnt" translation="0.071632 -0.082354 0.030908" rotation="-3.735066 0.87272 10.375458" nodeId="35"/>
+          <TransformGroup name="eye_R_out_skin_jnt" translation="0.068119 -0.074927 0.056931" rotation="-39.290916 -13.141899 20.828619" nodeId="36"/>
+          <TransformGroup name="eye_R_in_skin_jnt" translation="0.062061 -0.093173 0.025232" rotation="-3.236847 -16.441887 11.24872" nodeId="37"/>
+          <TransformGroup name="jaw_skin_jnt" translation="0.029336 -0.018063 -0.000092" rotation="0 -0.000002 -20.553778" nodeId="38">
+            <TransformGroup name="tongue_01_M_skin_jnt" translation="-0.010385 -0.049364 0" rotation="0 0.000002 13.303661" nodeId="39">
+              <TransformGroup name="tongue_02_M_skin_jnt" translation="-0.00005 -0.017346 0" rotation="0 0 -2.447031" nodeId="40">
+                <TransformGroup name="tongue_02_L_skin_jnt" translation="0 0 -0.002982" rotation="-6.465298 0.00001 -0.000003" nodeId="41"/>
+                <TransformGroup name="tongue_02_R_skin_jnt" translation="-0.000004 -0.000001 0.002982" rotation="6.465298 0 -0.000002" nodeId="42"/>
+              </TransformGroup>
+              <TransformGroup name="tongue_01_L_skin_jnt" translation="0 0 -0.004483" nodeId="43"/>
+              <TransformGroup name="tongue_01_R_skin_jnt" translation="0.000003 0 0.004483" rotation="0 0.000002 0" nodeId="44"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="brow_L_in_skin_jnt" translation="0.092182 -0.107614 -0.011901" rotation="10.948547 0.980576 -7.708909" nodeId="45"/>
+          <TransformGroup name="brow_L_out_skin_jnt" translation="0.095166 -0.098013 -0.042067" rotation="41.521736 4.367381 6.516552" nodeId="46"/>
+          <TransformGroup name="brow_R_in_skin_jnt" translation="0.092182 -0.107614 0.011717" rotation="-10.948547 -0.980575 -7.708904" nodeId="47"/>
+          <TransformGroup name="brow_R_out_skin_jnt" translation="0.095166 -0.098013 0.041883" rotation="-41.521736 -4.367378 6.516555" nodeId="48"/>
+          <TransformGroup name="nostril_L_skin_jnt" translation="0.032238 -0.100814 -0.020314" rotation="22.101198 -5.118702 -6.720001" nodeId="49"/>
+          <TransformGroup name="nostril_R_skin_jnt" translation="0.032238 -0.100814 0.02013" rotation="-22.101198 5.118701 -6.720004" nodeId="50"/>
+          <TransformGroup name="cheek_01_L_skin_jnt" translation="0.053405 -0.096457 -0.016671" rotation="52.073395 -30.200895 4.891402" nodeId="51"/>
+          <TransformGroup name="cheek_02_L_skin_jnt" translation="0.034521 -0.092673 -0.040341" rotation="16.0497 18.892099 17.310276" nodeId="52"/>
+          <TransformGroup name="cheek_03_L_skin_jnt" translation="0.005088 -0.072724 -0.048489" rotation="51.87175 -8.325634 -30.524057" nodeId="53"/>
+          <TransformGroup name="cheek_01_R_skin_jnt" translation="0.053405 -0.096457 0.016487" rotation="-52.073395 30.200897 4.891404" nodeId="54"/>
+          <TransformGroup name="cheek_02_R_skin_jnt" translation="0.034521 -0.092673 0.040156" rotation="-16.049698 -18.892101 17.31027" nodeId="55"/>
+          <TransformGroup name="cheek_03_R_skin_jnt" translation="0.005088 -0.072724 0.048305" rotation="-51.87175 8.325626 -30.524063" nodeId="56"/>
+          <TransformGroup name="mouth_R_corner_skin_jnt" translation="0.000916 -0.087297 0.024327" rotation="-24.14238 -4.172475 -7.675242" nodeId="57"/>
+          <TransformGroup name="mouth_R_up_skin_jnt" translation="0.003348 -0.102829 0.012777" rotation="-25.977472 -17.952402 -26.616217" nodeId="58"/>
+          <TransformGroup name="mouth_M_up_skin_jnt" translation="0.003213 -0.108078 -0.000092" rotation="0 0 -29.66198" nodeId="59"/>
+          <TransformGroup name="mouth_L_up_skin_jnt" translation="0.003348 -0.102829 -0.012961" rotation="25.977472 17.9524 -26.616215" nodeId="60"/>
+          <TransformGroup name="mouth_L_corner_skin_jnt" translation="0.000916 -0.087297 -0.024511" rotation="24.14238 4.172474 -7.675238" nodeId="61"/>
+          <TransformGroup name="mouth_L_low_skin_jnt" translation="-0.003245 -0.101349 -0.012634" rotation="27.487421 -7.577673 2.922265" nodeId="62"/>
+          <TransformGroup name="mouth_M_low_skin_jnt" translation="-0.003397 -0.10553 -0.000095" rotation="0 0 10.986897" nodeId="63"/>
+          <TransformGroup name="mouth_R_low_skin_jnt" translation="-0.003245 -0.101349 0.01245" rotation="-27.487419 7.577675 2.92227" nodeId="64"/>
+          <TransformGroup name="eyeLookAtReferenceFrame" translation="0.072866 -0.070538 -0.000092" rotation="90 90 0" nodeId="65"/>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="faceCamera_grp" translation="0.001931 1.590184 1.492328" visibility="false" nodeId="66">
+    </TransformGroup>
+  </Scene>
+
+
+  <Animation externalAnimFile="npcQG01FacialAnim.i3d.anim" />
+</i3D>

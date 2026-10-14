@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="waterBuffaloCalfBaby_posed" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/tileAndMirrorShader.xml" />
+    <File fileId="5" filename="$dataS/character/animals/domesticated/waterBuffalo/waterBuffaloCalf/waterBuffaloCalfHair_diffuse.png" />
+    <File fileId="6" filename="$dataS/character/animals/domesticated/waterBuffalo/waterBuffaloCalf/waterBuffaloCalfHair_normal.png" />
+    <File fileId="7" filename="$dataS/character/animals/domesticated/waterBuffalo/waterBuffaloCalf/waterBuffaloCalfHair_specular.png" />
+    <File fileId="1" filename="$dataS/character/animals/domesticated/waterBuffalo/waterBuffaloCalf/waterBuffaloCalf_diffuse.png" />
+    <File fileId="2" filename="$dataS/character/animals/domesticated/waterBuffalo/waterBuffaloCalf/waterBuffaloCalf_normal.png" />
+    <File fileId="3" filename="$dataS/character/animals/domesticated/waterBuffalo/waterBuffaloCalf/waterBuffaloCalf_specular.png" />
+  </Files>
+
+  <Materials>
+    <Material name="WaterBuffaloCalf_mat" materialId="1" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value=".5 .5 0 0.5"/>
+      <CustomParameter name="dirt" value="0 20.0 20.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0"/>
+      <CustomParameter name="sssColor" value="0.8 0.8 0.8 1.0"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="WaterBuffaloCalf_hair_alpha_mat" materialId="2" alphaBlending="true" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value=".5 .5 0 0.5"/>
+      <CustomParameter name="dirt" value="0 20.0 20.0"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0"/>
+      <CustomParameter name="sssColor" value="0.8 0.8 0.8 1.0"/>
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="waterBuffaloCalfBaby_posed.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="geo" nodeId="1">
+      <Shape name="Tongue" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="2"/>
+      <Shape name="Teeth" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="3"/>
+      <Shape name="Eye" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="4"/>
+      <Shape name="Horn" visibility="false" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="5"/>
+      <TransformGroup name="Hair" nodeId="6">
+        <Shape name="Whiskers" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="7"/>
+        <Shape name="Lash" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="8"/>
+        <Shape name="Tail" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="9"/>
+        <Shape name="WaterBuffaloCalf" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="10"/>
+        <Shape name="Fur" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="11"/>
+        <Shape name="Lash_reverse" shapeId="10" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="12"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

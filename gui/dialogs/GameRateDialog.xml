@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <RoundCorner profile="gameRateDialogBg" id="dialogElement">
+        <Bitmap profile="dialogHeaderDocked">
+            <Text profile="dialogHeaderText" text="$l10n_ui_rating" id="headerText" />
+        </Bitmap>
+        <Text profile="dialogTitle" text="$l10n_ui_howDoYouLikeTheGame" />
+        <BoxLayout profile="gameRateDialogLayout" onLeave="onLayoutLeave" id="ratingLayout">
+            <Button profile="gameRateDialogStarButton" id="stars[1]" onHighlight="onStarHighlight" onHighlightRemove="onStarHighlightRemove" onFocus="onStarFocus" onClick="onStarClick" focusChangeLeft="" />
+            <Button profile="gameRateDialogStarButton" id="stars[2]" onHighlight="onStarHighlight" onHighlightRemove="onStarHighlightRemove" onFocus="onStarFocus" onClick="onStarClick" />
+            <Button profile="gameRateDialogStarButton" id="stars[3]" onHighlight="onStarHighlight" onHighlightRemove="onStarHighlightRemove" onFocus="onStarFocus" onClick="onStarClick" />
+            <Button profile="gameRateDialogStarButton" id="stars[4]" onHighlight="onStarHighlight" onHighlightRemove="onStarHighlightRemove" onFocus="onStarFocus" onClick="onStarClick" />
+            <Button profile="gameRateDialogStarButton" id="stars[5]" onHighlight="onStarHighlight" onHighlightRemove="onStarHighlightRemove" onFocus="onStarFocus" onClick="onStarClick" focusChangeRight="" />
+        </BoxLayout>
+        <BoxLayout profile="buttonBoxDialogGameRate">
+            <Button profile="buttonOK" text="$l10n_button_continue" onClick="onClickOk" id="okButton" />
+            <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" />
+        </BoxLayout>
+    </RoundCorner>
+    <GUIProfiles>
+        <Profile name="gameRateDialogBg" extends="dialogBg">
+            <size value="1200px 400px" />
+        </Profile>
+        <Profile name="buttonBoxDialogGameRate" extends="buttonBoxDialog">
+            <Variant name="mobile">
+                <size value="1200px 200px" />
+            </Variant>
+        </Profile>
+        <Profile name="gameRateDialogLayout" extends="baseReference" with="anchorMiddleCenter">
+            <imageColor value="$preset_colorTransparent" />
+            <size value="250px 50px" />
+            <numFlows value="6" />
+            <alignmentY value="bottom" />
+            <Variant name="mobile">
+                <size value="1000px 100px" />
+            </Variant>
+        </Profile>
+        <Profile name="gameRateDialogStarButtonZero" extends="gameRateDialogStarButton">
+            <size value="0 50px" />
+        </Profile>
+        <Profile name="gameRateDialogStarButton" extends="baseReference" with="anchorTopLeft">
+            <size value="50px 50px" />
+            <margin value="0 0 0 0" />
+            <iconSize value="50px 50px" />
+            <imageFilename value="dataS/menu/modhubStar.png" />
+            <imageUVs value="0 0 1 1" />
+            <imageColor value="$preset_colorGlassMedium" />
+            <imageFocusedColor value="$preset_colorMainUI" />
+            <imageHighlightedColor value="$preset_colorBlue" />
+            <Variant name="mobile">
+                <imageFilename value="dataS/menu/modhubStar.png" />
+                <size value="200px 200px" />
+                <iconSize value="200px 200px" />
+                <imageColor value="$preset_colorGlassMedium" />
+                <imageFocusedColor value="$preset_colorWhite" />
+                <imageHighlightedColor value="$preset_colorWhite" />
+            </Variant>
+        </Profile>
+        <Profile name="gameRateDialogStarButtonActive" extends="gameRateDialogStarButton">
+            <imageColor value="$preset_colorMainUI" />
+            <Variant name="mobile">
+                <imageColor value="$preset_colorWhite" />
+            </Variant>
+        </Profile>
+    </GUIProfiles>
+</GUI>

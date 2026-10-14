@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onCreate="onCreate" onOpen="onOpen" onClose="onClose">
+    <Picture id="backgroundImage" profile="backgroundImage" />
+    <Bitmap profile="fs25_mainScreenSidebar" id="sidebarContainer">
+        <Bitmap profile="mainScreenLogo" id="logo" />
+        <BoxLayout profile="fs25_mainScreenButtonBox" id="buttonBox" wrapAround="true">
+            <Button profile="fs25_mainScreenButton" id="careerButton" text="$l10n_button_career" onClick="onCareerClick" onHighlight="onHighlight" />
+            <Button profile="fs25_mainScreenButton" id="multiplayerButton" text="$l10n_button_multiplayer" onClick="onMultiplayerClick" onHighlight="onHighlight" />
+            <Button profile="fs25_mainScreenButton" id="downloadModsButton" text="$l10n_button_downloadableContent" onClick="onDownloadModsClick" onHighlight="onHighlight">
+                <Bitmap profile="fs25_mainScreenIconModHubUpdate" id="iconHasUpdates" visible="false" />
+            </Button>
+            <Button profile="fs25_mainScreenButton" id="achievementsButton" text="$l10n_button_achievements" onClick="onAchievementsClick" onHighlight="onHighlight" />
+            <Button profile="fs25_mainScreenButton" id="storeButton" text="$l10n_button_dlcStore" onClick="onStoreClick" onHighlight="onHighlight" />
+            <Button profile="fs25_mainScreenButton" id="settingsButton" text="$l10n_button_settings" onClick="onSettingsClick" onHighlight="onHighlight" />
+            <Button profile="fs25_mainScreenButton" id="creditsButton" text="$l10n_button_credits" onClick="onCreditsClick" onHighlight="onHighlight" />
+            <Button profile="fs25_mainScreenButton" id="changeUserButton" text="$l10n_button_changeUser" onClick="onChangeUserClick" onHighlight="onHighlight" />
+            <Button profile="fs25_mainScreenButton" id="changeLanguageButton" text="$l10n_ui_language" onClick="onChangeLanguageClick" onHighlight="onHighlight" />
+            <Button profile="fs25_mainScreenButton" id="quitButton" text="$l10n_button_quit" onClick="onQuitClick" onHighlight="onHighlight" />
+        </BoxLayout>
+    </Bitmap>
+    <GuiElement profile="fs25_newsContainer" id="notificationElement">
+        <GuiElement profile="fs25_newsContainerSmall" id="notificationElementPrev" position="-100px 0px">
+            <Bitmap profile="fs25_newsBackground" />
+            <Bitmap profile="fs25_newsImageSmall" id="notificationImagePrev" />
+            <GuiElement profile="fs25_newsTextClippingLeft">
+                <Text profile="fs25_newsTitleLeft" id="notificationTitlePrev" text="Title" />
+                <Text profile="fs25_newsTextLeft" id="notificationMessagePrev" text="Description" />
+            </GuiElement>
+            <GuiElement profile="emptyPanel" newLayer="true">
+                <Bitmap profile="fs25_newsContainerSmallDark" />
+            </GuiElement>
+        </GuiElement>
+        <GuiElement profile="fs25_newsContainerSmall" id="notificationElementNext" position="100px 0px">
+            <Bitmap profile="fs25_newsBackground" />
+            <Bitmap profile="fs25_newsImageSmall" id="notificationImageNext" />
+            <GuiElement profile="fs25_newsTextClippingRight">
+                <Text profile="fs25_newsTitleRight" id="notificationTitleNext" text="Title" />
+                <Text profile="fs25_newsTextRight" id="notificationMessageNext" text="Description" />
+            </GuiElement>
+            <GuiElement profile="emptyPanel" newLayer="true">
+                <Bitmap profile="fs25_newsContainerSmallDark" />
+            </GuiElement>
+        </GuiElement>
+        <Bitmap profile="fs25_newsBackground" />
+        <Bitmap profile="fs25_newsImage" id="notificationImage" />
+        <Button profile="fs25_newsButtonLeft" id="notificationButtonLeft" onClick="onClickPreviousNotification" />
+        <IndexState profile="emptyPanel" id="indexState" stateElementTemplateId="stateIconTemplate" visible="false">
+            <GuiElement profile="emptyPanel" id="stateIconTemplate" />
+        </IndexState>
+        <Button profile="fs25_newsButtonRight" id="notificationButtonRight" onClick="onClickNextNotification" focusId="notificationButtonRight" focusChangeRight="notificationButtonRight" />
+        <Text profile="fs25_newsHeaderTitle" text="$l10n_ui_ingameNews" />
+        <Text profile="fs25_newsTitle" id="notificationTitle" text="Title" />
+        <Text profile="fs25_newsText" id="notificationMessage" text="Description" />
+        <Button profile="fs25_newsButtonOpen" id="notificationButtonOpen" onClick="onClickOpenNotification" />
+    </GuiElement>
+    <Text profile="versionText" onCreate="onCreateGameVersion" />
+    <Text profile="gamerTagText" id="gamerTagElement" />
+    <GUIProfiles>
+        <Profile name="fs25_mainScreenButtonBox" extends="emptyPanel" with="anchorStretchingYRight pivotBottomRight">
+            <size value="100% 650px" />
+            <absoluteSizeOffset value="78px 0px" />
+            <position value="0px 45px" />
+            <alignmentY value="bottom" />
+            <flowDirection value="vertical" />
+            <Variant name="mobile" extends="mainScreenButtonBox" />
+        </Profile>
+        <Profile name="fs25_mainScreenButton" extends="fs25_textDefault" with="anchorTopStretchingX">
+            <visible value="false" />
+            <size value="100% 60px" />
+            <clickSound value="SELECT" />
+            <imageSliceId value="noSlice" />
+            <imageColor value="$preset_colorTransparent" />
+            <textSize value="30px" />
+            <textUpperCase value="true" />
+            <textAutoWidth value="true" />
+            <textFocusedColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_mainScreenIconModHubUpdate" extends="baseReference" with="anchorMiddleRight">
+            <size value="18px 18px" />
+            <position value="20px 12px" />
+            <imageSliceId value="gui.updateNotification" />
+        </Profile>
+        <Profile name="fs25_newsContainer" extends="emptyPanel" with="anchorBottomRight">
+            <size value="330px 330px" />
+            <position value="-100px 60px" />
+        </Profile>
+        <Profile name="fs25_newsContainerSmall" extends="emptyPanel" with="anchorMiddleCenter">
+            <size value="300px 280px" />
+            <position value="-100px 60px" />
+        </Profile>
+        <Profile name="fs25_newsContainerSmallDark" extends="baseReference" with="anchorStretchingYStretchingX pivotTopCenter">
+            <absoluteSizeOffset value="4px 5px" />
+            <imageColor value="$preset_fs25_colorMainGrey_92" />
+        </Profile>
+        <Profile name="fs25_newsBackground" extends="baseReference" with="anchorBottomCenter">
+            <height value="155px" />
+            <imageSliceId value="gui.news" />
+        </Profile>
+        <Profile name="fs25_newsButtonLeft" extends="fs25_wideButton" with="anchorMiddleLeft">
+            <size value="18px 30px" />
+            <position value="-50px 0px" />
+            <handleFocus value="true" />
+            <fitToContent value="false" />
+            <clickSound value="PAGING" />
+            <iconSize value="18px 30px" />
+            <iconTextOffset value="0 0" />
+            <iconUVRotation value="180" />
+            <iconSliceId value="gui.navigation_marker" />
+            <iconColor value="$preset_fs25_colorMainLight" />
+            <iconFocusedColor value="$preset_fs25_colorMainHighlight" />
+            <iconHighlightedColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_newsButtonRight" extends="fs25_newsButtonLeft" with="anchorMiddleRight">
+            <position value="50px 0px" />
+            <iconUVRotation value="0" />
+        </Profile>
+        <Profile name="fs25_newsImage" extends="baseReference" with="anchorTopStretchingX">
+            <height value="185px" />
+            <absoluteSizeOffset value="4px 0px" />
+            <imageSize value="256 128" />
+            <imageSliceId value="noSlice" />
+            <imageIsWebOverlay value="true" />
+            <imagePreviewFilename value="dataS/menu/notification_dummy.png" />
+            <overlayMaskSize value="512px 512px" />
+            <overlayMaskPos value="-93px -164px" />
+            <imageMaskFilename value="dataS/menu/mask_news.png" />
+        </Profile>
+        <Profile name="fs25_newsImageSmall" extends="fs25_newsImage">
+            <height value="168px" />
+            <absoluteSizeOffset value="4px 0px" />
+            <imageSize value="256 128" />
+            <imageSliceId value="noSlice" />
+            <imageIsWebOverlay value="true" />
+            <imagePreviewFilename value="dataS/menu/notification_dummy.png" />
+            <overlayMaskSize value="512px 512px" />
+            <overlayMaskPos value="-108px -172px" />
+            <imageMaskFilename value="dataS/menu/mask_news2.png" />
+        </Profile>
+        <Profile name="fs25_newsHeaderTitle" extends="fs25_textDefault" with="anchorTopStretchingX">
+            <size value="100% 30px" />
+            <position value="0px 40px" />
+            <textSize value="24px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+            <textAlignment value="center" />
+        </Profile>
+        <Profile name="fs25_newsTitle" extends="fs25_textDefault" with="anchorBottomStretchingX">
+            <width value="100%" />
+            <absoluteSizeOffset value="30px 0px" />
+            <position value="0px 110px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+            <textLayoutMode value="scrolling" />
+        </Profile>
+        <Profile name="fs25_newsText" extends="fs25_textDefault" with="anchorBottomStretchingX">
+            <width value="100%" />
+            <absoluteSizeOffset value="30px 0px" />
+            <position value="0px 80px" />
+            <textMaxNumLines value="3" />
+            <textVerticalAlignment value="top" />
+            <textColor value="$preset_fs25_colorGreyText" />
+        </Profile>
+        <Profile name="fs25_newsTextClippingLeft" extends="emptyPanel" with="anchorStretchingYLeft">
+            <width value="75px" />
+            <position value="12px 0px" />
+            <clipping value="true" />
+        </Profile>
+        <Profile name="fs25_newsTitleLeft" extends="fs25_textDefault" with="anchorBottomLeft">
+            <width value="260px" />
+            <position value="0px 90px" />
+            <textSize value="12px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+        </Profile>
+        <Profile name="fs25_newsTextLeft" extends="fs25_textDefault" with="anchorBottomLeft">
+            <width value="260px" />
+            <position value="0px 68px" />
+            <textSize value="12px" />
+            <textMaxNumLines value="3" />
+            <textVerticalAlignment value="top" />
+            <textColor value="$preset_fs25_colorGreyText" />
+        </Profile>
+        <Profile name="fs25_newsTextClippingRight" extends="fs25_newsTextClippingLeft" with="anchorBottomRight">
+            <position value="-10px 0px" />
+        </Profile>
+        <Profile name="fs25_newsTitleRight" extends="fs25_newsTitleLeft" with="anchorBottomRight" />
+        <Profile name="fs25_newsTextRight" extends="fs25_newsTextLeft" with="anchorBottomRight" />
+        <Profile name="fs25_newsButtonOpen" extends="fs25_wideButton" with="anchorBottomRight">
+            <position value="-10px 10px" />
+            <inputAction value="MENU_EXTRA_1" />
+        </Profile>
+        <Profile name="gamerTagText" extends="fs25_textDefault" with="anchorTopRight">
+            <size value="300px 20px" />
+            <position value="-100px -55px" />
+            <textSize value="20px" />
+            <text2Size value="20px" />
+            <textBold value="true" />
+            <text2Bold value="true" />
+            <text2Color value="0 0 0 1" />
+            <text2Offset value="-1px -1px" />
+            <textAlignment value="right" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

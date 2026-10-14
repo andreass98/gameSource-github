@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<conditionalAnimation>
+    <item id="idle">
+        <clips>
+            <clip clipName="idle1FemaleSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isIdling" equal="true" />
+                <condition parameter="isHoldingChainsaw" equal="false" />
+                <condition parameter="isGrounded" equal="true" />
+                <condition parameter="isCrouching" equal="false" />
+                <condition parameter="isSwimming" equal="false" />
+                <condition parameter="rotationVelocity" between="-0.01, 0.01" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="idleChainsaw">
+        <clips>
+            <clip clipName="chainsaw_idleSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isStrafeWalkMode" equal="true" />
+                <condition parameter="isHoldingChainsaw" equal="true" />
+                <condition parameter="isCutting" equal="false" />
+                <condition parameter="isIdling" equal="true" />
+                <condition parameter="isGrounded" equal="true" />
+                <condition parameter="isCrouching" equal="false" />
+                <condition parameter="isSwimming" equal="false" />
+                <condition parameter="rotationVelocity" between="-0.01, 0.01" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="idleRotateLeft">
+        <clips speedScaleType="angular" speedScaleParameter="1.1">
+            <clip clipName="turnInplaceLeft90FemaleSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isIdling" equal="true" />
+                <condition parameter="isGrounded" equal="true" />
+                <condition parameter="isCrouching" equal="false" />
+                <condition parameter="isSwimming" equal="false" />
+                <condition parameter="isNPC" equal="true" />
+                <condition parameter="rotationVelocity" greater="0.01" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="idleRotateRight">
+        <clips speedScaleType="angular" speedScaleParameter="1.1">
+            <clip clipName="turnInplaceRight90FemaleSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isIdling" equal="true" />
+                <condition parameter="isGrounded" equal="true" />
+                <condition parameter="isCrouching" equal="false" />
+                <condition parameter="isSwimming" equal="false" />
+                <condition parameter="isNPC" equal="true" />
+                <condition parameter="rotationVelocity" lower="-0.01" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="walkFwd" entryTransitionDuration="0.25" exitTransitionDuration="0.25">
+        <clips speedScaleType="distance" speedScaleParameter="5.5">
+            <clip clipName="walkFwd1FemaleSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isStrafeWalkMode" equal="false" />
+                <condition parameter="isWalking" equal="true" />
+                <condition parameter="isGrounded" equal="true" />
+                <condition parameter="isCrouching" equal="false" />
+            </conditionGroup>
+            <conditionGroup>
+                <condition parameter="isStrafeWalkMode" equal="true" />
+                <condition parameter="isHoldingChainsaw" equal="false" />
+                <condition parameter="isWalking" equal="true" />
+                <condition parameter="isGrounded" equal="true" />
+                <condition parameter="isCrouching" equal="false" />
+                <condition parameter="movementDirZ" greater="0.05" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="walkFwdChainsaw" entryTransitionDuration="0.25" exitTransitionDuration="0.25">
+        <clips speedScaleType="distance" speedScaleParameter="1.35">
+            <clip clipName="chainsaw_walkSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isStrafeWalkMode" equal="true" />
+                <condition parameter="isHoldingChainsaw" equal="true" />
+                <condition parameter="isCutting" equal="false" />
+                <condition parameter="isWalking" equal="true" />
+                <condition parameter="isGrounded" equal="true" />
+                <condition parameter="isCrouching" equal="false" />
+                <condition parameter="movementDirZ" greater="0.05" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="walkBwdChainsaw" entryTransitionDuration="0.25" exitTransitionDuration="0.25">
+        <clips speedScaleType="distance" speedScaleParameter="2.7">
+            <clip clipName="chainsaw_walkbackwardSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isStrafeWalkMode" equal="true" />
+                <condition parameter="isHoldingChainsaw" equal="true" />
+                <condition parameter="isCutting" equal="false" />
+                <condition parameter="isWalking" equal="true" />
+                <condition parameter="isGrounded" equal="true" />
+                <condition parameter="isCrouching" equal="false" />
+                <condition parameter="movementDirZ" lower="-0.05" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="walkBwd" entryTransitionDuration="0.25" exitTransitionDuration="0.25">
+        <clips speedScaleType="distance" speedScaleParameter="2.7">
+            <clip clipName="walkBwdLoopSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isStrafeWalkMode" equal="true" />
+                <condition parameter="isHoldingChainsaw" equal="false" />
+                <condition parameter="isWalking" equal="true" />
+                <condition parameter="isGrounded" equal="true" />
+                <condition parameter="isCrouching" equal="false" />
+                <condition parameter="movementDirZ" lower="-0.05" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="strafeLeft" entryTransitionDuration="0.25" exitTransitionDuration="0.25">
+        <clips speedScaleType="distance" speedScaleParameter="2.7">
+            <clip clipName="strafeLeftLoopSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isStrafeWalkMode" equal="true" />
+                <condition parameter="isHoldingChainsaw" equal="false" />
+                <condition parameter="isWalking" equal="true" />
+                <condition parameter="isGrounded" equal="true" />
+                <condition parameter="isCrouching" equal="false" />
+                <condition parameter="movementDirX" greater="0.1" />
+                <condition parameter="movementDirZ" between="-0.05, 0.05" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="strafeLeft" entryTransitionDuration="0.25" exitTransitionDuration="0.25">
+        <clips speedScaleType="distance" speedScaleParameter="2.7">
+            <clip clipName="chainsaw_strafeleftSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isStrafeWalkMode" equal="true" />
+                <condition parameter="isHoldingChainsaw" equal="true" />
+                <condition parameter="isWalking" equal="true" />
+                <condition parameter="isGrounded" equal="true" />
+                <condition parameter="isCrouching" equal="false" />
+                <condition parameter="movementDirX" greater="0.1" />
+                <condition parameter="movementDirZ" between="-0.05, 0.05" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="strafeRight" entryTransitionDuration="0.25" exitTransitionDuration="0.25">
+        <clips speedScaleType="distance" speedScaleParameter="2.7">
+            <clip clipName="strafeRightLoopSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isStrafeWalkMode" equal="true" />
+                <condition parameter="isHoldingChainsaw" equal="false" />
+                <condition parameter="isWalking" equal="true" />
+                <condition parameter="isGrounded" equal="true" />
+                <condition parameter="isCrouching" equal="false" />
+                <condition parameter="movementDirX" lower="-0.1" />
+                <condition parameter="movementDirZ" between="-0.05, 0.05" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="strafeRightChainsaw" entryTransitionDuration="0.25" exitTransitionDuration="0.25">
+        <clips speedScaleType="distance" speedScaleParameter="2.7">
+            <clip clipName="chainsaw_straferightSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isStrafeWalkMode" equal="true" />
+                <condition parameter="isHoldingChainsaw" equal="true" />
+                <condition parameter="isWalking" equal="true" />
+                <condition parameter="isGrounded" equal="true" />
+                <condition parameter="isCrouching" equal="false" />
+                <condition parameter="movementDirX" lower="-0.1" />
+                <condition parameter="movementDirZ" between="-0.05, 0.05" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="runFwd" entryTransitionDuration="0.25" exitTransitionDuration="0.25">
+        <clips speedScaleType="distance" speedScaleParameter="4.9">
+            <clip clipName="runFwd1FemaleSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isRunning" equal="true" />
+                <condition parameter="isGrounded" equal="true" />
+                <condition parameter="isCrouching" equal="false" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="idleJump" entryTransitionDuration="0.1" exitTransitionDuration="0.35">
+        <clips>
+            <clip clipName="idleJump1FemaleSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isIdling" equal="true" />
+                <condition parameter="isGrounded" equal="false" />
+                <condition parameter="relativeVelocityY" greater="0.1" />
+                <condition parameter="distanceToGround" lower="0.2" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="walkJump" entryTransitionDuration="0.1" exitTransitionDuration="0.35">
+        <clips>
+            <clip clipName="walkJump1Source" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isWalking" equal="true" />
+                <condition parameter="isGrounded" equal="false" />
+                <condition parameter="relativeVelocityY" greater="0.1" />
+                <condition parameter="distanceToGround" lower="0.2" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="runJump" entryTransitionDuration="0.1" exitTransitionDuration="0.35">
+        <clips>
+            <clip clipName="runJump1Source" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isRunning" equal="true" />
+                <condition parameter="isGrounded" equal="false" />
+                <condition parameter="relativeVelocityY" greater="0.1" />
+                <condition parameter="distanceToGround" lower="0.2" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="jumpLoop" entryTransitionDuration="0.35" exitTransitionDuration="0.2">
+        <clips>
+            <clip clipName="jumpLoop1FemaleSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isGrounded" equal="false" />
+                <condition parameter="distanceToGround" greaterOrEqual="0.2" />
+                <condition parameter="distanceToGround" lower="2" />
+                <condition parameter="isSwimming" equal="false" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="jumpAir" entryTransitionDuration="0.35" exitTransitionDuration="0.2">
+        <clips>
+            <clip clipName="jumpAir1Source" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isGrounded" equal="false" />
+                <condition parameter="distanceToGround" greaterOrEqual="2" />
+                <condition parameter="isSwimming" equal="false" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="landMoving" entryTransitionDuration="0.1" exitTransitionDuration="0.1">
+        <clips>
+            <clip clipName="landMovingSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="absSpeed" greaterOrEqual="0.1" />
+                <condition parameter="isGrounded" equal="false" />
+                <condition parameter="relativeVelocityY" lower="-0.1" />
+                <condition parameter="distanceToGround" lower="0.2" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="landIdle" entryTransitionDuration="0.1" exitTransitionDuration="0.1">
+        <clips>
+            <clip clipName="landIdle1FemaleSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isIdling" equal="true" />
+                <condition parameter="isGrounded" equal="false" />
+                <condition parameter="relativeVelocityY" lower="-0.1" />
+                <condition parameter="distanceToGround" lower="0.2" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="crouchIdle">
+        <clips>
+            <clip clipName="crouchIdle1FemaleSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isIdling" equal="true" />
+                <condition parameter="isGrounded" equal="true" />
+                <condition parameter="isCrouching" equal="true" />
+                <condition parameter="isSwimming" equal="false" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="crouchFwd">
+        <clips speedScaleType="distance" speedScaleParameter="2.9">
+            <clip clipName="crouchFwd1FemaleSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isWalking" equal="true" />
+                <condition parameter="isGrounded" equal="true" />
+                <condition parameter="isCrouching" equal="true" />
+                <condition parameter="isSwimming" equal="false" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="swimIdle">
+        <clips>
+            <clip clipName="swimIdle1FemaleSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="absSpeed" lower="0.1" />
+                <condition parameter="isGrounded" equal="false" />
+                <condition parameter="isCrouching" equal="false" />
+                <condition parameter="isSwimming" equal="true" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="swimFwd">
+        <clips speedScaleType="distance" speedScaleParameter="17.0">
+            <clip clipName="swimFwd1FemaleSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="absSpeed" greaterOrEqual="0.1" />
+                <condition parameter="absSpeed" lowerOrEqual="3.1" />
+                <condition parameter="isGrounded" equal="false" />
+                <condition parameter="isCrouching" equal="false" />
+                <condition parameter="isSwimming" equal="true" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="swimFwdFast">
+        <clips speedScaleType="distance" speedScaleParameter="13.3">
+            <clip clipName="swimFwdFast1FemaleSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="absSpeed" greater="3.1" />
+                <condition parameter="isGrounded" equal="false" />
+                <condition parameter="isCrouching" equal="false" />
+                <condition parameter="isSwimming" equal="true" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="useChainsawHorizontal">
+        <clips>
+            <clip clipName="chainsaw_cutSidewaysSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isStrafeWalkMode" equal="true" />
+                <condition parameter="isHoldingChainsaw" equal="true" />
+                <condition parameter="isCutting" equal="true" />
+                <condition parameter="isVerticalCut" equal="false" />
+            </conditionGroup>
+        </conditions>
+    </item>
+    <item id="useChainsawVertical">
+        <clips>
+            <clip clipName="chainsaw_cutVerticalSource" />
+        </clips>
+        <conditions>
+            <conditionGroup>
+                <condition parameter="isStrafeWalkMode" equal="true" />
+                <condition parameter="isHoldingChainsaw" equal="true" />
+                <condition parameter="isCutting" equal="true" />
+                <condition parameter="isVerticalCut" equal="true" />
+            </conditionGroup>
+        </conditions>
+    </item>
+</conditionalAnimation>

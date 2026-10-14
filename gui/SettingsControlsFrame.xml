@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI name="settingsControls">
+    <GuiElement profile="fs25_menuContainer">
+        <GuiElement profile="fs25_menuHeaderPanel">
+            <Bitmap profile="fs25_menuHeaderIconBg">
+                <Bitmap profile="fs25_menuHeaderIcon" imageSliceId="gui.icon_options_keyboardControls" />
+            </Bitmap>
+            <Text profile="fs25_menuHeaderTitle" text="$l10n_ui_inGameMenuControls" />
+        </GuiElement>
+        <GuiElement profile="fs25_settingsControlsContainer">
+            <GuiElement profile="fs25_settingsControlsListHeader">
+                <Text profile="fs25_settingsControlsListHeaderTitle" text="$l10n_ui_action" />
+                <Button profile="fs25_settingsControlsListHeaderButtonPrev" id="buttonPrevRow" position="450px 10px" onClick="onClickPrevRow" />
+                <Text profile="fs25_settingsControlsListHeaderName" id="headerText1" position="485px 10px" text="$l10n_ui_key1" />
+                <Text profile="fs25_settingsControlsListHeaderName" id="headerText2" position="785px 10px" text="$l10n_ui_key2" />
+                <Text profile="fs25_settingsControlsListHeaderName" id="headerText3" position="1085px 10px" text="$l10n_ui_mouse" />
+                <Button profile="fs25_settingsControlsListHeaderButtonNext" id="buttonNextRow" position="1400px 10px" onClick="onClickNextRow" />
+                <ThreePartBitmap profile="fs25_lineSeparatorBottomSoft" absoluteSizeOffset="-60px 0px" position="-10px 0px" />
+            </GuiElement>
+            <SmoothList profile="fs25_settingsControlsList" id="controlsList" listSectionHeader="section" bottomClipperElement="bottomClipper">
+                <ListItem profile="fs25_settingsControlsListItem">
+                    <ThreePartBitmap profile="fs25_settingsControlsListItemBg" name="alternating" />
+                    <Text profile="fs25_settingsControlsListName" name="actionName" />
+                    <Bitmap profile="fs25_settingsControlsSeparator" position="485px 0px" />
+                    <Button profile="fs25_settingsControlsListButton" name="actionButton1" position="490px 0px" onClick="onMenuAcceptUp">
+                        <ThreePartBitmap profile="fs25_settingsControlsListButtonBg" />
+                        <InputGlyph profile="fs25_settingsControlsListGlyph" name="actionGlyph1" />
+                    </Button>
+                    <Bitmap profile="fs25_settingsControlsSeparator" position="785px 0px" />
+                    <Button profile="fs25_settingsControlsListButton" name="actionButton2" position="790px 0px" onClick="onMenuAcceptUp">
+                        <ThreePartBitmap profile="fs25_settingsControlsListButtonBg" />
+                        <InputGlyph profile="fs25_settingsControlsListGlyph" name="actionGlyph2" />
+                    </Button>
+                    <Bitmap profile="fs25_settingsControlsSeparator" position="1085px 0px" />
+                    <Button profile="fs25_settingsControlsListButton" name="actionButton3" position="1090px 0px" onClick="onMenuAcceptUp">
+                        <ThreePartBitmap profile="fs25_settingsControlsListButtonBg" />
+                        <InputGlyph profile="fs25_settingsControlsListGlyph" name="actionGlyph3" />
+                    </Button>
+                    <Bitmap profile="fs25_settingsControlsSeparator" position="1385px 0px" />
+                </ListItem>
+                <ListItem profile="fs25_settingsControlsListSection" name="section">
+                    <Text profile="fs25_settingsControlsListSectionTitle" name="title" />
+                </ListItem>
+            </SmoothList>
+            <Bitmap profile="fs25_stopClipper" name="bottomClipper" />
+        </GuiElement>
+    </GuiElement>
+    <ThreePartBitmap profile="fs25_sliderDockedBg">
+        <ThreePartBitmap profile="fs25_sliderDockedBox">
+            <Slider profile="fs25_sliderDocked" dataElementId="controlsList" />
+        </ThreePartBitmap>
+    </ThreePartBitmap>
+    <GUIProfiles>
+        <Profile name="fs25_settingsControlsContainer" extends="emptyPanel" with="anchorStretchingYStretchingX">
+            <absoluteSizeOffset value="90px 0px" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

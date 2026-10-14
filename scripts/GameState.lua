@@ -1,0 +1,10 @@
+GameState = {}
+GameState.STARTING = 1
+GameState.MENU_MAIN = 2
+GameState.LOADING = 3
+GameState.PAUSED = 4
+GameState.PLAY = 5
+GameState.MENU_SHOP_CONFIG = 6
+GameState.MENU_ANIMAL_SHOP = 7
+GameState.MENU_INGAME = 8
+GameState.MENU_SHOP = 9

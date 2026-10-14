@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI name="ingameMenuProduction">
+    <ThreePartBitmap profile="fs25_primaryMenuContainerBg" id="pointsBoxBg">
+        <Bitmap profile="fs25_secondaryMenuContainerArrow" id="pointsBoxArrow" />
+        <GuiElement profile="fs25_subCategoryContainer">
+            <MultiTextOption profile="fs25_subCategorySelector" id="pointsSelector" onClick="updateProductionLists" />
+            <BoxLayout profile="fs25_subCategorySelectorBox" id="pointsDotBox">
+                <RoundCorner profile="fs25_subCategorySelectorDot" />
+                <RoundCorner profile="fs25_subCategorySelectorDot" />
+            </BoxLayout>
+            <GuiElement profile="fs25_subCategoryListContainer">
+                <Bitmap profile="fs25_subCategoryStartClipper" name="startClipper" />
+                <Bitmap profile="fs25_subCategoryStopClipper" name="endClipper" />
+                <SmoothList profile="fs25_productionPointsList" id="pointsList" startClipperElementName="startClipper" endClipperElementName="endClipper" focusChangeLeft="pointsSelector" focusChangeRight="productsList" focusChangeBottom="nil" focusChangeTop="nil">
+                    <ListItem profile="fs25_subCategoryListItem">
+                        <Bitmap profile="fs25_subCategoryListItemIconPreplaced" name="iconPreplaced" />
+                        <Bitmap profile="fs25_subCategoryListItemIcon" name="icon" />
+                        <Text profile="fs25_productionPointsListItemName" name="name" />
+                    </ListItem>
+                    <ListItem profile="fs25_subCategoryListItemEmpty" name="empty" />
+                </SmoothList>
+                <ThreePartBitmap profile="fs25_subCategoryListSliderBox">
+                    <Slider profile="fs25_listSlider" dataElementId="pointsList" />
+                </ThreePartBitmap>
+            </GuiElement>
+        </GuiElement>
+    </ThreePartBitmap>
+    <GuiElement profile="fs25_menuContentContainer" id="menuContainer">
+        <GuiElement profile="fs25_menuHeaderPanel" position="0px 74px">
+            <Bitmap profile="fs25_menuHeaderIconBg">
+                <Bitmap profile="fs25_menuHeaderIcon" imageSliceId="gui.icon_ingameMenu_productionChains" />
+            </Bitmap>
+            <Text profile="fs25_menuHeaderTitle" text="$l10n_ui_ingameMenuProductionChains" />
+        </GuiElement>
+        <ThreePartBitmap profile="fs25_secondaryMenuContainerBg" id="productsBoxBg">
+            <ThreePartBitmap profile="fs25_secondaryMenuContainerBgTop" id="productsBoxBgTop" />
+            <Bitmap profile="fs25_secondaryMenuContainerArrow" id="productsBoxBgArrow" />
+        </ThreePartBitmap>
+        <GuiElement profile="fs25_secondaryMenuContainer" id="productsContainer">
+            <Text profile="fs25_secondaryMenuTitle" text="$l10n_helpLine_IconOverview_Products" />
+            <GuiElement profile="fs25_productsListContainer" id="productsListContainer">
+                <SmoothList profile="fs25_productionProductsList" id="productsList" startClipperElementName="startClipperProducts" endClipperElementName="endClipperProducts" focusChangeLeft="pointsList" focusChangeRight="detailsSlider" focusChangeBottom="nil" focusChangeTop="nil">
+                    <ListItem profile="fs25_subCategoryListItem">
+                        <Bitmap profile="fs25_productionProductsListIcon" name="icon">
+                            <Text profile="fs25_productionProductsListWarning" name="warning" text="!" />
+                        </Bitmap>
+                        <Text profile="fs25_subCategoryListItemName" name="name" width="210px" />
+                        <Text profile="fs25_productionProductsListItemStorage" name="activity" />
+                    </ListItem>
+                    <ListItem profile="fs25_subCategoryListItemEmpty" name="empty" />
+                </SmoothList>
+                <Bitmap profile="fs25_secondaryMenuStartClipper" name="startClipperProducts" />
+                <Bitmap profile="fs25_secondaryMenuStopClipper" name="endClipperProducts" />
+                <ThreePartBitmap profile="fs25_subCategoryListSliderBox" position="10px 0px">
+                    <Slider profile="fs25_listSlider" dataElementId="productsList" />
+                </ThreePartBitmap>
+            </GuiElement>
+        </GuiElement>
+        <ThreePartBitmap profile="fs25_tertiaryMenuContainerBg" id="detailsBoxBg">
+            <ThreePartBitmap profile="fs25_tertiaryMenuContainerBgTop" id="detailsBoxBgTop" />
+        </ThreePartBitmap>
+        <GuiElement profile="fs25_tertiaryMenuContainer" id="detailsContainer">
+            <GuiElement profile="fs25_productionDetailsRecipeItem" id="recipeItemTemplate">
+                <Bitmap profile="fs25_productionDetailsRecipeItemIcon" name="icon" />
+                <Text profile="fs25_productionDetailsRecipeItemAmount" name="amount" />
+                <Text profile="fs25_productionDetailsRecipeItemName" name="name" />
+            </GuiElement>
+            <SmoothList profile="fs25_productionDetailsList" id="detailsList" listSectionHeader="section">
+                <ListItem profile="fs25_productionDetailsListItem" name="fillTypeCell">
+                    <Bitmap profile="fs25_productionDetailsListItemIcon" name="icon" />
+                    <Text profile="fs25_productionDetailsListItemName" name="fillType" />
+                    <Text profile="fs25_productionDetailsListItemFillLevel" name="fillLevel" />
+                    <Text profile="fs25_productionDetailsListItemFillLevelPercent" name="fillPercent" />
+                    <ThreePartBitmap profile="fs25_productionDetailsListItemBarBackground">
+                        <ThreePartBitmap profile="fs25_productionDetailsListItemBar" name="bar" />
+                    </ThreePartBitmap>
+                </ListItem>
+                <ListItem profile="fs25_productionDetailsListItemLarge" name="detailsCell">
+                    <ThreePartBitmap profile="fs25_lineSeparatorTopSoft" name="separator" height="1dp" position="0px -10px" />
+                    <Bitmap profile="fs25_productionDetailsListItemIconLarge" name="iconLarge" />
+                    <Text profile="fs25_productionDetailsListSectionTitle" name="title" position="220px -30px" text="$l10n_ui_productions_production" />
+                    <GuiElement profile="fs25_productionDetailsInfoBox">
+                        <ThreePartBitmap profile="fs25_productionDetailsInfoBg" />
+                        <Text profile="fs25_productionDetailsInfoName" text="$l10n_ui_productions_status" />
+                        <Text profile="fs25_productionDetailsInfoValue" name="infoStatus" textSelectedColor="1 0 0 1" />
+                        <Text profile="fs25_productionDetailsInfoName" text="$l10n_ui_productions_cyclesPerMonth" position="15px -32px" />
+                        <Text profile="fs25_productionDetailsInfoValue" name="infoCycles" position="-15px -32px" />
+                        <ThreePartBitmap profile="fs25_productionDetailsInfoBg" position="0px -64px" />
+                        <Text profile="fs25_productionDetailsInfoName" text="$l10n_ui_production_costsPerMonth" position="15px -64px" />
+                        <Text profile="fs25_productionDetailsInfoValue" name="infoCosts" position="-15px -64px" />
+                    </GuiElement>
+                </ListItem>
+                <ListItem profile="fs25_productionDetailsListItemLarge" name="recipeCell">
+                    <BoxLayout profile="fs25_productionDetailsRecipeLayout" name="inputLayout" />
+                    <BoxLayout profile="fs25_productionDetailsRecipeLayoutArrow" name="arrowLayout">
+                        <Bitmap profile="fs25_productionDetailsRecipeArrow" />
+                    </BoxLayout>
+                    <BoxLayout profile="fs25_productionDetailsRecipeLayoutOutput" name="outputLayout" />
+                </ListItem>
+                <ListItem profile="fs25_productionDetailsListSection" name="section">
+                    <Text profile="fs25_productionDetailsListSectionTitle" name="title" />
+                </ListItem>
+            </SmoothList>
+            <ThreePartBitmap profile="fs25_subCategoryListSliderBox" position="33px 0px">
+                <Slider profile="fs25_listSlider" id="detailsSlider" dataElementId="detailsList" handleFocus="true" focusChangeLeft="productsList" focusChangeRight="pointsSelector" focusChangeBottom="nil" focusChangeTop="nil" />
+            </ThreePartBitmap>
+        </GuiElement>
+        <Text profile="fs25_productionEmptyText" id="noPointsOwnedText" text="$l10n_ui_noProductionPoints" />
+        <Text profile="fs25_productionEmptyText" id="allPointsBoughtText" text="$l10n_ui_allProductionPointsOwned" />
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="fs25_productionPointsList" extends="fs25_subCategoryList" />
+        <Profile name="fs25_productionPointsListItemName" extends="fs25_subCategoryListItemName">
+            <width value="210px" />
+            <position value="100px -32px" />
+        </Profile>
+        <Profile name="fs25_productionEmptyText" extends="fs25_textDefault" with="anchorMiddleCenter">
+            <textSize value="24px" />
+            <textAlignment value="center" />
+            <textAutoWidth value="true" />
+            <textMaxNumLines value="3" />
+            <textMaxWidth value="500px" />
+        </Profile>
+        <Profile name="fs25_productsListContainer" extends="emptyPanel" with="anchorBottomStretchingX pivotBottomLeft">
+            <position value="20px 30px" />
+            <absoluteSizeOffset value="80px 140px" />
+        </Profile>
+        <Profile name="fs25_productionProductsList" extends="fs25_subCategoryList" with="anchorStretchingYStretchingX" />
+        <Profile name="fs25_productionProductsListIcon" extends="fs25_subCategoryListItemIcon">
+            <imageColor value="$preset_colorWhite_25" />
+            <imageSelectedColor value="$preset_colorWhite" />
+        </Profile>
+        <Profile name="fs25_subCategoryListItemIconPreplaced" extends="fs25_subCategoryListItemIcon">
+            <size value="75px 75px" />
+            <position value="6px 7px" />
+            <imageMaskFilename value="dataS/menu/mask_productionPoint.png" />
+            <overlayMaskSize value="128px 128px" />
+            <overlayMaskPos value="-27px -26px" />
+        </Profile>
+        <Profile name="fs25_productionProductsListWarning" extends="fs25_textDefault" with="anchorTopRight">
+            <textSize value="24px" />
+            <textBold value="true" />
+            <textColor value="$preset_colorRed" />
+            <textAlignment value="right" />
+        </Profile>
+        <Profile name="fs25_productionProductsListItemStorage" extends="fs25_subCategoryListItemName">
+            <width value="210px" />
+            <position value="100px -52px" />
+            <textBold value="false" />
+        </Profile>
+        <Profile name="fs25_productionDetailsList" extends="emptyPanel" with="anchorStretchingYStretchingX anchorTopCenter">
+            <handleFocus value="false" />
+            <soundDisabled value="true" />
+            <listItemSpacing value="5px" />
+            <listSectionSpacing value="20px" />
+            <isHorizontalList value="false" />
+        </Profile>
+        <Profile name="fs25_productionDetailsListItem" extends="emptyPanel" with="anchorTopStretchingX pivotTopRight">
+            <height value="40px" />
+            <absoluteSizeOffset value="15px 0px" />
+        </Profile>
+        <Profile name="fs25_productionDetailsListItemIcon" extends="baseReference" with="anchorTopLeft">
+            <size value="25px 25px" />
+            <imageSliceId value="noSlice" />
+        </Profile>
+        <Profile name="fs25_productionDetailsListItemName" extends="fs25_textDefault" with="anchorTopLeft">
+            <position value="35px -5px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+        </Profile>
+        <Profile name="fs25_productionDetailsListItemFillLevel" extends="fs25_textDefault" with="anchorTopRight">
+            <position value="-55px -5px" />
+            <textUpperCase value="true" />
+            <textAlignment value="right" />
+        </Profile>
+        <Profile name="fs25_productionDetailsListItemFillLevelPercent" extends="fs25_textDefault" with="anchorTopRight">
+            <position value="0px -5px" />
+            <textUpperCase value="true" />
+            <textAlignment value="right" />
+            <textColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_productionDetailsListItemBarBackground" extends="baseReference" with="anchorTopStretchingX pivotTopLeft">
+            <size value="100% 6px" />
+            <position value="0px -30px" />
+            <imageColor value="$preset_fs25_colorMainDark" />
+            <imageSliceId value="gui.statusBarMid" />
+            <startImageSize value="4px 0" />
+            <startImageColor value="$preset_fs25_colorMainDark" />
+            <startImageSliceId value="gui.statusBarStart" />
+            <endImageSize value="4px 0" />
+            <endImageColor value="$preset_fs25_colorMainDark" />
+            <endImageSliceId value="gui.statusBarEnd" />
+        </Profile>
+        <Profile name="fs25_productionDetailsListItemBar" extends="fs25_productionDetailsListItemBarBackground" with="anchorMiddleStretchingX pivotMiddleLeft">
+            <position value="0px 0px" />
+            <imageColor value="$preset_fs25_colorMainHighlight" />
+            <startImageColor value="$preset_fs25_colorMainHighlight" />
+            <endImageColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+        <Profile name="fs25_productionDetailsListItemBarDanger" extends="fs25_productionDetailsListItemBar">
+            <imageColor value="$preset_colorRed" />
+            <startImageColor value="$preset_colorRed" />
+            <endImageColor value="$preset_colorRed" />
+        </Profile>
+        <Profile name="fs25_productionDetailsListSection" extends="emptyPanel" with="anchorTopStretchingX">
+            <height value="30px" />
+        </Profile>
+        <Profile name="fs25_productionDetailsListSectionTitle" extends="fs25_textDefault" with="anchorTopStretchingX pivotTopLeft">
+            <width value="100%" />
+            <textSize value="20px" />
+            <textBold value="true" />
+            <textUpperCase value="true" />
+        </Profile>
+        <Profile name="fs25_productionDetailsListItemLarge" extends="emptyPanel" with="anchorTopStretchingX">
+            <height value="280px" />
+        </Profile>
+        <Profile name="fs25_productionDetailsListItemIconLarge" extends="baseReference" with="anchorTopLeft">
+            <size value="180px 180px" />
+            <position value="20px -30px" />
+            <imageSliceId value="noSlice" />
+        </Profile>
+        <Profile name="fs25_productionDetailsInfoBox" extends="emptyPanel" with="anchorTopLeft">
+            <size value="385px 96px" />
+            <position value="220px -60px" />
+        </Profile>
+        <Profile name="fs25_productionDetailsInfoName" extends="fs25_textDefault" with="anchorTopLeft">
+            <size value="270px 32px" />
+            <position value="15px 0px" />
+            <textLayoutMode value="scrolling" />
+            <textScrollOnFocusOnly value="false" />
+        </Profile>
+        <Profile name="fs25_productionDetailsInfoValue" extends="fs25_textDefault" with="anchorTopRight">
+            <size value="270px 32px" />
+            <position value="-15px 0px" />
+            <textBold value="true" />
+            <textAlignment value="right" />
+        </Profile>
+        <Profile name="fs25_productionDetailsInfoBg" extends="baseReference" with="anchorTopStretchingX">
+            <height value="32px" />
+            <imageColor value="$preset_fs25_colorGrey" />
+            <imageSliceId value="gui.3dShop_button_middle" />
+            <startImageSize value="6px 0" />
+            <startImageColor value="$preset_fs25_colorGrey" />
+            <startImageSliceId value="gui.3dShop_button_left" />
+            <endImageSize value="6px 0" />
+            <endImageColor value="$preset_fs25_colorGrey" />
+            <endImageSliceId value="gui.3dShop_button_right" />
+        </Profile>
+        <Profile name="fs25_productionDetailsRecipeLayout" extends="emptyPanel" with="anchorTopLeft">
+            <size value="250px 100%" />
+            <flowDirection value="vertical" />
+        </Profile>
+        <Profile name="fs25_productionDetailsRecipeLayoutOutput" extends="emptyPanel" with="anchorStretchingYLeft">
+            <size value="400px 100%" />
+            <position value="320px 0px" />
+            <alignmentY value="middle" />
+            <flowDirection value="vertical" />
+        </Profile>
+        <Profile name="fs25_productionDetailsRecipeLayoutArrow" extends="emptyPanel" with="anchorStretchingYLeft">
+            <size value="30px 100%" />
+            <position value="270px 0px" />
+            <alignmentY value="middle" />
+            <flowDirection value="vertical" />
+        </Profile>
+        <Profile name="fs25_productionDetailsRecipeArrow" extends="baseReference" with="anchorTopLeft">
+            <size value="27px 30px" />
+            <imageColor value="$preset_fs25_colorGrey" />
+            <imageSliceId value="gui.recipe_arrow" />
+        </Profile>
+        <Profile name="fs25_productionDetailsRecipeItem" extends="emptyPanel" with="anchorTopLeft">
+            <size value="250px 35px" />
+        </Profile>
+        <Profile name="fs25_productionDetailsRecipeItemIcon" extends="baseReference" with="anchorMiddleLeft">
+            <size value="25px 25px" />
+            <imageSliceId value="noSlice" />
+        </Profile>
+        <Profile name="fs25_productionDetailsRecipeItemName" extends="fs25_textDefault" with="anchorTopRight">
+            <width value="183px" />
+            <position value="0px -4px" />
+            <textLayoutMode value="scrolling" />
+            <textVerticalAlignment value="bottom" />
+        </Profile>
+        <Profile name="fs25_productionDetailsRecipeItemAmount" extends="fs25_textDefault" with="anchorTopRight">
+            <width value="40px" />
+            <position value="-184px -4px" />
+            <textLayoutMode value="resize" />
+            <textAlignment value="right" />
+            <textVerticalAlignment value="bottom" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

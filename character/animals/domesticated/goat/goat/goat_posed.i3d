@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="goat_posed" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/tileAndMirrorShader.xml" />
+    <File fileId="1" filename="$dataS/character/animals/domesticated/goat/goat/goat_diffuse.png" />
+    <File fileId="6" filename="$dataS/character/animals/domesticated/goat/goat/goat_horns_diffuse.png" />
+    <File fileId="7" filename="$dataS/character/animals/domesticated/goat/goat/goat_horns_normal.png" />
+    <File fileId="8" filename="$dataS/character/animals/domesticated/goat/goat/goat_horns_specular.png" />
+    <File fileId="2" filename="$dataS/character/animals/domesticated/goat/goat/goat_normal.png" />
+    <File fileId="3" filename="$dataS/character/animals/domesticated/goat/goat/goat_specular.png" />
+    <File fileId="5" filename="$dataS/character/animals/domesticated/goat/goatHairs_diffuse.png" />
+  </Files>
+
+  <Materials>
+    <Material name="goat_02_mat" materialId="1" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <CustomParameter name="sssColor" value=".8 .8 .8 1.0"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="goat_04_mat" materialId="3" customShaderId="4" customShaderVariation="sssSpecularDirt_alphaMapSecondUV">
+      <CustomParameter name="sssColor" value=".8 .8 .8 1.0"/>
+      <Custommap name="alphaMap" fileId="5"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="goat_06_mat" materialId="2" customShaderId="4" customShaderVariation="sssSpecularDirt_alphaTestDisable">
+      <CustomParameter name="atlasInvSizeAndOffsetUV" value=".5 .5 0 0.5"/>
+      <CustomParameter name="dirtColor" value="0.20 0.14 0.08 0.0"/>
+      <CustomParameter name="mirrorScaleAndOffsetUV" value="1 1 0 0"/>
+      <CustomParameter name="sssColor" value=".8 .8 .8 1.0"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="goat_posed.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="goat" nodeId="1">
+      <Shape name="goat_body" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="2"/>
+      <Shape name="goat_horns" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="3"/>
+      <TransformGroup name="internals" nodeId="4">
+        <Shape name="tongue" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="5"/>
+        <Shape name="teeth_bottom" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="6"/>
+        <Shape name="lashes_l" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="7"/>
+        <Shape name="lashes_r" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="8"/>
+        <Shape name="eye_r" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="9"/>
+        <Shape name="eye_l" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="10"/>
+      </TransformGroup>
+      <TransformGroup name="fur" nodeId="11">
+        <Shape name="tail" translation="0.000664 0.577255 -0.382764" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="12"/>
+        <Shape name="whiskers" shapeId="10" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="13"/>
+        <Shape name="beard" shapeId="11" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="14"/>
+        <Shape name="ear_l" shapeId="12" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="15"/>
+        <Shape name="ear_r" shapeId="13" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="16"/>
+        <Shape name="back_fur" shapeId="14" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="17"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

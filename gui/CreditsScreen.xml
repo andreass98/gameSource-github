@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Picture profile="backgroundImage" id="backgroundImage" />
+    <Bitmap profile="fs25_mainScreenSidebar">
+        <Bitmap profile="mainScreenLogo" id="logo" />
+        <GuiElement profile="fs25_creditsScrollBox" id="creditsVisibilityBox">
+            <BoxLayout profile="fs25_creditsScrollLayout" id="creditsPlaceholder">
+                <Text profile="fs25_creditsTitle" id="creditsTitleElement" />
+                <Text profile="fs25_creditsText" id="creditsTextElement" />
+                <Text profile="fs25_creditsDisclaimer" id="creditsDisclaimerElement" />
+            </BoxLayout>
+        </GuiElement>
+    </Bitmap>
+    <BoxLayout profile="fs25_buttonBox" id="buttonsPC">
+        <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" />
+    </BoxLayout>
+    <GUIProfiles>
+        <Profile name="fs25_creditsScrollBox" extends="baseReference">
+            <size value="500px 690px" />
+            <position value="65px 30px" />
+        </Profile>
+        <Profile name="fs25_creditsScrollLayout" extends="emptyPanel" with="anchorMiddleStretchingX">
+            <absoluteSizeOffset value="0px 100px" />
+            <position value="0px -700px" />
+            <handleFocus value="false" />
+            <alignmentY value="top" />
+            <flowDirection value="vertical" />
+            <useFullVisibility value="false" />
+            <autoValidateLayout value="false" />
+        </Profile>
+        <Profile name="fs25_creditsTitle" extends="fs25_textDefault">
+            <size value="400px 16px" />
+            <margin value="0px 35px 0px 2px" />
+            <textUpperCase value="true" />
+            <textAutoWidth value="true" />
+            <textColor value="$preset_fs25_colorMainHighlight" />
+            <fadeInTime value="6" />
+            <fadeOutTime value="6" />
+        </Profile>
+        <Profile name="fs25_creditsText" extends="fs25_creditsTitle">
+            <size value="500px 30px" />
+            <margin value="0px 2px 0px 4px" />
+            <textSize value="26px" />
+            <textBold value="true" />
+            <textColor value="$preset_fs25_colorMainLight" />
+        </Profile>
+        <Profile name="fs25_creditsDisclaimer" extends="fs25_creditsTitle">
+            <margin value="0px 2px 0px 4px" />
+            <textColor value="$preset_fs25_colorMainLight" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

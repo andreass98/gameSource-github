@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="sheepAdultAnimations" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/tileAndMirrorShader.xml" />
+    <File fileId="5" filename="$dataS/character/animals/domesticated/sheep/ewe/sheepEwe_alpha.png" />
+    <File fileId="1" filename="$dataS/character/animals/domesticated/sheep/ewe/sheepEwe_diffuse.png" />
+    <File fileId="2" filename="$dataS/character/animals/domesticated/sheep/ewe/sheepEwe_normal.png" />
+    <File fileId="3" filename="$dataS/character/animals/domesticated/sheep/ewe/sheepEwe_specular.png" />
+  </Files>
+
+  <Materials>
+    <Material name="lambert1" materialId="1" diffuseColor="0.5 0.5 0.5 1">
+    </Material>
+    <Material name="sheepEwe_mat1" materialId="2" customShaderId="4" customShaderVariation="sssSpecularDirt_alphaMapSecondUV">
+      <CustomParameter name="sssColor" value=".8 .8 .8 1.0"/>
+      <Custommap name="alphaMap" fileId="5"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="sheepEwe_mat" materialId="3" customShaderId="4" customShaderVariation="sssSpecularDirt">
+      <CustomParameter name="sssColor" value=".8 .8 .8 1.0"/>
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Scene>
+    <TransformGroup name="sheepSkeleton" nodeId="1">
+      <TransformGroup name="sheep_root_skin_jnt" visibility="false" nodeId="2">
+        <TransformGroup name="sheep_spine_skin_jnt_01" translation="-1.57869e-33 0.807173 -0.451203" rotation="-1.40334e-14 -90 0" nodeId="3">
+          <TransformGroup name="sheep_spine_skin_jnt_02" translation="0.489589 1.42109e-16 1.08711e-16" nodeId="4">
+            <TransformGroup name="sheep_spine_skin_jnt_03" translation="0.489589 0 1.08711e-16" nodeId="5">
+              <TransformGroup name="sheep_neck_skin_jnt_01" translation="1.64382e-08 -3.06327e-08 -5.32907e-17" rotation="-1.40334e-14 -0 53.321" nodeId="6">
+                <TransformGroup name="sheep_neck_skin_jnt_02" translation="0.176781 9.14824e-15 -1.77636e-17" rotation="-7.01671e-15 0 0" nodeId="7">
+                  <TransformGroup name="sheep_neck_skin_jnt_03" translation="0.176781 8.22453e-15 3.97904e-15" nodeId="8">
+                    <TransformGroup name="sheep_head_skin_jnt" translation="1.36424e-13 0.00188874 1.60452e-17" rotation="53.321 90 0" nodeId="9">
+                      <TransformGroup name="sheep_jaw_skin_jnt" translation="-2.66454e-17 -0.0739049 0.0870362" rotation="90 -62.5957 -90" nodeId="10">
+                        <TransformGroup name="sheep_tongue_skin_jnt_01" translation="0.188025 0.0123732 6.21725e-17" rotation="0 -0 15.5725" nodeId="11">
+                          <TransformGroup name="sheep_tongue_skin_jnt_02" translation="0.0470155 1.42109e-16 5.04871e-31" nodeId="12"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="sheep_ear_L_skin_jnt_01" translation="0.133742 0.0306899 0.0361002" rotation="111.271 -11.0456 14.5471" nodeId="13">
+                        <TransformGroup name="sheep_ear_L_skin_jnt_02" translation="0.0870362 -2.73559e-15 2.41585e-15" rotation="0 -0 18.3548" nodeId="14"/>
+                      </TransformGroup>
+                      <TransformGroup name="sheep_ear_R_skin_jnt_01" translation="-0.133742 0.0306899 0.0361002" rotation="68.7286 -11.0456 165.453" nodeId="15">
+                        <TransformGroup name="sheep_ear_R_skin_jnt_02" translation="0.0870362 6.75016e-16 -1.42109e-16" rotation="0 -0 18.3548" nodeId="16"/>
+                      </TransformGroup>
+                      <TransformGroup name="sheep_eyeball_L_skin_jnt" translation="0.076989 0.0162948 0.158813" rotation="12.2761 -34.8415 -21.1992" nodeId="17"/>
+                      <TransformGroup name="sheep_eyeball_R_skin_jnt" translation="-0.076989 0.0162948 0.158813" rotation="167.724 -34.8415 -158.801" nodeId="18"/>
+                      <TransformGroup name="sheep_eyelid_up_L_skin_jnt" translation="0.10352 0.0336643 0.178497" rotation="-19.2832 -31.828 33.2124" nodeId="19"/>
+                      <TransformGroup name="sheep_eyelid_up_R_skin_jnt" translation="-0.10352 0.0336643 0.178497" rotation="-160.717 -31.828 146.788" nodeId="20"/>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="sheep_shoulder_L_skin_jnt" translation="-0.0252533 -0.115199 -0.109382" rotation="0 0 -123.255" nodeId="21">
+                <TransformGroup name="sheep_elbow_L_skin_jnt" translation="0.2072 -1.15463e-16 0" rotation="0 -0 36.4989" nodeId="22">
+                  <TransformGroup name="sheep_wrist_L_skin_jnt" translation="0.247448 -5.68434e-16 3.55271e-17" rotation="0 0 -11.859" nodeId="23">
+                    <TransformGroup name="sheep_front_foot_L_skin_jnt" translation="0.17575 4.26326e-16 -1.24345e-16" rotation="0 -0 38.2082" nodeId="24">
+                      <TransformGroup name="sheep_front_ball_L_skin_jnt" translation="0.0565704 -3.55271e-16 8.88178e-17" nodeId="25"/>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="sheep_shoulder_R_skin_jnt" translation="-0.0252533 -0.115199 0.109382" rotation="0 -0 56.7452" nodeId="26">
+                <TransformGroup name="sheep_elbow_R_skin_jnt" translation="-0.2072 5.32907e-17 -3.55271e-17" rotation="0 -0 36.4989" nodeId="27">
+                  <TransformGroup name="sheep_wrist_R_skin_jnt" translation="-0.247448 0 1.24345e-16" rotation="0 0 -11.859" nodeId="28">
+                    <TransformGroup name="sheep_front_foot_R_skin_jnt" translation="-0.17575 -3.55271e-16 1.59872e-16" rotation="0 0 -141.792" nodeId="29">
+                      <TransformGroup name="sheep_front_ball_R_skin_jnt" translation="0.0565704 -1.7053e-15 -7.81597e-16" rotation="0 0 -6.36111e-15" nodeId="30"/>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="sheep_breast_skin_jnt" translation="0.0762029 -0.32941 0.00785071" rotation="106.077 92.0562 53.321" nodeId="31"/>
+            </TransformGroup>
+            <TransformGroup name="sheep_belly_skin_jnt" translation="1.18222e-09 -0.431215 -2.34364e-13" rotation="-0 90 0" nodeId="32"/>
+          </TransformGroup>
+          <TransformGroup name="sheep_tail_skin_jnt_01" translation="-0.137473 0.0688942 -5.32907e-17" rotation="2.54444e-14 180 57.4063" nodeId="33">
+            <TransformGroup name="sheep_tail_skin_jnt_02" translation="0.0971178 -9.9476e-16 -7.10543e-17" rotation="0 0 -34.1176" nodeId="34">
+              <TransformGroup name="sheep_tail_skin_jnt_03" translation="0.110022 3.55271e-16 -1.42109e-16" rotation="0 0 -4.5585" nodeId="35">
+                <TransformGroup name="sheep_tail_skin_jnt_04" translation="0.125919 0 -1.42109e-16" rotation="0 -0 6.7559" nodeId="36">
+                  <TransformGroup name="sheep_tail_skin_jnt_05" translation="0.124962 -5.68434e-16 0" rotation="0 0 -1.90833e-14" nodeId="37"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="sheep_hip_L_skin_jnt" translation="-0.00209081 0.0184555 -0.109813" rotation="0 0 -74.2923" nodeId="38">
+            <TransformGroup name="sheep_knee_L_skin_jnt" translation="0.30742 3.19744e-16 7.10543e-17" rotation="0 0 -51.1069" nodeId="39">
+              <TransformGroup name="sheep_ankle_L_skin_jnt" translation="0.225274 2.13163e-16 1.06581e-16" rotation="0 -0 30.8791" nodeId="40">
+                <TransformGroup name="sheep_hind_foot_L_skin_jnt" translation="0.23787 3.55271e-16 -1.06581e-16" rotation="-8.63452 6.01259 39.1179" nodeId="41">
+                  <TransformGroup name="sheep_hind_ball_L_skin_jnt" translation="0.0607836 -2.13163e-16 1.06581e-16" rotation="12.7672 -0 0" nodeId="42"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="sheep_hip_R_skin_jnt" translation="-0.00209081 0.0184555 0.109813" rotation="0 -0 105.708" nodeId="43">
+            <TransformGroup name="sheep_knee_R_skin_jnt" translation="-0.30742 3.90799e-16 -3.55271e-17" rotation="0 0 -51.1069" nodeId="44">
+              <TransformGroup name="sheep_ankle_R_skin_jnt" translation="-0.225274 -7.81597e-16 8.88178e-17" rotation="0 -0 30.8791" nodeId="45">
+                <TransformGroup name="sheep_hind_foot_R_skin_jnt" translation="-0.23787 -2.84217e-16 5.32907e-17" rotation="8.63452 -6.01259 -140.882" nodeId="46">
+                  <TransformGroup name="sheep_hind_ball_R_skin_jnt" translation="0.0607836 2.84217e-16 7.10543e-17" rotation="-12.7672 0 0" nodeId="47"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+    <TransformGroup name="GEO" nodeId="48">
+    </TransformGroup>
+  </Scene>
+
+
+  <Animation externalAnimFile="sheepAdultAnimations.i3d.anim" />
+</i3D>

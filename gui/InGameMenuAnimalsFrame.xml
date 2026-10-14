@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI name="ingameMenuAnimals">
+    <ThreePartBitmap profile="fs25_subCategoryContainerBg">
+        <Bitmap profile="fs25_subCategoryContainerArrow" />
+    </ThreePartBitmap>
+    <Bitmap profile="fs25_subCategoryContainer">
+        <MultiTextOption profile="fs25_subCategorySelector" id="subCategorySelector" onClick="onHusbandryChanged" />
+        <BoxLayout profile="fs25_subCategorySelectorBox" id="subCategoryDotBox" />
+        <RoundCorner profile="fs25_subCategorySelectorDot" id="subCategoryDotTemplate" />
+        <GuiElement profile="fs25_subCategoryListContainer" id="contractsListBox">
+            <Bitmap profile="fs25_subCategoryStartClipper" name="startClipper" />
+            <Bitmap profile="fs25_subCategoryStopClipper" name="endClipper" />
+            <SmoothList profile="fs25_subCategoryList" id="list" startClipperElementName="startClipper" endClipperElementName="endClipper" listSectionHeader="section">
+                <ListItem profile="fs25_subCategoryListItem">
+                    <Bitmap profile="fs25_subCategoryListItemIcon" name="typeIcon" />
+                    <Text profile="fs25_animalSourceListItemName" name="name" />
+                    <Text profile="fs25_animalSourceListItemPrice" name="priceValue" />
+                    <Text profile="fs25_animalSourceListItemAmount" name="count" />
+                </ListItem>
+                <ListItem profile="fs25_subCategoryListSectionHeader" name="section">
+                    <Text profile="fs25_subCategoryListSectionHeaderTitle" name="title" />
+                </ListItem>
+            </SmoothList>
+            <Text profile="fs25_animalListEmptyText" id="noAnimalsText" text="$l10n_ui_noAnimalsInHusbandry" />
+            <ThreePartBitmap profile="fs25_subCategoryListSliderBox">
+                <Slider profile="fs25_listSlider" dataElementId="list" />
+            </ThreePartBitmap>
+        </GuiElement>
+    </Bitmap>
+    <GuiElement profile="fs25_menuContentContainer" id="detailsBox">
+        <GuiElement profile="fs25_menuHeaderPanel" position="0px 74px">
+            <Bitmap profile="fs25_menuHeaderIconBg">
+                <Bitmap profile="fs25_menuHeaderIcon" imageSliceId="gui.icon_ingameMenu_animals" />
+            </Bitmap>
+            <Text profile="fs25_menuHeaderTitle" text="$l10n_ui_ingameMenuAnimals" />
+        </GuiElement>
+        <GuiElement profile="fs25_animalInfoContainer" id="animalBox">
+            <Bitmap profile="fs25_animalIconGradient" />
+            <Bitmap profile="fs25_animalIcon" id="animalDetailTypeImage" />
+            <Text profile="fs25_animalIconTitle" id="animalDetailTypeNameText" position="0px -300px" />
+            <BoxLayout profile="fs25_animalRequirementsLayout" id="livestockAttributesLayout" position="0px -380px">
+                <GuiElement profile="fs25_animalRequirementsRow">
+                    <Text profile="fs25_animalInfoTitle" id="infoTitle[1]" text="$l10n_ui_age:" />
+                    <Text profile="fs25_animalInfoValue" id="animalAgeText" position="100px 0px" />
+                </GuiElement>
+                <GuiElement profile="fs25_animalRequirementsRow" id="infoRow[1]">
+                    <GuiElement profile="fs25_animalRequirementsRowTextPanel">
+                        <Text profile="fs25_animalRequirementsLabel" id="infoLabel[1]" />
+                        <Text profile="fs25_animalRequirementsValue" id="infoValue[1]" />
+                    </GuiElement>
+                    <ThreePartBitmap profile="fs25_animalSmallStatusBarBackground">
+                        <ThreePartBitmap profile="fs25_animalSmallStatusBar" id="infoStatusBar[1]" />
+                    </ThreePartBitmap>
+                </GuiElement>
+                <GuiElement profile="fs25_animalRequirementsRow" id="infoRow[2]">
+                    <GuiElement profile="fs25_animalRequirementsRowTextPanel">
+                        <Text profile="fs25_animalRequirementsLabel" id="infoLabel[2]" />
+                        <Text profile="fs25_animalRequirementsValue" id="infoValue[2]" />
+                    </GuiElement>
+                    <ThreePartBitmap profile="fs25_animalSmallStatusBarBackground">
+                        <ThreePartBitmap profile="fs25_animalSmallStatusBar" id="infoStatusBar[2]" />
+                    </ThreePartBitmap>
+                </GuiElement>
+                <GuiElement profile="fs25_animalRequirementsRow" id="infoRow[3]">
+                    <GuiElement profile="fs25_animalRequirementsRowTextPanel">
+                        <Text profile="fs25_animalRequirementsLabel" id="infoLabel[3]" />
+                        <Text profile="fs25_animalRequirementsValue" id="infoValue[3]" />
+                    </GuiElement>
+                    <ThreePartBitmap profile="fs25_animalSmallStatusBarBackground">
+                        <ThreePartBitmap profile="fs25_animalSmallStatusBar" id="infoStatusBar[3]" />
+                    </ThreePartBitmap>
+                </GuiElement>
+                <GuiElement profile="fs25_animalRequirementsRow" id="infoRow[4]">
+                    <GuiElement profile="fs25_animalRequirementsRowTextPanel">
+                        <Text profile="fs25_animalRequirementsLabel" id="infoLabel[4]" />
+                        <Text profile="fs25_animalRequirementsValue" id="infoValue[4]" />
+                    </GuiElement>
+                    <ThreePartBitmap profile="fs25_animalSmallStatusBarBackground">
+                        <ThreePartBitmap profile="fs25_animalSmallStatusBar" id="infoStatusBar[4]" />
+                    </ThreePartBitmap>
+                </GuiElement>
+                <GuiElement profile="fs25_animalRequirementsRow" id="infoRow[5]">
+                    <GuiElement profile="fs25_animalRequirementsRowTextPanel">
+                        <Text profile="fs25_animalRequirementsLabel" id="infoLabel[5]" />
+                        <Text profile="fs25_animalRequirementsValue" id="infoValue[5]" />
+                    </GuiElement>
+                    <ThreePartBitmap profile="fs25_animalSmallStatusBarBackground">
+                        <ThreePartBitmap profile="fs25_animalSmallStatusBar" id="infoStatusBar[5]" />
+                    </ThreePartBitmap>
+                </GuiElement>
+            </BoxLayout>
+        </GuiElement>
+        <ThreePartBitmap profile="fs25_animalInfoSeparatorLeft" />
+        <GuiElement profile="fs25_animalPenInfoContainer" id="husbandryBox">
+            <Bitmap profile="fs25_animalPenIcon" id="husbandryIcon" />
+            <GuiElement profile="fs25_animalRequirementsRow" position="0px 30px">
+                <Text profile="fs25_animalRequirementsHeaderLong" text="$l10n_ui_husbandryInformation" />
+            </GuiElement>
+            <BoxLayout profile="fs25_animalRequirementsLayout" id="requirementsLayout">
+                <Text profile="fs25_animalRequirementsHeaderLong" text="$l10n_ui_animalConditions" />
+                <GuiElement profile="fs25_animalRequirementsRow" id="conditionRow[1]">
+                    <GuiElement profile="fs25_animalRequirementsRowTextPanel">
+                        <Text profile="fs25_animalRequirementsLabel" id="conditionLabel[1]" />
+                        <Text profile="fs25_animalRequirementsValue" id="conditionValue[1]" />
+                    </GuiElement>
+                    <ThreePartBitmap profile="fs25_animalSmallStatusBarBackground">
+                        <ThreePartBitmap profile="fs25_animalSmallStatusBar" id="conditionStatusBar[1]" />
+                    </ThreePartBitmap>
+                </GuiElement>
+                <GuiElement profile="fs25_animalRequirementsRow" id="conditionRow[2]">
+                    <GuiElement profile="fs25_animalRequirementsRowTextPanel">
+                        <Text profile="fs25_animalRequirementsLabel" id="conditionLabel[2]" />
+                        <Text profile="fs25_animalRequirementsValue" id="conditionValue[2]" />
+                    </GuiElement>
+                    <ThreePartBitmap profile="fs25_animalSmallStatusBarBackground">
+                        <ThreePartBitmap profile="fs25_animalSmallStatusBar" id="conditionStatusBar[2]" />
+                    </ThreePartBitmap>
+                </GuiElement>
+                <GuiElement profile="fs25_animalRequirementsRow" id="conditionRow[3]">
+                    <GuiElement profile="fs25_animalRequirementsRowTextPanel">
+                        <Text profile="fs25_animalRequirementsLabel" id="conditionLabel[3]" />
+                        <Text profile="fs25_animalRequirementsValue" id="conditionValue[3]" />
+                    </GuiElement>
+                    <ThreePartBitmap profile="fs25_animalSmallStatusBarBackground">
+                        <ThreePartBitmap profile="fs25_animalSmallStatusBar" id="conditionStatusBar[3]" />
+                    </ThreePartBitmap>
+                </GuiElement>
+                <GuiElement profile="fs25_animalRequirementsRow" id="conditionRow[4]">
+                    <GuiElement profile="fs25_animalRequirementsRowTextPanel">
+                        <Text profile="fs25_animalRequirementsLabel" id="conditionLabel[4]" />
+                        <Text profile="fs25_animalRequirementsValue" id="conditionValue[4]" />
+                    </GuiElement>
+                    <ThreePartBitmap profile="fs25_animalSmallStatusBarBackground">
+                        <ThreePartBitmap profile="fs25_animalSmallStatusBar" id="conditionStatusBar[4]" />
+                    </ThreePartBitmap>
+                </GuiElement>
+                <GuiElement profile="fs25_animalRequirementsRow" id="conditionRow[5]">
+                    <GuiElement profile="fs25_animalRequirementsRowTextPanel">
+                        <Text profile="fs25_animalRequirementsLabel" id="conditionLabel[5]" />
+                        <Text profile="fs25_animalRequirementsValue" id="conditionValue[5]" />
+                    </GuiElement>
+                    <ThreePartBitmap profile="fs25_animalSmallStatusBarBackground">
+                        <ThreePartBitmap profile="fs25_animalSmallStatusBar" id="conditionStatusBar[5]" />
+                    </ThreePartBitmap>
+                </GuiElement>
+                <Text profile="fs25_animalRequirementsHeaderLong" text="$l10n_ui_animalFood" margin="0px 10px 0px 14px" />
+                <GuiElement profile="fs25_animalRequirementsRow" id="foodRowTotal">
+                    <GuiElement profile="fs25_animalRequirementsRowTextPanel">
+                        <Text profile="fs25_animalRequirementsLabel" id="foodHeader" text="$l10n_ui_total" />
+                        <Text profile="fs25_animalRequirementsValue" id="foodRowTotalValue" />
+                    </GuiElement>
+                    <ThreePartBitmap profile="fs25_animalSmallStatusBarBackground">
+                        <ThreePartBitmap profile="fs25_animalSmallStatusBar" id="foodRowTotalStatusBar" />
+                    </ThreePartBitmap>
+                </GuiElement>
+                <GuiElement profile="fs25_animalRequirementsRow" id="foodRow[1]">
+                    <GuiElement profile="fs25_animalRequirementsRowTextPanel">
+                        <Text profile="fs25_animalRequirementsLabel" id="foodLabel[1]" />
+                        <Text profile="fs25_animalRequirementsValue" id="foodValue[1]" />
+                    </GuiElement>
+                    <ThreePartBitmap profile="fs25_animalSmallStatusBarBackground">
+                        <ThreePartBitmap profile="fs25_animalSmallStatusBar" id="foodStatusBar[1]" />
+                    </ThreePartBitmap>
+                </GuiElement>
+                <GuiElement profile="fs25_animalRequirementsRow" id="foodRow[2]">
+                    <GuiElement profile="fs25_animalRequirementsRowTextPanel">
+                        <Text profile="fs25_animalRequirementsLabel" id="foodLabel[2]" />
+                        <Text profile="fs25_animalRequirementsValue" id="foodValue[2]" />
+                    </GuiElement>
+                    <ThreePartBitmap profile="fs25_animalSmallStatusBarBackground">
+                        <ThreePartBitmap profile="fs25_animalSmallStatusBar" id="foodStatusBar[2]" />
+                    </ThreePartBitmap>
+                </GuiElement>
+                <GuiElement profile="fs25_animalRequirementsRow" id="foodRow[3]">
+                    <GuiElement profile="fs25_animalRequirementsRowTextPanel">
+                        <Text profile="fs25_animalRequirementsLabel" id="foodLabel[3]" />
+                        <Text profile="fs25_animalRequirementsValue" id="foodValue[3]" />
+                    </GuiElement>
+                    <ThreePartBitmap profile="fs25_animalSmallStatusBarBackground">
+                        <ThreePartBitmap profile="fs25_animalSmallStatusBar" id="foodStatusBar[3]" />
+                    </ThreePartBitmap>
+                </GuiElement>
+                <GuiElement profile="fs25_animalRequirementsRow" id="foodRow[4]">
+                    <GuiElement profile="fs25_animalRequirementsRowTextPanel">
+                        <Text profile="fs25_animalRequirementsLabel" id="foodLabel[4]" />
+                        <Text profile="fs25_animalRequirementsValue" id="foodValue[4]" />
+                    </GuiElement>
+                    <ThreePartBitmap profile="fs25_animalSmallStatusBarBackground">
+                        <ThreePartBitmap profile="fs25_animalSmallStatusBar" id="foodStatusBar[4]" />
+                    </ThreePartBitmap>
+                </GuiElement>
+                <GuiElement profile="fs25_animalRequirementsRow" id="foodRow[5]">
+                    <GuiElement profile="fs25_animalRequirementsRowTextPanel">
+                        <Text profile="fs25_animalRequirementsLabel" id="foodLabel[5]" />
+                        <Text profile="fs25_animalRequirementsValue" id="foodValue[5]" />
+                    </GuiElement>
+                    <ThreePartBitmap profile="fs25_animalSmallStatusBarBackground">
+                        <ThreePartBitmap profile="fs25_animalSmallStatusBar" id="foodStatusBar[5]" />
+                    </ThreePartBitmap>
+                </GuiElement>
+            </BoxLayout>
+        </GuiElement>
+        <Text profile="fs25_animalInfoDescription" id="detailDescriptionText" />
+    </GuiElement>
+    <GuiElement profile="fs25_menuContentContainer">
+        <Text profile="fs25_animalListEmptyText" id="noHusbandriesText" text="$l10n_ui_noHusbandriesPlaced" position="0px 60px" />
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="fs25_animalPenIcon" extends="baseReference" with="anchorTopCenter">
+            <size value="400px 400px" />
+            <position value="0px 460px" />
+            <imageSliceId value="noSlice" />
+        </Profile>
+        <Profile name="fs25_animalRequirementsHeaderLong" extends="fs25_animalRequirementsHeader" with="anchorTopStretchingX pivotTopLeft">
+            <textMaxWidth value="600px" />
+            <textResizeWidth value="600px" />
+        </Profile>
+        <Profile name="fs25_animalListContainer" extends="fs25_subCategoryListContainer">
+            <absoluteSizeOffset value="52px 270px" />
+            <position value="23px -200px" />
+        </Profile>
+        <Profile name="fs25_animalInfoContainer" extends="emptyPanel" with="anchorStretchingYLeft">
+            <width value="390px" />
+            <position value="42px 0px" />
+        </Profile>
+        <Profile name="fs25_animalPenInfoContainer" extends="emptyPanel" with="anchorStretchingYRight">
+            <width value="700px" />
+            <absoluteSizeOffset value="0px 430px" />
+            <position value="-80px 0px" />
+        </Profile>
+        <Profile name="fs25_animalInfoSeparatorLeft" extends="fs25_lineSeparatorLeft" with="pivotTopLeft">
+            <width value="1dp" />
+            <position value="470px 0px" />
+            <absoluteSizeOffset value="0px 160px" />
+            <imageColor value="$preset_fs25_colorGrey" />
+        </Profile>
+        <Profile name="fs25_animalInfoDescription" extends="fs25_textGrey" with="anchorBottomStretchingX pivotBottomLeft">
+            <size value="100% 145px" />
+            <absoluteSizeOffset value="222px 0px" />
+            <position value="42px 40px" />
+            <textMaxNumLines value="5" />
+            <textLayoutMode value="resize" />
+        </Profile>
+        <Profile name="fs25_animalListEmptyText" extends="fs25_textDefault" with="anchorMiddleCenter">
+            <size value="340px 100px" />
+            <textSize value="22px" />
+            <textMaxNumLines value="4" />
+            <textAlignment value="center" />
+        </Profile>
+        <Profile name="buttonRename" extends="wideButton" with="touchButton">
+            <touchIconUVs value="384px 672px 48px 48px" />
+            <touchIconSize value="48px 48px" />
+        </Profile>
+    </GUIProfiles>
+</GUI>

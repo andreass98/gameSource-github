@@ -1,0 +1,8 @@
+AIFieldCourseSegmentCollisionCheckState = {}
+AIFieldCourseSegmentCollisionCheckState.INITIAL = 1
+AIFieldCourseSegmentCollisionCheckState.START_CHECK = 2
+AIFieldCourseSegmentCollisionCheckState.START_ADJUSTMENT = 3
+AIFieldCourseSegmentCollisionCheckState.END_CHECK = 4
+AIFieldCourseSegmentCollisionCheckState.END_ADJUSTMENT = 5
+AIFieldCourseSegmentCollisionCheckState.FINISHED = 6
+Enum(AIFieldCourseSegmentCollisionCheckState)

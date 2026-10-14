@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Bitmap profile="fs25_fullScreenBackground" id="background" />
+    <GuiElement profile="uiElementContainerFullScreenSpanning">
+        <Paging profile="uiInGameMenuPaging" onPageChange="onPageChange" onPageUpdate="onPageUpdate" id="pagingElement">
+            <FrameReference ref="settingsGeneral" name="settingsGeneral" id="pageSettingsGeneral" />
+            <FrameReference ref="settingsDisplay" name="settingsDisplay" id="pageSettingsDisplay" />
+            <FrameReference ref="settingsControls" name="settingsControls" id="pageSettingsControls" />
+            <FrameReference ref="settingsDevice" name="settingsDevice" id="pageSettingsDevice" />
+            <FrameReference ref="settingsConsole" name="settingsConsole" id="pageSettingsConsole" />
+            <FrameReference ref="settingsAdvanced" name="settingsAdvanced" id="pageSettingsAdvanced" />
+            <FrameReference ref="settingsHDR" name="settingsHDR" id="pageSettingsHDR" />
+        </Paging>
+    </GuiElement>
+    <Bitmap profile="fs25_tabListContainer" id="header">
+        <MultiTextOption profile="uiInGameMenuHeaderSelector" onClick="onClickPageSelection" id="pageSelector" soundDisabled="true" />
+        <SmoothList profile="fs25_tabList" id="pagingTabList" onSelectionChanged="onTabMenuSelectionChanged" onScroll="onTabMenuScroll">
+            <ListItem profile="fs25_tabListItem">
+                <Button profile="fs25_tabListItemButton" name="tabButton" />
+                <Bitmap profile="fs25_tabListItemSeparator" />
+                <Bitmap profile="fs25_tabListItemSeparatorBottom" />
+            </ListItem>
+        </SmoothList>
+    </Bitmap>
+    <BoxLayout profile="fs25_buttonBox" id="buttonsPanel">
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[1]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[2]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[3]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[4]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[5]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+        <Button profile="buttonBack" onClick="onClickBack" id="menuButton[6]">
+            <Bitmap profile="fs25_buttonBoxSeparator" name="separator" />
+        </Button>
+    </BoxLayout>
+</GUI>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement profile="newLayer" />
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <GuiElement profile="fs25_voteDialogBg" id="dialogElement">
+        <ThreePartBitmap profile="fs25_dialogBgMiddleSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgTopSmall" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <GuiElement profile="fs25_dialogContentContainer">
+            <Text profile="fs25_dialogTitle" text="$l10n_button_rate" position="0px -40px" />
+            <BoxLayout profile="fs25_voteDialogLayout" onLeave="onLayoutLeave" focusInit="onOpen">
+                <Button profile="fs25_voteDialogStarButtonZero" id="stars[0]" focusChangeLeft="lastStar" />
+                <Button profile="fs25_voteDialogStarButton" id="stars[1]" onHighlight="onStarHighlight" onHighlightRemove="onStarHighlightRemove" onFocus="onStarFocus" onClick="onStarClick" focusChangeLeft="" />
+                <Button profile="fs25_voteDialogStarButton" id="stars[2]" onHighlight="onStarHighlight" onHighlightRemove="onStarHighlightRemove" onFocus="onStarFocus" onClick="onStarClick" />
+                <Button profile="fs25_voteDialogStarButton" id="stars[3]" onHighlight="onStarHighlight" onHighlightRemove="onStarHighlightRemove" onFocus="onStarFocus" onClick="onStarClick" />
+                <Button profile="fs25_voteDialogStarButton" id="stars[4]" onHighlight="onStarHighlight" onHighlightRemove="onStarHighlightRemove" onFocus="onStarFocus" onClick="onStarClick" />
+                <Button profile="fs25_voteDialogStarButton" id="stars[5]" onHighlight="onStarHighlight" onHighlightRemove="onStarHighlightRemove" onFocus="onStarFocus" onClick="onStarClick" focusChangeRight="" focusId="lastStar" />
+            </BoxLayout>
+        </GuiElement>
+        <BoxLayout profile="fs25_dialogButtonBox">
+            <Button profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" />
+            <Bitmap profile="fs25_dialogButtonBoxSeparator" />
+            <Button profile="buttonOK" text="$l10n_button_rate" onClick="onClickOk" id="okButton" />
+        </BoxLayout>
+    </GuiElement>
+    <GUIProfiles>
+        <Profile name="fs25_voteDialogBg" extends="fs25_dialogBg">
+            <size value="700px 280px" />
+        </Profile>
+        <Profile name="fs25_voteDialogLayout" extends="emptyPanel" with="anchorBottomCenter">
+            <size value="550px 70px" />
+            <position value="0px 30px" />
+            <alignmentX value="center" />
+        </Profile>
+        <Profile name="fs25_voteDialogStarButtonZero" extends="fs25_voteDialogStarButton">
+            <size value="0 70px" />
+            <margin value="0 0 0 0" />
+        </Profile>
+        <Profile name="fs25_voteDialogStarButton" extends="baseReference" with="anchorTopLeft">
+            <size value="70px 70px" />
+            <margin value="15px 0 15px 0" />
+            <iconSize value="70px 70px" />
+            <imageSliceId value="gui.star" />
+            <imageColor value="$preset_fs25_colorMainDark" />
+        </Profile>
+        <Profile name="fs25_voteDialogStarButtonActive" extends="fs25_voteDialogStarButton">
+            <imageColor value="$preset_fs25_colorMainHighlight" />
+        </Profile>
+    </GUIProfiles>
+</GUI>
